@@ -1,0 +1,273 @@
+--------- beginning of main
+11-03 17:23:35.089 15823 15868 I smm2recomp: [env] LARECOMP_VK_GMEM_CAP_MB=1024 (recomp.env)
+11-03 17:23:35.089 15823 15868 I smm2recomp: [guest] in the window: 800000000-b20000000 rw-p 00000000 00:00 0 
+11-03 17:23:35.089 15823 15868 I smm2recomp: [guest] window 0x800000000-0xb20000000; highest mapping ends at 0x7fd919d000; 0 mappings (0 MB) in 0x7000000000-0x7320000000
+11-03 17:23:35.089 15823 15868 I smm2recomp: [paths] data: /storage/emulated/0/Android/data/org.smcraft.smm2recomp/files
+11-03 17:23:35.089 15823 15868 I smm2recomp: [gamelib] libsmm2game.so (105374 + 34472 functions)
+11-03 17:23:35.139 15823 15868 I smm2recomp: loaded main  at 800000000 size 2e74000 syms 947
+11-03 17:23:35.189 15823 15868 I smm2recomp: loaded sdk   at 804000000 size cd4000 syms 25091
+11-03 17:23:35.991 15823 15868 I smm2recomp: relocated main  (34 imports bound to host stubs)
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZN2nn2os5MutexD2Ev bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZN2nn6crypto6detail10CbcMacImpl20EncryptBlockCallbackINS0_12AesEncryptorILm16EEEEEvPvPKvS8_ bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZdlPv bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _Znwm bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZNSt3__1dvIdEENS_7complexIT_EERKS3_S5_ bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZNSt3__1mlIdEENS_7complexIT_EERKS3_S5_ bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZnwmRKSt9nothrow_t bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZnamRKSt9nothrow_t bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZdaPv bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZdlPvRKSt9nothrow_t bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: Libz_SigloMiddlewareInfo bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _Znam bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZNSt3__113__tree_removeIPNS_16__tree_node_baseIPvEEEEvT_S5_ bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: [loader] sdk: _ZNSt3__127__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_ bound to an earlier module's
+11-03 17:23:35.991 15823 15868 I smm2recomp: relocated sdk   (0 imports bound to host stubs)
+11-03 17:23:35.991 15823 15868 I smm2recomp: [settings] loaded smm2.ini
+11-03 17:23:35.991 15823 15868 I smm2recomp: main thread: prio 44, stack 0x100000
+11-03 17:23:35.991 15823 15868 I smm2recomp: [vk] gpu 0: Mali-G78 (api 1.4.305)
+11-03 17:23:35.991 15823 15868 I smm2recomp: [vk] using Mali-G78
+11-03 17:23:35.991 15823 15868 I smm2recomp: init sdk (DT_INIT 804000030, 106 init_array entries)
+11-03 17:23:35.991 15823 15868 I smm2recomp: [vk] shader global memory: the heap through its device address
+11-03 17:23:36.041 15823 15868 I smm2recomp: [vk] surface 1600x900, transform 0x2, window 1600x900
+11-03 17:23:36.041 15823 15868 I smm2recomp: [sm] GetService lm
+11-03 17:23:36.041 15823 15868 I smm2recomp: [ipc] close session lm (handle 103)
+11-03 17:23:36.041 15823 15868 I smm2recomp: [sm] GetService apm
+11-03 17:23:36.041 15823 15868 I smm2recomp: [sm] GetService appletOE
+11-03 17:23:36.041 15823 15868 I smm2recomp: [ipc] control 3 on appletOE (handle 105)
+11-03 17:23:36.041 15823 15868 I smm2recomp: [ipc] control 0 on appletOE (handle 105)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [am] ISelfController cmd 91 (unhandled, ok)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [am] IWindowController cmd 10 (unhandled, ok)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [am] ISelfController cmd 13 (unhandled, ok)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [am] ISelfController cmd 16 (unhandled, ok)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [sm] GetService aoc:u
+11-03 17:23:36.091 15823 15868 I smm2recomp: [sm] GetService pctl
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] control 3 on pctl (handle 109)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] control 0 on pctl (handle 109)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [sm] GetService pctl:s
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] control 3 on pctl:s (handle 10a)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] control 0 on pctl:s (handle 10a)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] close session pctl:s (handle 10a)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [sm] GetService pctl:a
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] control 3 on pctl:a (handle 10a)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] control 0 on pctl:a (handle 10a)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] close session pctl:a (handle 10a)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [sm] GetService pctl:r
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] control 3 on pctl:r (handle 10a)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] control 0 on pctl:r (handle 10a)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [ipc] close session pctl:r (handle 10a)
+11-03 17:23:36.091 15823 15868 I smm2recomp: [pctl] IParentalControlService cmd 1 (ok)
+11-03 17:23:36.091 15823 15868 I smm2recomp: init main (DT_INIT 800000030, 2502 init_array entries)
+11-03 17:23:36.292 15823 15868 I smm2recomp: [sm] GetService time:u
+11-03 17:23:36.292 15823 15868 I smm2recomp: [ipc] control 3 on time:u (handle 10a)
+11-03 17:23:36.292 15823 15868 I smm2recomp: [ipc] control 0 on time:u (handle 10a)
+11-03 17:23:36.292 15823 15868 I smm2recomp: [time] shared memory mapped at a3a004000
+11-03 17:23:36.292 15823 15868 I smm2recomp: [time] StandardUserSystemClock::GetCurrentTime (host clock)
+11-03 17:23:36.292 15823 15868 I smm2recomp: [ipc] control 3 on lm:ILogger (handle 104)
+11-03 17:23:36.292 15823 15868 I smm2recomp: [lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpDateTime |  | MainThread | ###  Application Start Time [17:23:36] ###
+11-03 17:23:36.292 15823 15868 I smm2recomp: [sm] GetService fsp-srv
+11-03 17:23:36.292 15823 15868 I smm2recomp: [ipc] control 3 on fsp-srv (handle 10c)
+11-03 17:23:36.292 15823 15868 I smm2recomp: [ipc] control 0 on fsp-srv (handle 10c)
+11-03 17:23:36.292 15823 15868 I smm2recomp: [ipc] control 2 on fsp-srv (handle 10c)
+11-03 17:23:36.292 15823 15868 I smm2recomp: [ipc] control 2 on fsp-srv (handle 10d)
+11-03 17:23:36.292 15823 15868 I smm2recomp: [mod] 100 Mario Challenge on: courses from TGRCode (built-in server), ruleset hundred
+11-03 17:23:36.292 15823 15868 I smm2recomp: [lanky] Lanky Mario (Weird Mushroom) off
+11-03 17:23:36.392 15823 15868 I smm2recomp: [fs] romfs index of extracted/romfs + mods-generated/romfs,: 3801 files, 0.2 MB of tables, image 3.05 GB (88ms)
+11-03 17:23:36.392 15823 15868 I smm2recomp: [fs] romfs reads: 1 (0 KB)
+11-03 17:23:36.392 15823 15868 I smm2recomp: [fs] romfs reads: 2 (0 KB)
+11-03 17:23:36.392 15823 15868 I smm2recomp: [fs] romfs reads: 4 (1 KB)
+11-03 17:23:36.392 15823 15868 I smm2recomp: [lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | <><><><><><><><> dumpMemoryInfo [ Application Start ] <><><><><><><><>
+11-03 17:23:36.392 15823 15868 I smm2recomp: 
+11-03 17:23:36.392 15823 15868 I smm2recomp: [lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 3284 MB: HBMなどのシステム以外のアプリ用領域
+11-03 17:23:36.392 15823 15868 I smm2recomp: 
+11-03 17:23:36.392 15823 15868 I smm2recomp: [lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 3220 MB  アプリのRootHeap + SDK用のAllocateMemoryBlock
+11-03 17:23:36.392 15823 15868 I smm2recomp: 
+11-03 17:23:36.392 15823 15868 I smm2recomp: [lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread |   63 MB: Program
+11-03 17:23:36.392 15823 15868 I smm2recomp: 
+11-03 17:23:36.392 15823 15868 I smm2recomp: [lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread |    1 MB: 空き
+11-03 17:23:36.392 15823 15868 I smm2recomp: 
+11-03 17:23:36.392 15823 15868 I smm2recomp: [lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 
+11-03 17:23:36.392 15823 15868 I smm2recomp: 
+11-03 17:23:36.392 15823 15868 I smm2recomp: [vk] Mali-G78, swapchain 1600x900
+11-03 17:23:36.392 15823 15868 I smm2recomp: [nvn] device initialized
+11-03 17:23:36.392 15823 15868 I smm2recomp: [nvn] window origin mode 1
+11-03 17:23:36.392 15823 15868 I smm2recomp: [nvn] window with 3 textures
+11-03 17:23:36.392 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a44fe7020 stack=a0da30fe0 prio=30 core=-2 -> 111
+11-03 17:23:36.392 15823 15868 I smm2recomp: [sm] GetService nifm:u
+11-03 17:23:36.392 15823 15868 I smm2recomp: [ipc] control 3 on nifm:u (handle 112)
+11-03 17:23:36.392 15823 15868 I smm2recomp: [ipc] control 0 on nifm:u (handle 112)
+11-03 17:23:36.392 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a4213c020 stack=a2921bfe0 prio=44 core=-2 -> 113
+11-03 17:23:36.392 15823 15868 I smm2recomp: [am] ICommonStateGetter cmd 66 (unhandled, ok)
+11-03 17:23:36.442 15823 15868 I smm2recomp: [sm] GetService hid
+11-03 17:23:36.442 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a45024020 stack=a0aa64fe0 prio=43 core=-2 -> 117
+11-03 17:23:36.442 15823 15868 I smm2recomp: [ipc] control 3 on hid (handle 114)
+11-03 17:23:36.442 15823 15868 I smm2recomp: [touch] InitializeTouchScreen
+11-03 17:23:36.442 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a45038020 stack=a23a38fe0 prio=44 core=-2 -> 118
+11-03 17:23:36.442 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a45139020 stack=a24525fe0 prio=44 core=-2 -> 119
+11-03 17:23:36.442 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a4523a020 stack=a3079cfe0 prio=44 core=-2 -> 11a
+11-03 17:23:36.442 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a4524c020 stack=a3d53dfe0 prio=45 core=-2 -> 11b
+11-03 17:23:36.442 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a4525d020 stack=a2d92efe0 prio=45 core=-2 -> 11c
+11-03 17:23:36.442 15823 15868 I smm2recomp: [am] ISelfController cmd 11 (unhandled, ok)
+11-03 17:23:36.442 15823 15868 I smm2recomp: [am] ISelfController cmd 12 (unhandled, ok)
+11-03 17:23:36.442 15823 15868 I smm2recomp: [am] ISelfController cmd 14 (unhandled, ok)
+11-03 17:23:36.442 15823 15868 I smm2recomp: [am] ISelfController cmd 1 (unhandled, ok)
+11-03 17:23:36.442 15823 15868 I smm2recomp: [sm] GetService set
+11-03 17:23:36.442 15823 15868 I smm2recomp: [ipc] close session set (handle 11d)
+11-03 17:23:36.442 15823 15868 I smm2recomp: [fs] romfs reads: 8 (235 KB)
+11-03 17:23:36.442 15823 15868 I smm2recomp: [sm] GetService acc:u0
+11-03 17:23:36.442 15823 15868 I smm2recomp: [ipc] control 3 on acc:u0 (handle 11d)
+11-03 17:23:36.442 15823 15868 I smm2recomp: [ipc] control 0 on acc:u0 (handle 11d)
+11-03 17:23:36.693 15823 15868 I smm2recomp: [kernel] thread 80 waits 250ms for core 0 (held by thread 82, last svc 21)
+11-03 17:23:36.693 15823 15868 I smm2recomp: [kernel] thread 88 waits 250ms for core 0 (held by thread 82, last svc 21)
+11-03 17:23:36.944 15823 15868 I smm2recomp: [kernel] thread 80 waits 500ms for core 0 (held by thread 82, last svc 1d)
+11-03 17:23:36.944 15823 15868 I smm2recomp: [kernel] thread 88 waits 500ms for core 0 (held by thread 82, last svc 1d)
+11-03 17:23:36.944 15823 15868 I smm2recomp: [fs] mounted host directory save/save_0
+11-03 17:23:36.944 15823 15868 I smm2recomp: [time] StandardUserSystemClock::GetCurrentTime (host clock)
+11-03 17:23:36.994 15823 15868 I smm2recomp: [time] StandardUserSystemClock::GetCurrentTime (host clock)
+11-03 17:23:36.994 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a45d1e020 stack=a17384fe0 prio=47 core=-2 -> 11f
+11-03 17:23:36.994 15823 15868 I smm2recomp: [fs] mounted host directory save/save_0
+11-03 17:23:36.994 15823 15868 I smm2recomp: [am] IAudioController cmd 1 (ok)
+11-03 17:23:36.994 15823 15868 I smm2recomp: [am] IAudioController cmd 2 (ok)
+11-03 17:23:36.994 15823 15868 I smm2recomp: [am] IAudioController cmd 0 (ok)
+11-03 17:23:36.994 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:36.994 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 120)
+11-03 17:23:36.994 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:36.994 15823 15868 I smm2recomp: Low latency audio enabled
+11-03 17:23:37.044 15823 15868 I smm2recomp: [audren] renderer 48000 Hz, 240 samples/frame, 96 voices, 16 mixes, 96 mix buffers, 96 splitters, 20 effects
+11-03 17:23:37.044 15823 15868 I smm2recomp: [audren] device 48000 Hz, 960 frames/period; queue target 2160 samples
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 120)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 120)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] control 3 on IAudioDevice (handle 121)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 121)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a48179020 stack=a17285fe0 prio=32 core=-2 -> 120
+11-03 17:23:37.044 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a4817f020 stack=a0ac4ffe0 prio=31 core=-2 -> 121
+11-03 17:23:37.044 15823 15868 I smm2recomp: [audren] splitters: 0 updated, 672 destinations (v1)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [audren] mix 0 used 1 vol 1.000 bufs 6 dest 2147483647 splitter -1:
+11-03 17:23:37.044 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 125)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] control 3 on IAudioDevice (handle 126)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 126)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 125)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] control 3 on IAudioDevice (handle 126)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 126)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 125)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] control 3 on IAudioDevice (handle 126)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 126)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 125)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 126)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 126)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 128)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 126)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] control 3 on IAudioDevice (handle 128)
+11-03 17:23:37.044 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 128)
+11-03 17:23:37.145 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a4891e020 stack=a1ef80fe0 prio=45 core=-2 -> 126
+11-03 17:23:37.145 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.145 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 128)
+11-03 17:23:37.145 15823 15868 I smm2recomp: [ipc] control 3 on IAudioDevice (handle 129)
+11-03 17:23:37.145 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 129)
+11-03 17:23:37.145 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.145 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 128)
+11-03 17:23:37.145 15823 15868 I smm2recomp: [ipc] control 3 on IAudioDevice (handle 129)
+11-03 17:23:37.145 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 129)
+11-03 17:23:37.145 15823 15868 I smm2recomp: [sm] GetService audren:u
+11-03 17:23:37.145 15823 15868 I smm2recomp: [ipc] close session audren:u (handle 128)
+11-03 17:23:37.145 15823 15868 I smm2recomp: [ipc] control 3 on IAudioDevice (handle 129)
+11-03 17:23:37.145 15823 15868 I smm2recomp: [ipc] close session IAudioDevice (handle 129)
+11-03 17:23:37.195 15823 15868 I smm2recomp: [kernel] thread 80 waits 750ms for core 0 (held by thread 82, last svc 16)
+11-03 17:23:37.195 15823 15868 I smm2recomp: [kernel] thread 88 waits 750ms for core 0 (held by thread 82, last svc 16)
+11-03 17:23:37.395 15823 15868 I smm2recomp: [fs] romfs reads: 16 (9872 KB)
+11-03 17:23:37.446 15823 15868 I smm2recomp: [kernel] thread 80 waits 1000ms for core 0 (held by thread 82, last svc 21)
+11-03 17:23:37.446 15823 15868 I smm2recomp: [kernel] thread 88 waits 1000ms for core 0 (held by thread 82, last svc 21)
+11-03 17:23:37.646 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a48df0020 stack=a114cffe0 prio=43 core=-2 -> 128
+11-03 17:23:37.696 15823 15868 I smm2recomp: [corepreempt] handoffs=1
+11-03 17:23:37.696 15823 15868 I smm2recomp: [kernel] thread 80 waits 1250ms for core 0 (held by thread 82, last svc 1d)
+11-03 17:23:37.696 15823 15868 I smm2recomp: [kernel] thread 88 waits 1250ms for core 0 (held by thread 82, last svc 1d)
+11-03 17:23:37.696 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a48e36020 stack=a16e0afe0 prio=44 core=-2 -> 129
+11-03 17:23:37.696 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a48e77020 stack=a198b0fe0 prio=44 core=-2 -> 12a
+11-03 17:23:37.697 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a48eb8020 stack=a35716fe0 prio=44 core=-2 -> 12b
+11-03 17:23:37.747 15823 15868 I smm2recomp: [fs] romfs reads: 32 (10472 KB)
+11-03 17:23:38.449 15823 15868 I smm2recomp: [kernel] thread 80 waits 2001ms for core 0 (held by thread 82, last svc 21)
+11-03 17:23:38.449 15823 15868 I smm2recomp: [kernel] thread 88 waits 2001ms for core 0 (held by thread 82, last svc 21)
+11-03 17:23:38.449 15823 15868 I smm2recomp: [pl] system font fonts/nintendo_udsg-r_std_003.bfttf (2053628 bytes)
+11-03 17:23:38.449 15823 15868 I smm2recomp: [pl] system font fonts/nintendo_ext_003.bfttf (180236 bytes)
+11-03 17:23:38.449 15823 15868 I smm2recomp: [pl] system font fonts/nintendo_udsg-r_ext_zh-cn_003.bfttf (123912 bytes)
+11-03 17:23:38.499 15823 15868 I smm2recomp: [pl] system font fonts/nintendo_udsg-r_org_zh-cn_003.bfttf (7848200 bytes)
+11-03 17:23:38.499 15823 15868 I smm2recomp: [pl] system font fonts/nintendo_udjxh-db_zh-tw_003.bfttf (3580260 bytes)
+11-03 17:23:38.499 15823 15868 I smm2recomp: [pl] system font fonts/nintendo_udsg-r_ko_003.bfttf (3672868 bytes)
+11-03 17:23:38.549 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a499d5020 stack=a1c6cdfe0 prio=46 core=-2 -> 12c
+11-03 17:23:38.599 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a4a470020 stack=a30f82fe0 prio=43 core=-2 -> 12d
+11-03 17:23:38.599 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a4b5a8020 stack=a2f6fefe0 prio=52 core=-2 -> 12e
+11-03 17:23:38.599 15823 15868 I smm2recomp: [sm] GetService friend:u
+11-03 17:23:38.600 15823 15868 I smm2recomp: [ipc] control 3 on friend:u (handle 12f)
+11-03 17:23:38.600 15823 15868 I smm2recomp: [ipc] control 0 on friend:u (handle 12f)
+11-03 17:23:38.600 15823 15868 I smm2recomp: [ipc] control 2 on friend:u (handle 12f)
+11-03 17:23:38.600 15823 15868 I smm2recomp: [ipc] control 2 on friend:u (handle 130)
+11-03 17:23:38.600 15823 15868 I smm2recomp: [ipc] control 2 on friend:u (handle 131)
+11-03 17:23:38.650 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=ab8e56020 stack=a08c9bfe0 prio=45 core=-2 -> 133
+11-03 17:23:38.650 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a4d22c020 stack=a39224fe0 prio=47 core=-2 -> 134
+11-03 17:23:38.700 15823 15868 I smm2recomp: [kernel] thread 80 waits 2251ms for core 0 (held by thread 82, last svc 1d)
+11-03 17:23:38.700 15823 15868 I smm2recomp: [kernel] thread 88 waits 2251ms for core 0 (held by thread 82, last svc 1d)
+11-03 17:23:38.750 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a6af2b020 stack=a20e4ffe0 prio=45 core=-2 -> 135
+11-03 17:23:38.750 15823 15868 I smm2recomp: [sm] GetService mii:e
+11-03 17:23:38.750 15823 15868 I smm2recomp: [ipc] control 3 on mii:e (handle 136)
+11-03 17:23:38.750 15823 15868 I smm2recomp: [ipc] control 0 on mii:e (handle 136)
+11-03 17:23:38.800 15823 15868 I smm2recomp: [fs] system data 0100000000000802: sysdata/0100000000000802 (6 files)
+11-03 17:23:38.800 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a6b6d3020 stack=a3fb91fe0 prio=45 core=-2 -> 137
+11-03 17:23:38.800 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a54ee7020 stack=a0b444fe0 prio=48 core=-2 -> 138
+11-03 17:23:38.800 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a54f5b020 stack=a128a2fe0 prio=48 core=-2 -> 139
+11-03 17:23:38.800 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=a55221020 stack=a174f6fe0 prio=48 core=-2 -> 13a
+11-03 17:23:38.901 15823 15868 I smm2recomp: [am] IAudioController cmd 1 (ok)
+11-03 17:23:38.901 15823 15868 I smm2recomp: [am] IAudioController cmd 2 (ok)
+11-03 17:23:38.901 15823 15868 I smm2recomp: [sm] GetService prepo:u
+11-03 17:23:38.901 15823 15868 I smm2recomp: [ipc] no HLE implementation for service 'prepo:u', using logging stub
+11-03 17:23:38.901 15823 15868 I smm2recomp: [ipc] control 3 on prepo:u (handle 13b)
+11-03 17:23:38.901 15823 15868 I smm2recomp: [ipc] control 0 on prepo:u (handle 13b)
+11-03 17:23:39.703 15823 15868 I smm2recomp: [kernel] thread 94 waits 2001ms for core 0 (held by thread 82, last svc 1d)
+11-03 17:23:40.605 15823 15868 I smm2recomp: [kernel] thread 99 waits 2001ms for core 0 (held by thread 82, last svc 1d)
+11-03 17:23:40.856 15823 15868 I smm2recomp: [kernel] thread 99 waits 2251ms for core 0 (held by thread 82, last svc 1d)
+11-03 17:23:41.659 15823 15868 I smm2recomp: [am] ICommonStateGetter cmd 66 (unhandled, ok)
+11-03 17:23:41.659 15823 15868 I smm2recomp: [input] GetNpadStyleSet id 0
+11-03 17:23:41.659 15823 15868 I smm2recomp: [input] GetNpadState id 0 lr 800263e58
+11-03 17:23:41.659 15823 15868 I smm2recomp: [input] GetNpadStates id 0 count 16 lr 800263e58
+11-03 17:23:41.659 15823 15868 I smm2recomp: [input] GetNpadStyleSet id 0x1
+11-03 17:23:41.659 15823 15868 I smm2recomp: [input] GetNpadStyleSet id 0x2
+11-03 17:23:41.659 15823 15868 I smm2recomp: [input] GetNpadStyleSet id 0x3
+11-03 17:23:41.659 15823 15868 I smm2recomp: [touch] the game reads the touch screen (5 touches per sample)
+11-03 17:23:41.709 15823 15868 I smm2recomp: [mod] worker guard: __cxa_pure_virtual at 0x8044b52a8
+11-03 17:23:41.709 15823 15868 I smm2recomp: [input] GetNpadStates id 0 count 16 lr 800263e58
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] effect type 6 used: slot 0 mix 4 enabled 1
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] effect type 2 used: slot 1 mix 7 enabled 1
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 1 used 1 vol 1.000 bufs 2 dest 3 splitter -1: 0>0=1.000 1>1=1.000
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 2 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 3 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 4 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 5 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 6 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 7 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 8 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 9 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 10 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 11 used 1 vol 1.000 bufs 2 dest 3 splitter -1: 0>0=1.000 1>1=1.000
+11-03 17:23:41.709 15823 15868 I smm2recomp: [audren] mix 12 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+11-03 17:23:41.709 15823 15868 I smm2recomp: [input] GetNpadStates id 0 count 16 lr 800263e58
+11-03 17:23:41.709 15823 15868 I smm2recomp: [nvn] ReportCounter type 16
+11-03 17:23:41.709 15823 15868 I smm2recomp: [nvn] ReportCounter type 0
+11-03 17:23:41.709 15823 15868 I smm2recomp: [ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+11-03 17:23:41.709 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=ab8e67020 stack=a213c1fe0 prio=45 core=-2 -> 11b
+11-03 17:23:41.709 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=ab8f20020 stack=a3f497fe0 prio=46 core=-2 -> 13c
+11-03 17:23:41.709 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=ab8f32020 stack=a298aefe0 prio=46 core=-2 -> 13d
+11-03 17:23:41.709 15823 15868 I smm2recomp: [kernel] CreateThread entry=80432e240 arg=ab8f44020 stack=a1b4c2fe0 prio=46 core=-2 -> 13e
+11-03 17:23:41.709 15823 15868 I smm2recomp: [am] ICommonStateGetter cmd 66 (unhandled, ok)
+11-03 17:23:41.810 15823 15868 I smm2recomp: [vk] transient ring: memory type 0 (device-local host-visible )
+11-03 17:23:44.372 15823 15868 I smm2recomp: [kernel] thread 93 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+11-03 17:23:44.372 15823 15868 I smm2recomp: [kernel] thread 98 waits 2272ms for core 2 (held by thread 100, last svc 21)
+11-03 17:23:44.372 15823 15868 I smm2recomp: [vi] vsync timer late by 638ms (host throttling?)
+11-03 17:23:44.372 15823 15868 I smm2recomp: [vk] guest heap imported for shader global memory: 3220 MB
+11-03 17:23:44.372 15823 15868 I smm2recomp: [vk] vertex / index data read in place up to 3328 MB into the heap (allocation 7605 MB, buffer 4095 MB)
+11-03 17:23:44.372 15823 15868 I smm2recomp: [vk] no page write tracking (-1, page 4096)
+11-03 17:23:44.372 15823 15868 I smm2recomp: [vk] vertex cache off: no page write tracking

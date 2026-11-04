@@ -96,6 +96,10 @@ static pthread_cond_t g_nothread_cond = PTHREAD_COND_INITIALIZER;
 // Time this thread spent blocked in the kernel (waits, sleeps): idle, not work. Frame pacing (exec.c vk_pace_frame)
 // takes the presenting thread's: a frame's busy time is its period minus this.
 __thread uint64_t g_blocked_ns;
+// The part of g_blocked_ns spent waiting for this thread's guest core (core_acquire), and who held the core through the
+// longest such wait since the frame pacer last read it (vk_pace_frame: "[pace] ... core X ms (thread N svc S)").
+__thread uint64_t g_corewait_ns, g_corewait_max_ns, g_corewait_holder;
+__thread uint32_t g_corewait_holder_svc;
 
 // ---- cores. Horizon runs one thread per core at a time, by priority, and games pin their threads to cores
 // (SetThreadCoreMask) and rely on threads of one core never running at once (SMM2's worker threads share data that
@@ -173,7 +177,15 @@ static void core_acquire(KThread *t) {
         if (!c->owner) { c->owner = t; break; }
         struct timespec ts;
         deadline(&ts, 250000000);
-        if (pthread_cond_timedwait(&t->cond, &g_klock, &ts) != 0 && c->owner != t) {
+        KThread *holder = c->owner;
+        uint64_t w0 = plat_now_ns();
+        int timed_out = pthread_cond_timedwait(&t->cond, &g_klock, &ts) != 0;
+        if (holder && plat_now_ns() - w0 > g_corewait_max_ns) {
+            g_corewait_max_ns = plat_now_ns() - w0;
+            g_corewait_holder = holder->id;
+            g_corewait_holder_svc = holder->last_svc & 0xFF;
+        }
+        if (timed_out && c->owner != t) {
             static int warned, warned_long;
             uint64_t waited = (plat_now_ns() - t0) / 1000000;
             // (the first ones; and from then on the long ones - a core held for seconds by a thread that makes no
@@ -189,7 +201,9 @@ static void core_acquire(KThread *t) {
 #ifdef __ANDROID__
     core_refresh_preempt();
 #endif
-    g_blocked_ns += plat_now_ns() - t0;
+    uint64_t waited_ns = plat_now_ns() - t0;
+    g_blocked_ns += waited_ns;
+    g_corewait_ns += waited_ns;
 }
 
 // At kernel entry: a better-priority thread waiting for this core takes it now (our stand-in for preemption)

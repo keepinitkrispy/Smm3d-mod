@@ -148,6 +148,8 @@ static int vk_counter_mode(void) {
 // LARECOMP_PACE=0: off.
 #define PACE_SLOW_NS 20000000ull
 extern __thread uint64_t g_blocked_ns;  // kernel.c: this thread's time blocked in waits / sleeps
+extern __thread uint64_t g_corewait_ns, g_corewait_max_ns, g_corewait_holder;  // kernel.c: the core-wait part
+extern __thread uint32_t g_corewait_holder_svc;
 static bool pace_slow;
 // Android's shader scan must not compete with a frame already missing its budget.
 // The atomic deadline is refreshed by the render thread and read by the ahead worker.
@@ -165,26 +167,38 @@ static uint64_t stat_pace_over;
 void vk_pace_frame(void) {
     static int on = -1;
     if (on < 0) { const char *e = getenv("LARECOMP_PACE"); on = !e || atoi(e) != 0; }
-    static uint64_t last, last_wait;
+    static uint64_t last, last_wait, last_core;
     static uint8_t over[60];
     static int idx, nover, calm;
     static double avg;  // busy ms, moving average (~20 frames)
-    uint64_t now = plat_now_ns(), w = g_blocked_ns;
-    uint64_t p = now - last, wt = w - last_wait;
+    uint64_t now = plat_now_ns(), w = g_blocked_ns, cw = g_corewait_ns;
+    uint64_t p = now - last, wt = w - last_wait, ct = cw - last_core;
+    uint64_t cmax = g_corewait_max_ns, cholder = g_corewait_holder;
+    uint32_t csvc = g_corewait_holder_svc;
+    g_corewait_max_ns = 0;
     bool first = !last;
-    last = now, last_wait = w;
+    last = now, last_wait = w, last_core = cw;
 #ifdef __ANDROID__
     // At <45 real FPS, defer speculative translation/compilation. Demand-driven
     // shader builds still run, and the scanner resumes after 2 seconds of headroom.
     if (!first && p > 22000000ull)
         atomic_store_explicit(&shader_ahead_pause_until_ns, now + 2000000000ull, memory_order_relaxed);
 #endif
+    static int log = -1;  // LARECOMP_LOG_PACE=1: each frame's period, vsync wait and busy time
+    if (log < 0) log = getenv("LARECOMP_LOG_PACE") != NULL;
+    // (hitches too: a frame over 100 ms is left out of the pacing below, but its split is what a stall review needs)
+    if (log && !first && p > 100000000ull)
+        LOG("[pace] hitch period %.2f blocked %.2f (core %.2f, longest %.2f held by thread %llu svc %02x) ms\n", p / 1e6,
+            wt / 1e6, ct / 1e6, cmax / 1e6, (unsigned long long)cholder, csvc);
     if (first || p > 100000000ull) return;  // (loading, a hitch: not a pace)
     double busy = (p > wt ? p - wt : 0) / 1e6;
     avg = avg ? avg + (busy - avg) * 0.05 : busy;
-    static int log = -1;  // LARECOMP_LOG_PACE=1: each frame's period, vsync wait and busy time
-    if (log < 0) log = getenv("LARECOMP_LOG_PACE") != NULL;
-    if (log) LOG("[pace] period %.2f blocked %.2f busy %.2f ms\n", p / 1e6, wt / 1e6, busy);
+    if (log) {
+        if (cmax > 1000000ull)  // (a core wait over 1 ms in this frame: who held the core)
+            LOG("[pace] period %.2f blocked %.2f busy %.2f ms core %.2f (longest %.2f held by thread %llu svc %02x)\n", p / 1e6,
+                wt / 1e6, busy, ct / 1e6, cmax / 1e6, (unsigned long long)cholder, csvc);
+        else LOG("[pace] period %.2f blocked %.2f busy %.2f ms core %.2f\n", p / 1e6, wt / 1e6, busy, ct / 1e6);
+    }
     int o = busy > 16.2;
     stat_pace_over += o;
     nover += o - over[idx];
@@ -728,6 +742,7 @@ static int cpu_prof_find_module(struct dl_phdr_info *info, size_t n, void *arg) 
     else if (strstr(name, "vulkan") || strstr(name, "mali") || strstr(name, "libGLES")) mod = 3;
     else if (strstr(name, "libc.so") || strstr(name, "libm.so") || strstr(name, "libart.so") || strstr(name, "libstdc++")) mod = 4;
     else if (strstr(name, "libglslang") || strstr(name, "libSPIRV") || strstr(name, "libshaderc")) mod = 5;
+    LOG("[cpumod] object %s -> %s\n", name[0] ? name : "(unnamed: the executable or vdso)", cpu_prof_names[mod]);
     if (mod == 6) return 0; // reserve segment table exclusively for named libraries
     for (ElfW(Half) j = 0; j < info->dlpi_phnum && cpu_prof_nsegments < CPU_PROF_SEGMENTS; j++) {
         const ElfW(Phdr) *ph = &info->dlpi_phdr[j];
@@ -793,7 +808,7 @@ static void cpu_prof_sampler_tick(void) {
     }
     LOG("\n");
     for (unsigned mod = 0; mod < CPU_PROF_LIBS; mod++) {
-        if (mod != 0 && mod != 1 && mod != 2 && mod != 3 && mod != 5) {
+        if (mod == 6) {  // ("other": not sampled into bins)
             for (unsigned i = 0; i < CPU_PROF_BINS; i++) atomic_exchange_explicit(&cpu_prof_bins[mod][i], 0, memory_order_relaxed);
             continue;
         }
@@ -2451,10 +2466,21 @@ static void gfx_gmap(int stage) {
         LOG("[gmap] bounded draw staging: range=%llu MB total=%llu MB\n", (unsigned long long)(max_range >> 20), (unsigned long long)(max_total >> 20));
     }
     static uint64_t rejected_ranges, rejected_draws;
+    // (every 2 s: what the staging cost the CPU - draws staged, bytes copied, the copies' time - and what it left out,
+    // whose shader reads then give zero)
+    static uint64_t win_start, win_draws, win_bytes, win_ns, win_excl_ranges, win_excl_draws;
+    uint64_t t_in = plat_now_ns();
+    if (!win_start) win_start = t_in;
+    if (t_in - win_start >= 2000000000ull) {
+        LOG("[gmap] 2s: staged %llu draws, %.1f MB copied in %.1f ms; left out %llu ranges, %llu draws\n",
+            (unsigned long long)win_draws, win_bytes / 1048576.0, win_ns / 1e6, (unsigned long long)win_excl_ranges,
+            (unsigned long long)win_excl_draws);
+        win_start = t_in, win_draws = win_bytes = win_ns = win_excl_ranges = win_excl_draws = 0;
+    }
     for (int i = 0; i < 16; i++) {  // heap offsets of the bound storage buffers, 256-aligned, sorted by start
         uint64_t a = st.sbuf[stage][i].addr, sz = st.sbuf[stage][i].size;
         if (!a || !sz || a < HEAP_BASE || a - HEAP_BASE + sz > HEAP_MAX) continue;
-        if (sz > max_range) { if (++rejected_ranges <= 12) LOG("[gmap] range excluded: %llu bytes stage=%d\n", (unsigned long long)sz, stage); continue; }
+        if (sz > max_range) { win_excl_ranges++; if (++rejected_ranges <= 12) LOG("[gmap] range excluded: %llu bytes stage=%d\n", (unsigned long long)sz, stage); continue; }
         uint64_t lo = (a - HEAP_BASE) & ~255ull, hi = (a - HEAP_BASE + sz + 255) & ~255ull;
         if (hi > HEAP_MAX) hi = HEAP_MAX;
         int k = n++;
@@ -2469,6 +2495,7 @@ static void gfx_gmap(int stage) {
     uint64_t total = 0;
     for (int i = 0; i < m; i++) total += (r[i].hi - r[i].lo + 255) & ~255ull;
     if (!m || m > GMAP_MAX || total > max_total) {
+        if (m) win_excl_draws++;
         if (m && ++rejected_draws <= 12) LOG("[gmap] draw excluded: %d ranges %llu bytes\n", m, (unsigned long long)total);
         gx_fast = gfast_info(); return;
     }
@@ -2484,6 +2511,7 @@ static void gfx_gmap(int stage) {
     }
     gx_tab[GMAP_MAX * 4] = (uint32_t)m;
     gx_fast = (VkDescriptorBufferInfo){sp.buf, sp.off, total};
+    win_draws++, win_bytes += total, win_ns += plat_now_ns() - t_in;
 }
 
 static VkDescriptorBufferInfo gfast_info(void) {

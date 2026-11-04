@@ -46,6 +46,8 @@ int ipc_handle_request(Cpu *c, uint32_t h) {  // a service doing host I/O (romfs
 }
 
 static volatile int stop;
+extern __thread uint64_t g_blocked_ns, g_corewait_ns, g_corewait_max_ns, g_corewait_holder;
+static uint64_t hi_blocked, hi_corewait, hi_corewait_max, hi_holder;
 static _Atomic unsigned long long hi_work, hi_ipc, lo_work;
 static void busy_us(int us) {             // guest code: function entries all along
     uint64_t end = plat_now_ns() + us * 1000ull;
@@ -60,6 +62,7 @@ static void hi_thread(Cpu *c) {           // thread 82: work, IPC, work, IPC...
         else rt_svc(c, 0x21, 0);
         hi_ipc++;
     }
+    hi_blocked = g_blocked_ns, hi_corewait = g_corewait_ns, hi_corewait_max = g_corewait_max_ns, hi_holder = g_corewait_holder;
     rt_svc(c, 0x0A, 0);
 }
 static void lo_thread(Cpu *c) {           // threads 80 / 88: worse priority, same core
@@ -89,10 +92,12 @@ int main(int argc, char **argv) {
     uint64_t t0 = plat_now_ns();
     sleep(secs);
     stop = 1;
+    usleep(50000);  // (the better thread notes its kernel.c wait totals)
     double el = (plat_now_ns() - t0) / 1e9;
     fnprof_sched_enable(0);
-    printf("hi_work=%llu hi_ipc=%llu lo_work=%llu armed=%.1f%% safepoint_calls=%llu\n", hi_work, hi_ipc, lo_work,
-           100.0 * armed_ns / 1e9 / el, safepoint_calls);
+    printf("hi_work=%llu hi_ipc=%llu lo_work=%llu armed=%.1f%% safepoint_calls=%llu | hi blocked %.0f ms, core wait %.1f ms"
+           " (longest %.2f ms, holder %llu)\n", hi_work, hi_ipc, lo_work, 100.0 * armed_ns / 1e9 / el, safepoint_calls,
+           hi_blocked / 1e6, hi_corewait / 1e6, hi_corewait_max / 1e6, (unsigned long long)hi_holder);
     fflush(stdout);
     _exit(0);
 }

@@ -1,0 +1,1429 @@
+{
+  "intervals": 6,
+  "first_snapshot_excluded": true,
+  "caveat": "Top 100 threads per snapshot; absent rows counted zero. Other apps active; uncontrolled title course.",
+  "threads": [
+    {
+      "pid": "19307",
+      "tid": "19390",
+      "mean_cpu_percent_one_core": 23.67,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19307",
+      "tid": "19374",
+      "mean_cpu_percent_one_core": 20.3,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19307",
+      "tid": "19410",
+      "mean_cpu_percent_one_core": 20.17,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "103",
+      "tid": "103",
+      "mean_cpu_percent_one_core": 18.67,
+      "name": "[dmabuf-deferred-free-worker]"
+    },
+    {
+      "pid": "19307",
+      "tid": "19409",
+      "mean_cpu_percent_one_core": 15.87,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19968",
+      "tid": "17200",
+      "mean_cpu_percent_one_core": 12.17,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "588",
+      "tid": "600",
+      "mean_cpu_percent_one_core": 10.7,
+      "name": "android.hardware.graphics.allocator-V2-service"
+    },
+    {
+      "pid": "19307",
+      "tid": "19419",
+      "mean_cpu_percent_one_core": 10.57,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19307",
+      "tid": "19406",
+      "mean_cpu_percent_one_core": 9.83,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19307",
+      "tid": "19389",
+      "mean_cpu_percent_one_core": 9.23,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "588",
+      "tid": "31558",
+      "mean_cpu_percent_one_core": 9.2,
+      "name": "android.hardware.graphics.allocator-V2-service"
+    },
+    {
+      "pid": "19307",
+      "tid": "19393",
+      "mean_cpu_percent_one_core": 8.9,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "655",
+      "tid": "655",
+      "mean_cpu_percent_one_core": 8.53,
+      "name": "[mali_jd_thread]"
+    },
+    {
+      "pid": "19307",
+      "tid": "19394",
+      "mean_cpu_percent_one_core": 8.47,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "587",
+      "tid": "632",
+      "mean_cpu_percent_one_core": 6.63,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "92",
+      "tid": "92",
+      "mean_cpu_percent_one_core": 6.4,
+      "name": "[kswapd0]"
+    },
+    {
+      "pid": "587",
+      "tid": "587",
+      "mean_cpu_percent_one_core": 6.03,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "19497",
+      "tid": "19497",
+      "mean_cpu_percent_one_core": 5.77,
+      "name": "top"
+    },
+    {
+      "pid": "19307",
+      "tid": "19357",
+      "mean_cpu_percent_one_core": 5.37,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19307",
+      "tid": "19384",
+      "mean_cpu_percent_one_core": 5.07,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19307",
+      "tid": "19407",
+      "mean_cpu_percent_one_core": 4.63,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "2197",
+      "tid": "2274",
+      "mean_cpu_percent_one_core": 4.33,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "1094",
+      "tid": "19403",
+      "mean_cpu_percent_one_core": 4.3,
+      "name": "audioserver"
+    },
+    {
+      "pid": "19968",
+      "tid": "17209",
+      "mean_cpu_percent_one_core": 4.17,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19307",
+      "tid": "19351",
+      "mean_cpu_percent_one_core": 3.9,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19307",
+      "tid": "19420",
+      "mean_cpu_percent_one_core": 3.67,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19968",
+      "tid": "20203",
+      "mean_cpu_percent_one_core": 3.47,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "17309",
+      "mean_cpu_percent_one_core": 3.47,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1556",
+      "tid": "1556",
+      "mean_cpu_percent_one_core": 3.43,
+      "name": "python3"
+    },
+    {
+      "pid": "19968",
+      "tid": "17311",
+      "mean_cpu_percent_one_core": 3.4,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "17215",
+      "mean_cpu_percent_one_core": 3.27,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19307",
+      "tid": "19392",
+      "mean_cpu_percent_one_core": 3.23,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19968",
+      "tid": "20039",
+      "mean_cpu_percent_one_core": 3.13,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "17168",
+      "mean_cpu_percent_one_core": 3.07,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "19968",
+      "mean_cpu_percent_one_core": 3.07,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "17313",
+      "mean_cpu_percent_one_core": 2.83,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "589",
+      "tid": "589",
+      "mean_cpu_percent_one_core": 2.7,
+      "name": "android.hardware.graphics.composer@2.4-service"
+    },
+    {
+      "pid": "2197",
+      "tid": "2197",
+      "mean_cpu_percent_one_core": 2.53,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "19307",
+      "tid": "19405",
+      "mean_cpu_percent_one_core": 2.47,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "1571",
+      "tid": "1571",
+      "mean_cpu_percent_one_core": 2.33,
+      "name": "system_server"
+    },
+    {
+      "pid": "1805",
+      "tid": "1805",
+      "mean_cpu_percent_one_core": 2.33,
+      "name": "[irq/416-fts]"
+    },
+    {
+      "pid": "2197",
+      "tid": "2269",
+      "mean_cpu_percent_one_core": 2.27,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "2197",
+      "tid": "2271",
+      "mean_cpu_percent_one_core": 2.27,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "2197",
+      "tid": "2272",
+      "mean_cpu_percent_one_core": 2.23,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "2197",
+      "tid": "2267",
+      "mean_cpu_percent_one_core": 2.23,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "2197",
+      "tid": "2270",
+      "mean_cpu_percent_one_core": 2.23,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "16784",
+      "tid": "16784",
+      "mean_cpu_percent_one_core": 2.2,
+      "name": "[kworker/u16:2-async_vote_wq]"
+    },
+    {
+      "pid": "2197",
+      "tid": "2273",
+      "mean_cpu_percent_one_core": 2.2,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "2197",
+      "tid": "2266",
+      "mean_cpu_percent_one_core": 2.2,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "2197",
+      "tid": "2268",
+      "mean_cpu_percent_one_core": 2.17,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "295",
+      "tid": "295",
+      "mean_cpu_percent_one_core": 2.1,
+      "name": "[decon0_kthread]"
+    },
+    {
+      "pid": "19968",
+      "tid": "17211",
+      "mean_cpu_percent_one_core": 2.1,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1571",
+      "tid": "1985",
+      "mean_cpu_percent_one_core": 2.03,
+      "name": "system_server"
+    },
+    {
+      "pid": "532",
+      "tid": "532",
+      "mean_cpu_percent_one_core": 2.03,
+      "name": "[sugov:4]"
+    },
+    {
+      "pid": "521",
+      "tid": "538",
+      "mean_cpu_percent_one_core": 1.83,
+      "name": "logd"
+    },
+    {
+      "pid": "1571",
+      "tid": "3774",
+      "mean_cpu_percent_one_core": 1.83,
+      "name": "system_server"
+    },
+    {
+      "pid": "19968",
+      "tid": "17212",
+      "mean_cpu_percent_one_core": 1.83,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "522",
+      "tid": "522",
+      "mean_cpu_percent_one_core": 1.77,
+      "name": "lmkd"
+    },
+    {
+      "pid": "19667",
+      "tid": "19667",
+      "mean_cpu_percent_one_core": 1.73,
+      "name": "zygote64"
+    },
+    {
+      "pid": "19307",
+      "tid": "19408",
+      "mean_cpu_percent_one_core": 1.67,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "2567",
+      "tid": "2567",
+      "mean_cpu_percent_one_core": 1.67,
+      "name": "com.android.phone"
+    },
+    {
+      "pid": "19667",
+      "tid": "19674",
+      "mean_cpu_percent_one_core": 1.67,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "521",
+      "tid": "17251",
+      "mean_cpu_percent_one_core": 1.63,
+      "name": "logd"
+    },
+    {
+      "pid": "2197",
+      "tid": "3869",
+      "mean_cpu_percent_one_core": 1.5,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "2197",
+      "tid": "2239",
+      "mean_cpu_percent_one_core": 1.47,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "534",
+      "tid": "534",
+      "mean_cpu_percent_one_core": 1.4,
+      "name": "[sugov:6]"
+    },
+    {
+      "pid": "2816",
+      "tid": "19630",
+      "mean_cpu_percent_one_core": 1.4,
+      "name": "com.google.android.gms"
+    },
+    {
+      "pid": "1571",
+      "tid": "1795",
+      "mean_cpu_percent_one_core": 1.27,
+      "name": "system_server"
+    },
+    {
+      "pid": "654",
+      "tid": "654",
+      "mean_cpu_percent_one_core": 1.27,
+      "name": "[mali_apc_thread]"
+    },
+    {
+      "pid": "19307",
+      "tid": "19307",
+      "mean_cpu_percent_one_core": 1.27,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "1571",
+      "tid": "2009",
+      "mean_cpu_percent_one_core": 1.23,
+      "name": "system_server"
+    },
+    {
+      "pid": "19307",
+      "tid": "19412",
+      "mean_cpu_percent_one_core": 1.23,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "2197",
+      "tid": "2440",
+      "mean_cpu_percent_one_core": 1.17,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "19307",
+      "tid": "19353",
+      "mean_cpu_percent_one_core": 1.13,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "17246",
+      "tid": "17246",
+      "mean_cpu_percent_one_core": 1.1,
+      "name": "logcat"
+    },
+    {
+      "pid": "1571",
+      "tid": "2049",
+      "mean_cpu_percent_one_core": 1.07,
+      "name": "system_server"
+    },
+    {
+      "pid": "19307",
+      "tid": "19411",
+      "mean_cpu_percent_one_core": 1.07,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19667",
+      "tid": "19758",
+      "mean_cpu_percent_one_core": 1.07,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "1571",
+      "tid": "2086",
+      "mean_cpu_percent_one_core": 1.03,
+      "name": "system_server"
+    },
+    {
+      "pid": "587",
+      "tid": "952",
+      "mean_cpu_percent_one_core": 1.0,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "20170",
+      "tid": "20207",
+      "mean_cpu_percent_one_core": 1.0,
+      "name": "com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0"
+    },
+    {
+      "pid": "19968",
+      "tid": "24088",
+      "mean_cpu_percent_one_core": 0.97,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19307",
+      "tid": "19404",
+      "mean_cpu_percent_one_core": 0.97,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "15192",
+      "tid": "15192",
+      "mean_cpu_percent_one_core": 0.97,
+      "name": "[kworker/u17:0-kbase_pm_poweroff_wait]"
+    },
+    {
+      "pid": "19081",
+      "tid": "19081",
+      "mean_cpu_percent_one_core": 0.97,
+      "name": "node"
+    },
+    {
+      "pid": "19968",
+      "tid": "17297",
+      "mean_cpu_percent_one_core": 0.97,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19307",
+      "tid": "19383",
+      "mean_cpu_percent_one_core": 0.93,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "1059",
+      "tid": "1098",
+      "mean_cpu_percent_one_core": 0.9,
+      "name": "android.hardware.sensors-service.multihal"
+    },
+    {
+      "pid": "18644",
+      "tid": "18644",
+      "mean_cpu_percent_one_core": 0.9,
+      "name": "[kworker/u17:1-alsa_pcm_period_work_0]"
+    },
+    {
+      "pid": "19119",
+      "tid": "19119",
+      "mean_cpu_percent_one_core": 0.87,
+      "name": "[kworker/2:5H-kblockd]"
+    },
+    {
+      "pid": "587",
+      "tid": "944",
+      "mean_cpu_percent_one_core": 0.87,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "19968",
+      "tid": "20678",
+      "mean_cpu_percent_one_core": 0.87,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19125",
+      "tid": "19125",
+      "mean_cpu_percent_one_core": 0.87,
+      "name": "[kworker/3:2H-kblockd]"
+    },
+    {
+      "pid": "19307",
+      "tid": "19418",
+      "mean_cpu_percent_one_core": 0.83,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "16552",
+      "tid": "16552",
+      "mean_cpu_percent_one_core": 0.83,
+      "name": "[kworker/u16:0-gpu-dvfs-control]"
+    },
+    {
+      "pid": "19307",
+      "tid": "19413",
+      "mean_cpu_percent_one_core": 0.83,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19053",
+      "tid": "19053",
+      "mean_cpu_percent_one_core": 0.8,
+      "name": "node"
+    },
+    {
+      "pid": "19399",
+      "tid": "19399",
+      "mean_cpu_percent_one_core": 0.8,
+      "name": "[kworker/1:4H-kblockd]"
+    },
+    {
+      "pid": "2816",
+      "tid": "18473",
+      "mean_cpu_percent_one_core": 0.77,
+      "name": "com.google.android.gms"
+    },
+    {
+      "pid": "18737",
+      "tid": "18737",
+      "mean_cpu_percent_one_core": 0.77,
+      "name": "[kworker/0:1H-kblockd]"
+    },
+    {
+      "pid": "587",
+      "tid": "627",
+      "mean_cpu_percent_one_core": 0.73,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "19667",
+      "tid": "19764",
+      "mean_cpu_percent_one_core": 0.73,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "19968",
+      "tid": "20183",
+      "mean_cpu_percent_one_core": 0.73,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "587",
+      "tid": "2007",
+      "mean_cpu_percent_one_core": 0.7,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "163",
+      "tid": "163",
+      "mean_cpu_percent_one_core": 0.7,
+      "name": "[eh_comp_thread]"
+    },
+    {
+      "pid": "2524",
+      "tid": "2524",
+      "mean_cpu_percent_one_core": 0.7,
+      "name": "com.shannon.imsservice"
+    },
+    {
+      "pid": "19968",
+      "tid": "17214",
+      "mean_cpu_percent_one_core": 0.7,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "17354",
+      "mean_cpu_percent_one_core": 0.7,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "20669",
+      "mean_cpu_percent_one_core": 0.67,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "994",
+      "tid": "1811",
+      "mean_cpu_percent_one_core": 0.67,
+      "name": "twoshay"
+    },
+    {
+      "pid": "1094",
+      "tid": "19401",
+      "mean_cpu_percent_one_core": 0.63,
+      "name": "audioserver"
+    },
+    {
+      "pid": "1059",
+      "tid": "1492",
+      "mean_cpu_percent_one_core": 0.63,
+      "name": "android.hardware.sensors-service.multihal"
+    },
+    {
+      "pid": "19968",
+      "tid": "24562",
+      "mean_cpu_percent_one_core": 0.63,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "24561",
+      "mean_cpu_percent_one_core": 0.63,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1571",
+      "tid": "2008",
+      "mean_cpu_percent_one_core": 0.63,
+      "name": "system_server"
+    },
+    {
+      "pid": "19667",
+      "tid": "19751",
+      "mean_cpu_percent_one_core": 0.63,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "587",
+      "tid": "2719",
+      "mean_cpu_percent_one_core": 0.6,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "1571",
+      "tid": "5407",
+      "mean_cpu_percent_one_core": 0.6,
+      "name": "system_server"
+    },
+    {
+      "pid": "19968",
+      "tid": "6540",
+      "mean_cpu_percent_one_core": 0.6,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "9008",
+      "mean_cpu_percent_one_core": 0.57,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1571",
+      "tid": "1683",
+      "mean_cpu_percent_one_core": 0.57,
+      "name": "system_server"
+    },
+    {
+      "pid": "19968",
+      "tid": "20021",
+      "mean_cpu_percent_one_core": 0.57,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1571",
+      "tid": "2123",
+      "mean_cpu_percent_one_core": 0.53,
+      "name": "system_server"
+    },
+    {
+      "pid": "19307",
+      "tid": "19436",
+      "mean_cpu_percent_one_core": 0.5,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "587",
+      "tid": "987",
+      "mean_cpu_percent_one_core": 0.5,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "19968",
+      "tid": "9669",
+      "mean_cpu_percent_one_core": 0.5,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19154",
+      "tid": "19154",
+      "mean_cpu_percent_one_core": 0.5,
+      "name": "[kworker/4:4H-kblockd]"
+    },
+    {
+      "pid": "1571",
+      "tid": "4760",
+      "mean_cpu_percent_one_core": 0.5,
+      "name": "system_server"
+    },
+    {
+      "pid": "19667",
+      "tid": "19760",
+      "mean_cpu_percent_one_core": 0.5,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "19667",
+      "tid": "19728",
+      "mean_cpu_percent_one_core": 0.5,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "19307",
+      "tid": "19398",
+      "mean_cpu_percent_one_core": 0.47,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19968",
+      "tid": "11900",
+      "mean_cpu_percent_one_core": 0.47,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1571",
+      "tid": "1725",
+      "mean_cpu_percent_one_core": 0.47,
+      "name": "system_server"
+    },
+    {
+      "pid": "19968",
+      "tid": "20676",
+      "mean_cpu_percent_one_core": 0.47,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "14773",
+      "mean_cpu_percent_one_core": 0.47,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "17162",
+      "mean_cpu_percent_one_core": 0.47,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "20477",
+      "mean_cpu_percent_one_core": 0.43,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "17218",
+      "mean_cpu_percent_one_core": 0.43,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1571",
+      "tid": "1972",
+      "mean_cpu_percent_one_core": 0.43,
+      "name": "system_server"
+    },
+    {
+      "pid": "25998",
+      "tid": "26003",
+      "mean_cpu_percent_one_core": 0.43,
+      "name": "com.android.chrome"
+    },
+    {
+      "pid": "17508",
+      "tid": "17508",
+      "mean_cpu_percent_one_core": 0.4,
+      "name": "[kworker/5:3H-kblockd]"
+    },
+    {
+      "pid": "7028",
+      "tid": "7049",
+      "mean_cpu_percent_one_core": 0.4,
+      "name": "com.google.android.apps.scone"
+    },
+    {
+      "pid": "31404",
+      "tid": "31404",
+      "mean_cpu_percent_one_core": 0.4,
+      "name": "com.google.android.apps.nexuslauncher"
+    },
+    {
+      "pid": "25998",
+      "tid": "26043",
+      "mean_cpu_percent_one_core": 0.4,
+      "name": "com.android.chrome"
+    },
+    {
+      "pid": "1571",
+      "tid": "2106",
+      "mean_cpu_percent_one_core": 0.37,
+      "name": "system_server"
+    },
+    {
+      "pid": "19968",
+      "tid": "17355",
+      "mean_cpu_percent_one_core": 0.37,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "2197",
+      "tid": "2207",
+      "mean_cpu_percent_one_core": 0.37,
+      "name": "com.android.systemui"
+    },
+    {
+      "pid": "1571",
+      "tid": "2866",
+      "mean_cpu_percent_one_core": 0.37,
+      "name": "system_server"
+    },
+    {
+      "pid": "19307",
+      "tid": "19426",
+      "mean_cpu_percent_one_core": 0.33,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "18376",
+      "tid": "18376",
+      "mean_cpu_percent_one_core": 0.33,
+      "name": "com.google.android.gms.ui"
+    },
+    {
+      "pid": "25998",
+      "tid": "25998",
+      "mean_cpu_percent_one_core": 0.33,
+      "name": "com.android.chrome"
+    },
+    {
+      "pid": "19667",
+      "tid": "19732",
+      "mean_cpu_percent_one_core": 0.33,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "19307",
+      "tid": "19540",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "26659",
+      "tid": "26663",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "com.google.android.googlequicksearchbox:interactor"
+    },
+    {
+      "pid": "19968",
+      "tid": "17300",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1571",
+      "tid": "2298",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "system_server"
+    },
+    {
+      "pid": "19968",
+      "tid": "20036",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1571",
+      "tid": "2284",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "system_server"
+    },
+    {
+      "pid": "2567",
+      "tid": "2740",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "com.android.phone"
+    },
+    {
+      "pid": "667",
+      "tid": "2944",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "android.hardware.power-service.pixel-libperfmgr"
+    },
+    {
+      "pid": "587",
+      "tid": "954",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "19968",
+      "tid": "17318",
+      "mean_cpu_percent_one_core": 0.3,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "2567",
+      "tid": "3106",
+      "mean_cpu_percent_one_core": 0.27,
+      "name": "com.android.phone"
+    },
+    {
+      "pid": "1571",
+      "tid": "4374",
+      "mean_cpu_percent_one_core": 0.27,
+      "name": "system_server"
+    },
+    {
+      "pid": "1000",
+      "tid": "1010",
+      "mean_cpu_percent_one_core": 0.27,
+      "name": "statsd"
+    },
+    {
+      "pid": "1741",
+      "tid": "1792",
+      "mean_cpu_percent_one_core": 0.27,
+      "name": "com.android.chrome:privileged_process2"
+    },
+    {
+      "pid": "19968",
+      "tid": "20670",
+      "mean_cpu_percent_one_core": 0.27,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "20064",
+      "mean_cpu_percent_one_core": 0.27,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "31404",
+      "tid": "31427",
+      "mean_cpu_percent_one_core": 0.27,
+      "name": "com.google.android.apps.nexuslauncher"
+    },
+    {
+      "pid": "19307",
+      "tid": "19422",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19968",
+      "tid": "20485",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "17353",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19667",
+      "tid": "19754",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "19667",
+      "tid": "19713",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "19667",
+      "tid": "19693",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "20170",
+      "tid": "20234",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0"
+    },
+    {
+      "pid": "19968",
+      "tid": "20040",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "20037",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "31404",
+      "tid": "31409",
+      "mean_cpu_percent_one_core": 0.23,
+      "name": "com.google.android.apps.nexuslauncher"
+    },
+    {
+      "pid": "1571",
+      "tid": "4769",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "system_server"
+    },
+    {
+      "pid": "19288",
+      "tid": "19288",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "python"
+    },
+    {
+      "pid": "19307",
+      "tid": "19435",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19307",
+      "tid": "19416",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "7028",
+      "tid": "7039",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "com.google.android.apps.scone"
+    },
+    {
+      "pid": "1490",
+      "tid": "1490",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "[com.google.usf.non_wake_up]"
+    },
+    {
+      "pid": "531",
+      "tid": "531",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "[sugov:0]"
+    },
+    {
+      "pid": "2816",
+      "tid": "4261",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "com.google.android.gms"
+    },
+    {
+      "pid": "2816",
+      "tid": "2816",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "com.google.android.gms"
+    },
+    {
+      "pid": "19667",
+      "tid": "19702",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "19968",
+      "tid": "17091",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "7028",
+      "tid": "7032",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "com.google.android.apps.scone"
+    },
+    {
+      "pid": "1571",
+      "tid": "1711",
+      "mean_cpu_percent_one_core": 0.2,
+      "name": "system_server"
+    },
+    {
+      "pid": "73",
+      "tid": "73",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "[rcuop/7]"
+    },
+    {
+      "pid": "7415",
+      "tid": "7415",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "adb"
+    },
+    {
+      "pid": "19224",
+      "tid": "19230",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "com.google.android.apps.turbo:aab"
+    },
+    {
+      "pid": "18376",
+      "tid": "18491",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "com.google.android.gms.ui"
+    },
+    {
+      "pid": "19968",
+      "tid": "17170",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1571",
+      "tid": "2629",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "system_server"
+    },
+    {
+      "pid": "587",
+      "tid": "2685",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "587",
+      "tid": "628",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "surfaceflinger"
+    },
+    {
+      "pid": "19968",
+      "tid": "20046",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "20004",
+      "mean_cpu_percent_one_core": 0.17,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "20674",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "12967",
+      "tid": "12967",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "python"
+    },
+    {
+      "pid": "2524",
+      "tid": "6658",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.shannon.imsservice"
+    },
+    {
+      "pid": "11219",
+      "tid": "11219",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "adbd"
+    },
+    {
+      "pid": "79",
+      "tid": "79",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "[kcompactd0]"
+    },
+    {
+      "pid": "1571",
+      "tid": "2684",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "system_server"
+    },
+    {
+      "pid": "1571",
+      "tid": "1708",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "system_server"
+    },
+    {
+      "pid": "1741",
+      "tid": "1748",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.android.chrome:privileged_process2"
+    },
+    {
+      "pid": "19667",
+      "tid": "19767",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "19667",
+      "tid": "19686",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "19667",
+      "tid": "19680",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.google.android.gm"
+    },
+    {
+      "pid": "18875",
+      "tid": "18875",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "[kworker/7:4H-kblockd]"
+    },
+    {
+      "pid": "18865",
+      "tid": "18865",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "[kworker/6:4H-kverityd]"
+    },
+    {
+      "pid": "17510",
+      "tid": "17510",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "[kworker/5:5H-kblockd]"
+    },
+    {
+      "pid": "19968",
+      "tid": "17299",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "20240",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "19968",
+      "tid": "19975",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "7070",
+      "tid": "7166",
+      "mean_cpu_percent_one_core": 0.13,
+      "name": "com.google.android.inputmethod.latin"
+    },
+    {
+      "pid": "19307",
+      "tid": "19421",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "19968",
+      "tid": "17256",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "com.robinhood.android"
+    },
+    {
+      "pid": "1018",
+      "tid": "20405",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "android.hardware.audio.service"
+    },
+    {
+      "pid": "2524",
+      "tid": "3627",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "com.shannon.imsservice"
+    },
+    {
+      "pid": "2493",
+      "tid": "3322",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "com.shannon.rcsservice"
+    },
+    {
+      "pid": "2567",
+      "tid": "2916",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "com.android.phone"
+    },
+    {
+      "pid": "2567",
+      "tid": "2834",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "com.android.phone"
+    },
+    {
+      "pid": "1571",
+      "tid": "2788",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "system_server"
+    },
+    {
+      "pid": "2567",
+      "tid": "2584",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "com.android.phone"
+    },
+    {
+      "pid": "2493",
+      "tid": "2519",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "com.shannon.rcsservice"
+    },
+    {
+      "pid": "7415",
+      "tid": "7431",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "adb"
+    },
+    {
+      "pid": "2567",
+      "tid": "2589",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "com.android.phone"
+    },
+    {
+      "pid": "667",
+      "tid": "2469",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "android.hardware.power-service.pixel-libperfmgr"
+    },
+    {
+      "pid": "66",
+      "tid": "66",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "[rcuop/6]"
+    },
+    {
+      "pid": "19307",
+      "tid": "19423",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "org.smcraft.smm2recomp"
+    },
+    {
+      "pid": "2198",
+      "tid": "2198",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "android.hardware.input.processor-service"
+    },
+    {
+      "pid": "1018",
+      "tid": "1778",
+      "mean_cpu_percent_one_core": 0.1,
+      "name": "android.hardware.audio.service"
+    }
+  ]
+}

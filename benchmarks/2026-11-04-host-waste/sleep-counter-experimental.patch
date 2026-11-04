@@ -1,0 +1,65 @@
+--- a/runtime/kernel.c
++++ b/runtime/kernel.c
+@@ -26,6 +26,27 @@
+ 
+ pthread_mutex_t g_klock = PTHREAD_MUTEX_INITIALIZER;
+ static __thread KThread *t_cur;
++
++// Opt-in diagnostic; no guest scheduling changes. UI thread drains counters.
++static atomic_uint_fast64_t host_sleep_zero, host_sleep_yield;
++void kernel_host_poll_report(void) {
++    static int enabled = -1;
++    static uint64_t last;
++    if (enabled < 0) {
++        const char *v = getenv("LARECOMP_HOST_POLL_PROF");
++        enabled = v && atoi(v) != 0;
++    }
++    if (!enabled) return;
++    uint64_t now = plat_now_ns();
++    if (!last) { last = now; return; }
++    if (now - last < 1000000000ull) return;
++    uint64_t zero = atomic_exchange_explicit(&host_sleep_zero, 0, memory_order_relaxed);
++    uint64_t yield = atomic_exchange_explicit(&host_sleep_yield, 0, memory_order_relaxed);
++    LOG("[hostpoll] elapsed_ns=%llu sleep_zero=%llu sched_yield=%llu\n",
++        (unsigned long long)(now-last), (unsigned long long)zero, (unsigned long long)yield);
++    last = now;
++}
++
+ 
+ // ------------------------------------------------------------------ handle table
+ #define MAX_HANDLES 4096
+@@ -834,12 +855,22 @@
+     case 0x0A: longjmp(t_cur->unwind, 1);  // ExitThread: back to thread_main, which signals the thread object
+     case 0x0B: {  // SleepThread (in slices of at most 50 ms: a reboot doesn't wait out a long sleep)
+         int64_t ns = (int64_t)x[0];
++        static __thread int poll_prof = -1;
++        if (poll_prof < 0) {
++            const char *v = getenv("LARECOMP_HOST_POLL_PROF");
++            poll_prof = v && atoi(v) != 0;
++        }
++        if (poll_prof && ns == 0)
++            atomic_fetch_add_explicit(&host_sleep_zero, 1, memory_order_relaxed);
+         pthread_mutex_lock(&g_klock);
+         if (ns <= 0) {  // yield: to a waiting thread of the same or better priority on this core
+             KThread *w = t_cur && t_cur->core >= 0 ? core_best_waiter(t_cur->core) : NULL;
+             if (w && w->prio <= t_cur->prio) { core_release(t_cur); core_acquire(t_cur); }
+             pthread_mutex_unlock(&g_klock);
+-            if (!w) sched_yield();
++            if (!w) {
++                if (poll_prof) atomic_fetch_add_explicit(&host_sleep_yield, 1, memory_order_relaxed);
++                sched_yield();
++            }
+             break;
+         }
+         core_release(t_cur);
+--- a/runtime/nvn/vulkan/device.c
++++ b/runtime/nvn/vulkan/device.c
+@@ -1170,6 +1170,8 @@
+         if (bounded) SDL_Delay(4);
+ #endif
+         menu_apply_window_requests(window);
++        extern void kernel_host_poll_report(void);
++        kernel_host_poll_report();
+         atomic_store(&g_display_hz, framegen_display_hz(window));  // (SDL's display state: read on this thread)
+     }
+ }

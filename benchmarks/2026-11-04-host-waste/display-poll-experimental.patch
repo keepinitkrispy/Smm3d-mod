@@ -1,0 +1,27 @@
+--- a/runtime/nvn/vulkan/device.c
++++ b/runtime/nvn/vulkan/device.c
+@@ -1136,6 +1136,10 @@
+ 
+ int ui_run(void) {
+     ui_window_init();
++    const char *hz_env = getenv("LARECOMP_DISPLAY_POLL_MS");
++    unsigned hz_ms = hz_env ? (unsigned)strtoul(hz_env, NULL, 10) : 0;
++    if (hz_ms > 1000) hz_ms = 1000;
++    uint64_t next_hz_poll = 0;
+     atomic_store(&ui_ready, true);
+     for (;;) {
+         if (rt_reboot_requested()) return rt_reboot_requested();  // (runtime/main.c tears the game down)
+@@ -1170,6 +1174,10 @@
+         if (bounded) SDL_Delay(4);
+ #endif
+         menu_apply_window_requests(window);
+-        atomic_store(&g_display_hz, framegen_display_hz(window));  // (SDL's display state: read on this thread)
+-    }
+-}
++        uint64_t host_now = SDL_GetTicksNS();
++        if (!hz_ms || host_now >= next_hz_poll) {
++            atomic_store(&g_display_hz, framegen_display_hz(window));
++            next_hz_poll = host_now + (uint64_t)hz_ms * 1000000ull;
++        }
++    }
++}

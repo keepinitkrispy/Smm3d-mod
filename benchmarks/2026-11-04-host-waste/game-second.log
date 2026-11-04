@@ -1,0 +1,414 @@
+[env] LARECOMP_VK_NO_GMEM=1 (recomp.env)
+[env] LARECOMP_GMAP_RANGE_MB=16 (recomp.env)
+[env] LARECOMP_GMAP_TOTAL_MB=32 (recomp.env)
+[env] LARECOMP_IPC_RELEASE_CORE=1 (recomp.env)
+[env] LARECOMP_CORE_QUANTUM_US=4000 (recomp.env)
+[env] LARECOMP_BOUNDED_EVENTS=1 (recomp.env)
+[env] LARECOMP_PACE=0 (recomp.env)
+[guest] in the window: 800000000-b20000000 rw-p 00000000 00:00 0 
+[guest] window 0x800000000-0xb20000000; highest mapping ends at 0x7fd919d000; 0 mappings (0 MB) in 0x7000000000-0x7320000000
+[paths] data: /storage/emulated/0/Android/data/org.smcraft.smm2recomp/files
+[gamelib] libsmm2game.so (105374 + 34472 functions)
+loaded main  at 800000000 size 2e74000 syms 947
+loaded sdk   at 804000000 size cd4000 syms 25091
+relocated main  (34 imports bound to host stubs)
+[loader] sdk: _ZN2nn2os5MutexD2Ev bound to an earlier module's
+[loader] sdk: _ZN2nn6crypto6detail10CbcMacImpl20EncryptBlockCallbackINS0_12AesEncryptorILm16EEEEEvPvPKvS8_ bound to an earlier module's
+[loader] sdk: _ZdlPv bound to an earlier module's
+[loader] sdk: _Znwm bound to an earlier module's
+[loader] sdk: _ZNSt3__1dvIdEENS_7complexIT_EERKS3_S5_ bound to an earlier module's
+[loader] sdk: _ZNSt3__1mlIdEENS_7complexIT_EERKS3_S5_ bound to an earlier module's
+[loader] sdk: _ZnwmRKSt9nothrow_t bound to an earlier module's
+[loader] sdk: _ZnamRKSt9nothrow_t bound to an earlier module's
+[loader] sdk: _ZdaPv bound to an earlier module's
+[loader] sdk: _ZdlPvRKSt9nothrow_t bound to an earlier module's
+[loader] sdk: Libz_SigloMiddlewareInfo bound to an earlier module's
+[loader] sdk: _Znam bound to an earlier module's
+[loader] sdk: _ZNSt3__113__tree_removeIPNS_16__tree_node_baseIPvEEEEvT_S5_ bound to an earlier module's
+[loader] sdk: _ZNSt3__127__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_ bound to an earlier module's
+relocated sdk   (0 imports bound to host stubs)
+[settings] loaded smm2.ini
+main thread: prio 44, stack 0x100000
+init sdk (DT_INIT 804000030, 106 init_array entries)
+[vk] gpu 0: Mali-G78 (api 1.4.305)
+[vk] using Mali-G78
+[vk] shader global memory: per-draw copies of the storage buffers (no host memory import)
+[vk] surface 2400x1080, transform 0x2, window 2400x1080
+[sm] GetService lm
+[ipc] close session lm (handle 103)
+[sm] GetService apm
+[sm] GetService appletOE
+[ipc] control 3 on appletOE (handle 105)
+[ipc] control 0 on appletOE (handle 105)
+[eventpump] bounded=1
+[am] ISelfController cmd 91 (unhandled, ok)
+[am] IWindowController cmd 10 (unhandled, ok)
+[am] ISelfController cmd 13 (unhandled, ok)
+[am] ISelfController cmd 16 (unhandled, ok)
+[sm] GetService aoc:u
+[sm] GetService pctl
+[ipc] control 3 on pctl (handle 109)
+[ipc] control 0 on pctl (handle 109)
+[sm] GetService pctl:s
+[ipc] control 3 on pctl:s (handle 10a)
+[ipc] control 0 on pctl:s (handle 10a)
+[ipc] close session pctl:s (handle 10a)
+[sm] GetService pctl:a
+[ipc] control 3 on pctl:a (handle 10a)
+[ipc] control 0 on pctl:a (handle 10a)
+[ipc] close session pctl:a (handle 10a)
+[sm] GetService pctl:r
+[ipc] control 3 on pctl:r (handle 10a)
+[ipc] control 0 on pctl:r (handle 10a)
+[ipc] close session pctl:r (handle 10a)
+[pctl] IParentalControlService cmd 1 (ok)
+init main (DT_INIT 800000030, 2502 init_array entries)
+[sm] GetService time:u
+[ipc] control 3 on time:u (handle 10a)
+[ipc] control 0 on time:u (handle 10a)
+[time] shared memory mapped at 9c3404000
+[time] StandardUserSystemClock::GetCurrentTime (host clock)
+[ipc] control 3 on lm:ILogger (handle 104)
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpDateTime |  | MainThread | ###  Application Start Time [09:33:36] ###
+[sm] GetService fsp-srv
+[ipc] control 3 on fsp-srv (handle 10c)
+[ipc] control 0 on fsp-srv (handle 10c)
+[ipc] control 2 on fsp-srv (handle 10c)
+[ipc] control 2 on fsp-srv (handle 10d)
+[mod] 100 Mario Challenge on: courses from TGRCode (built-in server), ruleset hundred
+[lanky] Lanky Mario (Weird Mushroom) off
+[fs] romfs index of extracted/romfs + mods-generated/romfs,: 3801 files, 0.2 MB of tables, image 3.05 GB (122ms)
+[fs] romfs reads: 1 (0 KB)
+[fs] romfs reads: 2 (0 KB)
+[fs] romfs reads: 4 (1 KB)
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | <><><><><><><><> dumpMemoryInfo [ Application Start ] <><><><><><><><>
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 3284 MB: HBMなどのシステム以外のアプリ用領域
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 3220 MB  アプリのRootHeap + SDK用のAllocateMemoryBlock
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread |   63 MB: Program
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread |    1 MB: 空き
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 
+
+[vk] Mali-G78, swapchain 2400x1080
+[nvn] device initialized
+[nvn] window origin mode 1
+[nvn] window with 3 textures
+[kernel] CreateThread entry=80432e240 arg=a44fe7020 stack=a315c3fe0 prio=30 core=-2 -> 111
+[sm] GetService nifm:u
+[ipc] control 3 on nifm:u (handle 112)
+[ipc] control 0 on nifm:u (handle 112)
+[kernel] CreateThread entry=80432e240 arg=a4213c020 stack=a09e25fe0 prio=44 core=-2 -> 113
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[sm] GetService hid
+[kernel] CreateThread entry=80432e240 arg=a45024020 stack=a1c5e3fe0 prio=43 core=-2 -> 117
+[ipc] control 3 on hid (handle 114)
+[touch] InitializeTouchScreen
+[kernel] CreateThread entry=80432e240 arg=a45038020 stack=a02a80fe0 prio=44 core=-2 -> 118
+[kernel] CreateThread entry=80432e240 arg=a45139020 stack=a05663fe0 prio=44 core=-2 -> 119
+[kernel] CreateThread entry=80432e240 arg=a4523a020 stack=a0e64dfe0 prio=44 core=-2 -> 11a
+[kernel] CreateThread entry=80432e240 arg=a4524c020 stack=a20f5bfe0 prio=45 core=-2 -> 11b
+[kernel] CreateThread entry=80432e240 arg=a4525d020 stack=a2b6bcfe0 prio=45 core=-2 -> 11c
+[am] ISelfController cmd 11 (unhandled, ok)
+[am] ISelfController cmd 12 (unhandled, ok)
+[am] ISelfController cmd 14 (unhandled, ok)
+[am] ISelfController cmd 1 (unhandled, ok)
+[sm] GetService set
+[ipc] close session set (handle 11d)
+[fs] romfs reads: 8 (235 KB)
+[corepreempt] handoffs=1
+[sm] GetService acc:u0
+[ipc] control 3 on acc:u0 (handle 11d)
+[ipc] control 0 on acc:u0 (handle 11d)
+[fs] mounted host directory save/save_0
+[time] StandardUserSystemClock::GetCurrentTime (host clock)
+[time] StandardUserSystemClock::GetCurrentTime (host clock)
+[kernel] thread 88 waits 250ms for core 0 (held by thread 82, last svc 1d)
+[kernel] CreateThread entry=80432e240 arg=a45d1e020 stack=a2b790fe0 prio=47 core=-2 -> 11f
+[fs] mounted host directory save/save_0
+[am] IAudioController cmd 1 (ok)
+[am] IAudioController cmd 2 (ok)
+[am] IAudioController cmd 0 (ok)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 120)
+[sm] GetService audren:u
+Low latency audio enabled
+[audren] device 48000 Hz, 960 frames/period; queue target 2160 samples
+[audren] renderer 48000 Hz, 240 samples/frame, 96 voices, 16 mixes, 96 mix buffers, 96 splitters, 20 effects
+[ipc] close session audren:u (handle 120)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 120)
+[ipc] control 3 on IAudioDevice (handle 121)
+[ipc] close session IAudioDevice (handle 121)
+[kernel] CreateThread entry=80432e240 arg=a48179020 stack=a31bd3fe0 prio=32 core=-2 -> 120
+[kernel] CreateThread entry=80432e240 arg=a4817f020 stack=a116effe0 prio=31 core=-2 -> 121
+[audren] splitters: 0 updated, 672 destinations (v1)
+[audren] mix 0 used 1 vol 1.000 bufs 6 dest 2147483647 splitter -1:
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] control 3 on IAudioDevice (handle 126)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] control 3 on IAudioDevice (handle 126)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] control 3 on IAudioDevice (handle 126)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 126)
+[ipc] close session IAudioDevice (handle 128)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 126)
+[ipc] control 3 on IAudioDevice (handle 128)
+[ipc] close session IAudioDevice (handle 128)
+[kernel] CreateThread entry=80432e240 arg=a4891e020 stack=a09aaefe0 prio=45 core=-2 -> 126
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 128)
+[ipc] control 3 on IAudioDevice (handle 129)
+[ipc] close session IAudioDevice (handle 129)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 128)
+[ipc] control 3 on IAudioDevice (handle 129)
+[ipc] close session IAudioDevice (handle 129)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 128)
+[ipc] control 3 on IAudioDevice (handle 129)
+[ipc] close session IAudioDevice (handle 129)
+[fs] romfs reads: 16 (9872 KB)
+[kernel] thread 88 waits 500ms for core 0 (held by thread 82, last svc 21)
+[kernel] CreateThread entry=80432e240 arg=a48df0020 stack=a1cfe3fe0 prio=43 core=-2 -> 128
+[kernel] CreateThread entry=80432e240 arg=a48e36020 stack=a25df5fe0 prio=44 core=-2 -> 129
+[kernel] CreateThread entry=80432e240 arg=a48e77020 stack=a323f3fe0 prio=44 core=-2 -> 12a
+[kernel] CreateThread entry=80432e240 arg=a48eb8020 stack=a2f672fe0 prio=44 core=-2 -> 12b
+[fs] romfs reads: 32 (10472 KB)
+[kernel] thread 88 waits 750ms for core 0 (held by thread 82, last svc 21)
+[pl] system font fonts/nintendo_udsg-r_std_003.bfttf (2053628 bytes)
+[pl] system font fonts/nintendo_ext_003.bfttf (180236 bytes)
+[pl] system font fonts/nintendo_udsg-r_ext_zh-cn_003.bfttf (123912 bytes)
+[pl] system font fonts/nintendo_udsg-r_org_zh-cn_003.bfttf (7848200 bytes)
+[pl] system font fonts/nintendo_udjxh-db_zh-tw_003.bfttf (3580260 bytes)
+[pl] system font fonts/nintendo_udsg-r_ko_003.bfttf (3672868 bytes)
+[kernel] CreateThread entry=80432e240 arg=a499d5020 stack=a0c37efe0 prio=46 core=-2 -> 12c
+[kernel] CreateThread entry=80432e240 arg=a4a470020 stack=a08e46fe0 prio=43 core=-2 -> 12d
+[kernel] CreateThread entry=80432e240 arg=a4b5a8020 stack=a39cb2fe0 prio=52 core=-2 -> 12e
+[sm] GetService friend:u
+[ipc] control 3 on friend:u (handle 12f)
+[ipc] control 0 on friend:u (handle 12f)
+[ipc] control 2 on friend:u (handle 12f)
+[ipc] control 2 on friend:u (handle 130)
+[ipc] control 2 on friend:u (handle 131)
+[kernel] CreateThread entry=80432e240 arg=ab8e56020 stack=a25c43fe0 prio=45 core=-2 -> 133
+[kernel] CreateThread entry=80432e240 arg=a4d22c020 stack=a16802fe0 prio=47 core=-2 -> 134
+[kernel] CreateThread entry=80432e240 arg=a6af2b020 stack=a0201efe0 prio=45 core=-2 -> 135
+[sm] GetService mii:e
+[ipc] control 3 on mii:e (handle 136)
+[ipc] control 0 on mii:e (handle 136)
+[fs] system data 0100000000000802: sysdata/0100000000000802 (6 files)
+[kernel] CreateThread entry=80432e240 arg=a6b6d3020 stack=a2f74efe0 prio=45 core=-2 -> 137
+[kernel] CreateThread entry=80432e240 arg=a54ee7020 stack=a17625fe0 prio=48 core=-2 -> 138
+[kernel] CreateThread entry=80432e240 arg=a54f5b020 stack=a3135cfe0 prio=48 core=-2 -> 139
+[kernel] CreateThread entry=80432e240 arg=a55221020 stack=a3da72fe0 prio=48 core=-2 -> 13a
+[am] IAudioController cmd 1 (ok)
+[am] IAudioController cmd 2 (ok)
+[sm] GetService prepo:u
+[ipc] no HLE implementation for service 'prepo:u', using logging stub
+[ipc] control 3 on prepo:u (handle 13b)
+[ipc] control 0 on prepo:u (handle 13b)
+[kernel] thread 88 waits 1000ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 99 waits 250ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 88 waits 1250ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 99 waits 500ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 88 waits 250ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 99 waits 750ms for core 0 (held by thread 82, last svc 21)
+[corepreempt] handoffs=128
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[input] GetNpadStyleSet id 0
+[input] GetNpadState id 0 lr 800263e58
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[input] GetNpadStyleSet id 0x1
+[input] GetNpadStyleSet id 0x2
+[input] GetNpadStyleSet id 0x3
+[touch] the game reads the touch screen (5 touches per sample)
+[mod] worker guard: __cxa_pure_virtual at 0x8044b52a8
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[nvn] ReportCounter type 16
+[nvn] ReportCounter type 0
+[ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+[kernel] CreateThread entry=80432e240 arg=ab8e67020 stack=a0b748fe0 prio=45 core=-2 -> 11b
+[kernel] CreateThread entry=80432e240 arg=ab8f20020 stack=a20270fe0 prio=46 core=-2 -> 13c
+[audren] effect type 6 used: slot 0 mix 4 enabled 1
+[audren] effect type 2 used: slot 1 mix 7 enabled 1
+[kernel] CreateThread entry=80432e240 arg=ab8f32020 stack=a250fffe0 prio=46 core=-2 -> 13d
+[audren] mix 1 used 1 vol 1.000 bufs 2 dest 3 splitter -1: 0>0=1.000 1>1=1.000
+[kernel] CreateThread entry=80432e240 arg=ab8f44020 stack=a12019fe0 prio=46 core=-2 -> 13e
+[audren] mix 2 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[audren] mix 3 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 4 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 5 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 6 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 7 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 8 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 9 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 10 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 11 used 1 vol 1.000 bufs 2 dest 3 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 12 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[vk] transient ring: memory type 0 (device-local host-visible )
+[menu] font /system/fonts/Roboto-Regular.ttf
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[fs] romfs reads: 64 (53460 KB)
+[corepreempt] handoffs=256
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+[vk] no page write tracking (-1, page 4096)
+[corepreempt] handoffs=384
+[corepreempt] handoffs=512
+[corepreempt] handoffs=640
+[fs] romfs reads: 128 (118019 KB)
+[corepreempt] handoffs=768
+[corepreempt] handoffs=896
+[corepreempt] handoffs=1024
+[vk] command counts: 0:833 2:662 3:160 4:3021 5:782 6:782 7:332 9:332 10:160 11:160 12:160 13:6225 15:11415 17:85 18:85 19:587 20:827 21:827 22:827 23:782 28:332 32:1004 33:580 38:760 48:85 51:1003 54:927 61:332
+[vk] t=4.1 frame 85 41.9 fps max 169ms level  (760 draws, 0 skipped, 163 passes, 0 dispatches, 170 flushes, wait 1ms, compile 4, fbcopy 0, upload 1.8MB)
+[corepreempt] handoffs=1152
+[corepreempt] handoffs=1280
+[corepreempt] handoffs=1408
+[corepreempt] handoffs=1536
+[corepreempt] handoffs=1664
+[corepreempt] handoffs=1792
+[corepreempt] handoffs=1920
+[vk] command counts: 0:1663 2:1326 3:326 4:6092 5:1612 6:1612 7:664 9:664 10:326 11:326 12:326 13:12450 15:22620 17:168 18:168 19:1168 20:1657 21:1657 22:1657 23:1612 28:664 32:2000 33:1161 38:1590 48:168 51:1999 54:1840 61:664
+[vk] t=6.1 frame 168 41.4 fps max 120ms level  (830 draws, 0 skipped, 166 passes, 0 dispatches, 166 flushes, wait 1ms, compile 0, fbcopy 0, upload 0.5MB)
+[fs] romfs reads: 256 (243624 KB)
+[corepreempt] handoffs=2048
+[corepreempt] handoffs=2176
+[corepreempt] handoffs=2304
+[vk] command counts: 0:2583 2:2062 3:558 4:10650 5:3686 6:3686 7:1032 9:1032 10:558 11:558 12:544 13:21757 15:36194 17:260 18:260 19:1812 20:2577 21:2577 22:2577 23:3686 28:1032 32:3104 33:1805 38:3763 48:260 51:3103 54:2852 61:1032
+[vk] t=8.2 frame 260 45.7 fps max 45ms level  (2173 draws, 0 skipped, 184 passes, 0 dispatches, 184 flushes, wait 1ms, compile 2, fbcopy 0, upload 2.4MB)
+[corepreempt] handoffs=2432
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+[kernel] CreateThread entry=80432e240 arg=ab8e67020 stack=a30e9bfe0 prio=45 core=-2 -> 11b
+[kernel] CreateThread entry=80432e240 arg=ab8f20020 stack=a0db16fe0 prio=46 core=-2 -> 13c
+[kernel] CreateThread entry=80432e240 arg=ab8f32020 stack=a18c32fe0 prio=46 core=-2 -> 13d
+[kernel] CreateThread entry=80432e240 arg=ab8f44020 stack=a29716fe0 prio=46 core=-2 -> 13e
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[corepreempt] handoffs=2560
+[corepreempt] handoffs=2688
+[corepreempt] handoffs=2816
+[corepreempt] handoffs=2944
+[corepreempt] handoffs=3072
+[corepreempt] handoffs=3200
+[corepreempt] handoffs=3328
+[vk] t=10.2 frame 354 46.8 fps max 42ms level  (3833 draws, 0 skipped, 188 passes, 0 dispatches, 188 flushes, wait 1ms, compile 0, fbcopy 0, upload 2.6MB)
+[corepreempt] handoffs=3456
+[corepreempt] handoffs=3584
+[corepreempt] handoffs=3712
+[corepreempt] handoffs=3840
+[corepreempt] handoffs=3968
+[corepreempt] handoffs=4096
+[corepreempt] handoffs=4224
+[corepreempt] handoffs=4352
+[corepreempt] handoffs=4480
+[corepreempt] handoffs=4608
+[corepreempt] handoffs=4736
+[vk] t=12.2 frame 451 48.1 fps max 37ms level  (3686 draws, 0 skipped, 194 passes, 0 dispatches, 194 flushes, wait 1ms, compile 0, fbcopy 0, upload 2.5MB)
+[corepreempt] handoffs=4864
+[corepreempt] handoffs=4992
+[corepreempt] handoffs=5120
+[corepreempt] handoffs=5248
+[corepreempt] handoffs=5376
+[corepreempt] handoffs=5504
+[corepreempt] handoffs=5632
+[corepreempt] handoffs=5760
+[corepreempt] handoffs=5888
+[corepreempt] handoffs=6016
+[vk] t=14.2 frame 529 38.6 fps max 70ms level  (2964 draws, 0 skipped, 156 passes, 0 dispatches, 156 flushes, wait 1ms, compile 0, fbcopy 0, upload 2.0MB)
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[mod] co-op in Endless / 100 Mario off
+[corepreempt] handoffs=6144
+[audren] splitters: 4 updated, 10 destinations (v1)
+[audren] mix 2 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 6 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] voice 0 through splitter 2 (3 destinations)
+[audren] voice 1 through splitter 3 (3 destinations)
+[audren] voice 0 through splitter 2 (3 destinations)
+[audren] voice 1 through splitter 3 (3 destinations)
+[kernel] thread 92 waits 250ms for core 1 (held by thread 81, last svc 1d)
+[vk] 4x4 colour texture sampled with depth comparison: through a depth copy (format 100 -> 126)
+[vk] texture 0x76543d9bf0 (1920x1080 f0x3f agl::DTA[17]) aliases storage a60b29200
+[vk] texture 0x76543da050 (1920x1080 f0x34 agl::DTA[16]) aliases storage a602b9000
+[vk] texture 0x76543f6f30 (1600x900 f0x3f agl::DTA[32]) aliases storage a608f9200
+[vk] texture 0x76543f6830 (1600x900 f0x34 agl::DTA[31]) aliases storage a602b9000
+[vk] texture 0x76543f9a10 (1600x900 f0x3f agl::DTA[35]) aliases storage a608f9200
+[corepreempt] handoffs=6272
+[gmap] bounded draw staging: range=16 MB total=32 MB
+[corepreempt] handoffs=6400
+[vk] t=16.2 frame 550 10.4 fps max 891ms level  (19316 draws, 0 skipped, 663 passes, 14 dispatches, 56 flushes, wait 45ms, compile 203, fbcopy 161, upload 177.4MB)
+[corepreempt] handoffs=6528
+[corepreempt] handoffs=6656
+[corepreempt] handoffs=6784
+[vk] t=18.2 frame 577 13.4 fps max 95ms level  (38598 draws, 0 skipped, 1134 passes, 27 dispatches, 81 flushes, wait 78ms, compile 4, fbcopy 304, upload 190.8MB)
+[corepreempt] handoffs=6912
+[corepreempt] handoffs=7040
+[input] GetNpadState id 0 lr 800263e58
+[mod] Muncher hit box (SMM1) off
+[pctl] IParentalControlService cmd 1001 (ok)
+[shader] prefetch: scanned 106410 draws / 1203 submits (393.2 ms), started 85 programs + 1094 pipelines ahead, waits 88 (183 ms total, worst 7 ms), unforeseen 0
+[vk] t=20.3 frame 601 11.9 fps max 127ms level  (34250 draws, 0 skipped, 1008 passes, 24 dispatches, 72 flushes, wait 67ms, compile 0, fbcopy 264, upload 162.7MB)
+[corepreempt] handoffs=7168
+[mod] the built-in course server didn't start; using server=http://127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] GET /api/endless: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_easy?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_normal?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_expert?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_super_expert?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] Maker avatar name set to "Player" (default Mii)
+[audren] splitters: 4 updated, 10 destinations (v1)
+[corepreempt] handoffs=7296
+[audren] splitters: 2 updated, 6 destinations (v1)
+[vk] t=22.3 frame 630 14.1 fps max 121ms level  (40456 draws, 0 skipped, 1226 passes, 29 dispatches, 87 flushes, wait 80ms, compile 4, fbcopy 319, upload 196.6MB)
+[corepreempt] handoffs=7424
+[corepreempt] handoffs=7552
+[audren] splitters: 2 updated, 5 destinations (v1)
+[audren] splitters: 4 updated, 13 destinations (v1)
+[corepreempt] handoffs=7680
+[vk] t=24.4 frame 657 13.1 fps max 117ms level  (37698 draws, 0 skipped, 1150 passes, 27 dispatches, 81 flushes, wait 74ms, compile 0, fbcopy 297, upload 183.6MB)
+[touch] 1 touch(es), first at 927,78
+[touch] 1 touch(es), first at 913,160
+[touch] 1 touch(es), first at 851,483
+[touch] 1 touch(es), first at 855,593
+[corepreempt] handoffs=7808
+[corepreempt] handoffs=7936
+[vk] t=26.4 frame 680 11.4 fps max 165ms level  (32062 draws, 0 skipped, 966 passes, 23 dispatches, 69 flushes, wait 66ms, compile 0, fbcopy 253, upload 155.9MB)
+[corepreempt] handoffs=8064
+[corepreempt] handoffs=8192
+[corepreempt] handoffs=8320
+[vk] t=28.4 frame 702 10.8 fps max 168ms level  (30653 draws, 0 skipped, 924 passes, 22 dispatches, 66 flushes, wait 53ms, compile 0, fbcopy 242, upload 149.2MB)
+[corepreempt] handoffs=8448
+[vk] t=30.5 frame 722 9.9 fps max 234ms level  (27880 draws, 0 skipped, 840 passes, 20 dispatches, 60 flushes, wait 53ms, compile 0, fbcopy 220, upload 135.8MB)
+[corepreempt] handoffs=8576
+[mod] SMW goal wipe on
+[mod] quick level return off
+[corepreempt] handoffs=8704
+[vk] t=32.5 frame 751 14.1 fps max 96ms level  (40426 draws, 0 skipped, 1218 passes, 29 dispatches, 87 flushes, wait 81ms, compile 0, fbcopy 319, upload 197.0MB)
+[corepreempt] handoffs=8832
+[corepreempt] handoffs=8960
+[corepreempt] handoffs=9088
+[vk] t=34.6 frame 777 12.6 fps max 112ms level  (36247 draws, 0 skipped, 1092 passes, 26 dispatches, 78 flushes, wait 75ms, compile 2, fbcopy 286, upload 177.0MB)
+window closed
+[shader] prefetch: scanned 250999 draws / 360 submits (472.8 ms), started 1 programs + 5 pipelines ahead, waits 1 (5 ms total, worst 5 ms), unforeseen 0

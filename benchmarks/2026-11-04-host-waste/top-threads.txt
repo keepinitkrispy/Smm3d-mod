@@ -1,0 +1,543 @@
+Threads: 6416 total,   5 running, 6411 sleeping,   0 stopped,   0 zombie
+  Mem:  7787844K total,  7637688K used,   150156K free,     1500K buffers
+ Swap:  3145724K total,  2696244K used,   449480K free,   905236K cached
+800%cpu 133%user  10%nice 196%sys 427%idle   9%iow  21%irq   4%sirq   0%host
+  PID   TID USER         %CPU NAME                       [CMDLINE]
+1001 1001 root 0.0 zygote64
+1002 2881 root 0.0 zygote
+1002 2883 root 0.0 zygote
+1002 2880 root 0.0 zygote
+1002 2882 root 0.0 zygote
+1002 2884 root 0.0 zygote
+1002 1002 root 0.0 zygote
+2345 2345 webview_zygote 0.0 webview_zygote
+18714 18714 shell 42.8 top
+1571 1571 system 4.2 system_server
+1571 2009 system 2.8 system_server
+1571 2684 system 1.4 system_server
+1571 2471 system 1.4 system_server
+1571 2008 system 1.4 system_server
+1571 1985 system 1.4 system_server
+1571 17055 system 0.0 system_server
+1571 17018 system 0.0 system_server
+1571 15805 system 0.0 system_server
+1571 15808 system 0.0 system_server
+1571 15800 system 0.0 system_server
+1571 15801 system 0.0 system_server
+1571 15802 system 0.0 system_server
+1571 15811 system 0.0 system_server
+1571 15804 system 0.0 system_server
+1571 15806 system 0.0 system_server
+1571 15807 system 0.0 system_server
+1571 15803 system 0.0 system_server
+1571 26500 system 0.0 system_server
+1571 20780 system 0.0 system_server
+1571 3194 system 0.0 system_server
+1571 6900 system 0.0 system_server
+1571 16258 system 0.0 system_server
+1571 30747 system 0.0 system_server
+1571 5761 system 0.0 system_server
+1571 21235 system 0.0 system_server
+1571 19315 system 0.0 system_server
+1571 1381 system 0.0 system_server
+1571 9387 system 0.0 system_server
+1571 1191 system 0.0 system_server
+1571 32233 system 0.0 system_server
+1571 27088 system 0.0 system_server
+1571 22238 system 0.0 system_server
+1571 20523 system 0.0 system_server
+1571 5638 system 0.0 system_server
+1571 3184 system 0.0 system_server
+1571 13743 system 0.0 system_server
+1571 8485 system 0.0 system_server
+1571 8370 system 0.0 system_server
+1571 8343 system 0.0 system_server
+1571 8342 system 0.0 system_server
+1571 8278 system 0.0 system_server
+1571 8277 system 0.0 system_server
+1571 8279 system 0.0 system_server
+1571 31763 system 0.0 system_server
+1571 31761 system 0.0 system_server
+1571 31762 system 0.0 system_server
+1571 31760 system 0.0 system_server
+1571 22859 system 0.0 system_server
+1571 22790 system 0.0 system_server
+1571 22779 system 0.0 system_server
+1571 22780 system 0.0 system_server
+1571 22778 system 0.0 system_server
+1571 22784 system 0.0 system_server
+1571 22783 system 0.0 system_server
+1571 22782 system 0.0 system_server
+1571 22771 system 0.0 system_server
+1571 22773 system 0.0 system_server
+1571 22775 system 0.0 system_server
+1571 22776 system 0.0 system_server
+1571 22777 system 0.0 system_server
+
+
+
+Threads: 6158 total,  10 running, 6148 sleeping,   0 stopped,   0 zombie
+  Mem:  7787844K total,  7698756K used,    89088K free,     1244K buffers
+ Swap:  3145724K total,  3059684K used,    86040K free,   998208K cached
+800%cpu 289%user  43%nice 342%sys  63%idle  14%iow  39%irq  10%sirq   0%host
+  PID   TID USER         %CPU NAME                       [CMDLINE]
+1001 1001 root 0.8 zygote64
+1002 2881 root 0.0 zygote
+1002 2883 root 0.0 zygote
+1002 2880 root 0.0 zygote
+1002 2882 root 0.0 zygote
+1002 2884 root 0.0 zygote
+1002 1002 root 0.0 zygote
+2345 2345 webview_zygote 0.0 webview_zygote
+18714 18714 shell 9.0 top
+1571 1736 system 11.0 system_server
+1571 2471 system 4.6 system_server
+1571 5384 system 4.2 system_server
+1571 2009 system 4.0 system_server
+1571 1571 system 3.2 system_server
+1571 5409 system 2.0 system_server
+1571 2629 system 1.8 system_server
+1571 2008 system 1.4 system_server
+1571 1985 system 1.2 system_server
+1571 4374 system 1.0 system_server
+1571 1711 system 1.0 system_server
+1571 2086 system 0.8 system_server
+1571 1989 system 0.8 system_server
+1571 1725 system 0.8 system_server
+1571 1708 system 0.8 system_server
+1571 5761 system 0.6 system_server
+1571 1710 system 0.6 system_server
+1571 1688 system 0.6 system_server
+1571 4784 system 0.4 system_server
+1571 2788 system 0.4 system_server
+1571 2684 system 0.4 system_server
+1571 2126 system 0.4 system_server
+1571 1972 system 0.4 system_server
+1571 1781 system 0.4 system_server
+1571 1722 system 0.4 system_server
+1571 1727 system 0.4 system_server
+1571 5407 system 0.2 system_server
+1571 3924 system 0.2 system_server
+1571 2298 system 0.2 system_server
+1571 2091 system 0.2 system_server
+1571 2039 system 0.2 system_server
+1571 2018 system 0.2 system_server
+1571 1723 system 0.2 system_server
+1571 1709 system 0.2 system_server
+1571 17055 system 0.0 system_server
+1571 17018 system 0.0 system_server
+1571 15804 system 0.0 system_server
+1571 15807 system 0.0 system_server
+1571 15811 system 0.0 system_server
+1571 15800 system 0.0 system_server
+1571 15801 system 0.0 system_server
+1571 15802 system 0.0 system_server
+1571 15803 system 0.0 system_server
+1571 15805 system 0.0 system_server
+1571 15806 system 0.0 system_server
+1571 15808 system 0.0 system_server
+1571 26500 system 0.0 system_server
+1571 20780 system 0.0 system_server
+1571 3194 system 0.0 system_server
+1571 6900 system 0.0 system_server
+1571 16258 system 0.0 system_server
+1571 30747 system 0.0 system_server
+1571 21235 system 0.0 system_server
+1571 19315 system 0.0 system_server
+1571 1381 system 0.0 system_server
+1571 9387 system 0.0 system_server
+1571 1191 system 0.0 system_server
+1571 32233 system 0.0 system_server
+1571 27088 system 0.0 system_server
+1571 22238 system 0.0 system_server
+1571 20523 system 0.0 system_server
+
+
+
+Threads: 6097 total,   8 running, 6089 sleeping,   0 stopped,   0 zombie
+  Mem:  7787844K total,  7699104K used,    88740K free,     1096K buffers
+ Swap:  3145724K total,  3132068K used,    13656K free,  1068648K cached
+800%cpu 233%user  22%nice 224%sys 211%idle  64%iow  34%irq  11%sirq   0%host
+  PID   TID USER         %CPU NAME                       [CMDLINE]
+1001 1001 root 0.0 zygote64
+1002 2881 root 0.0 zygote
+1002 2883 root 0.0 zygote
+1002 2880 root 0.0 zygote
+1002 2882 root 0.0 zygote
+1002 2884 root 0.0 zygote
+1002 1002 root 0.0 zygote
+2345 2345 webview_zygote 0.0 webview_zygote
+18714 18714 shell 8.2 top
+1571 1571 system 7.2 system_server
+1571 2009 system 4.4 system_server
+1571 2172 system 4.0 system_server
+1571 4780 system 3.0 system_server
+1571 1688 system 3.0 system_server
+1571 1710 system 2.8 system_server
+1571 2008 system 2.4 system_server
+1571 4784 system 2.2 system_server
+1571 3924 system 1.8 system_server
+1571 2629 system 1.8 system_server
+1571 1711 system 1.8 system_server
+1571 1736 system 1.6 system_server
+1571 2086 system 1.4 system_server
+1571 5384 system 1.2 system_server
+1571 4374 system 1.2 system_server
+1571 1708 system 1.2 system_server
+1571 4381 system 1.0 system_server
+1571 2684 system 1.0 system_server
+1571 2471 system 1.0 system_server
+1571 5402 system 0.8 system_server
+1571 1712 system 0.8 system_server
+1571 5407 system 0.6 system_server
+1571 2284 system 0.6 system_server
+1571 2123 system 0.6 system_server
+1571 1999 system 0.6 system_server
+1571 1985 system 0.6 system_server
+1571 1781 system 0.6 system_server
+1571 5408 system 0.4 system_server
+1571 3789 system 0.4 system_server
+1571 2976 system 0.4 system_server
+1571 2298 system 0.4 system_server
+1571 2051 system 0.4 system_server
+1571 1983 system 0.4 system_server
+1571 15800 system 0.2 system_server
+1571 8074 system 0.2 system_server
+1571 4292 system 0.2 system_server
+1571 2866 system 0.2 system_server
+1571 2788 system 0.2 system_server
+1571 2655 system 0.2 system_server
+1571 2278 system 0.2 system_server
+1571 2126 system 0.2 system_server
+1571 2112 system 0.2 system_server
+1571 2049 system 0.2 system_server
+1571 2018 system 0.2 system_server
+1571 2003 system 0.2 system_server
+1571 2000 system 0.2 system_server
+1571 1988 system 0.2 system_server
+1571 1732 system 0.2 system_server
+1571 1725 system 0.2 system_server
+1571 1723 system 0.2 system_server
+1571 1722 system 0.2 system_server
+1571 1707 system 0.2 system_server
+1571 1687 system 0.2 system_server
+1571 1682 system 0.2 system_server
+1571 17055 system 0.0 system_server
+1571 17018 system 0.0 system_server
+1571 15804 system 0.0 system_server
+1571 15808 system 0.0 system_server
+1571 15801 system 0.0 system_server
+1571 15802 system 0.0 system_server
+1571 15803 system 0.0 system_server
+
+
+
+Threads: 6109 total,   4 running, 6105 sleeping,   0 stopped,   0 zombie
+  Mem:  7787844K total,  7599636K used,   188208K free,     1260K buffers
+ Swap:  3145724K total,  3116280K used,    29444K free,  1011496K cached
+800%cpu 132%user  17%nice 163%sys 367%idle  89%iow  24%irq   8%sirq   0%host
+  PID   TID USER         %CPU NAME                       [CMDLINE]
+1001 1001 root 0.0 zygote64
+1002 2881 root 0.0 zygote
+1002 2883 root 0.0 zygote
+1002 2880 root 0.0 zygote
+1002 2882 root 0.0 zygote
+1002 2884 root 0.0 zygote
+1002 1002 root 0.0 zygote
+2345 2345 webview_zygote 0.0 webview_zygote
+18714 18714 shell 5.2 top
+1571 1683 system 9.0 system_server
+1571 2009 system 3.6 system_server
+1571 5402 system 2.8 system_server
+1571 1571 system 2.4 system_server
+1571 4780 system 2.0 system_server
+1571 1711 system 2.0 system_server
+1571 2008 system 1.6 system_server
+1571 4381 system 1.4 system_server
+1571 2123 system 1.0 system_server
+1571 1685 system 1.0 system_server
+1571 2086 system 0.8 system_server
+1571 1710 system 0.8 system_server
+1571 1688 system 0.8 system_server
+1571 2684 system 0.6 system_server
+1571 1708 system 0.6 system_server
+1571 1712 system 0.6 system_server
+1571 1684 system 0.6 system_server
+1571 1999 system 0.4 system_server
+1571 1687 system 0.4 system_server
+1571 2146 system 0.2 system_server
+1571 2126 system 0.2 system_server
+1571 2051 system 0.2 system_server
+1571 2039 system 0.2 system_server
+1571 1989 system 0.2 system_server
+1571 1983 system 0.2 system_server
+1571 1781 system 0.2 system_server
+1571 1760 system 0.2 system_server
+1571 1736 system 0.2 system_server
+1571 1725 system 0.2 system_server
+1571 1707 system 0.2 system_server
+1571 18880 system 0.0 system_server
+1571 17055 system 0.0 system_server
+1571 17018 system 0.0 system_server
+1571 15803 system 0.0 system_server
+1571 15811 system 0.0 system_server
+1571 15801 system 0.0 system_server
+1571 15802 system 0.0 system_server
+1571 15804 system 0.0 system_server
+1571 15805 system 0.0 system_server
+1571 15806 system 0.0 system_server
+1571 15807 system 0.0 system_server
+1571 15808 system 0.0 system_server
+1571 15800 system 0.0 system_server
+1571 26500 system 0.0 system_server
+1571 20780 system 0.0 system_server
+1571 3194 system 0.0 system_server
+1571 6900 system 0.0 system_server
+1571 16258 system 0.0 system_server
+1571 30747 system 0.0 system_server
+1571 5761 system 0.0 system_server
+1571 21235 system 0.0 system_server
+1571 19315 system 0.0 system_server
+1571 1381 system 0.0 system_server
+1571 9387 system 0.0 system_server
+1571 1191 system 0.0 system_server
+1571 32233 system 0.0 system_server
+1571 27088 system 0.0 system_server
+1571 22238 system 0.0 system_server
+1571 20523 system 0.0 system_server
+1571 5638 system 0.0 system_server
+1571 3184 system 0.0 system_server
+
+
+
+Threads: 6114 total,   9 running, 6105 sleeping,   0 stopped,   0 zombie
+  Mem:  7787844K total,  7587780K used,   200064K free,      924K buffers
+ Swap:  3145724K total,  3121044K used,    24680K free,  1091720K cached
+800%cpu 371%user  32%nice 208%sys 138%idle  13%iow  29%irq   9%sirq   0%host
+  PID   TID USER         %CPU NAME                       [CMDLINE]
+1001 1001 root 0.0 zygote64
+1002 2881 root 0.0 zygote
+1002 2883 root 0.0 zygote
+1002 2880 root 0.0 zygote
+1002 2882 root 0.0 zygote
+1002 2884 root 0.0 zygote
+1002 1002 root 0.0 zygote
+2345 2345 webview_zygote 0.0 webview_zygote
+18714 18714 shell 5.6 top
+1571 1571 system 5.4 system_server
+1571 2009 system 3.2 system_server
+1571 2008 system 2.6 system_server
+1571 2866 system 2.0 system_server
+1571 1688 system 1.8 system_server
+1571 2049 system 1.4 system_server
+1571 1736 system 1.4 system_server
+1571 1983 system 1.2 system_server
+1571 1708 system 1.2 system_server
+1571 1725 system 1.0 system_server
+1571 2684 system 0.8 system_server
+1571 1781 system 0.6 system_server
+1571 1710 system 0.6 system_server
+1571 5402 system 0.4 system_server
+1571 4780 system 0.4 system_server
+1571 2126 system 0.4 system_server
+1571 2045 system 0.4 system_server
+1571 1723 system 0.4 system_server
+1571 1711 system 0.4 system_server
+1571 1687 system 0.4 system_server
+1571 4381 system 0.2 system_server
+1571 2172 system 0.2 system_server
+1571 2150 system 0.2 system_server
+1571 2086 system 0.2 system_server
+1571 1970 system 0.2 system_server
+1571 1803 system 0.2 system_server
+1571 1722 system 0.2 system_server
+1571 1730 system 0.2 system_server
+1571 17055 system 0.0 system_server
+1571 17018 system 0.0 system_server
+1571 15806 system 0.0 system_server
+1571 15808 system 0.0 system_server
+1571 15800 system 0.0 system_server
+1571 15811 system 0.0 system_server
+1571 15802 system 0.0 system_server
+1571 15803 system 0.0 system_server
+1571 15804 system 0.0 system_server
+1571 15805 system 0.0 system_server
+1571 15807 system 0.0 system_server
+1571 15801 system 0.0 system_server
+1571 26500 system 0.0 system_server
+1571 20780 system 0.0 system_server
+1571 3194 system 0.0 system_server
+1571 6900 system 0.0 system_server
+1571 16258 system 0.0 system_server
+1571 30747 system 0.0 system_server
+1571 5761 system 0.0 system_server
+1571 21235 system 0.0 system_server
+1571 19315 system 0.0 system_server
+1571 1381 system 0.0 system_server
+1571 9387 system 0.0 system_server
+1571 1191 system 0.0 system_server
+1571 32233 system 0.0 system_server
+1571 27088 system 0.0 system_server
+1571 22238 system 0.0 system_server
+1571 20523 system 0.0 system_server
+1571 5638 system 0.0 system_server
+1571 3184 system 0.0 system_server
+1571 13743 system 0.0 system_server
+1571 8485 system 0.0 system_server
+1571 8370 system 0.0 system_server
+
+
+
+Threads: 5859 total,   6 running, 5853 sleeping,   0 stopped,   0 zombie
+  Mem:  7787844K total,  7599124K used,   188720K free,     1184K buffers
+ Swap:  3145724K total,  3076300K used,    69424K free,  1023616K cached
+800%cpu 234%user  29%nice 161%sys 326%idle  19%iow  25%irq   6%sirq   0%host
+  PID   TID USER         %CPU NAME                       [CMDLINE]
+1001 1001 root 0.0 zygote64
+1002 2881 root 0.0 zygote
+1002 2883 root 0.0 zygote
+1002 2880 root 0.0 zygote
+1002 2882 root 0.0 zygote
+1002 2884 root 0.0 zygote
+1002 1002 root 0.0 zygote
+2345 2345 webview_zygote 0.0 webview_zygote
+18714 18714 shell 4.8 top
+1571 1571 system 4.2 system_server
+1571 2008 system 1.6 system_server
+1571 2009 system 1.4 system_server
+1571 2282 system 1.2 system_server
+1571 2086 system 1.0 system_server
+1571 1736 system 0.8 system_server
+1571 4780 system 0.6 system_server
+1571 3924 system 0.6 system_server
+1571 2866 system 0.6 system_server
+1571 2684 system 0.6 system_server
+1571 2123 system 0.6 system_server
+1571 1708 system 0.6 system_server
+1571 4381 system 0.4 system_server
+1571 2655 system 0.4 system_server
+1571 2297 system 0.4 system_server
+1571 1781 system 0.4 system_server
+1571 1710 system 0.4 system_server
+1571 5402 system 0.2 system_server
+1571 2788 system 0.2 system_server
+1571 2126 system 0.2 system_server
+1571 2051 system 0.2 system_server
+1571 1989 system 0.2 system_server
+1571 1985 system 0.2 system_server
+1571 1983 system 0.2 system_server
+1571 1727 system 0.2 system_server
+1571 1722 system 0.2 system_server
+1571 1721 system 0.2 system_server
+1571 17055 system 0.0 system_server
+1571 17018 system 0.0 system_server
+1571 15808 system 0.0 system_server
+1571 15807 system 0.0 system_server
+1571 15800 system 0.0 system_server
+1571 15801 system 0.0 system_server
+1571 15802 system 0.0 system_server
+1571 15803 system 0.0 system_server
+1571 15804 system 0.0 system_server
+1571 15805 system 0.0 system_server
+1571 15806 system 0.0 system_server
+1571 15811 system 0.0 system_server
+1571 26500 system 0.0 system_server
+1571 20780 system 0.0 system_server
+1571 3194 system 0.0 system_server
+1571 6900 system 0.0 system_server
+1571 16258 system 0.0 system_server
+1571 30747 system 0.0 system_server
+1571 5761 system 0.0 system_server
+1571 21235 system 0.0 system_server
+1571 19315 system 0.0 system_server
+1571 1381 system 0.0 system_server
+1571 9387 system 0.0 system_server
+1571 1191 system 0.0 system_server
+1571 32233 system 0.0 system_server
+1571 27088 system 0.0 system_server
+1571 22238 system 0.0 system_server
+1571 20523 system 0.0 system_server
+1571 5638 system 0.0 system_server
+1571 3184 system 0.0 system_server
+1571 13743 system 0.0 system_server
+1571 8485 system 0.0 system_server
+1571 8370 system 0.0 system_server
+1571 8343 system 0.0 system_server
+
+
+
+Threads: 5858 total,   2 running, 5856 sleeping,   0 stopped,   0 zombie
+  Mem:  7787844K total,  7645820K used,   142024K free,     1184K buffers
+ Swap:  3145724K total,  3091036K used,    54688K free,  1028696K cached
+800%cpu 213%user   1%nice  78%sys 480%idle   1%iow  23%irq   4%sirq   0%host
+  PID   TID USER         %CPU NAME                       [CMDLINE]
+1001 1001 root 0.0 zygote64
+1002 2881 root 0.0 zygote
+1002 2883 root 0.0 zygote
+1002 2880 root 0.0 zygote
+1002 2882 root 0.0 zygote
+1002 2884 root 0.0 zygote
+1002 1002 root 0.0 zygote
+2345 2345 webview_zygote 0.0 webview_zygote
+18714 18714 shell 3.4 top
+1571 1571 system 2.0 system_server
+1571 2282 system 1.0 system_server
+1571 2009 system 0.6 system_server
+1571 2684 system 0.4 system_server
+1571 2655 system 0.4 system_server
+1571 2008 system 0.4 system_server
+1571 1999 system 0.4 system_server
+1571 3924 system 0.2 system_server
+1571 2051 system 0.2 system_server
+1571 1736 system 0.2 system_server
+1571 1725 system 0.2 system_server
+1571 1708 system 0.2 system_server
+1571 1710 system 0.2 system_server
+1571 17055 system 0.0 system_server
+1571 17018 system 0.0 system_server
+1571 15806 system 0.0 system_server
+1571 15808 system 0.0 system_server
+1571 15801 system 0.0 system_server
+1571 15802 system 0.0 system_server
+1571 15803 system 0.0 system_server
+1571 15811 system 0.0 system_server
+1571 15805 system 0.0 system_server
+1571 15800 system 0.0 system_server
+1571 15807 system 0.0 system_server
+1571 15804 system 0.0 system_server
+1571 26500 system 0.0 system_server
+1571 20780 system 0.0 system_server
+1571 3194 system 0.0 system_server
+1571 6900 system 0.0 system_server
+1571 16258 system 0.0 system_server
+1571 30747 system 0.0 system_server
+1571 5761 system 0.0 system_server
+1571 21235 system 0.0 system_server
+1571 19315 system 0.0 system_server
+1571 1381 system 0.0 system_server
+1571 9387 system 0.0 system_server
+1571 1191 system 0.0 system_server
+1571 32233 system 0.0 system_server
+1571 27088 system 0.0 system_server
+1571 22238 system 0.0 system_server
+1571 20523 system 0.0 system_server
+1571 5638 system 0.0 system_server
+1571 3184 system 0.0 system_server
+1571 13743 system 0.0 system_server
+1571 8485 system 0.0 system_server
+1571 8370 system 0.0 system_server
+1571 8343 system 0.0 system_server
+1571 8342 system 0.0 system_server
+1571 8279 system 0.0 system_server
+1571 8278 system 0.0 system_server
+1571 8277 system 0.0 system_server
+1571 31763 system 0.0 system_server
+1571 31762 system 0.0 system_server
+1571 31761 system 0.0 system_server
+1571 31760 system 0.0 system_server
+1571 22859 system 0.0 system_server
+1571 22790 system 0.0 system_server
+1571 22784 system 0.0 system_server
+1571 22782 system 0.0 system_server
+1571 22778 system 0.0 system_server
+1571 22779 system 0.0 system_server

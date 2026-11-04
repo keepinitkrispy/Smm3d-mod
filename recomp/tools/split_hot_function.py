@@ -4,7 +4,7 @@ Each chunk has its own bounded PC switch; intra-chunk gotos stay local. An
 out-of-chunk goto uses an ABI-compatible musttail call via a compact dispatcher.
 This preserves the full original indirect-branch fallback without optnone.
 
-Usage: split_hot_function.py INPUT.c OUTPUT.c [MAX_INSTRUCTIONS=512]
+Usage: split_hot_function.py INPUT.c OUTPUT.c [MAX_INSTRUCTIONS=64]
 """
 import re
 import sys
@@ -69,7 +69,7 @@ def split_function(source, match, max_instr):
     return source[:match.start()]+''.join(out)+source[end+2:], len(labels),count
 
 def run():
-    src=Path(sys.argv[1]); dest=Path(sys.argv[2]); size=int(sys.argv[3]) if len(sys.argv)>3 else 512
+    src=Path(sys.argv[1]); dest=Path(sys.argv[2]); size=int(sys.argv[3]) if len(sys.argv)>3 else 64
     if not 64 <= size <= 2048:raise ValueError('Invalid chunk size')
     data=src.read_text()
     replaced=0

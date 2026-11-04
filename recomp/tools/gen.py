@@ -481,7 +481,7 @@ def main():
     ap.add_argument('--chunk', type=int, default=1500)  # functions per file at most
     ap.add_argument('--chunk-bytes', type=int, default=1500000)  # and about this much C (even compile times)
     ap.add_argument('--big-fn', type=int, default=100000)  # bytes of C from which a function gets its own file
-    ap.add_argument('--split-huge', type=int, default=0, metavar='INSTRUCTIONS')  # opt-in: split optnone jump tables into optimized chunks (e.g. 512)
+    ap.add_argument('--split-huge', type=int, default=64, metavar='INSTRUCTIONS')  # opt-in: split optnone jump tables into optimized chunks (e.g. 512)
     ap.add_argument('--limit', type=int, default=0)
     ap.add_argument('--simd', choices=('asm', 'c'),
                     default='asm' if platform.machine().lower() in ('arm64', 'aarch64') else 'c')

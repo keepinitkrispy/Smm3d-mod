@@ -106,10 +106,11 @@ __thread uint64_t g_blocked_ns;
 // (core_check, at every svc). Threads allowed on several cores run freely (core -1). RECOMP_NO_CORES=1: off.
 // All of this under g_klock.
 static KThread *g_threads;
-typedef struct { KThread *owner; } Core;
+// Cursor stays in the scheduler, not KThread: changing KThread layout would
+// force ABI-rebuilding every Android runtime object that includes kernel.h.
+typedef struct { KThread *owner; uint64_t last_served_id; } Core;
 static Core g_cores[4];
 static int cores_off = -1;
-static uint64_t core_wait_counter;  // protected by g_klock
 
 // Experimental Horizon equal-priority time slicing. Disabled unless requested:
 // LARECOMP_CORE_QUANTUM_US=4000. Preserve single-owner-per-guest-core invariant.
@@ -165,10 +166,18 @@ static int core_of_mask(uint64_t mask) {
 static KThread *core_best_waiter(int core) {
     KThread *best = NULL;
     for (KThread *t = g_threads; t; t = t->anext)
-        if (t->want_core && t->core == core &&
-            (!best || t->prio < best->prio ||
-             (t->prio == best->prio && core_quantum_ns() &&
-              t->core_wait_order < best->core_wait_order))) best = t;
+        if (t->want_core && t->core == core) {
+            if (!best || t->prio < best->prio) {
+                best = t;
+            } else if (t->prio == best->prio && core_quantum_ns()) {
+                // Round robin by stable thread ID, wrapping after the last
+                // selected thread; never change priority ordering.
+                uint64_t cursor = g_cores[core].last_served_id;
+                bool after_t = t->id > cursor, after_b = best->id > cursor;
+                if ((after_t && !after_b) ||
+                    (after_t == after_b && t->id < best->id)) best = t;
+            }
+        }
     return best;
 }
 
@@ -177,7 +186,11 @@ static void core_release(KThread *t) {
     if (!t || t->core < 0 || g_cores[t->core].owner != t) return;
     KThread *w = core_best_waiter(t->core);
     g_cores[t->core].owner = w;
-    if (w) w->want_core = false, pthread_cond_signal(&w->cond);
+    if (w) {
+        g_cores[t->core].last_served_id = w->id;
+        w->want_core = false;
+        pthread_cond_signal(&w->cond);
+    }
 #ifdef __ANDROID__
     core_refresh_preempt();
 #endif
@@ -188,13 +201,12 @@ static void core_acquire(KThread *t) {
     if (!t || t->core < 0 || cores_off) return;
     Core *c = &g_cores[t->core];
     if (c->owner == t) return;
-    if (!c->owner) { c->owner = t;
+    if (!c->owner) { c->owner = t; c->last_served_id = t->id;
 #ifdef __ANDROID__
         core_last_acquired_ns = plat_now_ns();
 #endif
         return; }
     t->want_core = true;
-    t->core_wait_order = ++core_wait_counter;
 #ifdef __ANDROID__
     core_refresh_preempt();
 #endif

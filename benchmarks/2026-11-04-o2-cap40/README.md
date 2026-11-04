@@ -1,3 +1,5 @@
+SUPERSEDED: 40 FPS cap DROPPED. See ../2026-11-04-o2-speed/README.md. Do not run this old protocol.
+
 # Pixel 6: ThinLTO O2 + event pump + optional 40 FPS cap
 
 Verified build and side-by-side install, but **no 180-second gameplay A/B completed** (Nov 4, 2026, approximately 10 AM EST).

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Guarded 180s Pixel 6 O2 capped-vs-uncapped benchmark. Never spoof charging."""
+"""Guarded 180s Pixel 6 O2 pace30 / default / no-quantum benchmark; reject slow-motion winners."""
 import argparse
 import json
 import pathlib
@@ -10,7 +10,7 @@ import time
 
 HOME = pathlib.Path.home()
 REPO = HOME / "smm3d-source"
-OUT = REPO / "benchmarks/2026-11-04-o2-cap40"
+OUT = REPO / "benchmarks/2026-11-04-o2-speed"
 ADB = ["adb", "-s", "127.0.0.1:5555"]
 APP = "org.smcraft.smm2o2cap0"
 DATA = f"/sdcard/Android/data/{APP}/files"
@@ -23,7 +23,6 @@ CONF = {
     "LARECOMP_IPC_RELEASE_CORE": "1",
     "LARECOMP_CORE_QUANTUM_US": "4000",
     "LARECOMP_BOUNDED_EVENTS": "1",
-    "LARECOMP_PACE": "0",
     "LARECOMP_FPS_INTERVAL": "5",
 }
 
@@ -79,19 +78,40 @@ def check():
             "playable_course_fixture_verified": selected is not None,
             "ready": enough and not bat["plugged"] and cool and cold_clock and apk and exefs and romfs and selected is not None}
 
+def winning_policy():
+    """Post-validation decision; NEVER infer winner from FPS alone."""
+    path = OUT / "winner.json"
+    try:
+        result = json.loads(path.read_text())
+        if result.get("verified") is True and result.get("speed_ratio") is not None and \
+           0.95 <= float(result["speed_ratio"]) <= 1.05 and \
+           result.get("pace_mode") in ("pace30", "default"):
+            return result["pace_mode"]
+    except (OSError, ValueError, TypeError, KeyError):
+        pass
+    return None
+
 def collect(mode):
     info = check()
     if not info["ready"]:
         raise SystemExit("NO RUN: cool/unplugged/battery/data gate not met: " + json.dumps(info))
     OUT.mkdir(parents=True, exist_ok=True)
+    if mode == "noquantum" and winning_policy() is None:
+        raise SystemExit("NO RUN: validate game-speed/correct winner first, record winner.json")
     config = OUT / f"{mode}.env"
     selected = fixture()
     assert selected is not None
-    settings = CONF | {"LARECOMP_FPS_CAP": "40" if mode == "cap40" else "0",
-                       "SMM2_SEED": str(selected["seed"]),
+    settings = CONF | {"SMM2_SEED": str(selected["seed"]),
                        "LARECOMP_INPUT": selected["input_script"],
                        "LARECOMP_NO_USER_INPUT": "1"}
+    pace = winning_policy() if mode == "noquantum" else mode
+    if pace == "pace30":
+        settings["LARECOMP_PACE"] = "30"
+    if mode == "noquantum":
+        del settings["LARECOMP_CORE_QUANTUM_US"]
     config.write_text("".join(f"{k}={v}\n" for k, v in settings.items()))
+    config_record = OUT / f"{mode}.recomp.env"
+    config_record.write_text(config.read_text())
     assert adb("push", str(config), DATA + "/recomp.env", timeout=90).returncode == 0
     config.unlink()
     adb("shell", f"am force-stop {APP}")
@@ -112,7 +132,7 @@ def collect(mode):
                 t = round(time.monotonic() - start, 2)
                 # Evidence is local only: a screenshot just before the scoring window,
                 # and another at the end, after confirming the clone is foreground.
-                if n in (29, 36):
+                if n in (12, 24, 30, 36):
                     top = adb("shell", "dumpsys activity activities | grep -m1 topResumedActivity").stdout
                     if APP in top:
                         screenshot = OUT / f"{mode}-scene-{n*5}s.local.png"
@@ -142,14 +162,19 @@ def collect(mode):
               "steady_150_180": {"n": len(last), "mean": statistics.mean(last) if last else None,
                                   "minimum": min(last) if last else None},
               "fixture_id": selected["course_id"],
-              "scene_verified": False, "note": "Fixture preverified. Actual course must be checked against 145s/180s local screenshots of both runs before using results."}
+              "scene_verified": False, "speed_ratio": None, "correct_speed_verified": False,
+              "nvn_present_intervals": [line.strip()[-350:] for line in lines if "[gamemode]" in line],
+              "pace_policy": pace, "core_quantum_us": None if mode == "noquantum" else 4000,
+              "note": "Review local scene snapshots at 60s and 120s; compare game in-course timer delta to 60 real seconds. Only compare verified runs with speed ratio 0.95..1.05."}
     report = OUT / f"{mode}.json"
     report.write_text(json.dumps(result, indent=2) + "\n")
     clean = OUT / f"{mode}.sanitized.log"
     clean.write_text("\n".join(line[-600:] for line in lines if
-                               "[vk] t=" in line or "[framecap]" in line or
-                               "[eventpump]" in line or "[gmap]" in line) + "\n")
-    subprocess.run(["git", "add", str(report.relative_to(REPO)), str(clean.relative_to(REPO))],
+                               "[vk] t=" in line or "[pace]" in line or
+                               "[gamemode]" in line or "[eventpump]" in line or
+                               "[gmap]" in line) + "\n")
+    subprocess.run(["git", "add", str(report.relative_to(REPO)), str(clean.relative_to(REPO)),
+                    str(config_record.relative_to(REPO))],
                    cwd=REPO, check=True)
     subprocess.run(["git", "commit", "-m", f"Pixel O2 {mode} 180s FPS and clock run"], cwd=REPO, check=True)
     pushed = subprocess.run(["git", "push", "origin", f"HEAD:refs/heads/{BRANCH}"],
@@ -161,7 +186,7 @@ def collect(mode):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
-    parser.add_argument("--run", choices=["cap40", "uncapped"])
+    parser.add_argument("--run", choices=["pace30", "default", "noquantum"])
     a = parser.parse_args()
     if a.check or not a.run:
         print(json.dumps(check(), indent=2))

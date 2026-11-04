@@ -163,8 +163,16 @@ bool vk_ahead_should_pause(void) {
 static uint64_t stat_pace_over;
 
 void vk_pace_frame(void) {
-    static int on = -1;
-    if (on < 0) { const char *e = getenv("LARECOMP_PACE"); on = !e || atoi(e) != 0; }
+    // 0 disables intervention; 30 requests the game's genuine 30 mode;
+    // unset/default automatically selects 30/60 by measured busy time.
+    static int policy = -1;
+    if (policy < 0) {
+        const char *e = getenv("LARECOMP_PACE");
+        policy = !e ? 1 : atoi(e) == 30 ? 30 : atoi(e) == 0 ? 0 : 1;
+        pace_slow = policy == 30;  // GAME clock is not sped up or slowed down here.
+        LOG("[pace] policy=%s (30=force GPU 30-mode hint, default=auto)\n",
+            policy == 30 ? "force30" : policy == 0 ? "off" : "auto");
+    }
     static uint64_t last, last_wait;
     static uint8_t over[60];
     static int idx, nover, calm;
@@ -190,7 +198,7 @@ void vk_pace_frame(void) {
     nover += o - over[idx];
     over[idx] = (uint8_t)o;
     idx = (idx + 1) % 60;
-    if (!on) return;  // (measured and counted all the same: LARECOMP_LOG_PACE, the stats)
+    if (policy == 0 || policy == 30) return;  // auto-only transitions; force30 keeps slow GPU counter hint
     if (!pace_slow && nover >= 12) {
         pace_slow = true, calm = 0;
         LOG("[pace] frames don't fit 60 fps (%d of the last 60 over 16.2 ms busy): the game's 30 fps mode\n", nover);

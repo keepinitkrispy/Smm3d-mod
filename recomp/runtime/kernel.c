@@ -1,4 +1,9 @@
 // A small Horizon kernel: handles, threads, synchronization, memory, and the SVC dispatcher.
+#ifdef __ANDROID__
+#ifndef _GNU_SOURCE
+#define _GNU_SOURCE 1  // Bionic exposes sched_{get,set}affinity and CPU_SET under __USE_GNU.
+#endif
+#endif
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>

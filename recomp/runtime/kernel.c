@@ -115,11 +115,16 @@ static int cores_off = -1;
 extern void fnprof_sched_enable(int enabled);
 static _Atomic int core_preempt_waiters;
 static _Atomic unsigned long long core_preempt_handoffs;
-static __thread uint64_t core_last_acquired_ns;
+static KThread *core_best_waiter(int core);
+// Arm the FN_ENTER safe point only when it can act: some core's owner has a waiter of better priority (the only
+// case rt_guest_safepoint hands the core over). Armed for any waiter, it ran on every guest function entry while
+// worse-priority threads waited for seconds, for one handoff in the whole safe-point run (11-03 log: handoffs=1).
 static void core_refresh_preempt(void) {
     int any = 0;
-    for (KThread *w = g_threads; w; w = w->anext)
-        if (w->want_core && w->core >= 0) { any = 1; break; }
+    for (int i = 0; i < 4 && !any; i++) {
+        KThread *o = g_cores[i].owner, *w = o ? core_best_waiter(i) : NULL;
+        any = w && w->prio < o->prio;
+    }
     if (atomic_exchange_explicit(&core_preempt_waiters, any, memory_order_relaxed) != any)
         fnprof_sched_enable(any);
 }
@@ -154,7 +159,7 @@ static void core_acquire(KThread *t) {
     if (c->owner == t) return;
     if (!c->owner) { c->owner = t;
 #ifdef __ANDROID__
-        core_last_acquired_ns = plat_now_ns();
+        core_refresh_preempt();  // (a new owner: its waiters may now be of better priority)
 #endif
         return; }
     t->want_core = true;
@@ -182,7 +187,6 @@ static void core_acquire(KThread *t) {
     t->want_core = false;
     if (t->core >= 0 && g_cores[t->core].owner != t) g_cores[t->core].owner = t;  // (reboot unwinding)
 #ifdef __ANDROID__
-    core_last_acquired_ns = plat_now_ns();
     core_refresh_preempt();
 #endif
     g_blocked_ns += plat_now_ns() - t0;
@@ -785,6 +789,45 @@ static void svc_entry(Cpu *c, uint32_t imm, uint64_t pc) {
         c->x[1], c->x[2], pc);
 }
 
+// SendSyncRequest. On the Switch the caller blocks until the service process answers, and its core runs the next
+// thread meanwhile. Our services answer on the caller's host thread (file reads, sockets, audio updates), so the
+// caller kept its core through them: worse-priority threads of that core starved behind a loading thread making
+// IPC call after IPC call (11-03 log: threads 80 and 88 waiting 2+ s for core 0, held by thread 82 at svc 21).
+// Here the core is given up for the call, as the console would. Services already serve threads of different cores
+// at once, so a second caller is nothing new to them. Coming back, a caller of better priority than the core's new
+// owner gets it back at the owner's next safe point (Android: rt_guest_safepoint, armed by core_refresh_preempt)
+// or kernel call (core_check); without the Android safe point that can take long, so the default is on only there.
+// LARECOMP_IPC_RELEASE_CORE=0 / 1: off / on.
+static _Atomic unsigned long long ipc_core_handoffs;
+static int ipc_request_off_core(Cpu *c, uint32_t handle) {
+    static int on = -1;
+    if (on < 0) {
+        const char *e = ENV("LARECOMP_IPC_RELEASE_CORE");
+#ifdef __ANDROID__
+        on = !e || atoi(e) != 0;
+#else
+        on = e && atoi(e) != 0;
+#endif
+    }
+    if (!on || !t_cur || t_cur->core < 0 || cores_off > 0) return ipc_handle_request(c, handle);
+    pthread_mutex_lock(&g_klock);
+    int core = t_cur->core;
+    bool held = core >= 0 && g_cores[core].owner == t_cur;
+    if (!held) { pthread_mutex_unlock(&g_klock); return ipc_handle_request(c, handle); }
+    core_release(t_cur);
+    bool handed = g_cores[core].owner != NULL;  // (a waiter runs while we are in the service)
+    pthread_mutex_unlock(&g_klock);
+    if (handed) {
+        unsigned long long n = atomic_fetch_add_explicit(&ipc_core_handoffs, 1, memory_order_relaxed) + 1;
+        if (n == 1 || n % 1024 == 0) LOG("[ipccore] handoffs=%llu\n", n);
+    }
+    int r = ipc_handle_request(c, handle);
+    pthread_mutex_lock(&g_klock);
+    core_acquire(t_cur);
+    pthread_mutex_unlock(&g_klock);
+    return r;
+}
+
 static void svc_impl(Cpu *c, uint32_t imm, uint64_t pc) {
     uint64_t *x = c->x;
     switch (imm) {
@@ -862,7 +905,14 @@ static void svc_impl(Cpu *c, uint32_t imm, uint64_t pc) {
     }
     case 0x0D: {  // SetThreadPriority
         KObject *o = handle_get((uint32_t)x[0]);
-        if (o) ((KThread *)o)->prio = (int)x[1];
+        if (o) {
+            pthread_mutex_lock(&g_klock);
+            ((KThread *)o)->prio = (int)x[1];
+#ifdef __ANDROID__
+            core_refresh_preempt();  // (the order of an owner and its waiters may have changed)
+#endif
+            pthread_mutex_unlock(&g_klock);
+        }
         x[0] = o ? R_OK : R_INVALID_HANDLE;
         break;
     }
@@ -962,11 +1012,11 @@ static void svc_impl(Cpu *c, uint32_t imm, uint64_t pc) {
         x[1] = h;
         break;
     }
-    case 0x21: x[0] = ipc_handle_request(c, (uint32_t)x[0]); break;  // SendSyncRequest
+    case 0x21: x[0] = ipc_request_off_core(c, (uint32_t)x[0]); break;  // SendSyncRequest
     case 0x22: {  // SendSyncRequestWithUserBuffer(buf, size, handle)
         uint64_t saved = c->tpidrro;
         c->tpidrro = x[0];
-        x[0] = ipc_handle_request(c, (uint32_t)x[2]);
+        x[0] = ipc_request_off_core(c, (uint32_t)x[2]);
         c->tpidrro = saved;
         break;
     }

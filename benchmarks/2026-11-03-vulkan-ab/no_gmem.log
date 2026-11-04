@@ -1,0 +1,902 @@
+[env] LARECOMP_VK_GMEM_CAP_MB=1024 (recomp.env)
+[env] LARECOMP_VK_NO_GMEM=1 (recomp.env)
+[guest] in the window: 800000000-b20000000 rw-p 00000000 00:00 0 
+[guest] window 0x800000000-0xb20000000; highest mapping ends at 0x7fd919d000; 0 mappings (0 MB) in 0x7000000000-0x7320000000
+[paths] data: /storage/emulated/0/Android/data/org.smcraft.smm2recomp/files
+[gamelib] libsmm2game.so (105374 + 34472 functions)
+loaded main  at 800000000 size 2e74000 syms 947
+loaded sdk   at 804000000 size cd4000 syms 25091
+relocated main  (34 imports bound to host stubs)
+[loader] sdk: _ZN2nn2os5MutexD2Ev bound to an earlier module's
+[loader] sdk: _ZN2nn6crypto6detail10CbcMacImpl20EncryptBlockCallbackINS0_12AesEncryptorILm16EEEEEvPvPKvS8_ bound to an earlier module's
+[loader] sdk: _ZdlPv bound to an earlier module's
+[loader] sdk: _Znwm bound to an earlier module's
+[loader] sdk: _ZNSt3__1dvIdEENS_7complexIT_EERKS3_S5_ bound to an earlier module's
+[loader] sdk: _ZNSt3__1mlIdEENS_7complexIT_EERKS3_S5_ bound to an earlier module's
+[loader] sdk: _ZnwmRKSt9nothrow_t bound to an earlier module's
+[loader] sdk: _ZnamRKSt9nothrow_t bound to an earlier module's
+[loader] sdk: _ZdaPv bound to an earlier module's
+[loader] sdk: _ZdlPvRKSt9nothrow_t bound to an earlier module's
+[loader] sdk: Libz_SigloMiddlewareInfo bound to an earlier module's
+[loader] sdk: _Znam bound to an earlier module's
+[loader] sdk: _ZNSt3__113__tree_removeIPNS_16__tree_node_baseIPvEEEEvT_S5_ bound to an earlier module's
+[loader] sdk: _ZNSt3__127__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_ bound to an earlier module's
+relocated sdk   (0 imports bound to host stubs)
+[settings] loaded smm2.ini
+main thread: prio 44, stack 0x100000
+[vk] gpu 0: Mali-G78 (api 1.4.305)
+[vk] using Mali-G78
+init sdk (DT_INIT 804000030, 106 init_array entries)
+[vk] shader global memory: per-draw copies of the storage buffers (no host memory import)
+[vk] surface 2400x1080, transform 0x2, window 2400x1080
+[sm] GetService lm
+[ipc] close session lm (handle 103)
+[sm] GetService apm
+[sm] GetService appletOE
+[ipc] control 3 on appletOE (handle 105)
+[ipc] control 0 on appletOE (handle 105)
+[am] ISelfController cmd 91 (unhandled, ok)
+[am] IWindowController cmd 10 (unhandled, ok)
+[am] ISelfController cmd 13 (unhandled, ok)
+[am] ISelfController cmd 16 (unhandled, ok)
+[sm] GetService aoc:u
+[sm] GetService pctl
+[ipc] control 3 on pctl (handle 109)
+[ipc] control 0 on pctl (handle 109)
+[sm] GetService pctl:s
+[ipc] control 3 on pctl:s (handle 10a)
+[ipc] control 0 on pctl:s (handle 10a)
+[ipc] close session pctl:s (handle 10a)
+[sm] GetService pctl:a
+[ipc] control 3 on pctl:a (handle 10a)
+[ipc] control 0 on pctl:a (handle 10a)
+[ipc] close session pctl:a (handle 10a)
+[sm] GetService pctl:r
+[ipc] control 3 on pctl:r (handle 10a)
+[ipc] control 0 on pctl:r (handle 10a)
+[ipc] close session pctl:r (handle 10a)
+[pctl] IParentalControlService cmd 1 (ok)
+init main (DT_INIT 800000030, 2502 init_array entries)
+[sm] GetService time:u
+[ipc] control 3 on time:u (handle 10a)
+[ipc] control 0 on time:u (handle 10a)
+[time] shared memory mapped at 9dee04000
+[time] StandardUserSystemClock::GetCurrentTime (host clock)
+[ipc] control 3 on lm:ILogger (handle 104)
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpDateTime |  | MainThread | ###  Application Start Time [18:50:50] ###
+[sm] GetService fsp-srv
+[ipc] control 3 on fsp-srv (handle 10c)
+[ipc] control 0 on fsp-srv (handle 10c)
+[ipc] control 2 on fsp-srv (handle 10c)
+[ipc] control 2 on fsp-srv (handle 10d)
+[mod] 100 Mario Challenge on: courses from TGRCode (built-in server), ruleset hundred
+[lanky] Lanky Mario (Weird Mushroom) off
+[fs] romfs index of extracted/romfs + mods-generated/romfs,: 3801 files, 0.2 MB of tables, image 3.05 GB (153ms)
+[fs] romfs reads: 1 (0 KB)
+[fs] romfs reads: 2 (0 KB)
+[fs] romfs reads: 4 (1 KB)
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | <><><><><><><><> dumpMemoryInfo [ Application Start ] <><><><><><><><>
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 3284 MB: HBMなどのシステム以外のアプリ用領域
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 3220 MB  アプリのRootHeap + SDK用のAllocateMemoryBlock
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread |   63 MB: Program
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread |    1 MB: 空き
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 
+
+[vk] Mali-G78, swapchain 2400x1080
+[nvn] device initialized
+[nvn] window origin mode 1
+[nvn] window with 3 textures
+[kernel] CreateThread entry=80432e240 arg=a44fe7020 stack=a109dbfe0 prio=30 core=-2 -> 111
+[sm] GetService nifm:u
+[ipc] control 3 on nifm:u (handle 112)
+[ipc] control 0 on nifm:u (handle 112)
+[kernel] CreateThread entry=80432e240 arg=a4213c020 stack=a20a5afe0 prio=44 core=-2 -> 113
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[sm] GetService hid
+[kernel] CreateThread entry=80432e240 arg=a45024020 stack=a22361fe0 prio=43 core=-2 -> 117
+[ipc] control 3 on hid (handle 114)
+[touch] InitializeTouchScreen
+[kernel] CreateThread entry=80432e240 arg=a45038020 stack=a23928fe0 prio=44 core=-2 -> 118
+[kernel] CreateThread entry=80432e240 arg=a45139020 stack=a186e7fe0 prio=44 core=-2 -> 119
+[kernel] CreateThread entry=80432e240 arg=a4523a020 stack=a18a4dfe0 prio=44 core=-2 -> 11a
+[kernel] CreateThread entry=80432e240 arg=a4524c020 stack=a04198fe0 prio=45 core=-2 -> 11b
+[kernel] CreateThread entry=80432e240 arg=a4525d020 stack=a34a0dfe0 prio=45 core=-2 -> 11c
+[am] ISelfController cmd 11 (unhandled, ok)
+[am] ISelfController cmd 12 (unhandled, ok)
+[am] ISelfController cmd 14 (unhandled, ok)
+[am] ISelfController cmd 1 (unhandled, ok)
+[sm] GetService set
+[ipc] close session set (handle 11d)
+[fs] romfs reads: 8 (235 KB)
+[sm] GetService acc:u0
+[ipc] control 3 on acc:u0 (handle 11d)
+[ipc] control 0 on acc:u0 (handle 11d)
+[kernel] thread 80 waits 250ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 88 waits 250ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 80 waits 500ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 88 waits 500ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 80 waits 750ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 88 waits 750ms for core 0 (held by thread 82, last svc 1d)
+[fs] mounted host directory save/save_0
+[time] StandardUserSystemClock::GetCurrentTime (host clock)
+[time] StandardUserSystemClock::GetCurrentTime (host clock)
+[kernel] CreateThread entry=80432e240 arg=a45d1e020 stack=a16ae4fe0 prio=47 core=-2 -> 11f
+[fs] mounted host directory save/save_0
+[am] IAudioController cmd 1 (ok)
+[am] IAudioController cmd 2 (ok)
+[am] IAudioController cmd 0 (ok)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 120)
+[sm] GetService audren:u
+Low latency audio enabled
+[audren] renderer 48000 Hz, 240 samples/frame, 96 voices, 16 mixes, 96 mix buffers, 96 splitters, 20 effects
+[ipc] close session audren:u (handle 120)
+[audren] device 48000 Hz, 960 frames/period; queue target 2160 samples
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 120)
+[ipc] control 3 on IAudioDevice (handle 121)
+[ipc] close session IAudioDevice (handle 121)
+[kernel] CreateThread entry=80432e240 arg=a48179020 stack=a11045fe0 prio=32 core=-2 -> 120
+[kernel] CreateThread entry=80432e240 arg=a4817f020 stack=a1d2effe0 prio=31 core=-2 -> 121
+[audren] splitters: 0 updated, 672 destinations (v1)
+[audren] mix 0 used 1 vol 1.000 bufs 6 dest 2147483647 splitter -1:
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] control 3 on IAudioDevice (handle 126)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] control 3 on IAudioDevice (handle 126)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] control 3 on IAudioDevice (handle 126)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 126)
+[ipc] close session IAudioDevice (handle 128)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 126)
+[ipc] control 3 on IAudioDevice (handle 128)
+[ipc] close session IAudioDevice (handle 128)
+[kernel] thread 80 waits 1000ms for core 0 (held by thread 82, last svc 16)
+[kernel] thread 88 waits 1000ms for core 0 (held by thread 82, last svc 16)
+[kernel] CreateThread entry=80432e240 arg=a4891e020 stack=a06ddffe0 prio=45 core=-2 -> 126
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 128)
+[ipc] control 3 on IAudioDevice (handle 129)
+[ipc] close session IAudioDevice (handle 129)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 128)
+[ipc] control 3 on IAudioDevice (handle 129)
+[ipc] close session IAudioDevice (handle 129)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 128)
+[ipc] control 3 on IAudioDevice (handle 129)
+[ipc] close session IAudioDevice (handle 129)
+[kernel] thread 80 waits 1251ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 88 waits 1250ms for core 0 (held by thread 82, last svc 21)
+[fs] romfs reads: 16 (9872 KB)
+[kernel] CreateThread entry=80432e240 arg=a48df0020 stack=a3c297fe0 prio=43 core=-2 -> 128
+[kernel] CreateThread entry=80432e240 arg=a48e36020 stack=a0c43efe0 prio=44 core=-2 -> 129
+[kernel] CreateThread entry=80432e240 arg=a48e77020 stack=a2f926fe0 prio=44 core=-2 -> 12a
+[kernel] CreateThread entry=80432e240 arg=a48eb8020 stack=a2efaffe0 prio=44 core=-2 -> 12b
+[fs] romfs reads: 32 (10472 KB)
+[corepreempt] handoffs=1
+[kernel] thread 80 waits 2001ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 88 waits 2001ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 80 waits 2251ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 88 waits 2251ms for core 0 (held by thread 82, last svc 21)
+[pl] system font fonts/nintendo_udsg-r_std_003.bfttf (2053628 bytes)
+[pl] system font fonts/nintendo_ext_003.bfttf (180236 bytes)
+[pl] system font fonts/nintendo_udsg-r_ext_zh-cn_003.bfttf (123912 bytes)
+[pl] system font fonts/nintendo_udsg-r_org_zh-cn_003.bfttf (7848200 bytes)
+[pl] system font fonts/nintendo_udjxh-db_zh-tw_003.bfttf (3580260 bytes)
+[pl] system font fonts/nintendo_udsg-r_ko_003.bfttf (3672868 bytes)
+[kernel] CreateThread entry=80432e240 arg=a499d5020 stack=a0c315fe0 prio=46 core=-2 -> 12c
+[kernel] CreateThread entry=80432e240 arg=a4a470020 stack=a09d2cfe0 prio=43 core=-2 -> 12d
+[kernel] CreateThread entry=80432e240 arg=a4b5a8020 stack=a03e2dfe0 prio=52 core=-2 -> 12e
+[sm] GetService friend:u
+[ipc] control 3 on friend:u (handle 12f)
+[ipc] control 0 on friend:u (handle 12f)
+[ipc] control 2 on friend:u (handle 12f)
+[ipc] control 2 on friend:u (handle 130)
+[ipc] control 2 on friend:u (handle 131)
+[kernel] CreateThread entry=80432e240 arg=ab8e56020 stack=a2b3e4fe0 prio=45 core=-2 -> 133
+[kernel] CreateThread entry=80432e240 arg=a4d22c020 stack=a1118afe0 prio=47 core=-2 -> 134
+[kernel] CreateThread entry=80432e240 arg=a6af2b020 stack=a18e88fe0 prio=45 core=-2 -> 135
+[sm] GetService mii:e
+[ipc] control 3 on mii:e (handle 136)
+[ipc] control 0 on mii:e (handle 136)
+[fs] system data 0100000000000802: sysdata/0100000000000802 (6 files)
+[kernel] CreateThread entry=80432e240 arg=a6b6d3020 stack=a191fafe0 prio=45 core=-2 -> 137
+[kernel] CreateThread entry=80432e240 arg=a54ee7020 stack=a2e9f1fe0 prio=48 core=-2 -> 138
+[kernel] CreateThread entry=80432e240 arg=a54f5b020 stack=a03f1dfe0 prio=48 core=-2 -> 139
+[kernel] CreateThread entry=80432e240 arg=a55221020 stack=a2ca7ffe0 prio=48 core=-2 -> 13a
+[am] IAudioController cmd 1 (ok)
+[am] IAudioController cmd 2 (ok)
+[sm] GetService prepo:u
+[ipc] no HLE implementation for service 'prepo:u', using logging stub
+[ipc] control 3 on prepo:u (handle 13b)
+[ipc] control 0 on prepo:u (handle 13b)
+[kernel] thread 94 waits 2001ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 94 waits 2251ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 99 waits 2001ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 99 waits 2251ms for core 0 (held by thread 82, last svc 21)
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[input] GetNpadStyleSet id 0
+[input] GetNpadState id 0 lr 800263e58
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[input] GetNpadStyleSet id 0x1
+[input] GetNpadStyleSet id 0x2
+[input] GetNpadStyleSet id 0x3
+[touch] the game reads the touch screen (5 touches per sample)
+[mod] worker guard: __cxa_pure_virtual at 0x8044b52a8
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[audren] effect type 6 used: slot 0 mix 4 enabled 1
+[audren] effect type 2 used: slot 1 mix 7 enabled 1
+[audren] mix 1 used 1 vol 1.000 bufs 2 dest 3 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 2 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 3 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 4 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 5 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 6 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 7 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 8 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 9 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 10 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 11 used 1 vol 1.000 bufs 2 dest 3 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 12 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[nvn] ReportCounter type 16
+[nvn] ReportCounter type 0
+[ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+[kernel] CreateThread entry=80432e240 arg=ab8e67020 stack=a28a35fe0 prio=45 core=-2 -> 11b
+[kernel] CreateThread entry=80432e240 arg=ab8f20020 stack=a2cbebfe0 prio=46 core=-2 -> 13c
+[kernel] CreateThread entry=80432e240 arg=ab8f32020 stack=a0354bfe0 prio=46 core=-2 -> 13d
+[kernel] CreateThread entry=80432e240 arg=ab8f44020 stack=a3731ffe0 prio=46 core=-2 -> 13e
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[fs] romfs reads: 64 (53460 KB)
+[vk] transient ring: memory type 0 (device-local host-visible )
+[post] 1920x1080 smaa -> 1920x1080
+[menu] font /system/fonts/Roboto-Regular.ttf
+[cpumod] started 15 executable segments, 10ms CPU timer, 8KB buckets
+[corepreempt] handoffs=128
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[corepreempt] handoffs=256
+[corepreempt] handoffs=384
+[pace] frames don't fit 60 fps (12 of the last 60 over 16.2 ms busy): the game's 30 fps mode
+[corepreempt] handoffs=512
+[corepreempt] handoffs=640
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+[vk] no page write tracking (-1, page 4096)
+[corepreempt] handoffs=768
+[vk] command counts: 0:351 2:270 3:54 4:1132 5:220 6:220 7:136 9:136 10:54 11:54 12:54 13:2610 15:5244 17:40 18:40 19:256 20:329 21:329 22:329 23:220 28:136 32:432 33:233 38:166 48:40 51:431 54:416 61:136
+[vk] t=10.4 frame 40 19.5 fps gen 0/39 max 249ms level  (166 draws, 0 skipped, 57 passes, 0 dispatches, 80 flushes, wait 0ms, compile 4, fbcopy 0, upload 1.6MB)
+[corepreempt] handoffs=896
+[corepreempt] handoffs=1024
+[corepreempt] handoffs=1152
+[corepreempt] handoffs=1280
+[corepreempt] handoffs=1408
+[vk] command counts: 0:771 2:606 3:138 4:2686 5:640 6:640 7:304 9:304 10:138 11:138 12:138 13:5760 15:10914 17:82 18:82 19:550 20:749 21:749 22:749 23:640 28:304 32:936 33:527 38:586 48:82 51:935 54:878 61:304
+[vk] t=12.4 frame 82 21.0 fps gen 0/42 max 78ms level  (420 draws, 0 skipped, 84 passes, 0 dispatches, 84 flushes, wait 0ms, compile 0, fbcopy 0, upload 0.3MB)
+[corepreempt] handoffs=1536
+[corepreempt] handoffs=1664
+[fs] romfs reads: 128 (118019 KB)
+[corepreempt] handoffs=1792
+[corepreempt] handoffs=1920
+[vk] command counts: 0:1181 2:934 3:220 4:4203 5:1050 6:1050 7:468 9:468 10:220 11:220 12:220 13:8835 15:16449 17:123 18:123 19:837 20:1159 21:1159 22:1159 23:1050 28:468 32:1428 33:814 38:996 48:123 51:1427 54:1329 61:468
+[vk] t=14.4 frame 123 20.3 fps gen 0/41 max 81ms level  (410 draws, 0 skipped, 82 passes, 0 dispatches, 82 flushes, wait 1ms, compile 0, fbcopy 0, upload 0.3MB)
+[corepreempt] handoffs=2048
+[corepreempt] handoffs=2176
+[corepreempt] handoffs=2304
+[vk] t=16.4 frame 160 18.4 fps gen 0/37 max 123ms level  (370 draws, 0 skipped, 74 passes, 0 dispatches, 74 flushes, wait 0ms, compile 0, fbcopy 0, upload 0.2MB)
+[corepreempt] handoffs=2432
+[corepreempt] handoffs=2560
+[corepreempt] handoffs=2688
+[corepreempt] handoffs=2816
+[vk] t=18.5 frame 198 18.9 fps gen 0/38 max 74ms level  (380 draws, 0 skipped, 76 passes, 0 dispatches, 76 flushes, wait 0ms, compile 0, fbcopy 0, upload 0.2MB)
+[corepreempt] handoffs=2944
+[corepreempt] handoffs=3072
+[corepreempt] handoffs=3200
+[corepreempt] handoffs=3328
+[vk] t=20.5 frame 235 17.9 fps gen 0/37 max 93ms level  (370 draws, 0 skipped, 74 passes, 0 dispatches, 74 flushes, wait 1ms, compile 0, fbcopy 0, upload 0.2MB)
+[corepreempt] handoffs=3456
+[corepreempt] handoffs=3584
+[corepreempt] handoffs=3712
+[corepreempt] handoffs=3840
+[vk] t=22.5 frame 277 20.8 fps gen 0/42 max 75ms level  (420 draws, 0 skipped, 84 passes, 0 dispatches, 84 flushes, wait 0ms, compile 0, fbcopy 0, upload 0.3MB)
+[corepreempt] handoffs=3968
+[cpumod] 15s total 4252 unmapped 978 game=942 runtime=159 SDL3=920 Vulkan=15 libc=1238 shader=0 other=0
+[cpuhot] game 294a000:250 296c000:149 294c000:118 2958000:116 295c000:33 294e000:16 2972000:16 44f6000:13
+[cpuhot] runtime 1dc000:87 1d8000:23 1da000:18 266000:9 264000:6 4be000:4 1de000:3 4b8000:3
+[cpuhot] SDL3 1b2000:336 a0000:103 18c000:92 a2000:61 190000:58 1b0000:47 1b4000:38 184000:34
+[cpuhot] Vulkan 1c74000:2 30000:1 944000:1 946000:1 94c000:1 1bfc000:1 1c2a000:1 1c44000:1
+[corepreempt] handoffs=4096
+[corepreempt] handoffs=4224
+[vk] t=24.6 frame 311 16.8 fps gen 0/34 max 343ms level  (340 draws, 0 skipped, 68 passes, 0 dispatches, 68 flushes, wait 0ms, compile 0, fbcopy 0, upload 0.2MB)
+[corepreempt] handoffs=4352
+[fs] romfs reads: 256 (243624 KB)
+[corepreempt] handoffs=4480
+[corepreempt] handoffs=4608
+[corepreempt] handoffs=4736
+[vk] t=26.6 frame 353 20.7 fps gen 0/42 max 183ms level  (420 draws, 0 skipped, 84 passes, 0 dispatches, 84 flushes, wait 1ms, compile 0, fbcopy 0, upload 0.3MB)
+[corepreempt] handoffs=4864
+[vk] t=28.6 frame 366 6.4 fps gen 0/13 max 1541ms level  (236 draws, 0 skipped, 26 passes, 0 dispatches, 26 flushes, wait 0ms, compile 2, fbcopy 0, upload 0.3MB)
+[corepreempt] handoffs=4992
+[corepreempt] handoffs=5120
+[vk] t=30.6 frame 424 28.9 fps gen 0/58 max 54ms level  (2726 draws, 0 skipped, 116 passes, 0 dispatches, 116 flushes, wait 0ms, compile 0, fbcopy 0, upload 2.6MB)
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+[kernel] CreateThread entry=80432e240 arg=ab8e67020 stack=a16078fe0 prio=45 core=-2 -> 11b
+[kernel] CreateThread entry=80432e240 arg=ab8f20020 stack=a3948bfe0 prio=46 core=-2 -> 13c
+[kernel] CreateThread entry=80432e240 arg=ab8f32020 stack=a1fa62fe0 prio=46 core=-2 -> 13d
+[kernel] CreateThread entry=80432e240 arg=ab8f44020 stack=a3d966fe0 prio=46 core=-2 -> 13e
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[corepreempt] handoffs=5248
+[corepreempt] handoffs=5376
+[corepreempt] handoffs=5504
+[corepreempt] handoffs=5632
+[corepreempt] handoffs=5760
+[corepreempt] handoffs=5888
+[corepreempt] handoffs=6016
+[vk] t=32.7 frame 477 26.0 fps gen 0/53 max 54ms level  (2032 draws, 0 skipped, 106 passes, 0 dispatches, 106 flushes, wait 0ms, compile 0, fbcopy 0, upload 1.4MB)
+[kernel] thread 114 waits 2001ms for core 2 (held by thread 100, last svc 1d)
+[corepreempt] handoffs=6144
+[kernel] thread 114 waits 2251ms for core 2 (held by thread 100, last svc 1d)
+[corepreempt] handoffs=6272
+[corepreempt] handoffs=6400
+[corepreempt] handoffs=6528
+[corepreempt] handoffs=6656
+[corepreempt] handoffs=6784
+[corepreempt] handoffs=6912
+[corepreempt] handoffs=7040
+[vk] t=34.7 frame 525 24.0 fps gen 0/48 max 90ms level  (1824 draws, 0 skipped, 96 passes, 0 dispatches, 96 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=7168
+[corepreempt] handoffs=7296
+[corepreempt] handoffs=7424
+[corepreempt] handoffs=7552
+[corepreempt] handoffs=7680
+[corepreempt] handoffs=7808
+[corepreempt] handoffs=7936
+[vk] t=36.7 frame 571 22.4 fps gen 0/46 max 59ms level  (1748 draws, 0 skipped, 92 passes, 0 dispatches, 92 flushes, wait 0ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=8064
+[corepreempt] handoffs=8192
+[corepreempt] handoffs=8320
+[corepreempt] handoffs=8448
+[input] GetNpadState id 0 lr 800263e58
+[shader] prefetch: scanned 13002 draws / 1203 submits (53.0 ms), started 3 programs + 15 pipelines ahead, waits 9 (1988 ms total, worst 1444 ms), unforeseen 0
+[corepreempt] handoffs=8576
+[corepreempt] handoffs=8704
+[cpumod] 30s total 4182 unmapped 1114 game=563 runtime=226 SDL3=965 Vulkan=37 libc=1276 shader=1 other=0
+[cpuhot] game 3596000:22 bf5c000:22 44f8000:21 44f6000:19 11630000:16 1152c000:15 114d6000:14 2940000:13
+[cpuhot] runtime 1dc000:113 1d8000:44 1da000:26 266000:11 264000:10 4be000:6 1de000:4 360000:2
+[cpuhot] SDL3 1b2000:360 a0000:103 18c000:89 1b0000:59 a2000:56 190000:56 1b4000:32 114000:28
+[cpuhot] Vulkan 1d84000:4 2450000:4 91c000:2 2bde000:2 2f94000:2 8ea000:1 8fc000:1 8fe000:1
+[cpuhot] shader 3ba000:1
+[corepreempt] handoffs=8832
+[vk] t=38.7 frame 619 23.6 fps gen 0/48 max 56ms level  (1824 draws, 0 skipped, 96 passes, 0 dispatches, 96 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=8960
+[corepreempt] handoffs=9088
+[corepreempt] handoffs=9216
+[corepreempt] handoffs=9344
+[corepreempt] handoffs=9472
+[corepreempt] handoffs=9600
+[corepreempt] handoffs=9728
+[corepreempt] handoffs=9856
+[vk] t=40.8 frame 666 23.2 fps gen 0/47 max 63ms level  (1786 draws, 0 skipped, 94 passes, 0 dispatches, 94 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=9984
+[corepreempt] handoffs=10112
+[corepreempt] handoffs=10240
+[corepreempt] handoffs=10368
+[corepreempt] handoffs=10496
+[corepreempt] handoffs=10624
+[corepreempt] handoffs=10752
+[vk] t=42.8 frame 714 23.6 fps gen 0/48 max 62ms level  (1824 draws, 0 skipped, 96 passes, 0 dispatches, 96 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=10880
+[corepreempt] handoffs=11008
+[corepreempt] handoffs=11136
+[corepreempt] handoffs=11264
+[corepreempt] handoffs=11392
+[mod] SMW goal wipe on
+[mod] Muncher hit box (SMM1) off
+[mod] quick level return off
+[mod] co-op in Endless / 100 Mario off
+[corepreempt] handoffs=11520
+[corepreempt] handoffs=11648
+[corepreempt] handoffs=11776
+[vk] t=44.8 frame 760 22.5 fps gen 0/46 max 76ms level  (1748 draws, 0 skipped, 92 passes, 0 dispatches, 92 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=11904
+[corepreempt] handoffs=12032
+[corepreempt] handoffs=12160
+[corepreempt] handoffs=12288
+[corepreempt] handoffs=12416
+[corepreempt] handoffs=12544
+[corepreempt] handoffs=12672
+[vk] t=46.9 frame 807 23.1 fps gen 0/47 max 67ms level  (1786 draws, 0 skipped, 94 passes, 0 dispatches, 94 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=12800
+[corepreempt] handoffs=12928
+[corepreempt] handoffs=13056
+[corepreempt] handoffs=13184
+[corepreempt] handoffs=13312
+[corepreempt] handoffs=13440
+[vk] t=49.0 frame 844 17.9 fps gen 0/37 max 131ms level  (1406 draws, 0 skipped, 74 passes, 0 dispatches, 74 flushes, wait 0ms, compile 0, fbcopy 0, upload 1.0MB)
+[corepreempt] handoffs=13568
+[corepreempt] handoffs=13696
+[corepreempt] handoffs=13824
+[corepreempt] handoffs=13952
+[corepreempt] handoffs=14080
+[corepreempt] handoffs=14208
+[vk] t=51.0 frame 880 17.9 fps gen 0/36 max 95ms level  (1368 draws, 0 skipped, 72 passes, 0 dispatches, 72 flushes, wait 1ms, compile 0, fbcopy 0, upload 0.9MB)
+[corepreempt] handoffs=14336
+[corepreempt] handoffs=14464
+[corepreempt] handoffs=14592
+[corepreempt] handoffs=14720
+[corepreempt] handoffs=14848
+[corepreempt] handoffs=14976
+[corepreempt] handoffs=15104
+[corepreempt] handoffs=15232
+[vk] t=53.0 frame 924 21.6 fps gen 0/44 max 70ms level  (1672 draws, 0 skipped, 88 passes, 0 dispatches, 88 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.1MB)
+[corepreempt] handoffs=15360
+[cpumod] 45s total 4517 unmapped 1024 game=755 runtime=342 SDL3=910 Vulkan=28 libc=1458 shader=0 other=0
+[cpuhot] game 1152c000:41 3596000:39 44f8000:29 1170c000:29 3594000:26 114d6000:26 eee8000:24 44f6000:20
+[cpuhot] runtime 1dc000:189 1d8000:61 1da000:28 266000:18 264000:10 286000:6 4be000:5 262000:4
+[cpuhot] SDL3 1b2000:366 a0000:91 18c000:84 1b0000:48 184000:44 190000:43 a2000:40 8a000:30
+[cpuhot] Vulkan 1c3a000:2 1c74000:2 1d7e000:2 1d84000:2 32000:1 36000:1 8fa000:1 916000:1
+[corepreempt] handoffs=15488
+[corepreempt] handoffs=15616
+[corepreempt] handoffs=15744
+[corepreempt] handoffs=15872
+[corepreempt] handoffs=16000
+[vk] t=55.0 frame 966 20.8 fps gen 0/42 max 99ms level  (1596 draws, 0 skipped, 84 passes, 0 dispatches, 84 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.1MB)
+[corepreempt] handoffs=16128
+[corepreempt] handoffs=16256
+[corepreempt] handoffs=16384
+[corepreempt] handoffs=16512
+[corepreempt] handoffs=16640
+[corepreempt] handoffs=16768
+[corepreempt] handoffs=16896
+[vk] t=57.1 frame 1007 20.1 fps gen 0/41 max 76ms level  (1558 draws, 0 skipped, 82 passes, 0 dispatches, 82 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.1MB)
+[corepreempt] handoffs=17024
+[corepreempt] handoffs=17152
+[corepreempt] handoffs=17280
+[corepreempt] handoffs=17408
+[corepreempt] handoffs=17536
+[corepreempt] handoffs=17664
+[vk] t=59.1 frame 1036 14.4 fps gen 0/29 max 144ms level  (1102 draws, 0 skipped, 58 passes, 0 dispatches, 58 flushes, wait 0ms, compile 0, fbcopy 0, upload 0.7MB)
+[corepreempt] handoffs=17792
+[corepreempt] handoffs=17920
+[corepreempt] handoffs=18048
+[corepreempt] handoffs=18176
+[corepreempt] handoffs=18304
+[corepreempt] handoffs=18432
+[vk] t=61.1 frame 1077 20.1 fps gen 0/41 max 67ms level  (1558 draws, 0 skipped, 82 passes, 0 dispatches, 82 flushes, wait 0ms, compile 0, fbcopy 0, upload 1.1MB)
+[corepreempt] handoffs=18560
+[corepreempt] handoffs=18688
+[corepreempt] handoffs=18816
+[corepreempt] handoffs=18944
+[corepreempt] handoffs=19072
+[corepreempt] handoffs=19200
+[corepreempt] handoffs=19328
+[vk] t=63.1 frame 1119 20.6 fps gen 0/42 max 87ms level  (1596 draws, 0 skipped, 84 passes, 0 dispatches, 84 flushes, wait 0ms, compile 0, fbcopy 0, upload 1.1MB)
+[corepreempt] handoffs=19456
+[corepreempt] handoffs=19584
+[corepreempt] handoffs=19712
+[corepreempt] handoffs=19840
+[corepreempt] handoffs=19968
+[corepreempt] handoffs=20096
+[corepreempt] handoffs=20224
+[vk] t=65.3 frame 1160 19.4 fps gen 0/41 max 131ms level  (1558 draws, 0 skipped, 82 passes, 0 dispatches, 82 flushes, wait 0ms, compile 0, fbcopy 0, upload 1.1MB)
+[corepreempt] handoffs=20352
+[corepreempt] handoffs=20480
+[corepreempt] handoffs=20608
+[corepreempt] handoffs=20736
+[corepreempt] handoffs=20864
+[corepreempt] handoffs=20992
+[input] GetNpadState id 0 lr 800263e58
+[corepreempt] handoffs=21120
+[shader] prefetch: scanned 22800 draws / 1200 submits (61.7 ms), started 0 programs + 0 pipelines ahead, waits 0 (0 ms total, worst 0 ms), unforeseen 0
+[vk] t=67.3 frame 1204 21.8 fps gen 0/44 max 66ms level  (1672 draws, 0 skipped, 88 passes, 0 dispatches, 88 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.1MB)
+[corepreempt] handoffs=21248
+[corepreempt] handoffs=21376
+[corepreempt] handoffs=21504
+[cpumod] 60s total 4187 unmapped 908 game=820 runtime=309 SDL3=833 Vulkan=21 libc=1296 shader=0 other=0
+[cpuhot] game 2940000:63 3596000:39 1152c000:34 44f8000:33 44f6000:32 3594000:30 bf5c000:28 eee8000:23
+[cpuhot] runtime 1dc000:161 1d8000:61 1da000:36 266000:14 1de000:7 264000:7 27c000:6 1e0000:3
+[cpuhot] SDL3 1b2000:301 a0000:105 18c000:82 a2000:51 1b0000:51 190000:31 184000:30 1b4000:28
+[cpuhot] Vulkan ab0000:3 1bf8000:2 36000:1 8fc000:1 948000:1 1bfa000:1 1c14000:1 1c1e000:1
+[corepreempt] handoffs=21632
+[corepreempt] handoffs=21760
+[vk] t=69.3 frame 1238 17.0 fps gen 0/34 max 255ms level  (1292 draws, 0 skipped, 68 passes, 0 dispatches, 68 flushes, wait 1ms, compile 0, fbcopy 0, upload 0.9MB)
+[corepreempt] handoffs=21888
+[corepreempt] handoffs=22016
+[corepreempt] handoffs=22144
+[corepreempt] handoffs=22272
+[corepreempt] handoffs=22400
+[corepreempt] handoffs=22528
+[corepreempt] handoffs=22656
+[corepreempt] handoffs=22784
+[vk] t=71.3 frame 1283 22.4 fps gen 0/45 max 71ms level  (1710 draws, 0 skipped, 90 passes, 0 dispatches, 90 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=22912
+[corepreempt] handoffs=23040
+[corepreempt] handoffs=23168
+[corepreempt] handoffs=23296
+[corepreempt] handoffs=23424
+[corepreempt] handoffs=23552
+[corepreempt] handoffs=23680
+[vk] t=73.3 frame 1330 23.3 fps gen 0/47 max 60ms level  (1786 draws, 0 skipped, 94 passes, 0 dispatches, 94 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=23808
+[corepreempt] handoffs=23936
+[corepreempt] handoffs=24064
+[corepreempt] handoffs=24192
+[corepreempt] handoffs=24320
+[corepreempt] handoffs=24448
+[corepreempt] handoffs=24576
+[vk] t=75.3 frame 1375 22.1 fps gen 0/45 max 63ms level  (1710 draws, 0 skipped, 90 passes, 0 dispatches, 90 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.2MB)
+[corepreempt] handoffs=24704
+[corepreempt] handoffs=24832
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[kernel] thread 92 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 93 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 103 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 91 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 102 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 85 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 92 waits 2251ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 93 waits 2251ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 103 waits 2251ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 91 waits 2251ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 102 waits 2251ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 85 waits 2251ms for core 1 (held by thread 81, last svc 1d)
+[shader] waited 5226 ms for job
+[vk] 4x4 colour texture sampled with depth comparison: through a depth copy (format 100 -> 126)
+[vk] texture 0x76543dcb30 (1920x1080 f0x3f agl::DTA[17]) aliases storage a60b29200
+[vk] texture 0x76543de3b0 (1920x1080 f0x34 agl::DTA[16]) aliases storage a602b9000
+[audren] splitters: 4 updated, 10 destinations (v1)
+[audren] mix 2 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 6 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] voice 0 through splitter 2 (3 destinations)
+[audren] voice 1 through splitter 3 (3 destinations)
+[audren] voice 0 through splitter 2 (3 destinations)
+[audren] voice 1 through splitter 3 (3 destinations)
+[corepreempt] handoffs=24960
+[cpumod] 77s total 5253 unmapped 1127 game=399 runtime=206 SDL3=1105 Vulkan=692 libc=1655 shader=69 other=0
+[cpuhot] game 4dc0000:20 44f8000:14 eee8000:13 10c82000:13 108c4000:12 44f6000:11 294a000:10 bf5c000:10
+[cpuhot] runtime 1dc000:97 1d8000:32 1da000:19 264000:9 266000:8 276000:8 27a000:8 288000:5
+[cpuhot] SDL3 1b2000:418 a0000:143 18c000:103 190000:51 a2000:49 1b0000:49 18e000:47 184000:43
+[cpuhot] Vulkan 2f36000:53 2de0000:35 1eaa000:32 1eba000:32 1e78000:23 1eb8000:20 2d6a000:18 2bde000:15
+[cpuhot] shader 2b8000:7 3c2000:5 480000:5 320000:4 396000:4 2aa000:3 32e000:3 43e000:3
+[vk] t=85.3 frame 1389 1.4 fps gen 0/14 max 9182ms level  (1161 draws, 0 skipped, 125 passes, 1 dispatches, 29 flushes, wait 4ms, compile 155, fbcopy 12, upload 89.6MB)
+[vk] texture 0x765441c690 (1600x900 f0x3f agl::DTA[32]) aliases storage a608f9200
+[vk] texture 0x7654402df0 (1600x900 f0x34 agl::DTA[31]) aliases storage a602b9000
+[kernel] thread 92 waits 2006ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 93 waits 2008ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 91 waits 2002ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 103 waits 2006ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 102 waits 2003ms for core 1 (held by thread 81, last svc 1d)
+[vk] surface lost; no new one yet: Android native window is not available for surface creation, usually because of backgrounding
+[vk] t=87.4 frame 1390 0.5 fps gen 0/1 max 2138ms level  (1393 draws, 0 skipped, 43 passes, 1 dispatches, 2 flushes, wait 3ms, compile 38, fbcopy 12, upload 6.6MB)
+[vk] texture 0x76543e5e30 (1600x900 f0x3f agl::DTA[30]) aliases storage a608f9200
+[vk] surface lost; no new one yet: Android native window is not available for surface creation, usually because of backgrounding
+[vk] surface lost; no new one yet: Android native window is not available for surface creation, usually because of backgrounding
+[corepreempt] handoffs=25088
+[vk] surface lost; no new one yet: Android native window is not available for surface creation, usually because of backgrounding
+[vk] surface lost; no new one yet: Android native window is not available for surface creation, usually because of backgrounding
+[vk] t=89.7 frame 1395 2.2 fps gen 0/0 max 875ms level  (7037 draws, 0 skipped, 215 passes, 5 dispatches, 11 flushes, wait 19ms, compile 0, fbcopy 60, upload 34.1MB)
+[corepreempt] handoffs=25216
+[kernel] thread 97 waits 2003ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 103 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 93 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 91 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 102 waits 2001ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 85 waits 2002ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 97 waits 2253ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 103 waits 2251ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 93 waits 2252ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 91 waits 2251ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 102 waits 2251ms for core 1 (held by thread 81, last svc 1d)
+[kernel] thread 85 waits 2252ms for core 1 (held by thread 81, last svc 1d)
+[shader] waited 7461 ms for job
+[vk] t=98.4 frame 1398 0.3 fps gen 0/0 max 8044ms level  (4250 draws, 0 skipped, 129 passes, 3 dispatches, 6 flushes, wait 10ms, compile 2, fbcopy 36, upload 20.3MB)
+[corepreempt] handoffs=25344
+[corepreempt] handoffs=25472
+[cpumod] 92s total 1745 unmapped 75 game=383 runtime=143 SDL3=35 Vulkan=736 libc=331 shader=42 other=0
+[cpuhot] game fcd0000:14 fcd4000:13 10908000:10 fcd6000:9 108c4000:9 26c6000:8 2b7a000:8 a5ac000:8
+[cpuhot] runtime 1dc000:30 1d8000:23 1da000:12 36a000:9 35c000:8 27c000:6 360000:6 4be000:6
+[cpuhot] SDL3 1b2000:17 a0000:6 190000:4 1b4000:3 a2000:2 18c000:2 94000:1
+[cpuhot] Vulkan 278c000:47 278e000:45 2796000:35 2450000:31 2f36000:30 2880000:26 2456000:13 1eba000:12
+[cpuhot] shader 2b8000:6 372000:6 376000:3 322000:2 374000:2 3c0000:2 3c6000:2 2aa000:1
+[vk] t=100.6 frame 1405 3.2 fps gen 0/0 max 376ms level  (9996 draws, 0 skipped, 301 passes, 7 dispatches, 14 flushes, wait 31ms, compile 0, fbcopy 81, upload 47.3MB)
+[corepreempt] handoffs=25600
+[corepreempt] handoffs=25728
+[vk] t=102.8 frame 1413 3.7 fps gen 0/0 max 634ms level  (11442 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 25ms, compile 2, fbcopy 88, upload 66.1MB)
+[corepreempt] handoffs=25856
+[corepreempt] handoffs=25984
+[vk] t=104.9 frame 1423 4.7 fps gen 0/0 max 231ms level  (14310 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 35ms, compile 0, fbcopy 110, upload 67.7MB)
+[vk] t=107.1 frame 1427 1.9 fps gen 0/0 max 1531ms level  (5725 draws, 0 skipped, 172 passes, 4 dispatches, 8 flushes, wait 14ms, compile 2, fbcopy 44, upload 27.1MB)
+[corepreempt] handoffs=26112
+[corepreempt] handoffs=26240
+[vk] t=109.3 frame 1435 3.6 fps gen 0/0 max 434ms level  (11455 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 22ms, compile 0, fbcopy 88, upload 54.3MB)
+[corepreempt] handoffs=26368
+[corepreempt] handoffs=26496
+[vk] t=111.5 frame 1443 3.6 fps gen 0/0 max 337ms level  (11448 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 26ms, compile 0, fbcopy 88, upload 54.2MB)
+[corepreempt] handoffs=26624
+[vk] t=113.6 frame 1451 3.8 fps gen 0/0 max 302ms level  (11445 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 28ms, compile 0, fbcopy 88, upload 54.3MB)
+[pctl] IParentalControlService cmd 1001 (ok)
+[corepreempt] handoffs=26752
+[cpumod] 107s total 2283 unmapped 125 game=1198 runtime=389 SDL3=1 Vulkan=274 libc=282 shader=14 other=0
+[cpuhot] game 10908000:31 fcc0000:29 101e2000:26 343c000:24 114d6000:24 2b7a000:21 35ae000:21 a5ac000:21
+[cpuhot] runtime 1dc000:78 1d8000:72 1da000:39 366000:30 35c000:28 370000:24 360000:21 36a000:20
+[cpuhot] SDL3 190000:1
+[cpuhot] Vulkan 91c000:15 27a2000:11 1c06000:9 91a000:8 1bfc000:8 1c4e000:8 1c44000:6 1ee6000:6
+[cpuhot] shader 3c2000:2 2aa000:1 2b8000:1 2be000:1 2c6000:1 320000:1 372000:1 378000:1
+[vk] t=115.7 frame 1457 2.9 fps gen 0/0 max 583ms level  (8370 draws, 0 skipped, 258 passes, 6 dispatches, 12 flushes, wait 19ms, compile 0, fbcopy 66, upload 40.6MB)
+[corepreempt] handoffs=26880
+[mod] the built-in course server didn't start; using server=http://127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] GET /api/endless: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_easy?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_normal?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_expert?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_super_expert?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] Maker avatar name set to "Player" (default Mii)
+[corepreempt] handoffs=27008
+[vk] t=117.9 frame 1466 4.0 fps gen 0/0 max 297ms level  (12555 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 26ms, compile 0, fbcopy 99, upload 60.9MB)
+[corepreempt] handoffs=27136
+[vk] t=119.9 frame 1475 4.5 fps gen 0/0 max 261ms level  (12555 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 24ms, compile 0, fbcopy 99, upload 60.9MB)
+[corepreempt] handoffs=27264
+[vk] t=122.1 frame 1485 4.6 fps gen 0/0 max 275ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 28ms, compile 0, fbcopy 110, upload 67.7MB)
+[corepreempt] handoffs=27392
+[corepreempt] handoffs=27520
+[vk] t=124.2 frame 1494 4.2 fps gen 0/0 max 275ms level  (12555 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 30ms, compile 0, fbcopy 99, upload 60.9MB)
+[corepreempt] handoffs=27648
+[vk] t=126.4 frame 1503 4.2 fps gen 0/0 max 291ms level  (12555 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 27ms, compile 0, fbcopy 99, upload 61.0MB)
+[corepreempt] handoffs=27776
+[vk] t=128.6 frame 1512 4.1 fps gen 0/0 max 296ms level  (12555 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 31ms, compile 0, fbcopy 99, upload 61.0MB)
+[corepreempt] handoffs=27904
+[corepreempt] handoffs=28032
+[cpumod] 122s total 2249 unmapped 143 game=1246 runtime=463 SDL3=4 Vulkan=121 libc=272 shader=0 other=0
+[cpuhot] game fcc0000:35 343c000:34 a5ac000:25 10908000:25 1152c000:24 2b7a000:22 108c4000:22 114d6000:22
+[cpuhot] runtime 1dc000:106 1d8000:72 1da000:48 366000:44 36a000:35 370000:30 360000:25 35c000:22
+[cpuhot] SDL3 94000:2 168000:1 1b4000:1
+[cpuhot] Vulkan 91c000:19 8fe000:6 1c06000:6 1c28000:6 1c70000:6 1bfc000:5 1c72000:5 1ee6000:5
+[vk] t=130.8 frame 1520 3.5 fps gen 0/0 max 322ms level  (11160 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 25ms, compile 0, fbcopy 88, upload 54.2MB)
+[corepreempt] handoffs=28160
+[vk] t=132.9 frame 1528 3.8 fps gen 0/0 max 296ms level  (11160 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 23ms, compile 0, fbcopy 88, upload 54.2MB)
+[corepreempt] handoffs=28288
+[vk] t=135.0 frame 1537 4.4 fps gen 0/0 max 248ms level  (12552 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 31ms, compile 0, fbcopy 99, upload 61.0MB)
+[corepreempt] handoffs=28416
+[corepreempt] handoffs=28544
+[vk] t=137.9 frame 1546 3.1 fps gen 0/0 max 956ms level  (12547 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 30ms, compile 2, fbcopy 99, upload 61.2MB)
+[corepreempt] handoffs=28672
+[vk] t=139.9 frame 1556 5.0 fps gen 0/0 max 266ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 28ms, compile 0, fbcopy 110, upload 67.9MB)
+[corepreempt] handoffs=28800
+[corepreempt] handoffs=28928
+[vk] t=141.9 frame 1567 5.5 fps gen 0/0 max 215ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 33ms, compile 0, fbcopy 121, upload 74.7MB)
+[vk] acquire blocked 34ms
+[corepreempt] handoffs=29056
+[vk] t=144.3 frame 1575 3.3 fps gen 0/0 max 878ms level  (11160 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 25ms, compile 0, fbcopy 88, upload 54.3MB)
+[corepreempt] handoffs=29184
+[cpumod] 138s total 2249 unmapped 131 game=1200 runtime=472 SDL3=1 Vulkan=185 libc=254 shader=6 other=0
+[cpuhot] game 35ae000:34 343c000:25 10908000:24 a588000:23 2b7a000:21 a5ac000:20 7c50000:19 114d6000:19
+[cpuhot] runtime 1dc000:104 1d8000:79 1da000:48 36a000:41 366000:34 370000:31 35c000:30 360000:23
+[cpuhot] SDL3 190000:1
+[cpuhot] Vulkan 91c000:18 1bf8000:6 1c06000:6 1c4e000:6 91a000:5 1ee6000:5 288e000:5 8fe000:4
+[cpuhot] shader 364000:1 388000:1 3c0000:1 41c000:1 46a000:1 482000:1
+[vk] t=146.6 frame 1581 2.6 fps gen 0/0 max 662ms level  (8370 draws, 0 skipped, 258 passes, 6 dispatches, 12 flushes, wait 19ms, compile 0, fbcopy 66, upload 40.8MB)
+[corepreempt] handoffs=29312
+[vk] t=148.6 frame 1586 2.5 fps gen 0/0 max 662ms level  (6975 draws, 0 skipped, 215 passes, 5 dispatches, 10 flushes, wait 13ms, compile 0, fbcopy 55, upload 34.0MB)
+[corepreempt] handoffs=29440
+[vk] t=150.8 frame 1590 1.8 fps gen 0/0 max 1187ms level  (5580 draws, 0 skipped, 172 passes, 4 dispatches, 8 flushes, wait 15ms, compile 0, fbcopy 44, upload 27.2MB)
+[corepreempt] handoffs=29568
+[corepreempt] handoffs=29696
+[vk] t=153.1 frame 1596 2.7 fps gen 0/0 max 689ms level  (8370 draws, 0 skipped, 258 passes, 6 dispatches, 12 flushes, wait 18ms, compile 0, fbcopy 66, upload 40.8MB)
+[corepreempt] handoffs=29824
+[vk] t=155.2 frame 1602 2.8 fps gen 0/0 max 527ms level  (8370 draws, 0 skipped, 258 passes, 6 dispatches, 12 flushes, wait 15ms, compile 0, fbcopy 66, upload 40.8MB)
+[corepreempt] handoffs=29952
+[vi] vsync timer late by 7714ms (host throttling?)
+[cpumod] 156s total 1137 unmapped 67 game=591 runtime=251 SDL3=4 Vulkan=66 libc=158 shader=0 other=0
+[cpuhot] game fcc0000:19 101e2000:18 343c000:14 35ae000:14 10908000:14 7c50000:11 108c4000:11 a5ac000:10
+[cpuhot] runtime 1dc000:50 1d8000:49 1da000:27 36a000:21 366000:19 370000:17 35c000:13 360000:11
+[cpuhot] SDL3 90000:1 172000:1 18c000:1 1b4000:1
+[cpuhot] Vulkan 91c000:12 1c06000:8 91a000:5 1bfc000:3 1c72000:3 1c74000:3 1ee6000:3 20000:2
+[vk] t=164.3 frame 1605 0.3 fps gen 0/0 max 8627ms level  (4185 draws, 0 skipped, 129 passes, 3 dispatches, 6 flushes, wait 9ms, compile 0, fbcopy 33, upload 20.4MB)
+[shader] compile-ahead: 1 shaders read, 4 programs the game set, 8 compiled to SPIR-V, 157 s in; now Layout/Cmn_EventClearMark_00.Nin_NX_NVN.szs:Cmn_EventClearMark_00.arc:bgsh/__ArchiveShader.bnsh
+[vk] t=166.4 frame 1606 0.5 fps gen 0/0 max 2042ms level  (1395 draws, 0 skipped, 43 passes, 1 dispatches, 2 flushes, wait 3ms, compile 0, fbcopy 11, upload 6.8MB)
+[corepreempt] handoffs=30080
+[corepreempt] handoffs=30208
+[vk] t=168.5 frame 1613 3.3 fps gen 0/0 max 662ms level  (9765 draws, 0 skipped, 301 passes, 7 dispatches, 14 flushes, wait 20ms, compile 0, fbcopy 77, upload 47.6MB)
+[corepreempt] handoffs=30336
+[vk] t=170.5 frame 1622 4.4 fps gen 0/0 max 246ms level  (12555 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 28ms, compile 0, fbcopy 99, upload 61.2MB)
+[corepreempt] handoffs=30464
+[vk] t=172.6 frame 1632 4.9 fps gen 0/0 max 240ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 32ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=30592
+[corepreempt] handoffs=30720
+[vi] vsync timer late by 140ms (host throttling?)
+[vk] t=174.8 frame 1643 5.1 fps gen 0/0 max 361ms level  (15336 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 29ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=30848
+[vk] t=176.9 frame 1655 5.7 fps gen 0/0 max 209ms level  (16734 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 27ms, compile 0, fbcopy 132, upload 81.6MB)
+[corepreempt] handoffs=30976
+[corepreempt] handoffs=31104
+[vk] t=179.0 frame 1665 4.8 fps gen 0/0 max 307ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 25ms, compile 0, fbcopy 110, upload 68.0MB)
+[cpumod] 171s total 2293 unmapped 131 game=1321 runtime=431 SDL3=4 Vulkan=120 libc=257 shader=29 other=0
+[cpuhot] game 35ae000:33 114d6000:30 2b7a000:27 26c6000:25 108c4000:25 10908000:24 343c000:23 101e2000:23
+[cpuhot] runtime 1d8000:84 1dc000:82 1da000:40 366000:39 36a000:33 360000:29 370000:26 35c000:23
+[cpuhot] SDL3 90000:1 94000:1 190000:1 1b4000:1
+[cpuhot] Vulkan 91c000:15 1bfc000:10 1c06000:10 1ee6000:9 1c72000:7 1c2c000:5 1c4e000:5 1c74000:5
+[cpuhot] shader 2ba000:4 378000:3 2aa000:2 2b8000:2 2c6000:1 2e8000:1 322000:1 32c000:1
+[corepreempt] handoffs=31232
+[vk] t=181.0 frame 1677 5.9 fps gen 0/0 max 222ms level  (16744 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 31ms, compile 0, fbcopy 132, upload 81.6MB)
+[corepreempt] handoffs=31360
+[vk] t=183.1 frame 1689 5.9 fps gen 0/0 max 208ms level  (16740 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 34ms, compile 0, fbcopy 132, upload 81.6MB)
+[corepreempt] handoffs=31488
+[vi] vsync timer late by 206ms (host throttling?)
+[vk] t=185.1 frame 1699 4.8 fps gen 0/0 max 425ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 26ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=31616
+[vk] t=187.2 frame 1707 3.9 fps gen 0/0 max 387ms level  (11162 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 21ms, compile 0, fbcopy 88, upload 54.4MB)
+[corepreempt] handoffs=31744
+[vk] t=189.3 frame 1716 4.4 fps gen 0/0 max 565ms level  (12557 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 23ms, compile 0, fbcopy 99, upload 61.2MB)
+[corepreempt] handoffs=31872
+[corepreempt] handoffs=32000
+[vk] t=191.3 frame 1729 6.3 fps gen 0/0 max 209ms level  (18135 draws, 0 skipped, 559 passes, 13 dispatches, 26 flushes, wait 36ms, compile 0, fbcopy 143, upload 88.4MB)
+[corepreempt] handoffs=32128
+[vk] t=193.4 frame 1741 5.8 fps gen 0/0 max 222ms level  (16733 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 29ms, compile 0, fbcopy 132, upload 81.6MB)
+[cpumod] 186s total 2140 unmapped 116 game=1214 runtime=426 SDL3=2 Vulkan=143 libc=239 shader=0 other=0
+[cpuhot] game 35ae000:24 fcc0000:24 114d6000:22 a5ac000:21 10908000:21 2b7a000:19 a588000:19 1152c000:19
+[cpuhot] runtime 1d8000:81 1dc000:70 366000:37 1da000:30 36a000:30 370000:29 35c000:28 360000:26
+[cpuhot] SDL3 82000:1 1b4000:1
+[cpuhot] Vulkan 91c000:27 1c06000:8 1c4e000:7 1c72000:7 1c1e000:6 1d80000:6 1bfa000:5 1bfc000:5
+[cpumod] sampling complete
+[corepreempt] handoffs=32256
+[vi] vsync timer late by 345ms (host throttling?)
+[vk] t=195.8 frame 1751 4.2 fps gen 0/0 max 541ms level  (13942 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 25ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=32384
+[vk] t=197.8 frame 1762 5.4 fps gen 0/0 max 205ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 29ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=32512
+[corepreempt] handoffs=32640
+[vk] t=199.8 frame 1773 5.5 fps gen 0/0 max 211ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 35ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=32768
+[vk] t=201.9 frame 1784 5.4 fps gen 0/0 max 217ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 34ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=32896
+[vk] t=203.9 frame 1795 5.4 fps gen 0/0 max 217ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 32ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=33024
+[input] GetNpadState id 0 lr 800263e58
+[shader] prefetch: scanned 584491 draws / 1200 submits (4201.5 ms), started 82 programs + 1383 pipelines ahead, waits 114 (19229 ms total, worst 7461 ms), unforeseen 0
+[corepreempt] handoffs=33152
+[vi] vsync timer late by 455ms (host throttling?)
+[vk] t=206.5 frame 1807 4.6 fps gen 0/0 max 623ms level  (16740 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 31ms, compile 0, fbcopy 132, upload 81.6MB)
+[corepreempt] handoffs=33280
+[vk] t=208.5 frame 1817 4.9 fps gen 0/0 max 436ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 30ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=33408
+[vk] t=210.7 frame 1828 5.1 fps gen 0/0 max 284ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 31ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=33536
+[corepreempt] handoffs=33664
+[vk] t=212.7 frame 1838 5.0 fps gen 0/0 max 289ms level  (13946 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 28ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=33792
+[vk] t=214.9 frame 1849 5.0 fps gen 0/0 max 250ms level  (15334 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 35ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=33920
+[vi] vsync timer late by 394ms (host throttling?)
+[vk] t=217.3 frame 1860 4.6 fps gen 0/0 max 574ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 33ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=34048
+[corepreempt] handoffs=34176
+[vk] t=219.3 frame 1871 5.5 fps gen 0/0 max 213ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 34ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=34304
+[vk] t=221.4 frame 1881 4.9 fps gen 0/0 max 268ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 30ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=34432
+[vk] t=223.5 frame 1892 5.2 fps gen 0/0 max 229ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 33ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=34560
+[corepreempt] handoffs=34688
+[vk] t=225.5 frame 1902 4.9 fps gen 0/0 max 245ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 29ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=34816
+[vi] vsync timer late by 502ms (host throttling?)
+[vk] t=228.1 frame 1911 3.5 fps gen 0/0 max 733ms level  (12557 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 23ms, compile 0, fbcopy 99, upload 61.2MB)
+[corepreempt] handoffs=34944
+[vk] t=230.1 frame 1921 4.8 fps gen 0/0 max 252ms level  (13952 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 31ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=35072
+[corepreempt] handoffs=35200
+[vk] t=232.3 frame 1931 4.6 fps gen 0/0 max 266ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 35ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=35328
+[vk] t=234.3 frame 1940 4.4 fps gen 0/0 max 269ms level  (12549 draws, 0 skipped, 387 passes, 9 dispatches, 18 flushes, wait 27ms, compile 0, fbcopy 99, upload 61.2MB)
+[corepreempt] handoffs=35456
+[vk] t=236.4 frame 1950 4.9 fps gen 0/0 max 228ms level  (13941 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 26ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=35584
+[vi] vsync timer late by 187ms (host throttling?)
+[vk] t=238.4 frame 1960 4.8 fps gen 0/0 max 412ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 25ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=35712
+[vk] t=240.6 frame 1972 5.6 fps gen 0/0 max 201ms level  (16740 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 37ms, compile 0, fbcopy 132, upload 81.6MB)
+[corepreempt] handoffs=35840
+[corepreempt] handoffs=35968
+[vk] t=242.7 frame 1983 5.2 fps gen 0/0 max 224ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 30ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=36096
+[vk] t=244.7 frame 1994 5.4 fps gen 0/0 max 211ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 35ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=36224
+[vk] t=246.8 frame 2005 5.4 fps gen 0/0 max 216ms level  (15345 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 31ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=36352
+[corepreempt] handoffs=36480
+[vi] vsync timer late by 362ms (host throttling?)
+[vk] t=249.1 frame 2015 4.2 fps gen 0/0 max 577ms level  (13950 draws, 0 skipped, 430 passes, 10 dispatches, 20 flushes, wait 30ms, compile 0, fbcopy 110, upload 68.0MB)
+[corepreempt] handoffs=36608
+[vk] t=251.1 frame 2027 6.0 fps gen 0/0 max 187ms level  (16742 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 35ms, compile 0, fbcopy 132, upload 81.6MB)
+[corepreempt] handoffs=36736
+[vk] t=253.3 frame 2040 5.9 fps gen 0/0 max 207ms level  (18131 draws, 0 skipped, 559 passes, 13 dispatches, 26 flushes, wait 37ms, compile 0, fbcopy 143, upload 88.4MB)
+[corepreempt] handoffs=36864
+[vk] t=255.5 frame 2053 6.1 fps gen 0/0 max 200ms level  (18126 draws, 0 skipped, 559 passes, 13 dispatches, 26 flushes, wait 32ms, compile 0, fbcopy 143, upload 88.4MB)
+[corepreempt] handoffs=36992
+[corepreempt] handoffs=37120
+[vk] t=257.6 frame 2066 6.0 fps gen 0/0 max 203ms level  (18137 draws, 0 skipped, 559 passes, 13 dispatches, 26 flushes, wait 36ms, compile 0, fbcopy 143, upload 88.4MB)
+[corepreempt] handoffs=37248
+[vi] vsync timer late by 339ms (host throttling?)
+[vk] t=259.7 frame 2077 5.2 fps gen 0/0 max 482ms level  (15347 draws, 0 skipped, 473 passes, 11 dispatches, 22 flushes, wait 30ms, compile 0, fbcopy 121, upload 74.8MB)
+[corepreempt] handoffs=37376
+[vk] t=261.8 frame 2089 5.8 fps gen 0/0 max 205ms level  (16740 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 28ms, compile 0, fbcopy 132, upload 81.6MB)
+[corepreempt] handoffs=37504
+[vk] t=263.8 frame 2101 5.9 fps gen 0/0 max 201ms level  (16740 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 32ms, compile 0, fbcopy 132, upload 81.6MB)
+[corepreempt] handoffs=37632
+[vk] t=266.0 frame 2113 5.5 fps gen 0/0 max 222ms level  (16740 draws, 0 skipped, 516 passes, 12 dispatches, 24 flushes, wait 33ms, compile 0, fbcopy 132, upload 81.6MB)
+[kernel] thread 103 waits 2001ms for core 1 (held by thread 85, last svc 1a)
+[vi] vsync timer late by 383ms (host throttling?)
+[vi] vsync timer late by 591ms (host throttling?)
+[corepreempt] handoffs=37760
+[vk] acquire blocked 149ms
+[vk] t=274.9 frame 2114 0.1 fps gen 0/0 max 8877ms level  (1395 draws, 0 skipped, 43 passes, 1 dispatches, 2 flushes, wait 5ms, compile 0, fbcopy 11, upload 6.8MB)
+[shader] compile-ahead: 2 shaders read, 5 programs the game set, 11 compiled to SPIR-V, 268 s in; now Layout/Cmn_EventClearMark_00.Nin_NX_NVN.szs:Cmn_EventClearMark_00.arc:bgsh/__ArchiveShader.bnsh
+[corepreempt] handoffs=37888
+[vi] vsync timer late by 549ms (host throttling?)
+[vk] acquire blocked 1346ms
+[vk] t=286.5 frame 2115 0.1 fps gen 0/0 max 11575ms level  (1395 draws, 0 skipped, 43 passes, 1 dispatches, 2 flushes, wait 10ms, compile 0, fbcopy 11, upload 6.8MB)
+[corepreempt] handoffs=38016
+[corepreempt] handoffs=38144
+[vi] vsync timer late by 380ms (host throttling?)
+[vk] acquire blocked 84ms
+[vk] t=296.0 frame 2116 0.1 fps gen 0/0 max 9581ms level  (1395 draws, 0 skipped, 43 passes, 1 dispatches, 2 flushes, wait 3ms, compile 0, fbcopy 11, upload 6.8MB)
+[corepreempt] handoffs=38272
+[vk] t=298.6 frame 2118 0.8 fps gen 0/0 max 1895ms level  (2790 draws, 0 skipped, 86 passes, 2 dispatches, 4 flushes, wait 7ms, compile 0, fbcopy 22, upload 13.6MB)
+[corepreempt] handoffs=38400
+[vk] t=300.6 frame 2121 1.5 fps gen 0/0 max 889ms level  (4185 draws, 0 skipped, 129 passes, 3 dispatches, 6 flushes, wait 13ms, compile 0, fbcopy 33, upload 20.4MB)
+[corepreempt] handoffs=38528
+[vk] t=302.7 frame 2125 2.0 fps gen 0/0 max 591ms level  (5580 draws, 0 skipped, 172 passes, 4 dispatches, 8 flushes, wait 9ms, compile 0, fbcopy 44, upload 27.2MB)
+[corepreempt] handoffs=38656
+[vk] t=304.9 frame 2129 1.8 fps gen 0/0 max 642ms level  (5580 draws, 0 skipped, 172 passes, 4 dispatches, 8 flushes, wait 13ms, compile 0, fbcopy 44, upload 27.2MB)
+[corepreempt] handoffs=38784
+[vi] vsync timer late by 368ms (host throttling?)
+[corepreempt] handoffs=38912
+[vk] t=307.2 frame 2134 2.2 fps gen 0/0 max 773ms level  (6975 draws, 0 skipped, 215 passes, 5 dispatches, 10 flushes, wait 16ms, compile 0, fbcopy 55, upload 34.0MB)
+[corepreempt] handoffs=39040
+[vk] t=309.4 frame 2141 3.1 fps gen 0/0 max 355ms level  (9758 draws, 0 skipped, 301 passes, 7 dispatches, 14 flushes, wait 23ms, compile 0, fbcopy 77, upload 47.6MB)
+[corepreempt] handoffs=39168
+[corepreempt] handoffs=39296
+[vk] t=311.4 frame 2148 3.5 fps gen 0/0 max 342ms level  (9758 draws, 0 skipped, 301 passes, 7 dispatches, 14 flushes, wait 24ms, compile 0, fbcopy 77, upload 47.6MB)
+[corepreempt] handoffs=39424
+[vk] t=313.5 frame 2156 4.0 fps gen 0/0 max 289ms level  (11159 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 25ms, compile 0, fbcopy 88, upload 54.4MB)
+[corepreempt] handoffs=39552
+[vk] t=315.5 frame 2164 3.9 fps gen 0/0 max 285ms level  (11160 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 28ms, compile 0, fbcopy 88, upload 54.4MB)
+[corepreempt] handoffs=39680
+[vi] vsync timer late by 363ms (host throttling?)
+[corepreempt] handoffs=39808
+[vk] t=317.7 frame 2171 3.2 fps gen 0/0 max 692ms level  (9765 draws, 0 skipped, 301 passes, 7 dispatches, 14 flushes, wait 23ms, compile 0, fbcopy 77, upload 47.6MB)
+[corepreempt] handoffs=39936
+[vk] t=319.9 frame 2178 3.1 fps gen 0/0 max 411ms level  (9765 draws, 0 skipped, 301 passes, 7 dispatches, 14 flushes, wait 31ms, compile 0, fbcopy 77, upload 47.6MB)
+[corepreempt] handoffs=40064
+[corepreempt] handoffs=40192
+[vk] t=322.0 frame 2186 3.8 fps gen 0/0 max 296ms level  (11160 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 25ms, compile 0, fbcopy 88, upload 54.4MB)
+[corepreempt] handoffs=40320
+[vk] t=324.1 frame 2194 3.9 fps gen 0/0 max 282ms level  (11160 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 23ms, compile 0, fbcopy 88, upload 54.4MB)
+[corepreempt] handoffs=40448
+[corepreempt] handoffs=40576
+[vk] t=326.3 frame 2202 3.6 fps gen 0/0 max 316ms level  (11160 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 27ms, compile 0, fbcopy 88, upload 54.4MB)
+[corepreempt] handoffs=40704
+[vi] vsync timer late by 296ms (host throttling?)
+[vk] t=328.3 frame 2210 4.0 fps gen 0/0 max 505ms level  (11160 draws, 0 skipped, 344 passes, 8 dispatches, 16 flushes, wait 23ms, compile 0, fbcopy 88, upload 54.4MB)

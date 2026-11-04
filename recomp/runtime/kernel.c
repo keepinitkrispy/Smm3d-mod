@@ -96,6 +96,15 @@ static pthread_cond_t g_nothread_cond = PTHREAD_COND_INITIALIZER;
 // Time this thread spent blocked in the kernel (waits, sleeps): idle, not work. Frame pacing (exec.c vk_pace_frame)
 // takes the presenting thread's: a frame's busy time is its period minus this.
 __thread uint64_t g_blocked_ns;
+#ifdef __ANDROID__
+// Compatibility with the already-built Pixel Vulkan pacing module, which
+// consumes these exported counters. The tracked source snapshot omitted them
+// even though its installed exec.o references all four.
+uint64_t g_corewait_ns;
+uint64_t g_corewait_max_ns;
+uint64_t g_corewait_holder;
+uint32_t g_corewait_holder_svc;
+#endif
 
 // ---- cores. Horizon runs one thread per core at a time, by priority, and games pin their threads to cores
 // (SetThreadCoreMask) and rely on threads of one core never running at once (SMM2's worker threads share data that
@@ -211,6 +220,10 @@ static void core_acquire(KThread *t) {
     core_refresh_preempt();
 #endif
     uint64_t t0 = plat_now_ns();
+#ifdef __ANDROID__
+    uint64_t initial_holder = c->owner ? c->owner->id : 0;
+    uint32_t initial_svc = c->owner ? c->owner->last_svc : 0;
+#endif
     // (t->core read again each time: SetThreadCoreMask can move a thread still waiting for its first core - core_move -
     // and the new core is then handed to it, or free)
     while (t->core >= 0 && (c = &g_cores[t->core])->owner != t && !g_rt_unwind) {
@@ -234,7 +247,20 @@ static void core_acquire(KThread *t) {
     core_last_acquired_ns = plat_now_ns();
     core_refresh_preempt();
 #endif
-    g_blocked_ns += plat_now_ns() - t0;
+    uint64_t waited_ns = plat_now_ns() - t0;
+    g_blocked_ns += waited_ns;
+#ifdef __ANDROID__
+    __atomic_fetch_add(&g_corewait_ns, waited_ns, __ATOMIC_RELAXED);
+    uint64_t previous = __atomic_load_n(&g_corewait_max_ns, __ATOMIC_RELAXED);
+    while (waited_ns > previous) {
+        if (__atomic_compare_exchange_n(&g_corewait_max_ns, &previous, waited_ns,
+                                         false, __ATOMIC_RELAXED, __ATOMIC_RELAXED)) {
+            __atomic_store_n(&g_corewait_holder, initial_holder, __ATOMIC_RELAXED);
+            __atomic_store_n(&g_corewait_holder_svc, initial_svc & 0xFF, __ATOMIC_RELAXED);
+            break;
+        }
+    }
+#endif
 }
 
 // At kernel entry: a better-priority thread waiting for this core takes it now (our stand-in for preemption)

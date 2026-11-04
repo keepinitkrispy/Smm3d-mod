@@ -321,6 +321,7 @@ void vk_full_barrier(VkCommandBuffer cb) {
 
 static const void *g_pass_last_prog;  // the program of the current pass's last draw (lavapipe_mrt_split)
 static void ring_retire(void);
+static void ring_flush_pending(void);
 void vc_flush(void);
 
 // ---- LARECOMP_GPUPROF_AT=<frame>: GPU time per pass / dispatch / copy of that frame, logged as "[gpuprof]".
@@ -409,6 +410,9 @@ void vk_submit_extra(VkSemaphore wait, VkSemaphore signal, VkCommandBuffer extra
                         .signalSemaphoreInfoCount = signal ? 2 : 1, .pSignalSemaphoreInfos = sig,
                         .waitSemaphoreInfoCount = wait ? 1 : 0, .pWaitSemaphoreInfos = &wt};
     {
+        // Flush each dirty non-coherent staging allocation once per submission.
+        // Must precede vkQueueSubmit2; command-buffer barriers cannot flush CPU caches.
+        ring_flush_pending();
         PROF_T0();
         dl_note("submit %llu", (unsigned long long)submit_seq + 1);
         vk_queue_lock();  // (shared with device.c's present thread)
@@ -514,7 +518,16 @@ VkDescriptorSet vk_alloc_set(VkDescriptorSetLayout layout) {
 // 64 MB host-visible chunks (device-local when the GPU exposes resizable BAR); a chunk is reused once every
 // submission that allocated from it has completed.
 #define CHUNK_SIZE (64ull << 20)
-typedef struct { VkBuffer buf; VmaAllocation mem; uint8_t *ptr; uint64_t size, used, seq; } Chunk;
+typedef struct {
+    VkBuffer buf;
+    VmaAllocation mem;
+    uint8_t *ptr;
+    uint64_t size, used, seq;
+    // Only non-coherent host-visible mappings require explicit CPU->GPU flushes.
+    // Dirty bytes are merged for the entire submission rather than flushed per copy.
+    uint64_t dirty_lo, dirty_hi;
+    bool noncoherent;
+} Chunk;
 static Chunk *chunks;
 static int nchunks, active = -1;
 
@@ -533,16 +546,42 @@ static int new_chunk(uint64_t size) {
     VK_CHECK(vmaCreateBuffer(g_vk.vma, &bi, &ai, &c->buf, &c->mem, &info));
     c->ptr = info.pMappedData;
     c->size = size;
-    if (!nchunks) {  // where the ring lives: device-local (resizable BAR) or system memory read across PCIe
-        VkMemoryPropertyFlags f;
-        vmaGetMemoryTypeProperties(g_vk.vma, info.memoryType, &f);
-        LOG("[vk] transient ring: memory type %u (%s%s%s)\n", info.memoryType, f & VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT ? "device-local " : "system memory ",
-            f & VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT ? "host-visible " : "", f & VK_MEMORY_PROPERTY_HOST_CACHED_BIT ? "cached" : "");
+    c->dirty_lo = ~0ull;
+    VkMemoryPropertyFlags f;
+    vmaGetMemoryTypeProperties(g_vk.vma, info.memoryType, &f);
+    c->noncoherent = !(f & VK_MEMORY_PROPERTY_HOST_COHERENT_BIT);
+    if (!nchunks || c->noncoherent) {
+        LOG("[vk] transient ring: memory type %u (%s%s%s%s)\n", info.memoryType,
+            f & VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT ? "device-local " : "system memory ",
+            f & VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT ? "host-visible " : "",
+            f & VK_MEMORY_PROPERTY_HOST_CACHED_BIT ? "cached " : "",
+            c->noncoherent ? "non-coherent: batched CPU flush" : "coherent");
     }
     return nchunks++;
 }
 
 static void ring_retire(void) {}  // chunks are recycled lazily in vk_transient
+
+static void ring_dirty(Chunk *c, uint64_t off, uint64_t size) {
+    if (!c->noncoherent || !size) return;
+    if (off < c->dirty_lo) c->dirty_lo = off;
+    if (off + size > c->dirty_hi) c->dirty_hi = off + size;
+}
+
+// CPU writes to mapped non-coherent memory become visible before the queue
+// submission that consumes them. VMA aligns offset/size to nonCoherentAtomSize.
+// On host-coherent allocations this path performs no driver calls.
+static void ring_flush_pending(void) {
+    uint64_t pending = vk_pending_seq();
+    for (int i = 0; i < nchunks; i++) {
+        Chunk *c = &chunks[i];
+        if (!c->noncoherent || c->dirty_lo >= c->dirty_hi) continue;
+        if (c->seq != pending) FATAL("transient staging dirty across submissions\n");
+        VK_CHECK(vmaFlushAllocation(g_vk.vma, c->mem, c->dirty_lo, c->dirty_hi - c->dirty_lo));
+        c->dirty_lo = ~0ull;
+        c->dirty_hi = 0;
+    }
+}
 
 VkSpan vk_transient(uint64_t size, uint64_t align) {
     if (align < 16) align = 16;
@@ -553,6 +592,7 @@ VkSpan vk_transient(uint64_t size, uint64_t align) {
         if (off + size <= c->size) {
             c->used = off + size;
             c->seq = pending;
+            ring_dirty(c, off, size);
             stat_upload_bytes += size;
             return (VkSpan){c->buf, off, c->ptr + off};
         }
@@ -565,6 +605,7 @@ VkSpan vk_transient(uint64_t size, uint64_t align) {
     active = pick;
     chunks[pick].used = size;
     chunks[pick].seq = pending;
+    ring_dirty(&chunks[pick], 0, size);
     stat_upload_bytes += size;
     return (VkSpan){chunks[pick].buf, 0, chunks[pick].ptr};
 }

@@ -946,6 +946,26 @@ presented:;  // (frame generation: no window image for this frame's own present)
     g_frame_counter++;
     extern void vk_pace_frame(void);
     vk_pace_frame();  // (exec.c: the game's 30 fps mode when frames don't fit 60)
+#ifdef __ANDROID__
+    // Experimental Android frame deadline: LARECOMP_FPS_CAP=40; 0 (default) disables.
+    // Sleep rather than spinning, and never alter the guest's core ownership.
+    static int frame_cap = -1;
+    static uint64_t frame_cap_prev_ns;
+    if (frame_cap < 0) {
+        const char *v = getenv("LARECOMP_FPS_CAP");
+        frame_cap = v ? atoi(v) : 0;
+        if (frame_cap < 0 || frame_cap > 240) frame_cap = 0;
+        LOG("[framecap] target=%d fps (0=uncapped)\n", frame_cap);
+    }
+    if (frame_cap > 0) {
+        uint64_t interval_ns = 1000000000ull / (uint64_t)frame_cap;
+        uint64_t stamp_ns = SDL_GetTicksNS();
+        if (frame_cap_prev_ns && stamp_ns > frame_cap_prev_ns &&
+            stamp_ns - frame_cap_prev_ns < interval_ns)
+            SDL_DelayNS(interval_ns - (stamp_ns - frame_cap_prev_ns));
+        frame_cap_prev_ns = SDL_GetTicksNS();
+    }
+#endif
     extern void input_frame(uint64_t frame);
     input_frame(total_frames);
     static long slow_ms = -1;

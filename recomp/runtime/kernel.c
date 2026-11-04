@@ -97,13 +97,14 @@ static pthread_cond_t g_nothread_cond = PTHREAD_COND_INITIALIZER;
 // takes the presenting thread's: a frame's busy time is its period minus this.
 __thread uint64_t g_blocked_ns;
 #ifdef __ANDROID__
-// Compatibility with the already-built Pixel Vulkan pacing module, which
-// consumes these exported counters. The tracked source snapshot omitted them
-// even though its installed exec.o references all four.
-uint64_t g_corewait_ns;
-uint64_t g_corewait_max_ns;
-uint64_t g_corewait_holder;
-uint32_t g_corewait_holder_svc;
+// Compatibility with the existing Vulkan pacing object. Its ELF relocations
+// confirm these four counters must have TLS linkage (per guest host-thread).
+// The tracked source snapshot omitted them even though its exec.o references
+// all four. Exact TLS type/layout is required for a correct isolated link.
+__thread uint64_t g_corewait_ns;
+__thread uint64_t g_corewait_max_ns;
+__thread uint64_t g_corewait_holder;
+__thread uint32_t g_corewait_holder_svc;
 #endif
 
 // ---- cores. Horizon runs one thread per core at a time, by priority, and games pin their threads to cores

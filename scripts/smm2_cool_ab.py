@@ -15,7 +15,7 @@ ADB = ["adb", "-s", "127.0.0.1:5555"]
 APP = "org.smcraft.smm2o2cap0"
 DATA = f"/sdcard/Android/data/{APP}/files"
 BRANCH = "experiment/main-x1-affinity-20261104"
-FIXTURE_PATH = HOME / "smm2-hot/cap40/course-fixture.json"
+FIXTURE_PATH = HOME / "smm2-hot/speedcorrect/course-fixture.json"
 CONF = {
     "LARECOMP_VK_NO_GMEM": "1",
     "LARECOMP_GMAP_RANGE_MB": "16",

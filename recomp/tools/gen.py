@@ -481,6 +481,7 @@ def main():
     ap.add_argument('--chunk', type=int, default=1500)  # functions per file at most
     ap.add_argument('--chunk-bytes', type=int, default=1500000)  # and about this much C (even compile times)
     ap.add_argument('--big-fn', type=int, default=100000)  # bytes of C from which a function gets its own file
+    ap.add_argument('--split-huge', type=int, default=0, metavar='INSTRUCTIONS')  # opt-in: split optnone jump tables into optimized chunks (e.g. 512)
     ap.add_argument('--limit', type=int, default=0)
     ap.add_argument('--simd', choices=('asm', 'c'),
                     default='asm' if platform.machine().lower() in ('arm64', 'aarch64') else 'c')
@@ -599,7 +600,15 @@ def main():
         text += [f'void {fname(r)}(Cpu *c);\n' for r in sorted(refs)]
         text += [f'void {sanitize(hle[a])}(Cpu *c);\n' for a in sorted(set(hle) & set(fns))]
         text += ['\n'.join(body), '\n']
-        write_if_changed(path, ''.join(text))
+        content = ''.join(text)
+        if args.split_huge:
+            from split_hot_function import FN, split_function
+            if not 64 <= args.split_huge <= 2048:
+                raise ValueError('--split-huge requires 64..2048 instructions per chunk')
+            while match := FN.search(content):
+                content, instructions, chunks = split_function(content, match, args.split_huge)
+                print(f'{args.name}: split {match.group(1)} into {chunks} optimized chunks ({instructions} instructions)', file=sys.stderr, flush=True)
+        write_if_changed(path, content)
         nchunks += 1
         # (the start screen's setup reads these for its progress bar: runtime/gamebuild.c)
         print(f'{args.name}: progress {ci}/{len(order)} files {nchunks}', file=sys.stderr, flush=True)

@@ -1,0 +1,3587 @@
+[env] LARECOMP_VK_NO_GMEM=1 (recomp.env)
+[env] LARECOMP_GMAP_RANGE_MB=16 (recomp.env)
+[env] LARECOMP_GMAP_TOTAL_MB=32 (recomp.env)
+[env] LARECOMP_LOG_PACE=1 (recomp.env)
+[guest] in the window: 800000000-b20000000 rw-p 00000000 00:00 0 
+[guest] window 0x800000000-0xb20000000; highest mapping ends at 0x7fd919d000; 0 mappings (0 MB) in 0x7000000000-0x7320000000
+[paths] data: /storage/emulated/0/Android/data/org.smcraft.smm2recomp/files
+[gamelib] libsmm2game.so (105374 + 34472 functions)
+loaded main  at 800000000 size 2e74000 syms 947
+loaded sdk   at 804000000 size cd4000 syms 25091
+relocated main  (34 imports bound to host stubs)
+[loader] sdk: _ZN2nn2os5MutexD2Ev bound to an earlier module's
+[loader] sdk: _ZN2nn6crypto6detail10CbcMacImpl20EncryptBlockCallbackINS0_12AesEncryptorILm16EEEEEvPvPKvS8_ bound to an earlier module's
+[loader] sdk: _ZdlPv bound to an earlier module's
+[loader] sdk: _Znwm bound to an earlier module's
+[loader] sdk: _ZNSt3__1dvIdEENS_7complexIT_EERKS3_S5_ bound to an earlier module's
+[loader] sdk: _ZNSt3__1mlIdEENS_7complexIT_EERKS3_S5_ bound to an earlier module's
+[loader] sdk: _ZnwmRKSt9nothrow_t bound to an earlier module's
+[loader] sdk: _ZnamRKSt9nothrow_t bound to an earlier module's
+[loader] sdk: _ZdaPv bound to an earlier module's
+[loader] sdk: _ZdlPvRKSt9nothrow_t bound to an earlier module's
+[loader] sdk: Libz_SigloMiddlewareInfo bound to an earlier module's
+[loader] sdk: _Znam bound to an earlier module's
+[loader] sdk: _ZNSt3__113__tree_removeIPNS_16__tree_node_baseIPvEEEEvT_S5_ bound to an earlier module's
+[loader] sdk: _ZNSt3__127__tree_balance_after_insertIPNS_16__tree_node_baseIPvEEEEvT_S5_ bound to an earlier module's
+relocated sdk   (0 imports bound to host stubs)
+[settings] loaded smm2.ini
+main thread: prio 44, stack 0x100000
+init sdk (DT_INIT 804000030, 106 init_array entries)
+[vk] gpu 0: Mali-G78 (api 1.4.305)
+[vk] using Mali-G78
+[sm] GetService lm
+[ipc] close session lm (handle 103)
+[sm] GetService apm
+[sm] GetService appletOE
+[ipc] control 3 on appletOE (handle 105)
+[ipc] control 0 on appletOE (handle 105)
+[am] ISelfController cmd 91 (unhandled, ok)
+[am] IWindowController cmd 10 (unhandled, ok)
+[am] ISelfController cmd 13 (unhandled, ok)
+[am] ISelfController cmd 16 (unhandled, ok)
+[sm] GetService aoc:u
+[sm] GetService pctl
+[ipc] control 3 on pctl (handle 109)
+[ipc] control 0 on pctl (handle 109)
+[sm] GetService pctl:s
+[ipc] control 3 on pctl:s (handle 10a)
+[ipc] control 0 on pctl:s (handle 10a)
+[ipc] close session pctl:s (handle 10a)
+[sm] GetService pctl:a
+[ipc] control 3 on pctl:a (handle 10a)
+[ipc] control 0 on pctl:a (handle 10a)
+[ipc] close session pctl:a (handle 10a)
+[sm] GetService pctl:r
+[ipc] control 3 on pctl:r (handle 10a)
+[ipc] control 0 on pctl:r (handle 10a)
+[ipc] close session pctl:r (handle 10a)
+[pctl] IParentalControlService cmd 1 (ok)
+[vk] shader global memory: per-draw copies of the storage buffers (no host memory import)
+init main (DT_INIT 800000030, 2502 init_array entries)
+[vk] surface 1600x900, transform 0x2, window 1600x900
+[sm] GetService time:u
+[ipc] control 3 on time:u (handle 10a)
+[ipc] control 0 on time:u (handle 10a)
+[time] shared memory mapped at 919a04000
+[time] StandardUserSystemClock::GetCurrentTime (host clock)
+[ipc] control 3 on lm:ILogger (handle 104)
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpDateTime |  | MainThread | ###  Application Start Time [19:00:49] ###
+[sm] GetService fsp-srv
+[ipc] control 3 on fsp-srv (handle 10c)
+[ipc] control 0 on fsp-srv (handle 10c)
+[ipc] control 2 on fsp-srv (handle 10c)
+[ipc] control 2 on fsp-srv (handle 10d)
+[mod] 100 Mario Challenge on: courses from TGRCode (built-in server), ruleset hundred
+[lanky] Lanky Mario (Weird Mushroom) off
+[fs] romfs index of extracted/romfs + mods-generated/romfs,: 3801 files, 0.2 MB of tables, image 3.05 GB (117ms)
+[fs] romfs reads: 1 (0 KB)
+[fs] romfs reads: 2 (0 KB)
+[fs] romfs reads: 4 (1 KB)
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | <><><><><><><><> dumpMemoryInfo [ Application Start ] <><><><><><><><>
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 3284 MB: HBMなどのシステム以外のアプリ用領域
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 3220 MB  アプリのRootHeap + SDK用のAllocateMemoryBlock
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread |   63 MB: Program
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread |    1 MB: 空き
+
+[lm] D:/home/Project/Slope/App/Lib/LunchPack2/Program/Utl/UtlSystem.cpp | dumpMemoryInfo |  | MainThread | 
+
+[vk] Mali-G78, swapchain 1600x900
+[nvn] device initialized
+[nvn] window origin mode 1
+[nvn] window with 3 textures
+[kernel] CreateThread entry=80432e240 arg=a44fe7020 stack=a117e1fe0 prio=30 core=-2 -> 111
+[sm] GetService nifm:u
+[ipc] control 3 on nifm:u (handle 112)
+[ipc] control 0 on nifm:u (handle 112)
+[kernel] CreateThread entry=80432e240 arg=a4213c020 stack=a0defafe0 prio=44 core=-2 -> 113
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[sm] GetService hid
+[kernel] CreateThread entry=80432e240 arg=a45024020 stack=a2ab46fe0 prio=43 core=-2 -> 117
+[ipc] control 3 on hid (handle 114)
+[touch] InitializeTouchScreen
+[kernel] CreateThread entry=80432e240 arg=a45038020 stack=a14902fe0 prio=44 core=-2 -> 118
+[kernel] CreateThread entry=80432e240 arg=a45139020 stack=a02f35fe0 prio=44 core=-2 -> 119
+[kernel] CreateThread entry=80432e240 arg=a4523a020 stack=a0ea2dfe0 prio=44 core=-2 -> 11a
+[kernel] CreateThread entry=80432e240 arg=a4524c020 stack=a0320bfe0 prio=45 core=-2 -> 11b
+[kernel] CreateThread entry=80432e240 arg=a4525d020 stack=a0694dfe0 prio=45 core=-2 -> 11c
+[am] ISelfController cmd 11 (unhandled, ok)
+[am] ISelfController cmd 12 (unhandled, ok)
+[am] ISelfController cmd 14 (unhandled, ok)
+[am] ISelfController cmd 1 (unhandled, ok)
+[sm] GetService set
+[ipc] close session set (handle 11d)
+[fs] romfs reads: 8 (235 KB)
+[sm] GetService acc:u0
+[ipc] control 3 on acc:u0 (handle 11d)
+[ipc] control 0 on acc:u0 (handle 11d)
+[kernel] thread 80 waits 250ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 88 waits 250ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 80 waits 500ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 88 waits 500ms for core 0 (held by thread 82, last svc 1d)
+[fs] mounted host directory save/save_0
+[time] StandardUserSystemClock::GetCurrentTime (host clock)
+[time] StandardUserSystemClock::GetCurrentTime (host clock)
+[kernel] CreateThread entry=80432e240 arg=a45d1e020 stack=a21ea5fe0 prio=47 core=-2 -> 11f
+[fs] mounted host directory save/save_0
+[am] IAudioController cmd 1 (ok)
+[am] IAudioController cmd 2 (ok)
+[am] IAudioController cmd 0 (ok)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 120)
+[sm] GetService audren:u
+Low latency audio enabled
+[audren] renderer 48000 Hz, 240 samples/frame, 96 voices, 16 mixes, 96 mix buffers, 96 splitters, 20 effects
+[ipc] close session audren:u (handle 120)
+[audren] device 48000 Hz, 960 frames/period; queue target 2160 samples
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 120)
+[ipc] control 3 on IAudioDevice (handle 121)
+[ipc] close session IAudioDevice (handle 121)
+[kernel] CreateThread entry=80432e240 arg=a48179020 stack=a3cef1fe0 prio=32 core=-2 -> 120
+[kernel] CreateThread entry=80432e240 arg=a4817f020 stack=a258d9fe0 prio=31 core=-2 -> 121
+[audren] splitters: 0 updated, 672 destinations (v1)
+[audren] mix 0 used 1 vol 1.000 bufs 6 dest 2147483647 splitter -1:
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] control 3 on IAudioDevice (handle 126)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] control 3 on IAudioDevice (handle 126)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] control 3 on IAudioDevice (handle 126)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 125)
+[ipc] close session IAudioDevice (handle 126)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 126)
+[ipc] close session IAudioDevice (handle 128)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 126)
+[ipc] control 3 on IAudioDevice (handle 128)
+[ipc] close session IAudioDevice (handle 128)
+[kernel] CreateThread entry=80432e240 arg=a4891e020 stack=a04d57fe0 prio=45 core=-2 -> 126
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 128)
+[ipc] control 3 on IAudioDevice (handle 129)
+[ipc] close session IAudioDevice (handle 129)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 128)
+[ipc] control 3 on IAudioDevice (handle 129)
+[ipc] close session IAudioDevice (handle 129)
+[sm] GetService audren:u
+[ipc] close session audren:u (handle 128)
+[ipc] control 3 on IAudioDevice (handle 129)
+[ipc] close session IAudioDevice (handle 129)
+[kernel] thread 80 waits 750ms for core 0 (held by thread 82, last svc 16)
+[kernel] thread 88 waits 750ms for core 0 (held by thread 82, last svc 1d)
+[fs] romfs reads: 16 (9872 KB)
+[kernel] thread 80 waits 1000ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 88 waits 1000ms for core 0 (held by thread 82, last svc 21)
+[kernel] CreateThread entry=80432e240 arg=a48df0020 stack=a1e339fe0 prio=43 core=-2 -> 128
+[kernel] CreateThread entry=80432e240 arg=a48e36020 stack=a00654fe0 prio=44 core=-2 -> 129
+[kernel] CreateThread entry=80432e240 arg=a48e77020 stack=a1e54dfe0 prio=44 core=-2 -> 12a
+[kernel] CreateThread entry=80432e240 arg=a48eb8020 stack=a0a8abfe0 prio=44 core=-2 -> 12b
+[kernel] thread 80 waits 1250ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 88 waits 1250ms for core 0 (held by thread 82, last svc 1d)
+[fs] romfs reads: 32 (10472 KB)
+[corepreempt] handoffs=1
+[kernel] thread 80 waits 2001ms for core 0 (held by thread 82, last svc 21)
+[kernel] thread 88 waits 2001ms for core 0 (held by thread 82, last svc 21)
+[pl] system font fonts/nintendo_udsg-r_std_003.bfttf (2053628 bytes)
+[pl] system font fonts/nintendo_ext_003.bfttf (180236 bytes)
+[pl] system font fonts/nintendo_udsg-r_ext_zh-cn_003.bfttf (123912 bytes)
+[pl] system font fonts/nintendo_udsg-r_org_zh-cn_003.bfttf (7848200 bytes)
+[pl] system font fonts/nintendo_udjxh-db_zh-tw_003.bfttf (3580260 bytes)
+[pl] system font fonts/nintendo_udsg-r_ko_003.bfttf (3672868 bytes)
+[kernel] CreateThread entry=80432e240 arg=a499d5020 stack=a3ea7dfe0 prio=46 core=-2 -> 12c
+[kernel] CreateThread entry=80432e240 arg=a4a470020 stack=a3cb5bfe0 prio=43 core=-2 -> 12d
+[kernel] CreateThread entry=80432e240 arg=a4b5a8020 stack=a14e9bfe0 prio=52 core=-2 -> 12e
+[sm] GetService friend:u
+[ipc] control 3 on friend:u (handle 12f)
+[ipc] control 0 on friend:u (handle 12f)
+[ipc] control 2 on friend:u (handle 12f)
+[ipc] control 2 on friend:u (handle 130)
+[ipc] control 2 on friend:u (handle 131)
+[kernel] CreateThread entry=80432e240 arg=ab8e56020 stack=a06c8ffe0 prio=45 core=-2 -> 133
+[kernel] CreateThread entry=80432e240 arg=a4d22c020 stack=a0b883fe0 prio=47 core=-2 -> 134
+[kernel] thread 80 waits 2251ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 88 waits 2251ms for core 0 (held by thread 82, last svc 1d)
+[kernel] CreateThread entry=80432e240 arg=a6af2b020 stack=a388acfe0 prio=45 core=-2 -> 135
+[sm] GetService mii:e
+[ipc] control 3 on mii:e (handle 136)
+[ipc] control 0 on mii:e (handle 136)
+[fs] system data 0100000000000802: sysdata/0100000000000802 (6 files)
+[kernel] CreateThread entry=80432e240 arg=a6b6d3020 stack=a2f60dfe0 prio=45 core=-2 -> 137
+[kernel] CreateThread entry=80432e240 arg=a54ee7020 stack=a33a61fe0 prio=48 core=-2 -> 138
+[kernel] CreateThread entry=80432e240 arg=a54f5b020 stack=a26962fe0 prio=48 core=-2 -> 139
+[kernel] CreateThread entry=80432e240 arg=a55221020 stack=a03008fe0 prio=48 core=-2 -> 13a
+[am] IAudioController cmd 1 (ok)
+[am] IAudioController cmd 2 (ok)
+[sm] GetService prepo:u
+[ipc] no HLE implementation for service 'prepo:u', using logging stub
+[ipc] control 3 on prepo:u (handle 13b)
+[ipc] control 0 on prepo:u (handle 13b)
+[kernel] thread 94 waits 2001ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 99 waits 2001ms for core 0 (held by thread 82, last svc 1d)
+[kernel] thread 99 waits 2251ms for core 0 (held by thread 82, last svc 1d)
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[input] GetNpadStyleSet id 0
+[input] GetNpadState id 0 lr 800263e58
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[input] GetNpadStyleSet id 0x1
+[input] GetNpadStyleSet id 0x2
+[input] GetNpadStyleSet id 0x3
+[touch] the game reads the touch screen (5 touches per sample)
+[mod] worker guard: __cxa_pure_virtual at 0x8044b52a8
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[audren] effect type 6 used: slot 0 mix 4 enabled 1
+[audren] effect type 2 used: slot 1 mix 7 enabled 1
+[audren] mix 1 used 1 vol 1.000 bufs 2 dest 3 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 2 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 3 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 4 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 5 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 6 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 7 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 8 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+[audren] mix 9 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 10 used 1 vol 1.000 bufs 1 dest 2147483647 splitter -1:
+[audren] mix 11 used 1 vol 1.000 bufs 2 dest 3 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 12 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[kernel] CreateThread entry=80432e240 arg=ab8e67020 stack=a35118fe0 prio=45 core=-2 -> 11b
+[nvn] ReportCounter type 16
+[nvn] ReportCounter type 0
+[kernel] CreateThread entry=80432e240 arg=ab8f20020 stack=a26913fe0 prio=46 core=-2 -> 13c
+[kernel] CreateThread entry=80432e240 arg=ab8f32020 stack=a22be9fe0 prio=46 core=-2 -> 13d
+[kernel] CreateThread entry=80432e240 arg=ab8f44020 stack=a26eb0fe0 prio=46 core=-2 -> 13e
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[vk] transient ring: memory type 0 (device-local host-visible )
+[fs] romfs reads: 64 (53460 KB)
+[corepreempt] handoffs=128
+[corepreempt] handoffs=256
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[post] 1920x1080 smaa -> 1600x900
+[menu] font /system/fonts/Roboto-Regular.ttf
+[cpumod] started 15 executable segments, 10ms CPU timer, 8KB buckets
+[input] GetNpadStates id 0 count 16 lr 800263e58
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+[pace] period 50.79 blocked 7.19 busy 43.60 ms
+[pace] period 32.42 blocked 4.30 busy 28.12 ms
+[pace] period 85.94 blocked 56.46 busy 29.48 ms
+[vk] no page write tracking (-1, page 4096)
+[corepreempt] handoffs=384
+[pace] period 23.82 blocked 10.04 busy 13.78 ms
+[pace] period 21.36 blocked 7.44 busy 13.92 ms
+[pace] period 32.14 blocked 18.68 busy 13.47 ms
+[pace] period 28.71 blocked 15.60 busy 13.11 ms
+[pace] period 25.87 blocked 12.64 busy 13.23 ms
+[pace] period 33.87 blocked 17.47 busy 16.40 ms
+[pace] period 23.65 blocked 10.14 busy 13.51 ms
+[pace] period 33.60 blocked 20.28 busy 13.32 ms
+[pace] period 29.65 blocked 14.87 busy 14.79 ms
+[corepreempt] handoffs=512
+[pace] period 29.17 blocked 15.07 busy 14.11 ms
+[pace] period 23.09 blocked 6.01 busy 17.08 ms
+[pace] period 23.77 blocked 8.33 busy 15.45 ms
+[pace] period 29.33 blocked 15.39 busy 13.94 ms
+[pace] period 49.56 blocked 33.56 busy 16.00 ms
+[pace] period 15.12 blocked 1.66 busy 13.46 ms
+[pace] period 22.66 blocked 8.98 busy 13.68 ms
+[pace] period 23.78 blocked 9.54 busy 14.24 ms
+[pace] period 22.91 blocked 9.36 busy 13.55 ms
+[pace] period 27.35 blocked 14.33 busy 13.01 ms
+[pace] period 27.73 blocked 8.23 busy 19.50 ms
+[pace] period 26.58 blocked 8.44 busy 18.13 ms
+[pace] period 27.87 blocked 12.16 busy 15.70 ms
+[corepreempt] handoffs=640
+[pace] period 38.22 blocked 23.34 busy 14.89 ms
+[pace] period 38.83 blocked 26.53 busy 12.30 ms
+[pace] period 36.56 blocked 20.57 busy 15.98 ms
+[pace] period 43.43 blocked 28.23 busy 15.20 ms
+[pace] period 53.56 blocked 33.04 busy 20.52 ms
+[pace] period 27.31 blocked 8.82 busy 18.50 ms
+[pace] period 39.73 blocked 23.01 busy 16.72 ms
+[pace] period 32.12 blocked 15.22 busy 16.91 ms
+[pace] period 26.39 blocked 13.21 busy 13.18 ms
+[pace] period 55.70 blocked 33.62 busy 22.08 ms
+[pace] frames don't fit 60 fps (12 of the last 60 over 16.2 ms busy): the game's 30 fps mode
+[pace] period 24.63 blocked 8.63 busy 16.00 ms
+[corepreempt] handoffs=768
+[pace] period 28.29 blocked 8.91 busy 19.38 ms
+[pace] period 28.85 blocked 5.81 busy 23.03 ms
+[pace] period 46.59 blocked 22.57 busy 24.02 ms
+[pace] period 26.26 blocked 9.60 busy 16.66 ms
+[pace] period 54.95 blocked 32.37 busy 22.58 ms
+[pace] period 27.90 blocked 7.52 busy 20.38 ms
+[pace] period 26.22 blocked 2.47 busy 23.75 ms
+[pace] period 23.69 blocked 2.25 busy 21.44 ms
+[pace] period 22.23 blocked 8.17 busy 14.05 ms
+[pace] period 25.69 blocked 11.05 busy 14.63 ms
+[pace] period 31.21 blocked 14.25 busy 16.96 ms
+[corepreempt] handoffs=896
+[pace] period 32.72 blocked 17.80 busy 14.92 ms
+[pace] period 35.28 blocked 13.84 busy 21.44 ms
+[pace] period 18.96 blocked 3.15 busy 15.81 ms
+[pace] period 36.50 blocked 20.54 busy 15.97 ms
+[pace] period 33.19 blocked 18.09 busy 15.09 ms
+[pace] period 29.52 blocked 9.60 busy 19.92 ms
+[pace] period 22.91 blocked 7.20 busy 15.71 ms
+[pace] period 33.95 blocked 16.46 busy 17.49 ms
+[pace] period 18.42 blocked 4.37 busy 14.05 ms
+[pace] period 53.62 blocked 31.34 busy 22.28 ms
+[pace] period 62.28 blocked 39.08 busy 23.20 ms
+[vk] command counts: 0:595 2:474 3:116 4:2180 5:574 6:574 7:238 9:238 10:116 11:116 12:116 13:4440 15:8076 17:60 18:60 19:418 20:595 21:595 22:595 23:574 28:238 32:716 33:417 38:564 48:60 51:715 54:658 61:238
+[vk] t=9.2 frame 60 29.4 fps gen 0/59 max 103ms level  (564 draws, 0 skipped, 119 passes, 0 dispatches, 120 flushes, wait 1ms, compile 4, fbcopy 0, upload 1.9MB)
+[pace] period 27.54 blocked 7.48 busy 20.06 ms
+[pace] period 19.37 blocked 2.96 busy 16.41 ms
+[corepreempt] handoffs=1024
+[pace] period 33.55 blocked 17.85 busy 15.69 ms
+[pace] period 56.44 blocked 34.66 busy 21.78 ms
+[pace] period 41.19 blocked 19.85 busy 21.34 ms
+[pace] period 29.05 blocked 11.41 busy 17.63 ms
+[pace] period 44.01 blocked 24.52 busy 19.49 ms
+[pace] period 32.74 blocked 14.78 busy 17.96 ms
+[pace] period 32.79 blocked 11.51 busy 21.28 ms
+[pace] period 29.18 blocked 14.85 busy 14.33 ms
+[pace] period 53.28 blocked 32.92 busy 20.36 ms
+[pace] period 30.82 blocked 13.62 busy 17.19 ms
+[pace] period 24.04 blocked 5.17 busy 18.87 ms
+[pace] period 27.00 blocked 11.63 busy 15.37 ms
+[corepreempt] handoffs=1152
+[pace] period 38.82 blocked 22.62 busy 16.20 ms
+[pace] period 52.20 blocked 31.12 busy 21.07 ms
+[pace] period 32.40 blocked 11.99 busy 20.41 ms
+[pace] period 45.24 blocked 27.76 busy 17.47 ms
+[pace] period 56.63 blocked 32.55 busy 24.08 ms
+[pace] period 44.83 blocked 24.07 busy 20.76 ms
+[pace] period 30.65 blocked 13.35 busy 17.30 ms
+[pace] period 21.93 blocked 4.61 busy 17.32 ms
+[pace] period 26.16 blocked 8.72 busy 17.43 ms
+[pace] period 20.07 blocked 3.72 busy 16.35 ms
+[pace] period 25.29 blocked 8.32 busy 16.96 ms
+[fs] romfs reads: 128 (118019 KB)
+[corepreempt] handoffs=1280
+[pace] period 26.14 blocked 4.54 busy 21.59 ms
+[pace] period 25.09 blocked 9.50 busy 15.59 ms
+[pace] period 19.48 blocked 0.78 busy 18.71 ms
+[pace] period 19.49 blocked 5.94 busy 13.55 ms
+[pace] period 26.50 blocked 10.15 busy 16.36 ms
+[pace] period 17.08 blocked 1.98 busy 15.09 ms
+[pace] period 22.09 blocked 7.18 busy 14.91 ms
+[pace] period 15.95 blocked 3.07 busy 12.88 ms
+[pace] period 18.78 blocked 0.72 busy 18.06 ms
+[pace] period 29.48 blocked 15.80 busy 13.68 ms
+[pace] period 23.82 blocked 8.34 busy 15.48 ms
+[pace] period 22.42 blocked 8.79 busy 13.63 ms
+[pace] period 24.03 blocked 6.61 busy 17.42 ms
+[corepreempt] handoffs=1408
+[pace] period 26.97 blocked 8.51 busy 18.46 ms
+[pace] period 19.20 blocked 1.89 busy 17.31 ms
+[pace] period 31.59 blocked 16.88 busy 14.71 ms
+[pace] period 24.79 blocked 7.13 busy 17.65 ms
+[pace] period 21.08 blocked 4.41 busy 16.67 ms
+[pace] period 23.25 blocked 8.26 busy 14.99 ms
+[pace] period 24.31 blocked 11.67 busy 12.64 ms
+[pace] period 21.86 blocked 7.09 busy 14.77 ms
+[pace] period 28.65 blocked 13.88 busy 14.77 ms
+[pace] period 20.46 blocked 6.32 busy 14.14 ms
+[pace] period 28.62 blocked 8.90 busy 19.73 ms
+[corepreempt] handoffs=1536
+[pace] period 27.62 blocked 13.13 busy 14.50 ms
+[pace] period 27.39 blocked 14.45 busy 12.94 ms
+[pace] period 49.39 blocked 33.51 busy 15.88 ms
+[pace] period 32.10 blocked 11.69 busy 20.41 ms
+[pace] period 25.08 blocked 6.83 busy 18.25 ms
+[pace] period 19.21 blocked 4.21 busy 14.99 ms
+[pace] period 26.66 blocked 10.30 busy 16.36 ms
+[pace] period 38.61 blocked 21.51 busy 17.10 ms
+[pace] period 27.20 blocked 9.58 busy 17.62 ms
+[pace] period 25.11 blocked 6.65 busy 18.45 ms
+[pace] period 31.26 blocked 14.67 busy 16.58 ms
+[corepreempt] handoffs=1664
+[pace] period 34.63 blocked 16.44 busy 18.19 ms
+[pace] period 28.77 blocked 13.96 busy 14.82 ms
+[pace] period 22.17 blocked 7.43 busy 14.74 ms
+[pace] period 25.73 blocked 11.19 busy 14.54 ms
+[pace] period 22.54 blocked 8.68 busy 13.86 ms
+[pace] period 19.69 blocked 6.11 busy 13.58 ms
+[pace] period 28.50 blocked 13.79 busy 14.71 ms
+[pace] period 17.29 blocked 2.38 busy 14.91 ms
+[pace] period 32.17 blocked 16.45 busy 15.72 ms
+[pace] period 22.62 blocked 4.40 busy 18.22 ms
+[vk] command counts: 0:1295 2:1034 3:256 4:4770 5:1274 6:1274 7:518 9:518 10:256 11:256 12:256 13:9690 15:17526 17:130 18:130 19:908 20:1295 21:1295 22:1295 23:1274 28:518 32:1556 33:907 38:1264 48:130 51:1555 54:1428 61:518
+[vk] t=11.2 frame 130 34.7 fps gen 0/70 max 57ms level  (700 draws, 0 skipped, 140 passes, 0 dispatches, 140 flushes, wait 1ms, compile 0, fbcopy 0, upload 0.5MB)
+[pace] period 25.41 blocked 10.76 busy 14.65 ms
+[pace] period 30.65 blocked 10.96 busy 19.69 ms
+[pace] period 22.77 blocked 7.64 busy 15.14 ms
+[pace] period 31.11 blocked 13.82 busy 17.29 ms
+[corepreempt] handoffs=1792
+[pace] period 20.82 blocked 2.55 busy 18.27 ms
+[pace] period 26.11 blocked 4.98 busy 21.12 ms
+[pace] period 21.43 blocked 5.37 busy 16.06 ms
+[pace] period 22.84 blocked 9.64 busy 13.20 ms
+[pace] period 34.94 blocked 19.28 busy 15.66 ms
+[pace] period 33.31 blocked 16.05 busy 17.26 ms
+[pace] period 22.67 blocked 3.55 busy 19.12 ms
+[pace] period 29.21 blocked 10.49 busy 18.72 ms
+[pace] period 26.37 blocked 9.12 busy 17.25 ms
+[pace] period 27.07 blocked 10.46 busy 16.61 ms
+[pace] period 30.22 blocked 12.89 busy 17.32 ms
+[corepreempt] handoffs=1920
+[pace] period 27.86 blocked 8.43 busy 19.43 ms
+[pace] period 18.14 blocked 2.65 busy 15.49 ms
+[pace] period 21.05 blocked 6.26 busy 14.79 ms
+[pace] period 42.85 blocked 22.48 busy 20.37 ms
+[pace] period 28.74 blocked 12.79 busy 15.95 ms
+[pace] period 30.97 blocked 11.05 busy 19.92 ms
+[pace] period 24.12 blocked 10.26 busy 13.86 ms
+[pace] period 33.39 blocked 14.79 busy 18.60 ms
+[pace] period 29.38 blocked 12.29 busy 17.09 ms
+[pace] period 28.57 blocked 14.22 busy 14.34 ms
+[pace] period 27.33 blocked 11.69 busy 15.64 ms
+[pace] period 20.33 blocked 4.82 busy 15.51 ms
+[pace] period 19.31 blocked 4.09 busy 15.21 ms
+[corepreempt] handoffs=2048
+[pace] period 19.65 blocked 2.78 busy 16.87 ms
+[pace] period 24.62 blocked 7.67 busy 16.95 ms
+[pace] period 16.35 blocked 2.68 busy 13.67 ms
+[pace] period 16.50 blocked 2.82 busy 13.68 ms
+[pace] period 17.20 blocked 0.49 busy 16.70 ms
+[pace] period 28.21 blocked 13.58 busy 14.63 ms
+[pace] period 24.25 blocked 8.45 busy 15.80 ms
+[pace] period 15.95 blocked 2.54 busy 13.41 ms
+[pace] period 22.87 blocked 9.18 busy 13.69 ms
+[pace] period 20.90 blocked 6.92 busy 13.98 ms
+[pace] period 24.57 blocked 7.17 busy 17.39 ms
+[pace] period 15.97 blocked 0.63 busy 15.34 ms
+[pace] period 15.63 blocked 0.82 busy 14.80 ms
+[pace] period 16.56 blocked 0.69 busy 15.87 ms
+[pace] period 16.94 blocked 0.61 busy 16.32 ms
+[pace] period 21.21 blocked 7.40 busy 13.81 ms
+[pace] period 16.17 blocked 2.28 busy 13.89 ms
+[pace] period 16.92 blocked 0.71 busy 16.21 ms
+[pace] period 27.65 blocked 13.33 busy 14.31 ms
+[pace] period 15.45 blocked 0.55 busy 14.90 ms
+[pace] period 17.71 blocked 1.14 busy 16.57 ms
+[pace] period 20.00 blocked 6.52 busy 13.48 ms
+[pace] period 18.00 blocked 1.43 busy 16.57 ms
+[pace] period 16.57 blocked 1.36 busy 15.21 ms
+[pace] period 19.20 blocked 1.20 busy 18.00 ms
+[corepreempt] handoffs=2176
+[pace] period 15.61 blocked 0.69 busy 14.92 ms
+[pace] period 16.91 blocked 3.27 busy 13.65 ms
+[pace] period 19.75 blocked 0.79 busy 18.95 ms
+[pace] period 20.34 blocked 4.88 busy 15.47 ms
+[pace] period 14.28 blocked 1.58 busy 12.70 ms
+[pace] period 19.01 blocked 0.57 busy 18.44 ms
+[pace] period 17.54 blocked 1.18 busy 16.36 ms
+[pace] period 15.92 blocked 0.52 busy 15.41 ms
+[pace] period 14.71 blocked 0.68 busy 14.03 ms
+[pace] period 18.89 blocked 0.51 busy 18.39 ms
+[pace] period 14.93 blocked 1.16 busy 13.77 ms
+[pace] period 18.36 blocked 0.66 busy 17.69 ms
+[pace] period 14.17 blocked 0.62 busy 13.55 ms
+[pace] period 17.78 blocked 1.54 busy 16.24 ms
+[pace] period 17.94 blocked 0.88 busy 17.06 ms
+[pace] period 16.22 blocked 0.49 busy 15.74 ms
+[pace] period 15.81 blocked 0.53 busy 15.28 ms
+[pace] period 18.65 blocked 6.02 busy 12.63 ms
+[pace] period 18.77 blocked 1.53 busy 17.23 ms
+[pace] period 16.59 blocked 2.24 busy 14.36 ms
+[pace] period 18.27 blocked 0.86 busy 17.41 ms
+[pace] period 15.39 blocked 0.56 busy 14.83 ms
+[pace] period 18.01 blocked 4.54 busy 13.47 ms
+[pace] period 19.50 blocked 0.53 busy 18.97 ms
+[pace] period 20.71 blocked 6.92 busy 13.79 ms
+[pace] period 21.90 blocked 6.82 busy 15.08 ms
+[pace] period 27.03 blocked 7.75 busy 19.28 ms
+[pace] period 23.76 blocked 3.59 busy 20.17 ms
+[pace] period 22.93 blocked 4.27 busy 18.66 ms
+[corepreempt] handoffs=2304
+[pace] period 15.71 blocked 1.77 busy 13.94 ms
+[pace] period 17.65 blocked 1.64 busy 16.00 ms
+[pace] period 16.72 blocked 0.53 busy 16.20 ms
+[pace] period 20.65 blocked 7.29 busy 13.36 ms
+[fs] romfs reads: 256 (242261 KB)
+[pace] period 23.24 blocked 6.44 busy 16.80 ms
+[pace] period 14.22 blocked 0.42 busy 13.81 ms
+[pace] period 16.29 blocked 0.49 busy 15.80 ms
+[pace] period 19.84 blocked 5.03 busy 14.81 ms
+[pace] period 18.30 blocked 4.77 busy 13.53 ms
+[pace] period 19.07 blocked 5.59 busy 13.48 ms
+[pace] period 17.15 blocked 3.13 busy 14.02 ms
+[pace] period 29.65 blocked 14.23 busy 15.42 ms
+[vk] command counts: 0:2235 2:1786 3:444 4:8248 5:2214 6:2214 7:894 9:894 10:444 11:444 12:444 13:16740 15:30216 17:224 18:224 19:1566 20:2235 21:2235 22:2235 23:2214 28:894 32:2684 33:1565 38:2204 48:224 51:2683 54:2462 61:894
+[vk] t=13.2 frame 224 47.0 fps gen 0/94 max 43ms level  (940 draws, 0 skipped, 188 passes, 0 dispatches, 188 flushes, wait 1ms, compile 0, fbcopy 0, upload 0.6MB)
+[pace] period 14.26 blocked 0.48 busy 13.78 ms
+[pace] period 20.84 blocked 3.82 busy 17.02 ms
+[pace] period 20.09 blocked 4.53 busy 15.56 ms
+[pace] period 25.66 blocked 10.36 busy 15.30 ms
+[corepreempt] handoffs=2432
+[pace] period 22.09 blocked 8.51 busy 13.58 ms
+[pace] period 16.92 blocked 0.53 busy 16.39 ms
+[pace] period 17.31 blocked 0.73 busy 16.58 ms
+[pace] period 15.99 blocked 2.18 busy 13.81 ms
+[pace] period 17.62 blocked 3.64 busy 13.98 ms
+[pace] period 17.93 blocked 4.81 busy 13.12 ms
+[pace] period 22.31 blocked 7.70 busy 14.61 ms
+[pace] period 14.92 blocked 1.06 busy 13.86 ms
+[pace] period 25.86 blocked 12.44 busy 13.42 ms
+[pace] period 16.69 blocked 2.45 busy 14.24 ms
+[pace] period 16.78 blocked 0.90 busy 15.88 ms
+[pace] period 16.76 blocked 0.71 busy 16.05 ms
+[pace] period 17.30 blocked 1.50 busy 15.80 ms
+[pace] period 23.01 blocked 8.50 busy 14.51 ms
+[pace] period 16.74 blocked 2.11 busy 14.63 ms
+[pace] period 17.59 blocked 0.78 busy 16.81 ms
+[pace] period 16.59 blocked 2.79 busy 13.80 ms
+[pace] period 17.18 blocked 1.77 busy 15.41 ms
+[corepreempt] handoffs=2560
+[pace] period 21.45 blocked 7.56 busy 13.89 ms
+[pace] period 28.30 blocked 10.10 busy 18.20 ms
+[pace] period 16.75 blocked 1.93 busy 14.81 ms
+[pace] period 23.38 blocked 4.75 busy 18.63 ms
+[pace] period 22.06 blocked 7.86 busy 14.21 ms
+[pace] period 26.44 blocked 12.17 busy 14.27 ms
+[pace] period 17.28 blocked 1.45 busy 15.83 ms
+[pace] period 33.09 blocked 15.83 busy 17.26 ms
+[pace] period 16.84 blocked 2.13 busy 14.71 ms
+[pace] period 23.69 blocked 9.77 busy 13.92 ms
+[pace] period 17.70 blocked 0.60 busy 17.11 ms
+[pace] period 19.92 blocked 3.59 busy 16.33 ms
+[pace] period 16.08 blocked 0.54 busy 15.54 ms
+[pace] period 17.37 blocked 1.17 busy 16.20 ms
+[pace] period 21.08 blocked 7.03 busy 14.05 ms
+[corepreempt] handoffs=2688
+[pace] period 16.33 blocked 0.57 busy 15.77 ms
+[pace] period 23.05 blocked 8.91 busy 14.14 ms
+[pace] period 23.83 blocked 3.88 busy 19.95 ms
+[pace] period 15.83 blocked 0.88 busy 14.94 ms
+[pace] period 27.20 blocked 9.82 busy 17.38 ms
+[pace] period 24.68 blocked 9.09 busy 15.58 ms
+[pace] period 33.25 blocked 15.86 busy 17.39 ms
+[pace] period 19.94 blocked 2.21 busy 17.73 ms
+[pace] period 19.42 blocked 1.84 busy 17.58 ms
+[pace] period 19.51 blocked 4.24 busy 15.27 ms
+[pace] period 16.36 blocked 1.65 busy 14.71 ms
+[pace] period 17.99 blocked 0.58 busy 17.41 ms
+[pace] period 15.78 blocked 0.54 busy 15.24 ms
+[pace] period 16.50 blocked 0.58 busy 15.92 ms
+[pace] period 20.81 blocked 4.67 busy 16.15 ms
+[pace] period 23.61 blocked 8.76 busy 14.85 ms
+[pace] period 16.72 blocked 1.22 busy 15.50 ms
+[pace] period 29.04 blocked 12.84 busy 16.21 ms
+[vk] t=15.3 frame 280 27.7 fps gen 0/56 max 910ms level  (1221 draws, 0 skipped, 112 passes, 0 dispatches, 112 flushes, wait 0ms, compile 2, fbcopy 0, upload 1.7MB)
+[pace] period 22.14 blocked 6.02 busy 16.12 ms
+[pace] period 15.35 blocked 0.65 busy 14.70 ms
+[pace] period 17.54 blocked 0.81 busy 16.73 ms
+[pace] period 14.39 blocked 0.66 busy 13.73 ms
+[pace] period 21.37 blocked 6.93 busy 14.44 ms
+[pace] period 15.76 blocked 0.53 busy 15.23 ms
+[pace] period 16.78 blocked 0.62 busy 16.16 ms
+[pace] period 16.84 blocked 1.12 busy 15.72 ms
+[pace] period 17.62 blocked 0.53 busy 17.09 ms
+[pace] period 15.70 blocked 0.54 busy 15.16 ms
+[pace] period 15.90 blocked 0.68 busy 15.22 ms
+[pace] period 18.53 blocked 0.84 busy 17.69 ms
+[pace] period 20.47 blocked 6.78 busy 13.69 ms
+[pace] period 17.19 blocked 0.60 busy 16.59 ms
+[pace] period 18.31 blocked 0.60 busy 17.71 ms
+[pace] period 14.75 blocked 1.56 busy 13.20 ms
+[pace] period 17.13 blocked 1.02 busy 16.11 ms
+[pace] period 18.22 blocked 1.09 busy 17.13 ms
+[pace] period 16.88 blocked 1.52 busy 15.36 ms
+[pace] period 15.71 blocked 1.08 busy 14.63 ms
+[pace] period 16.86 blocked 0.75 busy 16.11 ms
+[pace] period 23.33 blocked 7.76 busy 15.57 ms
+[pace] period 15.90 blocked 0.63 busy 15.27 ms
+[pace] period 22.17 blocked 3.49 busy 18.68 ms
+[pace] period 20.81 blocked 3.15 busy 17.67 ms
+[pace] period 17.37 blocked 1.70 busy 15.67 ms
+[pace] period 16.26 blocked 0.55 busy 15.71 ms
+[corepreempt] handoffs=2816
+[pace] period 16.41 blocked 0.51 busy 15.89 ms
+[pace] period 16.83 blocked 0.49 busy 16.33 ms
+[pace] period 19.47 blocked 3.81 busy 15.66 ms
+[pace] period 15.21 blocked 0.68 busy 14.53 ms
+[pace] period 20.67 blocked 5.33 busy 15.34 ms
+[pace] period 17.72 blocked 0.49 busy 17.24 ms
+[pace] period 20.49 blocked 4.35 busy 16.14 ms
+[pace] period 17.87 blocked 1.17 busy 16.70 ms
+[pace] period 15.72 blocked 0.56 busy 15.16 ms
+[pace] period 15.18 blocked 0.59 busy 14.59 ms
+[pace] period 22.54 blocked 4.99 busy 17.55 ms
+[pace] period 15.95 blocked 0.55 busy 15.41 ms
+[pace] period 16.63 blocked 0.51 busy 16.13 ms
+[pace] period 23.76 blocked 9.37 busy 14.38 ms
+[pace] period 18.33 blocked 1.35 busy 16.98 ms
+[pace] period 15.29 blocked 0.63 busy 14.66 ms
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[pace] period 21.11 blocked 4.85 busy 16.26 ms
+[pace] period 26.28 blocked 8.40 busy 17.88 ms
+[pace] period 15.65 blocked 0.55 busy 15.10 ms
+[ipc] STUB prepo:u cmd 10103 (in 40 bytes, x1 a1 b0 c0) -> ok
+[kernel] CreateThread entry=80432e240 arg=ab8e67020 stack=a08063fe0 prio=45 core=-2 -> 11b
+[kernel] CreateThread entry=80432e240 arg=ab8f20020 stack=a2568afe0 prio=46 core=-2 -> 13c
+[kernel] CreateThread entry=80432e240 arg=ab8f32020 stack=a1bbfefe0 prio=46 core=-2 -> 13d
+[kernel] CreateThread entry=80432e240 arg=ab8f44020 stack=a16cb7fe0 prio=46 core=-2 -> 13e
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[pace] period 23.93 blocked 6.70 busy 17.23 ms
+[pace] period 23.22 blocked 9.35 busy 13.87 ms
+[pace] period 17.69 blocked 0.54 busy 17.14 ms
+[pace] period 16.75 blocked 1.22 busy 15.52 ms
+[pace] period 20.18 blocked 6.27 busy 13.91 ms
+[corepreempt] handoffs=2944
+[pace] period 19.82 blocked 3.17 busy 16.65 ms
+[pace] period 15.82 blocked 1.13 busy 14.69 ms
+[pace] period 19.39 blocked 2.34 busy 17.05 ms
+[pace] period 14.18 blocked 0.59 busy 13.59 ms
+[pace] period 17.93 blocked 1.44 busy 16.48 ms
+[pace] period 15.45 blocked 1.78 busy 13.67 ms
+[pace] period 17.94 blocked 4.55 busy 13.39 ms
+[pace] period 31.52 blocked 16.65 busy 14.87 ms
+[pace] period 16.63 blocked 1.83 busy 14.80 ms
+[pace] period 18.16 blocked 1.67 busy 16.48 ms
+[corepreempt] handoffs=3072
+[pace] period 21.28 blocked 0.95 busy 20.33 ms
+[pace] period 15.28 blocked 1.35 busy 13.93 ms
+[pace] period 18.49 blocked 3.54 busy 14.95 ms
+[pace] period 23.52 blocked 5.80 busy 17.72 ms
+[pace] period 17.05 blocked 1.28 busy 15.77 ms
+[pace] period 28.03 blocked 15.10 busy 12.93 ms
+[pace] period 28.18 blocked 10.83 busy 17.35 ms
+[pace] period 20.07 blocked 4.02 busy 16.04 ms
+[corepreempt] handoffs=3200
+[pace] period 30.94 blocked 12.38 busy 18.56 ms
+[pace] period 28.45 blocked 6.11 busy 22.33 ms
+[pace] period 22.88 blocked 6.94 busy 15.93 ms
+[pace] period 16.61 blocked 2.10 busy 14.51 ms
+[pace] period 17.61 blocked 3.33 busy 14.27 ms
+[pace] period 19.07 blocked 1.95 busy 17.12 ms
+[pace] period 25.67 blocked 10.28 busy 15.38 ms
+[pace] period 18.49 blocked 0.96 busy 17.52 ms
+[corepreempt] handoffs=3328
+[pace] period 26.81 blocked 12.97 busy 13.84 ms
+[pace] period 21.28 blocked 6.36 busy 14.91 ms
+[pace] period 18.04 blocked 4.44 busy 13.60 ms
+[pace] period 21.28 blocked 4.41 busy 16.88 ms
+[pace] period 26.90 blocked 11.45 busy 15.45 ms
+[pace] period 30.66 blocked 9.17 busy 21.49 ms
+[pace] period 19.72 blocked 1.95 busy 17.77 ms
+[pace] period 16.44 blocked 1.52 busy 14.92 ms
+[pace] period 21.30 blocked 1.98 busy 19.32 ms
+[pace] period 27.72 blocked 10.11 busy 17.61 ms
+[corepreempt] handoffs=3456
+[pace] period 16.44 blocked 1.87 busy 14.58 ms
+[pace] period 29.87 blocked 11.67 busy 18.20 ms
+[pace] period 23.51 blocked 5.19 busy 18.32 ms
+[pace] period 24.96 blocked 8.98 busy 15.97 ms
+[pace] period 23.67 blocked 1.46 busy 22.21 ms
+[pace] period 21.68 blocked 2.71 busy 18.97 ms
+[pace] period 20.39 blocked 1.43 busy 18.96 ms
+[corepreempt] handoffs=3584
+[pace] period 23.67 blocked 4.92 busy 18.75 ms
+[pace] period 21.10 blocked 2.55 busy 18.56 ms
+[pace] period 17.57 blocked 1.07 busy 16.50 ms
+[pace] period 17.08 blocked 2.19 busy 14.89 ms
+[pace] period 18.57 blocked 2.77 busy 15.80 ms
+[pace] period 17.04 blocked 1.42 busy 15.62 ms
+[pace] period 25.56 blocked 6.72 busy 18.85 ms
+[vk] t=17.3 frame 381 50.4 fps gen 0/101 max 31ms level  (4243 draws, 0 skipped, 202 passes, 0 dispatches, 202 flushes, wait 1ms, compile 0, fbcopy 0, upload 2.9MB)
+[pace] period 23.01 blocked 3.44 busy 19.57 ms
+[pace] period 24.42 blocked 4.92 busy 19.50 ms
+[corepreempt] handoffs=3712
+[pace] period 32.84 blocked 14.20 busy 18.65 ms
+[pace] period 22.62 blocked 3.96 busy 18.66 ms
+[pace] period 19.45 blocked 1.33 busy 18.12 ms
+[pace] period 19.44 blocked 3.22 busy 16.22 ms
+[pace] period 19.81 blocked 2.74 busy 17.08 ms
+[pace] period 17.23 blocked 1.87 busy 15.36 ms
+[pace] period 17.04 blocked 2.94 busy 14.10 ms
+[pace] period 22.99 blocked 5.21 busy 17.78 ms
+[corepreempt] handoffs=3840
+[pace] period 18.60 blocked 4.29 busy 14.30 ms
+[pace] period 24.77 blocked 6.34 busy 18.43 ms
+[pace] period 22.15 blocked 6.04 busy 16.11 ms
+[pace] period 23.40 blocked 5.63 busy 17.78 ms
+[pace] period 19.73 blocked 3.58 busy 16.15 ms
+[pace] period 24.69 blocked 4.37 busy 20.32 ms
+[pace] period 20.37 blocked 2.25 busy 18.13 ms
+[corepreempt] handoffs=3968
+[pace] period 31.10 blocked 11.14 busy 19.96 ms
+[pace] period 21.79 blocked 1.44 busy 20.35 ms
+[pace] period 34.72 blocked 17.79 busy 16.92 ms
+[pace] period 31.44 blocked 14.90 busy 16.54 ms
+[pace] period 18.77 blocked 1.75 busy 17.02 ms
+[pace] period 22.40 blocked 4.94 busy 17.46 ms
+[pace] period 19.08 blocked 3.22 busy 15.87 ms
+[corepreempt] handoffs=4096
+[pace] period 21.50 blocked 4.94 busy 16.56 ms
+[pace] period 21.92 blocked 6.27 busy 15.65 ms
+[pace] period 20.14 blocked 3.29 busy 16.85 ms
+[pace] period 18.46 blocked 1.28 busy 17.18 ms
+[pace] period 21.58 blocked 6.36 busy 15.22 ms
+[pace] period 29.35 blocked 10.39 busy 18.96 ms
+[pace] period 21.65 blocked 3.98 busy 17.67 ms
+[corepreempt] handoffs=4224
+[pace] period 20.36 blocked 4.79 busy 15.57 ms
+[pace] period 18.86 blocked 4.07 busy 14.80 ms
+[pace] period 16.33 blocked 2.37 busy 13.96 ms
+[pace] period 20.42 blocked 3.56 busy 16.85 ms
+[pace] period 27.82 blocked 8.66 busy 19.16 ms
+[pace] period 18.86 blocked 1.71 busy 17.15 ms
+[pace] period 23.86 blocked 8.43 busy 15.43 ms
+[pace] period 18.92 blocked 4.82 busy 14.10 ms
+[pace] period 26.11 blocked 12.43 busy 13.68 ms
+[corepreempt] handoffs=4352
+[pace] period 26.89 blocked 9.51 busy 17.38 ms
+[pace] period 18.22 blocked 2.91 busy 15.31 ms
+[pace] period 19.93 blocked 3.01 busy 16.92 ms
+[pace] period 16.84 blocked 1.41 busy 15.43 ms
+[pace] period 33.85 blocked 19.29 busy 14.56 ms
+[pace] period 16.36 blocked 1.21 busy 15.15 ms
+[pace] period 22.79 blocked 8.22 busy 14.57 ms
+[pace] period 20.79 blocked 6.54 busy 14.25 ms
+[corepreempt] handoffs=4480
+[pace] period 16.55 blocked 2.29 busy 14.27 ms
+[pace] period 16.83 blocked 0.78 busy 16.05 ms
+[pace] period 35.99 blocked 15.90 busy 20.09 ms
+[pace] period 16.21 blocked 1.95 busy 14.26 ms
+[pace] period 29.01 blocked 10.06 busy 18.95 ms
+[pace] period 18.52 blocked 1.52 busy 17.00 ms
+[pace] period 19.33 blocked 2.00 busy 17.33 ms
+[pace] period 17.16 blocked 2.71 busy 14.45 ms
+[corepreempt] handoffs=4608
+[pace] period 30.33 blocked 7.35 busy 22.98 ms
+[pace] period 17.39 blocked 1.38 busy 16.00 ms
+[pace] period 20.19 blocked 4.03 busy 16.16 ms
+[pace] period 18.52 blocked 4.57 busy 13.95 ms
+[pace] period 17.70 blocked 3.05 busy 14.65 ms
+[pace] period 20.86 blocked 3.26 busy 17.60 ms
+[pace] period 23.40 blocked 7.17 busy 16.23 ms
+[pace] period 17.13 blocked 0.96 busy 16.16 ms
+[corepreempt] handoffs=4736
+[pace] period 22.63 blocked 7.25 busy 15.37 ms
+[pace] period 28.93 blocked 12.31 busy 16.62 ms
+[pace] period 23.21 blocked 6.28 busy 16.93 ms
+[pace] period 20.32 blocked 4.45 busy 15.87 ms
+[pace] period 20.63 blocked 4.27 busy 16.35 ms
+[pace] period 17.03 blocked 1.86 busy 15.17 ms
+[pace] period 24.20 blocked 7.71 busy 16.49 ms
+[pace] period 21.36 blocked 6.22 busy 15.14 ms
+[corepreempt] handoffs=4864
+[pace] period 34.33 blocked 17.34 busy 16.99 ms
+[pace] period 28.53 blocked 12.30 busy 16.23 ms
+[pace] period 21.27 blocked 1.10 busy 20.16 ms
+[pace] period 31.48 blocked 10.32 busy 21.15 ms
+[pace] period 14.93 blocked 0.95 busy 13.98 ms
+[pace] period 37.41 blocked 20.44 busy 16.97 ms
+[pace] period 18.04 blocked 1.20 busy 16.84 ms
+[corepreempt] handoffs=4992
+[pace] period 23.29 blocked 8.45 busy 14.84 ms
+[pace] period 18.74 blocked 3.40 busy 15.34 ms
+[pace] period 20.58 blocked 3.60 busy 16.98 ms
+[pace] period 18.77 blocked 3.20 busy 15.57 ms
+[pace] period 17.57 blocked 1.03 busy 16.54 ms
+[pace] period 18.96 blocked 2.09 busy 16.86 ms
+[pace] period 18.32 blocked 3.78 busy 14.55 ms
+[pace] period 27.95 blocked 10.15 busy 17.80 ms
+[pace] period 15.24 blocked 1.23 busy 14.01 ms
+[corepreempt] handoffs=5120
+[pace] period 18.36 blocked 4.43 busy 13.94 ms
+[pace] period 17.48 blocked 4.09 busy 13.39 ms
+[pace] period 22.24 blocked 1.14 busy 21.10 ms
+[vk] t=19.3 frame 472 45.3 fps gen 0/91 max 38ms level  (3458 draws, 0 skipped, 182 passes, 0 dispatches, 182 flushes, wait 1ms, compile 0, fbcopy 0, upload 2.3MB)
+[pace] period 33.20 blocked 12.16 busy 21.04 ms
+[pace] period 16.66 blocked 1.85 busy 14.81 ms
+[pace] period 31.04 blocked 14.44 busy 16.60 ms
+[pace] period 25.07 blocked 6.36 busy 18.72 ms
+[pace] period 18.03 blocked 1.22 busy 16.82 ms
+[corepreempt] handoffs=5248
+[pace] period 16.88 blocked 1.17 busy 15.71 ms
+[pace] period 24.07 blocked 8.35 busy 15.73 ms
+[pace] period 25.06 blocked 7.78 busy 17.28 ms
+[pace] period 26.14 blocked 6.08 busy 20.05 ms
+[pace] period 22.73 blocked 7.43 busy 15.31 ms
+[pace] period 23.28 blocked 7.60 busy 15.68 ms
+[pace] period 16.79 blocked 1.65 busy 15.14 ms
+[pace] period 25.83 blocked 10.23 busy 15.61 ms
+[corepreempt] handoffs=5376
+[pace] period 20.83 blocked 5.42 busy 15.41 ms
+[pace] period 23.51 blocked 8.73 busy 14.78 ms
+[pace] period 24.32 blocked 6.60 busy 17.72 ms
+[pace] period 27.34 blocked 11.64 busy 15.70 ms
+[pace] period 18.53 blocked 3.85 busy 14.68 ms
+[pace] period 19.24 blocked 4.11 busy 15.13 ms
+[pace] period 24.30 blocked 6.17 busy 18.13 ms
+[corepreempt] handoffs=5504
+[pace] period 16.18 blocked 2.32 busy 13.86 ms
+[pace] period 22.66 blocked 7.42 busy 15.24 ms
+[pace] period 18.95 blocked 2.07 busy 16.88 ms
+[pace] period 18.61 blocked 1.77 busy 16.85 ms
+[pace] period 34.63 blocked 17.23 busy 17.40 ms
+[pace] period 22.75 blocked 5.57 busy 17.18 ms
+[pace] period 34.49 blocked 14.28 busy 20.21 ms
+[pace] period 17.93 blocked 1.36 busy 16.58 ms
+[pace] period 25.91 blocked 8.52 busy 17.39 ms
+[corepreempt] handoffs=5632
+[pace] period 24.16 blocked 4.02 busy 20.14 ms
+[pace] period 21.97 blocked 6.15 busy 15.82 ms
+[pace] period 22.41 blocked 5.74 busy 16.66 ms
+[pace] period 23.65 blocked 8.15 busy 15.50 ms
+[pace] period 20.95 blocked 4.79 busy 16.16 ms
+[pace] period 21.58 blocked 5.40 busy 16.18 ms
+[pace] period 18.82 blocked 3.65 busy 15.18 ms
+[pace] period 14.67 blocked 0.88 busy 13.79 ms
+[corepreempt] handoffs=5760
+[pace] period 21.26 blocked 3.01 busy 18.25 ms
+[pace] period 16.53 blocked 1.25 busy 15.28 ms
+[pace] period 17.39 blocked 1.42 busy 15.97 ms
+[pace] period 20.15 blocked 2.36 busy 17.79 ms
+[pace] period 25.09 blocked 9.21 busy 15.88 ms
+[pace] period 23.81 blocked 5.66 busy 18.15 ms
+[pace] period 23.42 blocked 5.84 busy 17.58 ms
+[pace] period 30.93 blocked 8.58 busy 22.34 ms
+[corepreempt] handoffs=5888
+[pace] period 22.04 blocked 3.99 busy 18.05 ms
+[pace] period 20.82 blocked 3.07 busy 17.75 ms
+[pace] period 14.77 blocked 0.90 busy 13.87 ms
+[pace] period 18.52 blocked 3.52 busy 15.00 ms
+[pace] period 18.89 blocked 1.46 busy 17.43 ms
+[pace] period 24.82 blocked 8.59 busy 16.23 ms
+[pace] period 19.96 blocked 4.77 busy 15.19 ms
+[pace] period 18.82 blocked 0.93 busy 17.89 ms
+[corepreempt] handoffs=6016
+[pace] period 20.76 blocked 2.92 busy 17.84 ms
+[pace] period 19.42 blocked 3.32 busy 16.10 ms
+[pace] period 30.82 blocked 14.96 busy 15.86 ms
+[pace] period 23.61 blocked 4.63 busy 18.98 ms
+[pace] period 16.21 blocked 2.03 busy 14.18 ms
+[pace] period 18.94 blocked 4.54 busy 14.40 ms
+[pace] period 17.51 blocked 0.80 busy 16.71 ms
+[pace] period 15.88 blocked 1.60 busy 14.28 ms
+[pace] period 19.93 blocked 4.77 busy 15.16 ms
+[corepreempt] handoffs=6144
+[pace] period 21.13 blocked 3.83 busy 17.30 ms
+[pace] period 15.32 blocked 1.28 busy 14.04 ms
+[pace] period 17.80 blocked 1.55 busy 16.25 ms
+[pace] period 20.10 blocked 3.54 busy 16.55 ms
+[pace] period 21.28 blocked 5.96 busy 15.32 ms
+[pace] period 14.60 blocked 0.68 busy 13.92 ms
+[pace] period 24.70 blocked 5.94 busy 18.75 ms
+[pace] period 22.52 blocked 8.23 busy 14.30 ms
+[pace] period 17.94 blocked 2.78 busy 15.16 ms
+[corepreempt] handoffs=6272
+[pace] period 15.17 blocked 1.75 busy 13.41 ms
+[pace] period 22.04 blocked 5.70 busy 16.34 ms
+[pace] period 16.42 blocked 2.34 busy 14.07 ms
+[pace] period 30.11 blocked 11.40 busy 18.71 ms
+[pace] period 20.27 blocked 6.59 busy 13.69 ms
+[pace] period 24.63 blocked 8.77 busy 15.86 ms
+[pace] period 22.34 blocked 4.19 busy 18.15 ms
+[pace] period 16.17 blocked 2.18 busy 13.99 ms
+[corepreempt] handoffs=6400
+[pace] period 36.60 blocked 18.24 busy 18.36 ms
+[pace] period 16.26 blocked 1.39 busy 14.86 ms
+[pace] period 20.91 blocked 3.86 busy 17.06 ms
+[pace] period 27.53 blocked 11.45 busy 16.09 ms
+[pace] period 19.49 blocked 1.24 busy 18.25 ms
+[pace] period 16.23 blocked 1.04 busy 15.20 ms
+[pace] period 18.60 blocked 1.45 busy 17.16 ms
+[pace] period 15.97 blocked 1.56 busy 14.41 ms
+[pace] period 17.06 blocked 1.44 busy 15.62 ms
+[corepreempt] handoffs=6528
+[pace] period 29.04 blocked 14.68 busy 14.35 ms
+[pace] period 25.05 blocked 6.80 busy 18.25 ms
+[pace] period 19.79 blocked 1.08 busy 18.71 ms
+[pace] period 15.42 blocked 1.13 busy 14.29 ms
+[pace] period 20.56 blocked 5.42 busy 15.14 ms
+[vk] t=21.3 frame 565 46.4 fps gen 0/93 max 37ms level  (3534 draws, 0 skipped, 186 passes, 0 dispatches, 186 flushes, wait 1ms, compile 0, fbcopy 0, upload 2.4MB)
+[pace] period 15.75 blocked 0.73 busy 15.01 ms
+[pace] period 17.26 blocked 1.67 busy 15.60 ms
+[pace] period 14.76 blocked 1.00 busy 13.76 ms
+[corepreempt] handoffs=6656
+[pace] period 22.09 blocked 4.11 busy 17.98 ms
+[pace] period 22.06 blocked 7.79 busy 14.27 ms
+[pace] period 25.09 blocked 9.73 busy 15.36 ms
+[pace] period 19.14 blocked 4.28 busy 14.86 ms
+[pace] period 20.42 blocked 5.18 busy 15.25 ms
+[pace] period 20.38 blocked 6.74 busy 13.64 ms
+[pace] period 20.32 blocked 4.76 busy 15.56 ms
+[corepreempt] handoffs=6784
+[pace] period 16.24 blocked 1.83 busy 14.41 ms
+[pace] period 28.73 blocked 11.21 busy 17.51 ms
+[pace] period 19.50 blocked 2.30 busy 17.20 ms
+[pace] period 16.33 blocked 1.82 busy 14.51 ms
+[pace] period 16.61 blocked 1.67 busy 14.94 ms
+[pace] period 18.68 blocked 0.86 busy 17.81 ms
+[pace] period 22.99 blocked 8.93 busy 14.06 ms
+[corepreempt] handoffs=6912
+[pace] period 19.02 blocked 4.45 busy 14.57 ms
+[pace] period 16.70 blocked 1.09 busy 15.60 ms
+[pace] period 26.17 blocked 11.20 busy 14.96 ms
+[pace] period 20.87 blocked 6.77 busy 14.09 ms
+[pace] period 26.23 blocked 10.95 busy 15.28 ms
+[pace] period 25.60 blocked 8.08 busy 17.52 ms
+[pace] period 22.00 blocked 3.14 busy 18.86 ms
+[pace] period 30.31 blocked 11.81 busy 18.50 ms
+[pace] period 18.90 blocked 2.53 busy 16.37 ms
+[corepreempt] handoffs=7040
+[pace] period 23.69 blocked 8.88 busy 14.81 ms
+[pace] period 22.19 blocked 3.59 busy 18.61 ms
+[pace] period 20.05 blocked 3.56 busy 16.49 ms
+[pace] period 27.96 blocked 8.66 busy 19.30 ms
+[pace] period 30.81 blocked 10.48 busy 20.33 ms
+[pace] period 19.93 blocked 2.59 busy 17.34 ms
+[pace] period 21.19 blocked 4.52 busy 16.67 ms
+[input] GetNpadState id 0 lr 800263e58
+[pace] period 27.45 blocked 11.83 busy 15.63 ms
+[corepreempt] handoffs=7168
+[pace] period 17.17 blocked 3.61 busy 13.56 ms
+[shader] prefetch: scanned 16028 draws / 1203 submits (43.0 ms), started 3 programs + 15 pipelines ahead, waits 7 (970 ms total, worst 877 ms), unforeseen 0
+[pace] period 23.72 blocked 7.20 busy 16.52 ms
+[pace] period 26.94 blocked 9.46 busy 17.49 ms
+[pace] period 17.11 blocked 0.76 busy 16.34 ms
+[pace] period 19.92 blocked 2.62 busy 17.30 ms
+[pace] period 24.31 blocked 6.54 busy 17.76 ms
+[pace] period 16.26 blocked 0.72 busy 15.54 ms
+[pace] period 18.74 blocked 4.16 busy 14.58 ms
+[pace] period 19.31 blocked 3.52 busy 15.79 ms
+[corepreempt] handoffs=7296
+[cpumod] 15s total 4166 unmapped 1057 game=612 runtime=120 SDL3=970 Vulkan=31 libc=1374 shader=2 other=0
+[cpuhot] game 294a000:78 296c000:43 294c000:40 2958000:33 44f8000:21 3594000:16 bf5c000:15 1170c000:15
+[cpuhot] runtime 1dc000:64 1d8000:33 1da000:8 4be000:3 1de000:2 36a000:2 1e0000:1 270000:1
+[cpuhot] SDL3 1b2000:369 18c000:108 a0000:107 1b0000:65 a2000:56 190000:50 184000:34 18e000:34
+[cpuhot] Vulkan 2de0000:3 1c1e000:2 8fc000:1 916000:1 91a000:1 958000:1 962000:1 ab4000:1
+[cpuhot] shader 2b8000:1 42c000:1
+[pace] period 27.94 blocked 1.18 busy 26.76 ms
+[pace] period 17.24 blocked 2.38 busy 14.86 ms
+[pace] period 32.78 blocked 16.91 busy 15.87 ms
+[pace] period 20.35 blocked 2.60 busy 17.75 ms
+[pace] period 28.06 blocked 9.56 busy 18.50 ms
+[pace] period 19.86 blocked 0.67 busy 19.19 ms
+[pace] period 18.16 blocked 1.34 busy 16.83 ms
+[pace] period 18.11 blocked 2.71 busy 15.40 ms
+[pace] period 20.56 blocked 6.04 busy 14.51 ms
+[corepreempt] handoffs=7424
+[pace] period 20.30 blocked 4.47 busy 15.82 ms
+[pace] period 18.93 blocked 1.02 busy 17.91 ms
+[pace] period 18.69 blocked 2.65 busy 16.05 ms
+[pace] period 17.03 blocked 3.36 busy 13.67 ms
+[pace] period 18.56 blocked 1.95 busy 16.61 ms
+[pace] period 20.52 blocked 4.57 busy 15.96 ms
+[pace] period 19.04 blocked 2.91 busy 16.13 ms
+[pace] period 16.82 blocked 2.14 busy 14.68 ms
+[pace] period 19.64 blocked 4.97 busy 14.67 ms
+[corepreempt] handoffs=7552
+[pace] period 27.75 blocked 10.57 busy 17.18 ms
+[pace] period 26.02 blocked 9.71 busy 16.30 ms
+[pace] period 19.03 blocked 4.63 busy 14.40 ms
+[pace] period 19.09 blocked 1.99 busy 17.10 ms
+[pace] period 23.37 blocked 6.85 busy 16.52 ms
+[pace] period 26.01 blocked 9.24 busy 16.78 ms
+[pace] period 27.54 blocked 10.59 busy 16.95 ms
+[pace] period 18.63 blocked 2.88 busy 15.75 ms
+[pace] period 23.87 blocked 7.30 busy 16.58 ms
+[corepreempt] handoffs=7680
+[pace] period 36.10 blocked 15.94 busy 20.16 ms
+[pace] period 28.93 blocked 8.30 busy 20.63 ms
+[pace] period 20.60 blocked 1.57 busy 19.03 ms
+[pace] period 23.79 blocked 7.34 busy 16.45 ms
+[pace] period 25.81 blocked 10.11 busy 15.70 ms
+[pace] period 16.19 blocked 1.00 busy 15.19 ms
+[pace] period 25.89 blocked 6.00 busy 19.89 ms
+[corepreempt] handoffs=7808
+[pace] period 16.78 blocked 1.13 busy 15.65 ms
+[pace] period 26.36 blocked 8.41 busy 17.96 ms
+[pace] period 19.80 blocked 2.55 busy 17.25 ms
+[pace] period 21.26 blocked 4.64 busy 16.62 ms
+[pace] period 22.34 blocked 5.02 busy 17.32 ms
+[pace] period 22.03 blocked 4.44 busy 17.59 ms
+[pace] period 19.85 blocked 4.05 busy 15.80 ms
+[pace] period 17.48 blocked 1.05 busy 16.43 ms
+[pace] period 19.11 blocked 4.21 busy 14.91 ms
+[corepreempt] handoffs=7936
+[pace] period 25.12 blocked 8.78 busy 16.34 ms
+[pace] period 20.56 blocked 6.05 busy 14.51 ms
+[pace] period 22.28 blocked 5.71 busy 16.57 ms
+[pace] period 19.52 blocked 3.80 busy 15.72 ms
+[pace] period 20.25 blocked 1.75 busy 18.50 ms
+[pace] period 25.94 blocked 9.40 busy 16.54 ms
+[pace] period 40.28 blocked 23.72 busy 16.56 ms
+[vk] t=23.3 frame 658 45.6 fps gen 0/93 max 40ms level  (3534 draws, 0 skipped, 186 passes, 0 dispatches, 186 flushes, wait 1ms, compile 0, fbcopy 0, upload 2.4MB)
+[corepreempt] handoffs=8064
+[pace] period 18.46 blocked 2.75 busy 15.71 ms
+[pace] period 16.34 blocked 1.07 busy 15.26 ms
+[pace] period 30.22 blocked 11.38 busy 18.84 ms
+[pace] period 21.38 blocked 5.74 busy 15.64 ms
+[pace] period 26.53 blocked 9.99 busy 16.54 ms
+[pace] period 29.47 blocked 9.99 busy 19.48 ms
+[pace] period 29.24 blocked 6.99 busy 22.25 ms
+[pace] period 23.57 blocked 5.36 busy 18.22 ms
+[pace] period 30.96 blocked 12.40 busy 18.57 ms
+[corepreempt] handoffs=8192
+[pace] period 30.74 blocked 9.89 busy 20.85 ms
+[pace] period 25.02 blocked 5.17 busy 19.85 ms
+[pace] period 25.34 blocked 8.15 busy 17.19 ms
+[pace] period 32.53 blocked 14.20 busy 18.34 ms
+[pace] period 23.67 blocked 8.10 busy 15.57 ms
+[pace] period 24.42 blocked 8.04 busy 16.38 ms
+[corepreempt] handoffs=8320
+[pace] period 39.21 blocked 17.94 busy 21.27 ms
+[pace] period 24.09 blocked 3.39 busy 20.70 ms
+[pace] period 17.62 blocked 1.39 busy 16.23 ms
+[pace] period 30.78 blocked 12.84 busy 17.94 ms
+[pace] period 25.90 blocked 9.14 busy 16.76 ms
+[pace] period 33.98 blocked 18.49 busy 15.49 ms
+[pace] period 22.53 blocked 1.42 busy 21.11 ms
+[corepreempt] handoffs=8448
+[pace] period 18.42 blocked 2.09 busy 16.33 ms
+[pace] period 26.84 blocked 9.66 busy 17.18 ms
+[pace] period 22.22 blocked 6.75 busy 15.47 ms
+[pace] period 32.86 blocked 13.92 busy 18.95 ms
+[pace] period 20.52 blocked 1.63 busy 18.88 ms
+[pace] period 24.40 blocked 8.35 busy 16.05 ms
+[pace] period 25.01 blocked 8.43 busy 16.58 ms
+[corepreempt] handoffs=8576
+[pace] period 24.09 blocked 5.19 busy 18.90 ms
+[pace] period 25.33 blocked 9.08 busy 16.25 ms
+[pace] period 16.40 blocked 1.37 busy 15.03 ms
+[pace] period 20.58 blocked 6.24 busy 14.34 ms
+[pace] period 19.87 blocked 3.44 busy 16.43 ms
+[pace] period 27.64 blocked 13.10 busy 14.53 ms
+[pace] period 19.10 blocked 3.64 busy 15.46 ms
+[pace] period 20.65 blocked 4.80 busy 15.85 ms
+[pace] period 29.47 blocked 12.91 busy 16.57 ms
+[pace] period 19.55 blocked 4.16 busy 15.39 ms
+[corepreempt] handoffs=8704
+[pace] period 27.59 blocked 12.33 busy 15.26 ms
+[pace] period 20.96 blocked 4.15 busy 16.81 ms
+[pace] period 17.56 blocked 2.30 busy 15.26 ms
+[pace] period 15.97 blocked 1.49 busy 14.48 ms
+[pace] period 24.40 blocked 9.12 busy 15.29 ms
+[pace] period 19.05 blocked 0.64 busy 18.41 ms
+[pace] period 17.04 blocked 1.44 busy 15.60 ms
+[pace] period 25.27 blocked 8.72 busy 16.55 ms
+[pace] period 15.56 blocked 2.06 busy 13.50 ms
+[pace] period 21.81 blocked 7.02 busy 14.80 ms
+[corepreempt] handoffs=8832
+[pace] period 17.98 blocked 1.99 busy 15.99 ms
+[pace] period 16.22 blocked 0.91 busy 15.31 ms
+[pace] period 20.04 blocked 4.79 busy 15.25 ms
+[pace] period 18.61 blocked 3.09 busy 15.52 ms
+[pace] period 34.24 blocked 17.42 busy 16.82 ms
+[pace] period 29.19 blocked 13.22 busy 15.97 ms
+[pace] period 17.10 blocked 1.33 busy 15.77 ms
+[corepreempt] handoffs=8960
+[pace] period 15.99 blocked 1.16 busy 14.83 ms
+[pace] period 27.22 blocked 11.35 busy 15.87 ms
+[pace] period 17.48 blocked 2.01 busy 15.47 ms
+[pace] period 26.29 blocked 10.13 busy 16.16 ms
+[pace] period 17.30 blocked 3.30 busy 14.01 ms
+[pace] period 17.42 blocked 2.65 busy 14.78 ms
+[pace] period 19.86 blocked 1.94 busy 17.92 ms
+[pace] period 21.91 blocked 4.71 busy 17.20 ms
+[corepreempt] handoffs=9088
+[pace] period 33.19 blocked 12.44 busy 20.75 ms
+[pace] period 34.80 blocked 15.65 busy 19.15 ms
+[pace] period 17.60 blocked 1.79 busy 15.81 ms
+[pace] period 27.38 blocked 10.39 busy 16.99 ms
+[pace] period 25.87 blocked 6.88 busy 18.99 ms
+[pace] period 19.49 blocked 2.50 busy 16.99 ms
+[pace] period 34.02 blocked 12.82 busy 21.20 ms
+[pace] period 23.45 blocked 5.22 busy 18.23 ms
+[corepreempt] handoffs=9216
+[pace] period 26.94 blocked 11.49 busy 15.46 ms
+[pace] period 23.59 blocked 7.01 busy 16.58 ms
+[pace] period 29.88 blocked 13.06 busy 16.82 ms
+[pace] period 19.67 blocked 1.72 busy 17.95 ms
+[pace] period 30.90 blocked 11.72 busy 19.17 ms
+[pace] period 18.27 blocked 1.28 busy 16.99 ms
+[pace] period 15.30 blocked 1.98 busy 13.32 ms
+[pace] period 22.44 blocked 7.06 busy 15.37 ms
+[pace] period 20.97 blocked 5.69 busy 15.27 ms
+[corepreempt] handoffs=9344
+[pace] period 18.11 blocked 2.43 busy 15.68 ms
+[pace] period 20.23 blocked 3.62 busy 16.61 ms
+[pace] period 35.24 blocked 14.97 busy 20.27 ms
+[pace] period 22.12 blocked 2.02 busy 20.09 ms
+[vk] t=25.3 frame 743 42.2 fps gen 0/85 max 39ms level  (3230 draws, 0 skipped, 170 passes, 0 dispatches, 170 flushes, wait 1ms, compile 0, fbcopy 0, upload 2.2MB)
+[pace] period 26.06 blocked 10.05 busy 16.01 ms
+[pace] period 28.38 blocked 12.37 busy 16.01 ms
+[pace] period 31.11 blocked 14.41 busy 16.70 ms
+[pace] period 26.87 blocked 9.35 busy 17.51 ms
+[corepreempt] handoffs=9472
+[pace] period 22.56 blocked 6.97 busy 15.58 ms
+[pace] period 17.74 blocked 2.56 busy 15.18 ms
+[pace] period 19.92 blocked 5.09 busy 14.83 ms
+[pace] period 31.12 blocked 16.54 busy 14.58 ms
+[pace] period 18.76 blocked 3.11 busy 15.65 ms
+[pace] period 24.76 blocked 10.04 busy 14.72 ms
+[pace] period 21.04 blocked 6.60 busy 14.44 ms
+[pace] period 26.17 blocked 5.74 busy 20.43 ms
+[corepreempt] handoffs=9600
+[pace] period 20.83 blocked 2.30 busy 18.53 ms
+[pace] period 24.00 blocked 9.20 busy 14.80 ms
+[pace] period 24.74 blocked 5.68 busy 19.06 ms
+[pace] period 27.16 blocked 8.15 busy 19.01 ms
+[pace] period 18.88 blocked 2.81 busy 16.07 ms
+[pace] period 26.68 blocked 11.25 busy 15.43 ms
+[pace] period 28.51 blocked 12.10 busy 16.42 ms
+[pace] period 19.09 blocked 1.83 busy 17.26 ms
+[corepreempt] handoffs=9728
+[pace] period 19.08 blocked 2.94 busy 16.14 ms
+[pace] period 30.03 blocked 14.34 busy 15.69 ms
+[pace] period 54.08 blocked 34.50 busy 19.58 ms
+[pace] period 25.32 blocked 6.86 busy 18.47 ms
+[pace] period 20.61 blocked 4.23 busy 16.38 ms
+[pace] period 21.40 blocked 6.17 busy 15.23 ms
+[pace] period 32.00 blocked 15.21 busy 16.78 ms
+[pace] period 23.68 blocked 5.00 busy 18.67 ms
+[pace] period 41.43 blocked 24.96 busy 16.48 ms
+[corepreempt] handoffs=9856
+[pace] period 49.69 blocked 27.50 busy 22.19 ms
+[pace] period 30.10 blocked 10.21 busy 19.89 ms
+[pace] period 28.83 blocked 12.38 busy 16.45 ms
+[pace] period 18.49 blocked 2.15 busy 16.34 ms
+[pace] period 21.73 blocked 5.85 busy 15.88 ms
+[pace] period 22.12 blocked 4.18 busy 17.94 ms
+[pace] period 43.90 blocked 21.64 busy 22.26 ms
+[corepreempt] handoffs=9984
+[pace] period 23.19 blocked 5.79 busy 17.39 ms
+[pace] period 38.49 blocked 19.03 busy 19.46 ms
+[pace] period 20.24 blocked 2.08 busy 18.17 ms
+[pace] period 25.54 blocked 3.85 busy 21.69 ms
+[pace] period 16.47 blocked 1.55 busy 14.92 ms
+[pace] period 35.35 blocked 19.00 busy 16.35 ms
+[pace] period 37.39 blocked 20.97 busy 16.42 ms
+[pace] period 31.64 blocked 13.32 busy 18.32 ms
+[corepreempt] handoffs=10112
+[pace] period 67.93 blocked 15.40 busy 52.53 ms
+[pace] period 23.70 blocked 2.85 busy 20.85 ms
+[pace] period 32.64 blocked 17.09 busy 15.55 ms
+[pace] period 31.48 blocked 7.89 busy 23.60 ms
+[pace] period 25.81 blocked 6.50 busy 19.31 ms
+[corepreempt] handoffs=10240
+[pace] period 41.31 blocked 20.36 busy 20.95 ms
+[pace] period 30.97 blocked 8.24 busy 22.72 ms
+[pace] period 28.78 blocked 6.92 busy 21.86 ms
+[pace] period 28.85 blocked 8.17 busy 20.68 ms
+[pace] period 27.68 blocked 2.85 busy 24.83 ms
+[pace] period 32.11 blocked 14.43 busy 17.69 ms
+[pace] period 22.37 blocked 2.88 busy 19.48 ms
+[corepreempt] handoffs=10368
+[pace] period 30.72 blocked 14.66 busy 16.06 ms
+[pace] period 41.79 blocked 12.18 busy 29.62 ms
+[pace] period 23.14 blocked 1.82 busy 21.32 ms
+[pace] period 23.35 blocked 6.75 busy 16.61 ms
+[pace] period 32.03 blocked 14.28 busy 17.75 ms
+[vk] t=27.3 frame 806 31.4 fps gen 0/63 max 156ms level  (2394 draws, 0 skipped, 126 passes, 0 dispatches, 126 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.6MB)
+[pace] period 27.84 blocked 7.71 busy 20.13 ms
+[pace] period 33.92 blocked 16.31 busy 17.61 ms
+[corepreempt] handoffs=10496
+[pace] period 25.07 blocked 9.75 busy 15.32 ms
+[pace] period 31.10 blocked 14.05 busy 17.05 ms
+[pace] period 17.40 blocked 1.31 busy 16.09 ms
+[pace] period 29.14 blocked 10.17 busy 18.97 ms
+[pace] period 16.85 blocked 0.94 busy 15.90 ms
+[pace] period 26.34 blocked 7.03 busy 19.31 ms
+[pace] period 18.68 blocked 1.23 busy 17.45 ms
+[pace] period 27.90 blocked 7.28 busy 20.61 ms
+[corepreempt] handoffs=10624
+[pace] period 18.43 blocked 1.26 busy 17.18 ms
+[pace] period 24.08 blocked 6.04 busy 18.04 ms
+[pace] period 28.19 blocked 8.43 busy 19.76 ms
+[pace] period 29.98 blocked 14.26 busy 15.72 ms
+[pace] period 35.13 blocked 11.56 busy 23.57 ms
+[pace] period 27.65 blocked 11.20 busy 16.45 ms
+[pace] period 29.42 blocked 8.86 busy 20.56 ms
+[pace] period 21.63 blocked 5.20 busy 16.43 ms
+[corepreempt] handoffs=10752
+[pace] period 39.52 blocked 22.91 busy 16.60 ms
+[pace] period 40.02 blocked 21.56 busy 18.46 ms
+[pace] period 36.20 blocked 18.46 busy 17.74 ms
+[pace] period 28.77 blocked 10.90 busy 17.87 ms
+[pace] period 23.94 blocked 6.20 busy 17.74 ms
+[pace] period 21.74 blocked 5.88 busy 15.87 ms
+[pace] period 23.46 blocked 3.78 busy 19.68 ms
+[corepreempt] handoffs=10880
+[pace] period 19.40 blocked 3.78 busy 15.62 ms
+[pace] period 26.00 blocked 9.66 busy 16.33 ms
+[pace] period 21.11 blocked 4.31 busy 16.80 ms
+[pace] period 24.76 blocked 9.02 busy 15.73 ms
+[pace] period 33.10 blocked 16.60 busy 16.51 ms
+[pace] period 30.94 blocked 12.74 busy 18.19 ms
+[pace] period 33.26 blocked 11.50 busy 21.76 ms
+[corepreempt] handoffs=11008
+[pace] period 23.83 blocked 3.08 busy 20.75 ms
+[pace] period 31.35 blocked 10.13 busy 21.22 ms
+[pace] period 18.83 blocked 1.23 busy 17.60 ms
+[pace] period 19.35 blocked 4.11 busy 15.24 ms
+[pace] period 22.37 blocked 6.73 busy 15.63 ms
+[pace] period 38.25 blocked 22.35 busy 15.90 ms
+[pace] period 17.97 blocked 2.61 busy 15.36 ms
+[pace] period 20.13 blocked 5.15 busy 14.99 ms
+[corepreempt] handoffs=11136
+[pace] period 32.62 blocked 16.67 busy 15.95 ms
+[pace] period 27.97 blocked 10.22 busy 17.75 ms
+[pace] period 18.02 blocked 2.40 busy 15.62 ms
+[pace] period 41.99 blocked 22.25 busy 19.75 ms
+[pace] period 24.84 blocked 5.69 busy 19.15 ms
+[pace] period 19.72 blocked 4.13 busy 15.59 ms
+[pace] period 39.02 blocked 21.29 busy 17.73 ms
+[corepreempt] handoffs=11264
+[pace] period 27.21 blocked 9.28 busy 17.92 ms
+[pace] period 20.94 blocked 5.52 busy 15.42 ms
+[pace] period 27.40 blocked 11.24 busy 16.16 ms
+[pace] period 41.28 blocked 23.46 busy 17.82 ms
+[pace] period 27.66 blocked 8.65 busy 19.02 ms
+[pace] period 30.21 blocked 13.42 busy 16.79 ms
+[pace] period 29.73 blocked 13.53 busy 16.19 ms
+[pace] period 23.87 blocked 6.42 busy 17.46 ms
+[corepreempt] handoffs=11392
+[pace] period 40.62 blocked 19.81 busy 20.81 ms
+[pace] period 23.64 blocked 6.32 busy 17.32 ms
+[pace] period 30.18 blocked 8.40 busy 21.78 ms
+[pace] period 19.58 blocked 3.15 busy 16.43 ms
+[pace] period 40.04 blocked 21.37 busy 18.67 ms
+[pace] period 27.33 blocked 10.07 busy 17.26 ms
+[pace] period 25.68 blocked 8.55 busy 17.12 ms
+[corepreempt] handoffs=11520
+[pace] period 35.70 blocked 16.57 busy 19.13 ms
+[pace] period 21.40 blocked 5.30 busy 16.10 ms
+[pace] period 28.73 blocked 11.22 busy 17.51 ms
+[pace] period 24.36 blocked 7.36 busy 16.99 ms
+[pace] period 19.55 blocked 2.53 busy 17.02 ms
+[pace] period 24.56 blocked 7.56 busy 17.00 ms
+[pace] period 25.94 blocked 4.23 busy 21.70 ms
+[corepreempt] handoffs=11648
+[pace] period 31.75 blocked 12.06 busy 19.70 ms
+[pace] period 31.30 blocked 13.80 busy 17.50 ms
+[pace] period 36.25 blocked 18.37 busy 17.88 ms
+[pace] period 27.73 blocked 8.03 busy 19.70 ms
+[vk] t=29.3 frame 879 36.3 fps gen 0/73 max 42ms level  (2774 draws, 0 skipped, 146 passes, 0 dispatches, 146 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.9MB)
+[pace] period 26.86 blocked 6.92 busy 19.93 ms
+[pace] period 30.16 blocked 12.00 busy 18.16 ms
+[pace] period 22.79 blocked 4.20 busy 18.59 ms
+[corepreempt] handoffs=11776
+[pace] period 36.82 blocked 20.40 busy 16.43 ms
+[pace] period 36.80 blocked 16.25 busy 20.55 ms
+[pace] period 23.86 blocked 6.94 busy 16.92 ms
+[pace] period 20.36 blocked 2.39 busy 17.97 ms
+[pace] period 37.29 blocked 19.28 busy 18.02 ms
+[pace] period 22.40 blocked 7.24 busy 15.15 ms
+[pace] period 21.63 blocked 4.90 busy 16.73 ms
+[corepreempt] handoffs=11904
+[pace] period 20.25 blocked 2.88 busy 17.37 ms
+[pace] period 22.49 blocked 6.35 busy 16.14 ms
+[pace] period 17.76 blocked 2.42 busy 15.34 ms
+[pace] period 28.35 blocked 11.58 busy 16.77 ms
+[pace] period 28.98 blocked 12.14 busy 16.83 ms
+[pace] period 24.76 blocked 7.14 busy 17.62 ms
+[pace] period 17.44 blocked 3.01 busy 14.43 ms
+[pace] period 23.50 blocked 4.98 busy 18.52 ms
+[pace] period 19.96 blocked 3.35 busy 16.60 ms
+[corepreempt] handoffs=12032
+[pace] period 24.59 blocked 5.35 busy 19.23 ms
+[pace] period 33.57 blocked 13.44 busy 20.14 ms
+[pace] period 28.52 blocked 4.95 busy 23.57 ms
+[pace] period 36.44 blocked 14.67 busy 21.77 ms
+[pace] period 33.16 blocked 14.54 busy 18.61 ms
+[pace] period 43.00 blocked 13.68 busy 29.32 ms
+[pace] period 39.89 blocked 21.51 busy 18.38 ms
+[corepreempt] handoffs=12160
+[pace] period 43.28 blocked 20.71 busy 22.57 ms
+[pace] period 30.40 blocked 1.98 busy 28.42 ms
+[pace] period 38.25 blocked 16.49 busy 21.76 ms
+[pace] period 35.91 blocked 15.31 busy 20.59 ms
+[pace] period 24.83 blocked 7.09 busy 17.74 ms
+[pace] period 26.70 blocked 9.61 busy 17.09 ms
+[pace] period 34.85 blocked 4.45 busy 30.40 ms
+[corepreempt] handoffs=12288
+[pace] period 36.70 blocked 7.61 busy 29.10 ms
+[pace] period 23.90 blocked 6.97 busy 16.94 ms
+[pace] period 28.66 blocked 7.19 busy 21.47 ms
+[pace] period 32.15 blocked 10.67 busy 21.48 ms
+[pace] period 17.42 blocked 1.13 busy 16.29 ms
+[pace] period 24.72 blocked 6.07 busy 18.65 ms
+[pace] period 20.86 blocked 3.33 busy 17.53 ms
+[corepreempt] handoffs=12416
+[pace] period 28.04 blocked 10.79 busy 17.25 ms
+[pace] period 27.68 blocked 10.94 busy 16.74 ms
+[pace] period 22.34 blocked 6.54 busy 15.80 ms
+[pace] period 23.77 blocked 5.60 busy 18.17 ms
+[pace] period 32.89 blocked 16.44 busy 16.45 ms
+[pace] period 23.00 blocked 6.48 busy 16.52 ms
+[pace] period 21.74 blocked 1.40 busy 20.33 ms
+[pace] period 30.44 blocked 11.15 busy 19.29 ms
+[corepreempt] handoffs=12544
+[pace] period 17.12 blocked 1.05 busy 16.07 ms
+[pace] period 27.76 blocked 11.00 busy 16.76 ms
+[pace] period 24.69 blocked 7.41 busy 17.28 ms
+[pace] period 41.44 blocked 20.32 busy 21.13 ms
+[pace] period 20.05 blocked 1.45 busy 18.60 ms
+[pace] period 22.70 blocked 4.99 busy 17.71 ms
+[pace] period 27.01 blocked 9.24 busy 17.78 ms
+[corepreempt] handoffs=12672
+[pace] period 24.66 blocked 5.66 busy 19.00 ms
+[pace] period 24.18 blocked 4.32 busy 19.86 ms
+[pace] period 18.54 blocked 1.85 busy 16.69 ms
+[pace] period 17.50 blocked 3.40 busy 14.10 ms
+[pace] period 60.37 blocked 41.26 busy 19.11 ms
+[pace] period 36.67 blocked 16.84 busy 19.83 ms
+[pace] period 31.41 blocked 10.55 busy 20.86 ms
+[pace] period 35.13 blocked 14.46 busy 20.67 ms
+[corepreempt] handoffs=12800
+[pace] period 38.81 blocked 17.17 busy 21.64 ms
+[pace] period 21.28 blocked 3.35 busy 17.93 ms
+[pace] period 18.51 blocked 1.70 busy 16.81 ms
+[pace] period 31.46 blocked 13.84 busy 17.61 ms
+[pace] period 30.39 blocked 9.73 busy 20.66 ms
+[pace] period 28.11 blocked 11.57 busy 16.54 ms
+[corepreempt] handoffs=12928
+[pace] period 27.37 blocked 10.48 busy 16.88 ms
+[pace] period 23.89 blocked 5.70 busy 18.20 ms
+[pace] period 31.78 blocked 12.82 busy 18.95 ms
+[vk] t=31.4 frame 951 35.5 fps gen 0/72 max 60ms level  (2736 draws, 0 skipped, 144 passes, 0 dispatches, 144 flushes, wait 1ms, compile 0, fbcopy 0, upload 1.8MB)
+[pace] period 30.22 blocked 11.40 busy 18.82 ms
+[pace] period 29.56 blocked 11.95 busy 17.61 ms
+[pace] period 33.60 blocked 10.69 busy 22.90 ms
+[pace] period 19.47 blocked 1.24 busy 18.23 ms
+[corepreempt] handoffs=13056
+[pace] period 33.83 blocked 16.31 busy 17.52 ms
+[pace] period 22.42 blocked 2.26 busy 20.17 ms
+[pace] period 25.19 blocked 6.06 busy 19.14 ms
+[pace] period 26.23 blocked 8.49 busy 17.74 ms
+[pace] period 69.98 blocked 48.00 busy 21.98 ms
+[pace] period 70.53 blocked 46.94 busy 23.59 ms
+[pace] period 51.46 blocked 25.37 busy 26.09 ms
+[pace] period 36.83 blocked 14.74 busy 22.09 ms
+[pace] period 78.91 blocked 57.58 busy 21.33 ms
+[corepreempt] handoffs=13184
+[pace] period 44.52 blocked 25.56 busy 18.96 ms
+[pace] period 25.30 blocked 7.71 busy 17.59 ms
+[pace] period 37.18 blocked 15.33 busy 21.85 ms
+[am] ICommonStateGetter cmd 66 (unhandled, ok)
+[pace] period 36.78 blocked 21.35 busy 15.43 ms
+[mod] co-op in Endless / 100 Mario off
+[audren] mix 2 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[audren] mix 6 used 1 vol 1.000 bufs 2 dest 0 splitter -1: 0>0=1.000 1>1=1.000
+[vk] texture 0x7654434bf0 (1920x1080 f0x34 agl::DTA[15]) aliases storage a602b9000
+[pace] period 82.17 blocked 45.39 busy 36.78 ms
+[vk] texture 0x7654450330 (1920x1080 f0x3d agl::DTA[20]) aliases storage a60b29200
+[pace] period 52.19 blocked 26.25 busy 25.94 ms
+[corepreempt] handoffs=13312
+[pace] period 82.53 blocked 47.09 busy 35.44 ms
+[pace] period 42.49 blocked 18.67 busy 23.82 ms
+[pace] period 57.45 blocked 33.31 busy 24.14 ms
+[pace] period 51.81 blocked 26.20 busy 25.61 ms
+[pace] period 55.23 blocked 28.09 busy 27.15 ms
+[vk] t=33.4 frame 976 12.2 fps gen 0/25 max 956ms level  (2930 draws, 0 skipped, 218 passes, 0 dispatches, 50 flushes, wait 0ms, compile 74, fbcopy 8, upload 7.1MB)
+[pace] period 74.17 blocked 45.80 busy 28.36 ms
+[corepreempt] handoffs=13440
+[gmap] bounded draw staging: range=16 MB total=32 MB
+[pace] period 50.58 blocked 19.65 busy 30.93 ms
+[pace] period 41.83 blocked 14.33 busy 27.50 ms
+[corepreempt] handoffs=13568
+[pace] period 59.06 blocked 33.38 busy 25.69 ms
+[pace] period 53.95 blocked 26.42 busy 27.53 ms
+[pace] period 70.29 blocked 43.55 busy 26.74 ms
+[pace] period 67.21 blocked 43.21 busy 23.99 ms
+[pace] period 77.36 blocked 49.82 busy 27.55 ms
+[corepreempt] handoffs=13696
+[pace] period 99.25 blocked 62.33 busy 36.92 ms
+[pace] period 49.01 blocked 25.56 busy 23.45 ms
+[vk] t=35.5 frame 991 7.1 fps gen 0/15 max 891ms level  (4600 draws, 0 skipped, 240 passes, 0 dispatches, 30 flushes, wait 0ms, compile 6, fbcopy 15, upload 9.0MB)
+[pace] period 40.17 blocked 11.02 busy 29.15 ms
+[pace] period 64.45 blocked 34.64 busy 29.81 ms
+[corepreempt] handoffs=13824
+[pace] period 57.21 blocked 29.72 busy 27.49 ms
+[pace] period 58.47 blocked 30.79 busy 27.68 ms
+[pace] period 72.93 blocked 44.72 busy 28.22 ms
+[pace] period 41.80 blocked 11.81 busy 29.99 ms
+[pace] period 56.60 blocked 27.27 busy 29.33 ms
+[pace] period 65.63 blocked 36.53 busy 29.10 ms
+[pace] period 68.35 blocked 41.29 busy 27.07 ms
+[pace] period 56.84 blocked 27.32 busy 29.51 ms
+[pace] period 58.23 blocked 28.70 busy 29.53 ms
+[corepreempt] handoffs=13952
+[pace] period 52.15 blocked 22.07 busy 30.09 ms
+[pace] period 39.02 blocked 9.55 busy 29.47 ms
+[pace] period 60.06 blocked 28.08 busy 31.97 ms
+[pace] period 55.68 blocked 24.46 busy 31.22 ms
+[pace] period 51.04 blocked 19.29 busy 31.75 ms
+[pace] period 67.11 blocked 38.70 busy 28.41 ms
+[pace] period 72.37 blocked 42.30 busy 30.07 ms
+[pace] period 49.19 blocked 19.54 busy 29.65 ms
+[pace] period 56.17 blocked 27.99 busy 28.18 ms
+[pace] period 54.68 blocked 29.59 busy 25.10 ms
+[corepreempt] handoffs=14080
+[pace] period 66.35 blocked 35.08 busy 31.27 ms
+[pace] period 64.97 blocked 35.92 busy 29.05 ms
+[pace] period 51.36 blocked 24.40 busy 26.95 ms
+[vk] texture 0x7654304d90 (1920x1080 f0x34 agl::DTA[21]) aliases storage a602b9000
+[pace] period 46.96 blocked 19.48 busy 27.48 ms
+[cpumod] 30s total 4256 unmapped 1004 game=574 runtime=196 SDL3=1032 Vulkan=52 libc=1389 shader=9 other=0
+[cpuhot] game 2940000:27 44f8000:21 bf5c000:18 eee8000:18 4dc0000:17 44f6000:12 11630000:10 2784000:9
+[cpuhot] runtime 1dc000:104 1d8000:48 1da000:17 1de000:3 27c000:3 370000:3 35c000:2 3d6000:2
+[cpuhot] SDL3 1b2000:389 18c000:121 a0000:108 190000:60 a2000:54 1b0000:49 184000:43 ca000:32
+[cpuhot] Vulkan 1bfa000:2 1c46000:2 1ee6000:2 1f38000:2 2f36000:2 916000:1 94e000:1 a28000:1
+[cpuhot] shader 2b8000:2 372000:2 320000:1 330000:1 34a000:1 376000:1 418000:1
+[pace] period 61.05 blocked 24.90 busy 36.15 ms
+[pace] period 51.11 blocked 22.26 busy 28.85 ms
+[pace] period 52.09 blocked 21.05 busy 31.05 ms
+[pace] period 37.67 blocked 7.23 busy 30.44 ms
+[pace] period 42.19 blocked 13.57 busy 28.61 ms
+[corepreempt] handoffs=14208
+[pace] period 89.85 blocked 56.11 busy 33.74 ms
+[pace] period 47.74 blocked 16.84 busy 30.90 ms
+[vk] t=37.5 frame 1024 16.4 fps gen 0/33 max 205ms level  (10253 draws, 0 skipped, 528 passes, 0 dispatches, 66 flushes, wait 0ms, compile 0, fbcopy 33, upload 15.4MB)
+[pace] period 48.73 blocked 19.99 busy 28.74 ms
+[pace] period 49.75 blocked 19.11 busy 30.64 ms
+[pace] period 55.32 blocked 26.42 busy 28.90 ms
+[pace] period 50.96 blocked 20.24 busy 30.72 ms
+[pace] period 45.87 blocked 18.04 busy 27.83 ms
+[pace] period 60.71 blocked 29.94 busy 30.77 ms
+[mod] Muncher hit box (SMM1) off
+[pace] period 49.88 blocked 20.59 busy 29.29 ms
+[pctl] IParentalControlService cmd 1001 (ok)
+[pace] period 86.47 blocked 59.37 busy 27.10 ms
+[corepreempt] handoffs=14336
+[pace] period 61.69 blocked 32.39 busy 29.30 ms
+[pace] period 67.29 blocked 34.35 busy 32.93 ms
+[pace] period 52.21 blocked 24.55 busy 27.67 ms
+[pace] period 59.70 blocked 31.91 busy 27.79 ms
+[pace] period 64.07 blocked 36.22 busy 27.85 ms
+[pace] period 62.96 blocked 35.36 busy 27.60 ms
+[pace] period 48.56 blocked 21.11 busy 27.46 ms
+[pace] period 66.31 blocked 38.69 busy 27.62 ms
+[mod] the built-in course server didn't start; using server=http://127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] GET /api/endless: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_easy?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_normal?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_expert?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/rankings/hundred_super_expert?limit=1: cannot connect to 127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] GET /api/me: cannot connect to 127.0.0.1:8080
+[mod] Maker avatar name set to "Player" (default Mii)
+[pace] period 67.14 blocked 36.02 busy 31.12 ms
+[corepreempt] handoffs=14464
+[pace] period 48.62 blocked 21.38 busy 27.24 ms
+[pace] period 66.75 blocked 39.03 busy 27.72 ms
+[pace] period 48.51 blocked 20.50 busy 28.01 ms
+[pace] period 49.68 blocked 21.37 busy 28.31 ms
+[pace] period 62.85 blocked 34.13 busy 28.72 ms
+[pace] period 51.85 blocked 25.79 busy 26.06 ms
+[pace] period 72.98 blocked 46.66 busy 26.32 ms
+[pace] period 66.48 blocked 39.49 busy 26.99 ms
+[pace] period 65.90 blocked 38.60 busy 27.30 ms
+[pace] period 65.64 blocked 35.33 busy 30.31 ms
+[corepreempt] handoffs=14592
+[pace] period 69.40 blocked 43.39 busy 26.01 ms
+[pace] period 61.47 blocked 33.71 busy 27.76 ms
+[pace] period 47.01 blocked 19.56 busy 27.44 ms
+[pace] period 52.84 blocked 23.40 busy 29.44 ms
+[pace] period 48.82 blocked 20.18 busy 28.65 ms
+[pace] period 49.83 blocked 19.83 busy 30.00 ms
+[pace] period 45.52 blocked 16.86 busy 28.67 ms
+[pace] period 56.13 blocked 29.11 busy 27.02 ms
+[vk] t=39.6 frame 1059 17.3 fps gen 0/35 max 87ms level  (9839 draws, 0 skipped, 560 passes, 0 dispatches, 70 flushes, wait 0ms, compile 0, fbcopy 35, upload 11.4MB)
+[pace] period 63.01 blocked 34.15 busy 28.87 ms
+[pace] period 50.27 blocked 19.06 busy 31.22 ms
+[pace] period 64.44 blocked 38.01 busy 26.42 ms
+[corepreempt] handoffs=14720
+[pace] period 62.76 blocked 37.51 busy 25.24 ms
+[pace] period 67.61 blocked 37.48 busy 30.13 ms
+[pace] period 51.96 blocked 20.38 busy 31.57 ms
+[pace] period 48.09 blocked 17.72 busy 30.37 ms
+[pace] period 52.51 blocked 23.60 busy 28.91 ms
+[pace] period 57.67 blocked 30.05 busy 27.62 ms
+[pace] period 62.64 blocked 33.53 busy 29.11 ms
+[pace] period 58.05 blocked 29.15 busy 28.91 ms
+[pace] period 62.09 blocked 30.80 busy 31.29 ms
+[corepreempt] handoffs=14848
+[pace] period 57.49 blocked 30.72 busy 26.78 ms
+[pace] period 51.83 blocked 24.45 busy 27.37 ms
+[pace] period 78.65 blocked 46.28 busy 32.37 ms
+[pace] period 51.19 blocked 23.84 busy 27.35 ms
+[pace] period 73.79 blocked 42.70 busy 31.09 ms
+[pace] period 59.28 blocked 30.98 busy 28.30 ms
+[pace] period 60.75 blocked 30.25 busy 30.50 ms
+[pace] period 54.44 blocked 26.15 busy 28.29 ms
+[pace] period 57.00 blocked 25.64 busy 31.36 ms
+[corepreempt] handoffs=14976
+[pace] period 78.01 blocked 49.30 busy 28.71 ms
+[pace] period 49.50 blocked 20.13 busy 29.37 ms
+[pace] period 55.30 blocked 27.84 busy 27.46 ms
+[pace] period 53.03 blocked 23.14 busy 29.89 ms
+[pace] period 50.87 blocked 18.15 busy 32.72 ms
+[pace] period 49.69 blocked 19.17 busy 30.52 ms
+[pace] period 50.93 blocked 22.14 busy 28.79 ms
+[pace] period 61.89 blocked 32.21 busy 29.69 ms
+[pace] period 53.13 blocked 21.35 busy 31.78 ms
+[pace] period 73.78 blocked 44.12 busy 29.66 ms
+[corepreempt] handoffs=15104
+[pace] period 68.41 blocked 38.88 busy 29.53 ms
+[pace] period 65.63 blocked 38.75 busy 26.88 ms
+[pace] period 52.34 blocked 24.33 busy 28.01 ms
+[vk] t=41.6 frame 1093 16.9 fps gen 0/34 max 79ms level  (9316 draws, 0 skipped, 544 passes, 0 dispatches, 68 flushes, wait 0ms, compile 0, fbcopy 34, upload 11.0MB)
+[pace] period 69.47 blocked 41.50 busy 27.97 ms
+[pace] period 50.87 blocked 22.71 busy 28.16 ms
+[pace] period 69.77 blocked 42.91 busy 26.86 ms
+[pace] period 58.94 blocked 32.80 busy 26.14 ms
+[pace] period 72.80 blocked 41.04 busy 31.76 ms
+[pace] period 53.69 blocked 26.11 busy 27.58 ms
+[corepreempt] handoffs=15232
+[pace] period 65.36 blocked 37.94 busy 27.42 ms
+[pace] period 53.55 blocked 26.74 busy 26.81 ms
+[pace] period 61.14 blocked 34.82 busy 26.32 ms
+[pace] period 68.58 blocked 42.29 busy 26.29 ms
+[pace] period 51.87 blocked 24.09 busy 27.77 ms
+[pace] period 51.57 blocked 23.82 busy 27.75 ms
+[pace] period 57.59 blocked 29.40 busy 28.19 ms
+[pace] period 60.40 blocked 32.51 busy 27.89 ms
+[pace] period 58.00 blocked 31.95 busy 26.05 ms
+[pace] period 49.81 blocked 23.40 busy 26.41 ms
+[pace] period 58.62 blocked 31.93 busy 26.69 ms
+[corepreempt] handoffs=15360
+[pace] period 57.86 blocked 28.60 busy 29.27 ms
+[pace] period 46.40 blocked 16.68 busy 29.72 ms
+[pace] period 69.50 blocked 38.96 busy 30.54 ms
+[pace] period 55.54 blocked 23.69 busy 31.85 ms
+[pace] period 66.24 blocked 35.02 busy 31.22 ms
+[pace] period 45.48 blocked 17.95 busy 27.53 ms
+[pace] period 56.09 blocked 29.84 busy 26.25 ms
+[pace] period 56.86 blocked 26.03 busy 30.84 ms
+[pace] period 54.25 blocked 24.43 busy 29.81 ms
+[corepreempt] handoffs=15488
+[pace] period 66.25 blocked 32.02 busy 34.22 ms
+[pace] period 53.22 blocked 21.73 busy 31.49 ms
+[pace] period 53.55 blocked 25.36 busy 28.19 ms
+[pace] period 58.00 blocked 29.68 busy 28.31 ms
+[pace] period 69.63 blocked 43.48 busy 26.15 ms
+[pace] period 54.41 blocked 26.72 busy 27.69 ms
+[pace] period 67.48 blocked 39.93 busy 27.55 ms
+[pace] period 54.33 blocked 25.54 busy 28.79 ms
+[pace] period 68.55 blocked 39.86 busy 28.69 ms
+[vk] t=43.6 frame 1128 16.9 fps gen 0/35 max 73ms level  (9576 draws, 0 skipped, 560 passes, 0 dispatches, 70 flushes, wait 0ms, compile 0, fbcopy 35, upload 11.2MB)
+[corepreempt] handoffs=15616
+[pace] period 38.24 blocked 9.90 busy 28.34 ms
+[pace] period 41.69 blocked 12.47 busy 29.22 ms
+[pace] period 47.61 blocked 17.77 busy 29.83 ms
+[pace] period 55.66 blocked 26.93 busy 28.72 ms
+[pace] period 68.20 blocked 40.27 busy 27.93 ms
+[pace] period 66.90 blocked 36.77 busy 30.13 ms
+[pace] period 61.17 blocked 31.57 busy 29.60 ms
+[pace] period 66.17 blocked 36.70 busy 29.47 ms
+[pace] period 64.15 blocked 35.68 busy 28.47 ms
+[pace] period 63.44 blocked 34.13 busy 29.31 ms
+[pace] period 50.39 blocked 21.88 busy 28.52 ms
+[corepreempt] handoffs=15744
+[pace] period 56.33 blocked 29.12 busy 27.21 ms
+[pace] period 48.14 blocked 20.80 busy 27.34 ms
+[pace] period 55.08 blocked 28.52 busy 26.56 ms
+[pace] period 69.19 blocked 38.15 busy 31.04 ms
+[pace] period 54.76 blocked 27.61 busy 27.15 ms
+[pace] period 80.05 blocked 52.89 busy 27.17 ms
+[pace] period 78.93 blocked 42.34 busy 36.58 ms
+[pace] period 61.69 blocked 30.78 busy 30.91 ms
+[pace] period 61.42 blocked 35.27 busy 26.15 ms
+[corepreempt] handoffs=15872
+[pace] period 78.37 blocked 50.54 busy 27.83 ms
+[pace] period 74.56 blocked 46.12 busy 28.44 ms
+[pace] period 63.86 blocked 37.94 busy 25.92 ms
+[pace] period 47.75 blocked 19.51 busy 28.25 ms
+[pace] period 59.02 blocked 29.49 busy 29.53 ms
+[pace] period 51.95 blocked 23.03 busy 28.91 ms
+[pace] period 60.60 blocked 32.96 busy 27.64 ms
+[pace] period 47.00 blocked 18.43 busy 28.56 ms
+[pace] period 76.04 blocked 46.21 busy 29.82 ms
+[corepreempt] handoffs=16000
+[pace] period 58.84 blocked 30.23 busy 28.61 ms
+[pace] period 48.13 blocked 19.25 busy 28.88 ms
+[pace] period 64.17 blocked 32.77 busy 31.40 ms
+[pace] period 51.76 blocked 21.75 busy 30.01 ms
+[pace] period 59.97 blocked 33.16 busy 26.81 ms
+[vk] t=45.7 frame 1162 16.7 fps gen 0/34 max 80ms level  (9315 draws, 0 skipped, 544 passes, 0 dispatches, 68 flushes, wait 0ms, compile 0, fbcopy 34, upload 11.0MB)
+[pace] period 59.87 blocked 28.01 busy 31.86 ms
+[pace] period 64.35 blocked 35.36 busy 28.98 ms
+[pace] period 59.30 blocked 31.24 busy 28.06 ms
+[pace] period 66.65 blocked 39.39 busy 27.26 ms
+[corepreempt] handoffs=16128
+[pace] period 43.57 blocked 14.56 busy 29.01 ms
+[pace] period 67.79 blocked 38.12 busy 29.67 ms
+[pace] period 57.48 blocked 24.95 busy 32.53 ms
+[pace] period 50.40 blocked 22.16 busy 28.24 ms
+[pace] period 59.63 blocked 27.55 busy 32.09 ms
+[pace] period 68.88 blocked 39.10 busy 29.78 ms
+[pace] period 48.87 blocked 18.24 busy 30.63 ms
+[pace] period 51.20 blocked 22.42 busy 28.78 ms
+[pace] period 43.95 blocked 17.05 busy 26.90 ms
+[corepreempt] handoffs=16256
+[pace] period 77.31 blocked 47.52 busy 29.79 ms
+[pace] period 50.79 blocked 23.21 busy 27.57 ms
+[pace] period 64.98 blocked 36.92 busy 28.06 ms
+[pace] period 55.80 blocked 24.76 busy 31.04 ms
+[pace] period 41.81 blocked 12.91 busy 28.91 ms
+[pace] period 54.81 blocked 23.59 busy 31.22 ms
+[pace] period 47.85 blocked 19.37 busy 28.48 ms
+[pace] period 63.60 blocked 33.21 busy 30.39 ms
+[pace] period 45.73 blocked 19.03 busy 26.71 ms
+[pace] period 44.41 blocked 15.85 busy 28.56 ms
+[pace] period 55.36 blocked 23.29 busy 32.08 ms
+[pace] period 53.20 blocked 21.51 busy 31.69 ms
+[corepreempt] handoffs=16384
+[pace] period 58.46 blocked 29.08 busy 29.38 ms
+[pace] period 52.96 blocked 23.03 busy 29.93 ms
+[pace] period 46.01 blocked 16.54 busy 29.47 ms
+[pace] period 46.49 blocked 19.38 busy 27.11 ms
+[pace] period 75.27 blocked 44.49 busy 30.78 ms
+[pace] period 77.53 blocked 48.07 busy 29.46 ms
+[pace] period 65.79 blocked 39.12 busy 26.67 ms
+[pace] period 81.56 blocked 52.45 busy 29.11 ms
+[corepreempt] handoffs=16512
+[pace] period 73.16 blocked 45.93 busy 27.22 ms
+[pace] period 56.15 blocked 29.62 busy 26.54 ms
+[vk] t=47.7 frame 1197 17.2 fps gen 0/35 max 81ms level  (9590 draws, 0 skipped, 560 passes, 0 dispatches, 70 flushes, wait 0ms, compile 0, fbcopy 35, upload 11.3MB)
+[pace] period 55.84 blocked 27.97 busy 27.87 ms
+[input] GetNpadState id 0 lr 800263e58
+[pace] period 59.64 blocked 30.12 busy 29.52 ms
+[pace] period 39.68 blocked 10.14 busy 29.54 ms
+[shader] prefetch: scanned 79815 draws / 1200 submits (180.1 ms), started 34 programs + 270 pipelines ahead, waits 64 (1369 ms total, worst 800 ms), unforeseen 0
+[pace] period 55.00 blocked 28.41 busy 26.59 ms
+[pace] period 59.53 blocked 28.50 busy 31.03 ms
+[pace] period 77.56 blocked 47.65 busy 29.91 ms
+[pace] period 66.68 blocked 37.75 busy 28.93 ms
+[pace] period 59.37 blocked 31.72 busy 27.64 ms
+[corepreempt] handoffs=16640
+[pace] period 38.97 blocked 9.72 busy 29.24 ms
+[pace] period 52.60 blocked 23.80 busy 28.80 ms
+[pace] period 54.63 blocked 25.90 busy 28.72 ms
+[pace] period 49.10 blocked 20.82 busy 28.29 ms
+[pace] period 51.22 blocked 22.17 busy 29.05 ms
+[pace] period 55.04 blocked 25.29 busy 29.75 ms
+[pace] period 44.15 blocked 16.13 busy 28.01 ms
+[pace] period 46.90 blocked 19.44 busy 27.46 ms
+[pace] period 51.29 blocked 20.40 busy 30.88 ms
+[pace] period 45.96 blocked 17.52 busy 28.44 ms
+[pace] period 49.50 blocked 20.83 busy 28.67 ms
+[corepreempt] handoffs=16768
+[pace] period 55.25 blocked 27.86 busy 27.39 ms
+[pace] period 62.19 blocked 33.93 busy 28.26 ms
+[pace] period 53.49 blocked 25.68 busy 27.81 ms
+[pace] period 56.09 blocked 26.54 busy 29.56 ms
+[pace] period 51.25 blocked 20.93 busy 30.32 ms
+[pace] period 46.42 blocked 18.97 busy 27.45 ms
+[pace] period 52.98 blocked 22.96 busy 30.02 ms
+[pace] period 61.71 blocked 31.94 busy 29.77 ms
+[pace] period 57.81 blocked 29.01 busy 28.79 ms
+[pace] period 65.03 blocked 37.63 busy 27.40 ms
+[corepreempt] handoffs=16896
+[pace] period 54.46 blocked 23.77 busy 30.69 ms
+[pace] period 62.26 blocked 33.36 busy 28.90 ms
+[pace] period 57.82 blocked 29.20 busy 28.62 ms
+[pace] period 43.23 blocked 12.92 busy 30.31 ms
+[pace] period 44.00 blocked 16.63 busy 27.37 ms
+[pace] period 56.94 blocked 28.71 busy 28.23 ms
+[pace] period 35.64 blocked 7.80 busy 27.84 ms
+[pace] period 59.11 blocked 26.31 busy 32.80 ms
+[pace] period 52.04 blocked 17.25 busy 34.79 ms
+[vk] t=49.7 frame 1235 18.6 fps gen 0/38 max 78ms level  (10397 draws, 0 skipped, 608 passes, 0 dispatches, 76 flushes, wait 0ms, compile 0, fbcopy 38, upload 12.2MB)
+[pace] period 51.83 blocked 16.68 busy 35.15 ms
+[pace] period 64.12 blocked 32.09 busy 32.02 ms
+[pace] period 44.25 blocked 13.91 busy 30.34 ms
+[corepreempt] handoffs=17024
+[pace] period 67.04 blocked 39.54 busy 27.50 ms
+[pace] period 43.15 blocked 14.72 busy 28.43 ms
+[pace] period 86.16 blocked 53.32 busy 32.84 ms
+[pace] period 60.80 blocked 28.14 busy 32.66 ms
+[pace] period 57.17 blocked 29.40 busy 27.78 ms
+[pace] period 62.11 blocked 31.09 busy 31.03 ms
+[pace] period 55.97 blocked 27.84 busy 28.13 ms
+[pace] period 88.29 blocked 60.74 busy 27.54 ms
+[pace] period 55.08 blocked 27.44 busy 27.64 ms
+[corepreempt] handoffs=17152
+[pace] period 62.55 blocked 30.79 busy 31.75 ms
+[pace] period 70.38 blocked 39.03 busy 31.35 ms
+[pace] period 72.14 blocked 39.38 busy 32.76 ms
+[pace] period 55.56 blocked 27.92 busy 27.63 ms
+[pace] period 61.94 blocked 30.86 busy 31.07 ms
+[pace] period 95.20 blocked 40.81 busy 54.39 ms
+[pace] period 40.83 blocked 9.48 busy 31.35 ms
+[pace] period 61.33 blocked 29.67 busy 31.67 ms
+[pace] period 39.00 blocked 9.49 busy 29.51 ms
+[pace] period 74.09 blocked 39.17 busy 34.92 ms
+[corepreempt] handoffs=17280
+[pace] period 52.99 blocked 25.94 busy 27.06 ms
+[pace] period 57.88 blocked 30.77 busy 27.11 ms
+[pace] period 62.24 blocked 34.47 busy 27.78 ms
+[pace] period 68.93 blocked 38.68 busy 30.26 ms
+[pace] period 39.06 blocked 12.76 busy 26.30 ms
+[pace] period 82.15 blocked 49.29 busy 32.86 ms
+[pace] period 77.84 blocked 48.55 busy 29.29 ms
+[pace] period 69.89 blocked 43.11 busy 26.79 ms
+[pace] period 67.07 blocked 39.30 busy 27.77 ms
+[corepreempt] handoffs=17408
+[pace] period 60.69 blocked 27.82 busy 32.87 ms
+[vk] t=51.8 frame 1267 15.9 fps gen 0/32 max 95ms level  (8768 draws, 0 skipped, 512 passes, 0 dispatches, 64 flushes, wait 0ms, compile 0, fbcopy 32, upload 10.3MB)
+[pace] period 67.12 blocked 38.46 busy 28.66 ms
+[pace] period 63.48 blocked 33.27 busy 30.22 ms
+[pace] period 41.12 blocked 8.62 busy 32.50 ms
+[pace] period 46.21 blocked 16.90 busy 29.31 ms
+[pace] period 64.78 blocked 33.91 busy 30.87 ms
+[pace] period 41.38 blocked 13.47 busy 27.91 ms
+[pace] period 50.28 blocked 21.54 busy 28.74 ms
+[pace] period 50.93 blocked 21.53 busy 29.40 ms
+[cpumod] 45s total 4232 unmapped 1061 game=600 runtime=151 SDL3=1022 Vulkan=12 libc=1386 shader=0 other=0
+[cpuhot] game 3b58000:31 343c000:26 3898000:13 fcc0000:12 44f8000:11 1193a000:11 eee8000:10 2898000:9
+[cpuhot] runtime 1dc000:73 1d8000:35 27c000:11 1da000:10 370000:6 366000:3 35c000:2 36a000:2
+[cpuhot] SDL3 1b2000:411 18c000:116 a0000:85 1b0000:65 190000:51 a2000:44 184000:36 18e000:34
+[cpuhot] Vulkan 91a000:3 1c5a000:2 2e000:1 8fa000:1 91c000:1 1bfa000:1 1bfc000:1 1c1e000:1
+[pace] period 52.98 blocked 14.25 busy 38.73 ms
+[corepreempt] handoffs=17536
+[pace] period 47.95 blocked 19.06 busy 28.89 ms
+[pace] period 64.60 blocked 34.15 busy 30.45 ms
+[pace] period 51.58 blocked 22.54 busy 29.04 ms
+[pace] period 74.20 blocked 42.55 busy 31.66 ms
+[pace] period 48.54 blocked 18.75 busy 29.79 ms
+[pace] period 67.44 blocked 39.01 busy 28.43 ms
+[pace] period 87.13 blocked 54.21 busy 32.93 ms
+[pace] period 75.63 blocked 46.71 busy 28.92 ms
+[corepreempt] handoffs=17664
+[pace] period 64.10 blocked 34.02 busy 30.08 ms
+[pace] period 47.80 blocked 19.35 busy 28.45 ms
+[pace] period 71.92 blocked 44.11 busy 27.81 ms
+[pace] period 45.79 blocked 16.04 busy 29.75 ms
+[pace] period 61.41 blocked 31.53 busy 29.88 ms
+[pace] period 49.84 blocked 19.66 busy 30.18 ms
+[pace] period 55.82 blocked 24.98 busy 30.85 ms
+[pace] period 51.84 blocked 21.29 busy 30.55 ms
+[pace] period 58.88 blocked 28.44 busy 30.44 ms
+[corepreempt] handoffs=17792
+[pace] period 57.97 blocked 27.54 busy 30.43 ms
+[pace] period 61.93 blocked 33.48 busy 28.46 ms
+[pace] period 61.85 blocked 29.84 busy 32.01 ms
+[pace] period 49.43 blocked 20.58 busy 28.86 ms
+[pace] period 47.88 blocked 18.39 busy 29.49 ms
+[pace] period 69.33 blocked 40.50 busy 28.83 ms
+[pace] period 72.40 blocked 36.08 busy 36.31 ms
+[pace] period 70.14 blocked 38.86 busy 31.28 ms
+[pace] period 63.68 blocked 34.63 busy 29.06 ms
+[vk] t=53.8 frame 1302 17.0 fps gen 0/35 max 88ms level  (9590 draws, 0 skipped, 560 passes, 0 dispatches, 70 flushes, wait 0ms, compile 0, fbcopy 35, upload 11.3MB)
+[pace] period 60.19 blocked 28.22 busy 31.97 ms
+[corepreempt] handoffs=17920
+[pace] period 54.97 blocked 24.01 busy 30.97 ms
+[pace] period 71.50 blocked 42.51 busy 28.98 ms
+[pace] period 63.59 blocked 32.61 busy 30.97 ms
+[pace] period 58.37 blocked 29.38 busy 28.99 ms
+[pace] period 63.64 blocked 34.26 busy 29.38 ms
+[pace] period 62.55 blocked 31.63 busy 30.92 ms
+[pace] period 59.05 blocked 27.69 busy 31.36 ms
+[pace] period 54.69 blocked 23.46 busy 31.23 ms
+[pace] period 43.59 blocked 13.28 busy 30.31 ms
+[pace] period 55.61 blocked 25.92 busy 29.69 ms
+[corepreempt] handoffs=18048
+[pace] period 67.05 blocked 35.26 busy 31.79 ms
+[pace] period 58.40 blocked 30.40 busy 28.00 ms
+[pace] period 65.39 blocked 37.07 busy 28.32 ms
+[pace] period 54.99 blocked 23.35 busy 31.64 ms
+[pace] period 50.94 blocked 19.30 busy 31.64 ms
+[pace] period 67.55 blocked 36.53 busy 31.02 ms
+[pace] period 56.95 blocked 24.64 busy 32.32 ms
+[pace] period 62.06 blocked 32.81 busy 29.24 ms
+[pace] period 57.63 blocked 27.24 busy 30.39 ms
+[pace] period 40.06 blocked 11.23 busy 28.82 ms
+[corepreempt] handoffs=18176
+[pace] period 68.22 blocked 34.74 busy 33.48 ms
+[pace] period 36.72 blocked 7.40 busy 29.32 ms
+[pace] period 69.65 blocked 37.57 busy 32.07 ms
+[pace] period 53.20 blocked 25.00 busy 28.20 ms
+[pace] period 53.79 blocked 21.01 busy 32.78 ms
+[pace] period 57.83 blocked 29.32 busy 28.51 ms
+[pace] period 82.19 blocked 52.30 busy 29.89 ms
+[pace] period 60.51 blocked 26.54 busy 33.96 ms
+[pace] period 49.14 blocked 20.16 busy 28.97 ms
+[pace] period 63.09 blocked 35.75 busy 27.34 ms
+[corepreempt] handoffs=18304
+[pace] period 66.32 blocked 39.73 busy 26.59 ms
+[pace] period 96.30 blocked 62.52 busy 33.78 ms
+[pace] period 45.04 blocked 15.38 busy 29.66 ms
+[vk] t=55.8 frame 1336 16.7 fps gen 0/34 max 96ms level  (9301 draws, 0 skipped, 544 passes, 0 dispatches, 68 flushes, wait 0ms, compile 0, fbcopy 34, upload 10.9MB)
+[pace] period 62.60 blocked 33.92 busy 28.68 ms
+[pace] period 66.45 blocked 36.09 busy 30.36 ms
+[pace] period 62.82 blocked 35.35 busy 27.46 ms
+[pace] period 55.33 blocked 26.99 busy 28.33 ms
+[pace] period 76.94 blocked 47.06 busy 29.89 ms
+[corepreempt] handoffs=18432
+[pace] period 64.99 blocked 36.02 busy 28.97 ms
+[pace] period 55.62 blocked 24.39 busy 31.23 ms
+[pace] period 70.13 blocked 39.11 busy 31.01 ms
+[pace] period 46.77 blocked 15.87 busy 30.90 ms
+[pace] period 59.22 blocked 26.20 busy 33.02 ms
+[pace] period 57.56 blocked 25.95 busy 31.61 ms
+[pace] period 68.87 blocked 40.76 busy 28.11 ms
+[pace] period 50.72 blocked 19.64 busy 31.08 ms
+[pace] period 47.67 blocked 15.11 busy 32.56 ms
+[corepreempt] handoffs=18560
+[pace] period 80.88 blocked 42.46 busy 38.42 ms
+[pace] period 52.45 blocked 19.33 busy 33.12 ms
+[pace] period 60.86 blocked 28.54 busy 32.32 ms
+[pace] period 39.34 blocked 6.71 busy 32.63 ms
+[pace] period 56.25 blocked 20.28 busy 35.97 ms
+[pace] period 52.02 blocked 18.77 busy 33.25 ms
+[pace] period 73.91 blocked 41.46 busy 32.46 ms
+[pace] period 50.54 blocked 17.94 busy 32.60 ms
+[pace] period 60.71 blocked 29.25 busy 31.46 ms
+[pace] period 56.22 blocked 27.10 busy 29.12 ms
+[pace] period 57.32 blocked 24.75 busy 32.57 ms
+[corepreempt] handoffs=18688
+[pace] period 57.09 blocked 23.94 busy 33.15 ms
+[pace] period 54.16 blocked 23.80 busy 30.36 ms
+[pace] period 42.29 blocked 12.16 busy 30.13 ms
+[pace] period 58.50 blocked 26.28 busy 32.22 ms
+[pace] period 66.86 blocked 33.73 busy 33.13 ms
+[pace] period 68.45 blocked 36.61 busy 31.84 ms
+[pace] period 55.80 blocked 27.59 busy 28.21 ms
+[pace] period 77.68 blocked 42.01 busy 35.67 ms
+[corepreempt] handoffs=18816
+[pace] period 56.83 blocked 25.76 busy 31.07 ms
+[vk] t=57.9 frame 1370 16.8 fps gen 0/34 max 81ms level  (9316 draws, 0 skipped, 544 passes, 0 dispatches, 68 flushes, wait 0ms, compile 0, fbcopy 34, upload 11.0MB)
+[pace] period 53.02 blocked 22.34 busy 30.68 ms
+[pace] period 66.03 blocked 31.81 busy 34.22 ms
+[pace] period 61.26 blocked 29.14 busy 32.12 ms
+[pace] period 39.19 blocked 7.14 busy 32.05 ms
+[pace] period 35.16 blocked 6.98 busy 28.18 ms
+[pace] period 50.40 blocked 19.93 busy 30.46 ms
+[pace] period 54.75 blocked 22.86 busy 31.89 ms
+[pace] period 51.54 blocked 20.82 busy 30.72 ms
+[pace] period 46.94 blocked 15.02 busy 31.92 ms
+[corepreempt] handoffs=18944
+[pace] period 50.67 blocked 18.44 busy 32.23 ms
+[pace] period 58.12 blocked 27.23 busy 30.89 ms
+[pace] period 46.72 blocked 16.71 busy 30.01 ms
+[pace] period 74.29 blocked 43.53 busy 30.76 ms
+[pace] period 59.92 blocked 28.00 busy 31.92 ms
+[pace] period 70.72 blocked 43.26 busy 27.46 ms
+[pace] period 56.79 blocked 26.89 busy 29.90 ms
+[pace] period 68.93 blocked 37.91 busy 31.02 ms
+[pace] period 64.40 blocked 34.52 busy 29.88 ms
+[pace] period 61.80 blocked 32.95 busy 28.86 ms
+[corepreempt] handoffs=19072
+[pace] period 80.19 blocked 49.83 busy 30.37 ms
+[pace] period 63.00 blocked 32.02 busy 30.98 ms
+[pace] period 77.66 blocked 45.91 busy 31.76 ms
+[pace] period 61.30 blocked 32.10 busy 29.20 ms
+[pace] period 66.20 blocked 36.37 busy 29.83 ms
+[pace] period 66.55 blocked 36.74 busy 29.81 ms
+[pace] period 53.22 blocked 20.53 busy 32.69 ms
+[pace] period 50.33 blocked 16.97 busy 33.35 ms
+[pace] period 57.41 blocked 24.83 busy 32.58 ms
+[corepreempt] handoffs=19200
+[pace] period 62.66 blocked 29.99 busy 32.67 ms
+[pace] period 58.69 blocked 25.27 busy 33.42 ms
+[pace] period 56.37 blocked 21.95 busy 34.43 ms
+[pace] period 58.98 blocked 24.46 busy 34.52 ms
+[pace] period 57.48 blocked 27.12 busy 30.36 ms
+[pace] period 60.68 blocked 24.82 busy 35.86 ms
+[vk] t=59.9 frame 1404 17.0 fps gen 0/34 max 81ms level  (9316 draws, 0 skipped, 544 passes, 0 dispatches, 68 flushes, wait 0ms, compile 0, fbcopy 34, upload 11.0MB)
+[pace] period 63.30 blocked 29.09 busy 34.21 ms
+[pace] period 56.07 blocked 23.67 busy 32.41 ms
+[pace] period 40.97 blocked 6.54 busy 34.43 ms
+[corepreempt] handoffs=19328
+[pace] period 50.95 blocked 20.49 busy 30.47 ms
+[pace] period 54.52 blocked 23.65 busy 30.87 ms
+[pace] period 59.54 blocked 27.90 busy 31.65 ms
+[pace] period 65.27 blocked 30.33 busy 34.94 ms
+[pace] period 62.91 blocked 31.87 busy 31.05 ms
+[pace] period 42.69 blocked 12.77 busy 29.92 ms
+[pace] period 44.92 blocked 12.36 busy 32.55 ms
+[pace] period 57.45 blocked 25.27 busy 32.18 ms
+[pace] period 41.82 blocked 11.06 busy 30.76 ms
+[corepreempt] handoffs=19456
+[pace] period 55.58 blocked 25.80 busy 29.78 ms
+[pace] period 66.06 blocked 37.20 busy 28.86 ms
+[pace] period 77.35 blocked 45.70 busy 31.65 ms
+[pace] period 84.21 blocked 52.71 busy 31.50 ms
+[pace] period 69.50 blocked 39.15 busy 30.35 ms
+[pace] period 44.44 blocked 14.70 busy 29.74 ms
+[pace] period 54.02 blocked 24.77 busy 29.25 ms
+[pace] period 45.97 blocked 13.30 busy 32.67 ms
+[pace] period 45.22 blocked 11.71 busy 33.52 ms
+[pace] period 55.24 blocked 23.78 busy 31.46 ms
+[corepreempt] handoffs=19584
+[pace] period 47.34 blocked 17.69 busy 29.64 ms
+[pace] period 72.15 blocked 41.38 busy 30.77 ms
+[pace] period 63.15 blocked 27.35 busy 35.81 ms
+[pace] period 53.65 blocked 22.45 busy 31.20 ms
+[pace] period 52.35 blocked 21.14 busy 31.21 ms
+[pace] period 59.40 blocked 27.83 busy 31.56 ms
+[pace] period 43.52 blocked 13.28 busy 30.24 ms
+[pace] period 46.95 blocked 15.31 busy 31.63 ms
+[pace] period 51.04 blocked 18.24 busy 32.80 ms
+[corepreempt] handoffs=19712
+[pace] period 53.46 blocked 22.10 busy 31.36 ms
+[pace] period 50.17 blocked 18.33 busy 31.84 ms
+[pace] period 67.83 blocked 33.77 busy 34.06 ms
+[pace] period 54.64 blocked 22.27 busy 32.37 ms
+[pace] period 59.77 blocked 26.64 busy 33.13 ms
+[vk] t=61.9 frame 1440 17.9 fps gen 0/36 max 84ms level  (9849 draws, 0 skipped, 576 passes, 0 dispatches, 72 flushes, wait 0ms, compile 0, fbcopy 36, upload 11.5MB)
+[pace] period 67.68 blocked 37.04 busy 30.64 ms
+[pace] period 54.08 blocked 24.30 busy 29.78 ms
+[pace] period 51.13 blocked 18.90 busy 32.23 ms
+[corepreempt] handoffs=19840
+[pace] period 62.71 blocked 31.02 busy 31.69 ms
+[pace] period 56.72 blocked 27.20 busy 29.52 ms
+[pace] period 68.13 blocked 34.15 busy 33.98 ms
+[pace] period 53.02 blocked 21.13 busy 31.89 ms
+[pace] period 57.15 blocked 26.34 busy 30.81 ms
+[pace] period 60.38 blocked 25.67 busy 34.71 ms
+[pace] period 78.23 blocked 44.61 busy 33.63 ms
+[pace] period 59.05 blocked 25.26 busy 33.78 ms
+[corepreempt] handoffs=19968
+[pace] period 58.55 blocked 25.26 busy 33.29 ms
+[pace] period 62.85 blocked 32.60 busy 30.25 ms
+[pace] period 65.37 blocked 35.79 busy 29.58 ms
+[pace] period 56.69 blocked 26.03 busy 30.66 ms
+[pace] period 60.80 blocked 29.49 busy 31.31 ms
+[pace] period 72.94 blocked 39.53 busy 33.41 ms
+[pace] period 65.19 blocked 34.39 busy 30.80 ms
+[pace] period 80.39 blocked 47.62 busy 32.77 ms
+[pace] period 67.86 blocked 35.60 busy 32.26 ms
+[corepreempt] handoffs=20096
+[pace] period 42.96 blocked 11.90 busy 31.06 ms
+[pace] period 65.90 blocked 32.80 busy 33.10 ms
+[pace] period 56.52 blocked 24.45 busy 32.07 ms
+[pace] period 55.07 blocked 25.45 busy 29.61 ms
+[pace] period 55.28 blocked 23.19 busy 32.10 ms
+[pace] period 54.72 blocked 20.94 busy 33.77 ms
+[pace] period 76.11 blocked 43.85 busy 32.25 ms
+[pace] period 82.70 blocked 39.97 busy 42.73 ms
+[pace] period 95.56 blocked 56.36 busy 39.20 ms
+[corepreempt] handoffs=20224
+[pace] period 50.89 blocked 19.75 busy 31.14 ms
+[pace] period 73.84 blocked 32.00 busy 41.83 ms
+[pace] period 74.83 blocked 41.54 busy 33.30 ms
+[vk] t=63.9 frame 1472 15.7 fps gen 0/32 max 95ms level  (8768 draws, 0 skipped, 512 passes, 0 dispatches, 64 flushes, wait 0ms, compile 0, fbcopy 32, upload 10.3MB)
+[pace] period 53.30 blocked 21.72 busy 31.57 ms
+[pace] period 82.84 blocked 51.01 busy 31.83 ms
+[pace] period 60.57 blocked 28.91 busy 31.66 ms
+[pace] period 61.38 blocked 30.72 busy 30.66 ms
+[pace] period 58.45 blocked 24.65 busy 33.81 ms
+[pace] period 58.59 blocked 28.81 busy 29.78 ms
+[pace] period 52.65 blocked 23.73 busy 28.92 ms
+[pace] period 80.52 blocked 50.42 busy 30.09 ms
+[corepreempt] handoffs=20352
+[pace] period 74.76 blocked 43.41 busy 31.36 ms
+[pace] period 61.01 blocked 25.46 busy 35.56 ms
+[pace] period 48.10 blocked 17.06 busy 31.04 ms
+[pace] period 62.95 blocked 30.23 busy 32.72 ms
+[pace] period 43.52 blocked 12.19 busy 31.33 ms
+[pace] period 48.12 blocked 13.85 busy 34.27 ms
+[pace] period 41.15 blocked 10.84 busy 30.30 ms
+[pace] period 53.69 blocked 16.74 busy 36.95 ms
+[corepreempt] handoffs=20480
+[pace] period 66.54 blocked 34.53 busy 32.00 ms
+[pace] period 62.69 blocked 31.68 busy 31.01 ms
+[pace] period 56.44 blocked 19.98 busy 36.46 ms
+[pace] period 82.20 blocked 42.39 busy 39.80 ms
+[pace] period 70.15 blocked 37.17 busy 32.98 ms
+[pace] period 65.01 blocked 29.95 busy 35.05 ms
+[pace] period 68.84 blocked 28.93 busy 39.91 ms
+[pace] period 58.07 blocked 25.57 busy 32.50 ms
+[pace] period 68.44 blocked 36.54 busy 31.90 ms
+[corepreempt] handoffs=20608
+[pace] period 64.15 blocked 31.83 busy 32.31 ms
+[pace] period 59.65 blocked 27.75 busy 31.90 ms
+[pace] period 66.45 blocked 36.40 busy 30.05 ms
+[pace] period 67.60 blocked 29.60 busy 38.00 ms
+[pace] period 71.52 blocked 31.08 busy 40.45 ms
+[pace] period 67.71 blocked 33.63 busy 34.08 ms
+[vk] t=66.0 frame 1504 15.7 fps gen 0/32 max 104ms level  (8768 draws, 0 skipped, 512 passes, 0 dispatches, 64 flushes, wait 0ms, compile 0, fbcopy 32, upload 10.3MB)
+[pace] period 60.81 blocked 30.63 busy 30.18 ms
+[corepreempt] handoffs=20736
+[pace] period 63.60 blocked 30.20 busy 33.40 ms
+[pace] period 95.51 blocked 24.52 busy 70.99 ms
+[pace] period 49.91 blocked 14.98 busy 34.93 ms
+[pace] period 75.28 blocked 36.26 busy 39.02 ms
+[pace] period 66.42 blocked 30.47 busy 35.94 ms
+[pace] period 68.40 blocked 34.02 busy 34.38 ms
+[pace] period 76.16 blocked 45.74 busy 30.43 ms
+[pace] period 57.49 blocked 23.56 busy 33.93 ms
+[corepreempt] handoffs=20864
+[pace] period 79.71 blocked 44.19 busy 35.52 ms
+[pace] period 97.45 blocked 63.50 busy 33.95 ms
+[pace] period 56.53 blocked 25.10 busy 31.42 ms
+[pace] period 80.41 blocked 52.33 busy 28.08 ms
+[pace] period 77.24 blocked 41.54 busy 35.70 ms
+[pace] period 56.80 blocked 25.37 busy 31.43 ms
+[pace] period 52.86 blocked 23.54 busy 29.32 ms
+[pace] period 66.83 blocked 37.23 busy 29.60 ms
+[pace] period 55.90 blocked 25.73 busy 30.17 ms
+[cpumod] 60s total 4273 unmapped 1159 game=697 runtime=188 SDL3=960 Vulkan=25 libc=1244 shader=0 other=0
+[cpuhot] game 3b58000:37 343c000:34 1152c000:18 f2fa000:17 35ae000:11 44f6000:11 eee8000:11 fcc0000:11
+[cpuhot] runtime 1dc000:94 1d8000:41 1da000:14 27c000:8 370000:5 35c000:4 4be000:3 1e0000:2
+[cpuhot] SDL3 1b2000:331 a0000:126 18c000:96 a2000:58 1b0000:55 190000:51 184000:43 1b4000:31
+[cpuhot] Vulkan 91c000:3 1c5c000:2 1d60000:2 94a000:1 94c000:1 1bfc000:1 1c06000:1 1c10000:1
+[pace] period 60.64 blocked 23.68 busy 36.96 ms
+[corepreempt] handoffs=20992
+[pace] period 54.22 blocked 24.42 busy 29.81 ms
+[pace] period 64.57 blocked 32.40 busy 32.17 ms
+[pace] period 46.70 blocked 15.51 busy 31.20 ms
+[pace] period 61.58 blocked 31.00 busy 30.58 ms
+[pace] period 80.04 blocked 48.54 busy 31.49 ms
+[pace] period 67.49 blocked 34.91 busy 32.58 ms
+[pace] period 75.11 blocked 44.89 busy 30.21 ms
+[pace] period 75.35 blocked 42.88 busy 32.47 ms
+[pace] period 80.33 blocked 45.96 busy 34.37 ms
+[corepreempt] handoffs=21120
+[pace] period 68.04 blocked 35.77 busy 32.26 ms
+[pace] period 71.45 blocked 38.07 busy 33.39 ms
+[vk] t=68.0 frame 1534 14.7 fps gen 0/30 max 97ms level  (8205 draws, 0 skipped, 480 passes, 0 dispatches, 60 flushes, wait 0ms, compile 0, fbcopy 30, upload 9.6MB)
+[pace] period 67.65 blocked 35.10 busy 32.55 ms
+[pace] period 59.09 blocked 24.02 busy 35.07 ms
+[pace] period 66.46 blocked 33.87 busy 32.59 ms
+[pace] period 60.55 blocked 27.98 busy 32.57 ms
+[pace] period 50.31 blocked 16.52 busy 33.80 ms
+[pace] period 47.78 blocked 16.22 busy 31.56 ms
+[pace] period 73.54 blocked 42.98 busy 30.57 ms
+[pace] period 64.65 blocked 29.20 busy 35.45 ms
+[corepreempt] handoffs=21248
+[pace] period 46.12 blocked 14.29 busy 31.83 ms
+[pace] period 60.29 blocked 29.69 busy 30.60 ms
+[pace] period 74.26 blocked 42.60 busy 31.66 ms
+[pace] period 52.21 blocked 22.92 busy 29.29 ms
+[pace] period 70.33 blocked 37.45 busy 32.87 ms
+[pace] period 70.68 blocked 40.02 busy 30.67 ms
+[pace] period 67.63 blocked 35.59 busy 32.04 ms
+[pace] period 77.94 blocked 44.95 busy 32.99 ms
+[pace] period 67.85 blocked 35.60 busy 32.25 ms
+[corepreempt] handoffs=21376
+[pace] period 54.74 blocked 28.22 busy 26.52 ms
+[pace] period 87.03 blocked 54.98 busy 32.05 ms
+[pace] period 58.60 blocked 25.79 busy 32.81 ms
+[pace] period 56.64 blocked 24.71 busy 31.92 ms
+[pace] period 57.68 blocked 26.37 busy 31.31 ms
+[pace] period 57.30 blocked 25.13 busy 32.17 ms
+[pace] period 56.81 blocked 24.81 busy 32.00 ms
+[corepreempt] handoffs=21504
+[pace] period 62.39 blocked 30.68 busy 31.72 ms
+[pace] period 66.77 blocked 34.31 busy 32.46 ms
+[pace] period 70.98 blocked 40.61 busy 30.37 ms
+[pace] period 62.32 blocked 29.27 busy 33.05 ms
+[pace] period 62.06 blocked 30.39 busy 31.67 ms
+[pace] period 46.84 blocked 17.44 busy 29.40 ms
+[pace] period 81.83 blocked 52.11 busy 29.72 ms
+[pace] period 68.18 blocked 35.55 busy 32.63 ms
+[vk] t=70.0 frame 1566 15.8 fps gen 0/32 max 87ms level  (8768 draws, 0 skipped, 512 passes, 0 dispatches, 64 flushes, wait 0ms, compile 0, fbcopy 32, upload 10.3MB)
+[pace] period 52.23 blocked 20.93 busy 31.31 ms
+[pace] period 60.06 blocked 26.59 busy 33.47 ms
+[corepreempt] handoffs=21632
+[pace] period 66.06 blocked 34.48 busy 31.58 ms
+[pace] period 66.63 blocked 33.47 busy 33.16 ms
+[pace] period 53.16 blocked 22.50 busy 30.66 ms
+[pace] period 60.19 blocked 27.74 busy 32.45 ms
+[pace] period 69.25 blocked 38.19 busy 31.06 ms
+[pace] period 82.59 blocked 48.47 busy 34.12 ms
+[pace] period 77.32 blocked 44.83 busy 32.50 ms
+[pace] period 60.48 blocked 28.54 busy 31.94 ms
+[corepreempt] handoffs=21760
+[pace] period 59.17 blocked 31.18 busy 27.99 ms
+[pace] period 81.92 blocked 48.97 busy 32.95 ms
+[pace] period 68.52 blocked 31.06 busy 37.46 ms
+[pace] period 84.33 blocked 50.19 busy 34.14 ms
+[pace] period 65.89 blocked 35.17 busy 30.72 ms
+[pace] period 58.98 blocked 26.57 busy 32.41 ms
+[pace] period 60.55 blocked 25.60 busy 34.95 ms
+[pace] period 61.36 blocked 26.69 busy 34.66 ms
+[pace] period 49.74 blocked 19.72 busy 30.02 ms
+[pace] period 89.73 blocked 54.30 busy 35.43 ms
+[corepreempt] handoffs=21888
+[pace] period 63.42 blocked 29.30 busy 34.13 ms
+[pace] period 74.85 blocked 40.09 busy 34.77 ms
+[pace] period 57.50 blocked 24.83 busy 32.67 ms
+[pace] period 58.49 blocked 25.78 busy 32.71 ms
+[pace] period 75.62 blocked 42.13 busy 33.49 ms
+[pace] period 86.65 blocked 52.18 busy 34.48 ms
+[pace] period 65.96 blocked 33.68 busy 32.27 ms
+[pace] period 59.90 blocked 25.57 busy 34.33 ms
+[corepreempt] handoffs=22016
+[pace] period 67.12 blocked 35.53 busy 31.59 ms
+[pace] period 63.91 blocked 33.41 busy 30.50 ms
+[vk] t=72.0 frame 1596 15.0 fps gen 0/30 max 90ms level  (8220 draws, 0 skipped, 480 passes, 0 dispatches, 60 flushes, wait 0ms, compile 0, fbcopy 30, upload 9.7MB)
+[pace] period 78.38 blocked 44.35 busy 34.03 ms
+[pace] period 49.39 blocked 20.63 busy 28.76 ms
+[pace] period 88.55 blocked 58.41 busy 30.14 ms
+[pace] period 86.91 blocked 53.28 busy 33.63 ms
+[pace] period 86.98 blocked 54.26 busy 32.72 ms
+[pace] period 61.66 blocked 29.74 busy 31.93 ms
+[pace] period 55.60 blocked 22.29 busy 33.31 ms
+[corepreempt] handoffs=22144
+[pace] period 66.10 blocked 37.39 busy 28.71 ms
+[pace] period 65.45 blocked 33.99 busy 31.47 ms
+[pace] period 77.78 blocked 45.00 busy 32.79 ms
+[pace] period 70.61 blocked 38.44 busy 32.18 ms
+[pace] period 55.76 blocked 23.89 busy 31.87 ms
+[pace] period 59.62 blocked 26.37 busy 33.25 ms
+[pace] period 75.16 blocked 42.26 busy 32.90 ms
+[pace] period 65.57 blocked 33.49 busy 32.08 ms
+[pace] period 54.23 blocked 22.86 busy 31.37 ms
+[pace] period 62.91 blocked 32.04 busy 30.87 ms
+[corepreempt] handoffs=22272
+[pace] period 73.85 blocked 43.90 busy 29.95 ms
+[pace] period 60.65 blocked 24.40 busy 36.26 ms
+[pace] period 81.03 blocked 50.09 busy 30.94 ms
+[pace] period 76.14 blocked 36.08 busy 40.06 ms
+[pace] period 71.46 blocked 39.92 busy 31.54 ms
+[pace] period 87.59 blocked 50.86 busy 36.74 ms
+[pace] period 56.86 blocked 24.82 busy 32.04 ms
+[pace] period 60.96 blocked 27.46 busy 33.51 ms
+[corepreempt] handoffs=22400
+[pace] period 97.47 blocked 62.02 busy 35.45 ms
+[pace] period 68.13 blocked 35.48 busy 32.65 ms
+[pace] period 66.22 blocked 35.88 busy 30.34 ms
+[pace] period 70.91 blocked 25.62 busy 45.29 ms
+[vk] t=74.1 frame 1625 14.3 fps gen 0/29 max 97ms level  (7935 draws, 0 skipped, 464 passes, 0 dispatches, 58 flushes, wait 0ms, compile 0, fbcopy 29, upload 9.3MB)
+[pace] period 82.92 blocked 47.14 busy 35.78 ms
+[pace] period 59.67 blocked 28.17 busy 31.50 ms
+[pace] period 65.53 blocked 33.85 busy 31.67 ms
+[pace] period 95.26 blocked 59.15 busy 36.11 ms
+[corepreempt] handoffs=22528
+[pace] period 83.25 blocked 39.04 busy 44.21 ms
+[pace] period 99.42 blocked 45.32 busy 54.10 ms
+[pace] period 89.77 blocked 43.21 busy 46.56 ms
+[pace] period 37.02 blocked 5.88 busy 31.14 ms
+[pace] period 65.14 blocked 33.43 busy 31.71 ms
+[pace] period 53.31 blocked 20.33 busy 32.98 ms
+[corepreempt] handoffs=22656
+[pace] period 45.97 blocked 13.73 busy 32.25 ms
+[pace] period 57.71 blocked 25.47 busy 32.23 ms
+[pace] period 54.90 blocked 22.57 busy 32.33 ms
+[pace] period 59.77 blocked 28.53 busy 31.24 ms
+[pace] period 69.51 blocked 36.95 busy 32.56 ms
+[pace] period 50.25 blocked 18.54 busy 31.71 ms
+[pace] period 84.06 blocked 50.55 busy 33.52 ms
+[pace] period 57.63 blocked 25.94 busy 31.69 ms
+[pace] period 74.06 blocked 39.72 busy 34.34 ms
+[pace] period 53.09 blocked 23.00 busy 30.09 ms
+[corepreempt] handoffs=22784
+[pace] period 55.52 blocked 20.82 busy 34.69 ms
+[pace] period 56.19 blocked 22.95 busy 33.25 ms
+[pace] period 67.59 blocked 35.86 busy 31.73 ms
+[pace] period 60.65 blocked 29.38 busy 31.28 ms
+[pace] period 74.90 blocked 43.70 busy 31.19 ms
+[pace] period 69.31 blocked 39.35 busy 29.95 ms
+[pace] period 65.46 blocked 36.03 busy 29.43 ms
+[vk] t=76.1 frame 1654 14.4 fps gen 0/29 max 113ms level  (7942 draws, 0 skipped, 464 passes, 0 dispatches, 58 flushes, wait 0ms, compile 0, fbcopy 29, upload 9.3MB)
+[pace] period 62.79 blocked 29.20 busy 33.59 ms
+[corepreempt] handoffs=22912
+[pace] period 55.11 blocked 22.37 busy 32.74 ms
+[pace] period 67.01 blocked 35.59 busy 31.42 ms
+[pace] period 88.50 blocked 37.95 busy 50.55 ms
+[pace] period 88.78 blocked 50.69 busy 38.08 ms
+[pace] period 93.66 blocked 55.03 busy 38.62 ms
+[pace] period 59.97 blocked 26.73 busy 33.24 ms
+[corepreempt] handoffs=23040
+[pace] period 57.84 blocked 25.12 busy 32.73 ms
+[pace] period 60.36 blocked 29.36 busy 31.01 ms
+[pace] period 53.89 blocked 21.34 busy 32.55 ms
+[pace] period 68.63 blocked 37.62 busy 31.01 ms
+[pace] period 68.42 blocked 37.75 busy 30.67 ms
+[pace] period 68.25 blocked 36.56 busy 31.69 ms
+[pace] period 66.54 blocked 39.10 busy 27.44 ms
+[pace] period 81.73 blocked 47.35 busy 34.38 ms
+[corepreempt] handoffs=23168
+[pace] period 61.67 blocked 28.28 busy 33.39 ms
+[pace] period 72.87 blocked 38.22 busy 34.65 ms
+[pace] period 67.64 blocked 33.48 busy 34.16 ms
+[pace] period 69.55 blocked 35.03 busy 34.52 ms
+[pace] period 68.48 blocked 34.65 busy 33.84 ms
+[pace] period 82.37 blocked 49.44 busy 32.93 ms
+[pace] period 73.92 blocked 40.21 busy 33.71 ms
+[pace] period 75.50 blocked 42.24 busy 33.26 ms
+[corepreempt] handoffs=23296
+[pace] period 61.60 blocked 29.09 busy 32.52 ms
+[pace] period 83.25 blocked 51.47 busy 31.78 ms
+[vk] t=78.1 frame 1681 13.4 fps gen 0/27 max 126ms level  (7398 draws, 0 skipped, 432 passes, 0 dispatches, 54 flushes, wait 0ms, compile 0, fbcopy 27, upload 8.7MB)
+[pace] period 69.58 blocked 35.60 busy 33.99 ms
+[pace] period 67.74 blocked 28.72 busy 39.02 ms
+[pace] period 81.92 blocked 45.31 busy 36.62 ms
+[pace] period 71.16 blocked 38.88 busy 32.28 ms
+[pace] period 69.17 blocked 37.03 busy 32.15 ms
+[pace] period 77.77 blocked 46.17 busy 31.59 ms
+[corepreempt] handoffs=23424
+[pace] period 87.12 blocked 55.51 busy 31.61 ms
+[pace] period 83.56 blocked 47.97 busy 35.59 ms
+[pace] period 62.98 blocked 30.81 busy 32.17 ms
+[pace] period 72.88 blocked 42.57 busy 30.32 ms
+[pace] period 85.16 blocked 51.93 busy 33.23 ms
+[pace] period 70.28 blocked 33.52 busy 36.76 ms
+[pace] period 67.41 blocked 35.95 busy 31.46 ms
+[pace] period 79.34 blocked 45.80 busy 33.54 ms
+[pace] period 73.82 blocked 40.98 busy 32.84 ms
+[pace] period 66.21 blocked 34.36 busy 31.86 ms
+[corepreempt] handoffs=23552
+[pace] period 57.56 blocked 27.74 busy 29.82 ms
+[pace] period 64.03 blocked 29.77 busy 34.26 ms
+[pace] period 67.45 blocked 34.59 busy 32.86 ms
+[pace] period 40.43 blocked 9.15 busy 31.28 ms
+[pace] period 54.74 blocked 22.74 busy 32.00 ms
+[pace] period 45.06 blocked 13.03 busy 32.03 ms
+[pace] period 45.54 blocked 12.47 busy 33.07 ms
+[pace] period 57.04 blocked 23.28 busy 33.76 ms
+[pace] period 69.61 blocked 34.08 busy 35.53 ms
+[pace] period 47.08 blocked 14.99 busy 32.09 ms
+[corepreempt] handoffs=23680
+[pace] period 79.52 blocked 47.63 busy 31.90 ms
+[pace] period 63.88 blocked 33.25 busy 30.63 ms
+[pace] period 71.11 blocked 37.31 busy 33.81 ms
+[pace] period 65.42 blocked 36.81 busy 28.61 ms
+[vk] t=80.1 frame 1711 14.9 fps gen 0/30 max 87ms level  (8220 draws, 0 skipped, 480 passes, 0 dispatches, 60 flushes, wait 0ms, compile 0, fbcopy 30, upload 9.7MB)
+[pace] period 57.17 blocked 25.04 busy 32.12 ms
+[pace] period 64.32 blocked 33.22 busy 31.10 ms
+[pace] period 82.32 blocked 50.18 busy 32.14 ms
+[corepreempt] handoffs=23808
+[pace] period 58.74 blocked 28.58 busy 30.16 ms
+[pace] period 65.84 blocked 34.19 busy 31.65 ms
+[pace] period 79.74 blocked 43.93 busy 35.81 ms
+[pace] period 79.20 blocked 44.69 busy 34.51 ms
+[pace] period 59.27 blocked 26.59 busy 32.68 ms
+[pace] period 70.82 blocked 38.04 busy 32.79 ms
+[pace] period 64.48 blocked 33.31 busy 31.16 ms
+[pace] period 59.98 blocked 24.90 busy 35.07 ms
+[corepreempt] handoffs=23936
+[pace] period 57.77 blocked 26.75 busy 31.02 ms
+[pace] period 57.12 blocked 25.30 busy 31.82 ms
+[pace] period 44.13 blocked 12.77 busy 31.36 ms
+[pace] period 59.46 blocked 27.34 busy 32.12 ms
+[pace] period 45.17 blocked 12.39 busy 32.78 ms
+[pace] period 68.27 blocked 34.22 busy 34.05 ms
+[pace] period 76.05 blocked 43.88 busy 32.17 ms
+[pace] period 65.58 blocked 31.39 busy 34.19 ms
+[pace] period 80.96 blocked 47.89 busy 33.06 ms
+[corepreempt] handoffs=24064
+[pace] period 77.26 blocked 44.09 busy 33.17 ms
+[pace] period 41.44 blocked 4.59 busy 36.85 ms
+[pace] period 64.88 blocked 31.17 busy 33.71 ms
+[pace] period 65.26 blocked 32.05 busy 33.21 ms
+[pace] period 60.72 blocked 22.18 busy 38.54 ms
+[pace] period 58.03 blocked 20.63 busy 37.40 ms
+[pace] period 61.29 blocked 22.10 busy 39.19 ms
+[pace] period 53.26 blocked 20.14 busy 33.12 ms
+[corepreempt] handoffs=24192
+[pace] period 52.15 blocked 21.80 busy 30.35 ms
+[pace] period 55.72 blocked 22.03 busy 33.70 ms
+[vk] t=82.1 frame 1742 15.5 fps gen 0/31 max 120ms level  (8479 draws, 0 skipped, 496 passes, 0 dispatches, 62 flushes, wait 0ms, compile 0, fbcopy 31, upload 9.9MB)
+[pace] period 67.03 blocked 36.88 busy 30.14 ms
+[pace] period 49.25 blocked 14.37 busy 34.89 ms
+[cpumod] 75s total 4207 unmapped 1131 game=707 runtime=179 SDL3=907 Vulkan=20 libc=1263 shader=0 other=0
+[cpuhot] game 3b58000:37 343c000:20 f2fa000:19 fcc0000:17 10908000:17 1152c000:13 2898000:12 44f8000:12
+[cpuhot] runtime 1dc000:81 1d8000:45 1da000:12 370000:8 27c000:7 1e0000:4 4be000:4 35c000:3
+[cpuhot] SDL3 1b2000:349 a0000:98 18c000:84 1b0000:54 a2000:52 190000:39 184000:32 8a000:27
+[cpuhot] Vulkan 91c000:2 944000:2 1bfc000:2 1c72000:2 91a000:1 948000:1 94a000:1 aae000:1
+[pace] period 66.42 blocked 28.65 busy 37.77 ms
+[pace] period 60.50 blocked 26.60 busy 33.90 ms
+[pace] period 54.18 blocked 23.18 busy 31.00 ms
+[pace] period 81.34 blocked 47.18 busy 34.17 ms
+[pace] period 57.90 blocked 24.37 busy 33.52 ms
+[corepreempt] handoffs=24320
+[pace] period 54.93 blocked 20.81 busy 34.12 ms
+[pace] period 59.44 blocked 28.65 busy 30.79 ms
+[pace] period 66.92 blocked 34.62 busy 32.30 ms
+[pace] period 58.99 blocked 27.81 busy 31.17 ms
+[pace] period 64.45 blocked 32.91 busy 31.53 ms
+[pace] period 62.11 blocked 28.77 busy 33.35 ms
+[pace] period 82.61 blocked 47.54 busy 35.07 ms
+[pace] period 64.19 blocked 30.96 busy 33.23 ms
+[corepreempt] handoffs=24448
+[pace] period 64.52 blocked 34.42 busy 30.10 ms
+[pace] period 77.13 blocked 41.48 busy 35.65 ms
+[pace] period 60.95 blocked 28.99 busy 31.96 ms
+[pace] period 65.48 blocked 33.52 busy 31.97 ms
+[pace] period 82.63 blocked 47.67 busy 34.96 ms
+[pace] period 56.27 blocked 22.69 busy 33.58 ms
+[pace] period 62.33 blocked 28.22 busy 34.10 ms
+[pace] period 50.91 blocked 18.06 busy 32.86 ms
+[corepreempt] handoffs=24576
+[pace] period 66.37 blocked 32.15 busy 34.22 ms
+[pace] period 61.47 blocked 27.47 busy 34.00 ms
+[pace] period 60.27 blocked 25.02 busy 35.26 ms
+[pace] period 69.39 blocked 36.55 busy 32.83 ms
+[pace] period 87.02 blocked 51.93 busy 35.09 ms
+[pace] period 88.29 blocked 53.86 busy 34.43 ms
+[pace] period 60.95 blocked 29.41 busy 31.54 ms
+[pace] period 58.15 blocked 27.10 busy 31.05 ms
+[vk] t=84.1 frame 1773 15.3 fps gen 0/31 max 89ms level  (8494 draws, 0 skipped, 496 passes, 0 dispatches, 62 flushes, wait 0ms, compile 0, fbcopy 31, upload 10.0MB)
+[corepreempt] handoffs=24704
+[pace] period 59.80 blocked 24.75 busy 35.05 ms
+[pace] period 54.48 blocked 21.60 busy 32.88 ms
+[pace] period 78.34 blocked 43.32 busy 35.03 ms
+[pace] period 71.48 blocked 37.12 busy 34.36 ms
+[pace] period 64.61 blocked 31.21 busy 33.40 ms
+[pace] period 79.05 blocked 45.25 busy 33.80 ms
+[pace] period 63.49 blocked 36.57 busy 26.92 ms
+[pace] period 67.69 blocked 35.60 busy 32.09 ms
+[pace] period 87.55 blocked 51.29 busy 36.26 ms
+[corepreempt] handoffs=24832
+[pace] period 64.23 blocked 28.63 busy 35.59 ms
+[pace] period 98.42 blocked 65.38 busy 33.04 ms
+[pace] period 81.23 blocked 44.86 busy 36.37 ms
+[pace] period 63.56 blocked 31.30 busy 32.26 ms
+[pace] period 57.02 blocked 25.63 busy 31.40 ms
+[pace] period 76.27 blocked 41.78 busy 34.49 ms
+[pace] period 80.48 blocked 45.05 busy 35.43 ms
+[corepreempt] handoffs=24960
+[pace] period 73.10 blocked 37.14 busy 35.96 ms
+[pace] period 61.37 blocked 29.40 busy 31.97 ms
+[pace] period 83.67 blocked 47.13 busy 36.53 ms
+[pace] period 79.33 blocked 46.43 busy 32.90 ms
+[pace] period 89.31 blocked 56.14 busy 33.16 ms
+[pace] period 73.96 blocked 35.32 busy 38.64 ms
+[pace] period 55.68 blocked 21.87 busy 33.82 ms
+[pace] period 82.47 blocked 45.63 busy 36.84 ms
+[pace] period 60.76 blocked 27.16 busy 33.60 ms
+[corepreempt] handoffs=25088
+[input] GetNpadState id 0 lr 800263e58
+[pace] period 47.32 blocked 16.20 busy 31.12 ms
+[pace] period 64.17 blocked 27.37 busy 36.80 ms
+[shader] prefetch: scanned 164310 draws / 1200 submits (309.0 ms), started 0 programs + 0 pipelines ahead, waits 0 (0 ms total, worst 0 ms), unforeseen 0
+[pace] period 65.81 blocked 31.74 busy 34.07 ms
+[pace] period 72.75 blocked 36.52 busy 36.23 ms
+[vk] t=86.2 frame 1802 14.1 fps gen 0/29 max 99ms level  (7946 draws, 0 skipped, 464 passes, 0 dispatches, 58 flushes, wait 0ms, compile 0, fbcopy 29, upload 9.4MB)
+[pace] period 68.04 blocked 33.65 busy 34.38 ms
+[pace] period 69.41 blocked 37.14 busy 32.27 ms
+[pace] period 64.10 blocked 30.21 busy 33.89 ms
+[pace] period 66.19 blocked 31.59 busy 34.61 ms
+[corepreempt] handoffs=25216
+[pace] period 57.50 blocked 24.62 busy 32.87 ms
+[pace] period 79.98 blocked 41.19 busy 38.78 ms
+[pace] period 81.33 blocked 44.77 busy 36.56 ms
+[pace] period 71.77 blocked 35.93 busy 35.84 ms
+[pace] period 68.48 blocked 28.99 busy 39.49 ms
+[pace] period 71.78 blocked 36.47 busy 35.31 ms
+[pace] period 73.51 blocked 40.32 busy 33.19 ms
+[pace] period 77.88 blocked 46.08 busy 31.81 ms
+[corepreempt] handoffs=25344
+[pace] period 81.21 blocked 42.83 busy 38.38 ms
+[pace] period 66.60 blocked 24.18 busy 42.42 ms
+[pace] period 63.90 blocked 26.01 busy 37.89 ms
+[pace] period 66.94 blocked 36.26 busy 30.68 ms
+[pace] period 76.53 blocked 41.70 busy 34.83 ms
+[pace] period 63.23 blocked 33.22 busy 30.01 ms
+[pace] period 66.87 blocked 32.64 busy 34.23 ms
+[pace] period 67.88 blocked 38.26 busy 29.62 ms
+[corepreempt] handoffs=25472
+[pace] period 99.64 blocked 62.46 busy 37.18 ms
+[pace] period 83.63 blocked 46.15 busy 37.49 ms
+[pace] period 81.63 blocked 47.80 busy 33.82 ms
+[pace] period 54.89 blocked 17.18 busy 37.71 ms
+[pace] period 84.42 blocked 37.84 busy 46.59 ms
+[pace] period 82.56 blocked 49.60 busy 32.96 ms
+[pace] period 79.14 blocked 45.60 busy 33.54 ms
+[pace] period 89.14 blocked 54.34 busy 34.80 ms
+[vk] t=88.2 frame 1830 13.6 fps gen 0/28 max 100ms level  (7657 draws, 0 skipped, 448 passes, 0 dispatches, 56 flushes, wait 0ms, compile 0, fbcopy 28, upload 8.9MB)
+[corepreempt] handoffs=25600
+[pace] period 95.03 blocked 44.68 busy 50.35 ms
+[pace] period 54.36 blocked 17.55 busy 36.80 ms
+[pace] period 93.22 blocked 55.09 busy 38.13 ms
+[pace] period 54.04 blocked 21.92 busy 32.12 ms
+[pace] period 75.65 blocked 40.40 busy 35.25 ms
+[pace] period 57.59 blocked 24.35 busy 33.24 ms
+[pace] period 72.03 blocked 36.62 busy 35.42 ms
+[pace] period 72.97 blocked 38.46 busy 34.52 ms
+[pace] period 50.17 blocked 16.37 busy 33.80 ms
+[corepreempt] handoffs=25728
+[pace] period 76.98 blocked 39.31 busy 37.68 ms
+[pace] period 63.01 blocked 25.96 busy 37.05 ms
+[pace] period 84.04 blocked 46.89 busy 37.15 ms
+[pace] period 63.82 blocked 30.70 busy 33.12 ms
+[pace] period 60.42 blocked 27.69 busy 32.73 ms
+[pace] period 57.57 blocked 23.22 busy 34.35 ms
+[pace] period 80.37 blocked 46.85 busy 33.52 ms
+[pace] period 74.79 blocked 41.84 busy 32.95 ms
+[corepreempt] handoffs=25856
+[pace] period 81.13 blocked 42.14 busy 38.99 ms
+[pace] period 69.51 blocked 33.17 busy 36.34 ms
+[pace] period 59.74 blocked 24.02 busy 35.72 ms
+[pace] period 51.66 blocked 16.12 busy 35.55 ms
+[pace] period 53.31 blocked 16.31 busy 37.00 ms
+[pace] period 55.90 blocked 20.43 busy 35.47 ms
+[pace] period 58.52 blocked 25.20 busy 33.32 ms
+[pace] period 56.58 blocked 24.67 busy 31.92 ms
+[pace] period 71.70 blocked 38.02 busy 33.68 ms
+[pace] period 79.39 blocked 43.08 busy 36.31 ms
+[pace] period 70.23 blocked 36.78 busy 33.45 ms
+[corepreempt] handoffs=25984
+[pace] period 85.27 blocked 49.52 busy 35.75 ms
+[pace] period 70.52 blocked 36.44 busy 34.09 ms
+[vk] t=90.3 frame 1860 14.6 fps gen 0/30 max 95ms level  (8220 draws, 0 skipped, 480 passes, 0 dispatches, 60 flushes, wait 0ms, compile 0, fbcopy 30, upload 9.7MB)
+[pace] period 68.50 blocked 32.29 busy 36.21 ms
+[pace] period 80.71 blocked 47.17 busy 33.54 ms
+[pace] period 88.61 blocked 55.63 busy 32.98 ms
+[pace] period 64.05 blocked 27.00 busy 37.05 ms
+[pace] period 74.81 blocked 43.26 busy 31.55 ms
+[pace] period 67.35 blocked 31.01 busy 36.34 ms
+[corepreempt] handoffs=26112
+[pace] period 59.10 blocked 27.67 busy 31.44 ms
+[pace] period 78.38 blocked 44.13 busy 34.25 ms
+[pace] period 67.56 blocked 30.62 busy 36.94 ms
+[pace] period 63.97 blocked 29.84 busy 34.13 ms
+[pace] period 52.11 blocked 18.03 busy 34.09 ms
+[pace] period 61.69 blocked 23.82 busy 37.87 ms
+[pace] period 43.02 blocked 8.34 busy 34.68 ms
+[pace] period 58.40 blocked 23.89 busy 34.51 ms
+[pace] period 68.86 blocked 34.89 busy 33.97 ms
+[corepreempt] handoffs=26240
+[pace] period 80.76 blocked 42.90 busy 37.86 ms
+[pace] period 54.38 blocked 20.88 busy 33.50 ms
+[pace] period 65.59 blocked 31.10 busy 34.49 ms
+[pace] period 60.34 blocked 19.96 busy 40.38 ms
+[pace] period 66.67 blocked 30.63 busy 36.04 ms
+[pace] period 62.95 blocked 29.16 busy 33.79 ms
+[pace] period 83.48 blocked 35.77 busy 47.71 ms
+[corepreempt] handoffs=26368
+[pace] period 95.32 blocked 56.65 busy 38.67 ms
+[pace] period 91.01 blocked 52.51 busy 38.51 ms
+[pace] period 69.40 blocked 27.52 busy 41.89 ms
+[pace] period 65.62 blocked 32.24 busy 33.37 ms
+[pace] period 75.12 blocked 41.75 busy 33.37 ms
+[pace] period 77.45 blocked 42.22 busy 35.23 ms
+[vk] t=92.4 frame 1889 14.1 fps gen 0/29 max 107ms level  (7946 draws, 0 skipped, 464 passes, 0 dispatches, 58 flushes, wait 0ms, compile 0, fbcopy 29, upload 9.4MB)
+[pace] period 69.96 blocked 36.48 busy 33.47 ms
+[corepreempt] handoffs=26496
+[pace] period 62.98 blocked 30.29 busy 32.70 ms
+[pace] period 77.15 blocked 39.29 busy 37.86 ms
+[pace] period 63.25 blocked 26.59 busy 36.66 ms
+[pace] period 41.39 blocked 9.04 busy 32.35 ms
+[pace] period 89.75 blocked 50.69 busy 39.07 ms
+[pace] period 86.36 blocked 49.89 busy 36.47 ms
+[pace] period 67.03 blocked 29.20 busy 37.83 ms
+[pace] period 66.78 blocked 33.65 busy 33.13 ms
+[corepreempt] handoffs=26624
+[pace] period 70.58 blocked 35.96 busy 34.62 ms
+[pace] period 64.67 blocked 24.09 busy 40.58 ms
+[pace] period 66.31 blocked 31.34 busy 34.97 ms
+[pace] period 68.99 blocked 34.00 busy 34.99 ms
+[pace] period 57.89 blocked 24.09 busy 33.81 ms
+[pace] period 63.59 blocked 30.03 busy 33.56 ms
+[pace] period 78.13 blocked 36.08 busy 42.05 ms
+[pace] period 75.84 blocked 38.74 busy 37.09 ms
+[pace] period 81.68 blocked 39.40 busy 42.28 ms
+[corepreempt] handoffs=26752
+[pace] period 41.40 blocked 7.48 busy 33.92 ms
+[pace] period 77.57 blocked 35.53 busy 42.05 ms
+[pace] period 49.48 blocked 13.72 busy 35.76 ms
+[pace] period 91.13 blocked 57.34 busy 33.79 ms
+[pace] period 79.26 blocked 40.28 busy 38.99 ms
+[pace] period 77.38 blocked 41.03 busy 36.35 ms
+[pace] period 56.67 blocked 22.83 busy 33.84 ms
+[corepreempt] handoffs=26880
+[pace] period 75.58 blocked 33.80 busy 41.77 ms
+[pace] period 84.11 blocked 50.17 busy 33.95 ms
+[pace] period 91.36 blocked 55.43 busy 35.93 ms
+[vk] t=94.4 frame 1918 14.0 fps gen 0/29 max 101ms level  (7942 draws, 0 skipped, 464 passes, 0 dispatches, 58 flushes, wait 0ms, compile 0, fbcopy 29, upload 9.3MB)
+[pace] period 82.21 blocked 43.22 busy 38.99 ms
+[pace] period 56.30 blocked 22.97 busy 33.34 ms
+[pace] period 76.96 blocked 37.10 busy 39.86 ms
+[pace] period 65.49 blocked 30.38 busy 35.11 ms
+[corepreempt] handoffs=27008
+[pace] period 90.24 blocked 56.62 busy 33.62 ms
+[pace] period 99.50 blocked 61.97 busy 37.53 ms
+[pace] period 98.43 blocked 48.99 busy 49.43 ms
+[pace] period 96.00 blocked 56.58 busy 39.41 ms
+[pace] period 69.07 blocked 34.93 busy 34.14 ms
+[pace] period 73.33 blocked 38.25 busy 35.08 ms
+[corepreempt] handoffs=27136
+[pace] period 77.40 blocked 38.93 busy 38.47 ms
+[pace] period 67.38 blocked 31.84 busy 35.55 ms
+[pace] period 67.30 blocked 32.06 busy 35.25 ms
+[pace] period 88.05 blocked 46.79 busy 41.26 ms
+[pace] period 92.92 blocked 57.48 busy 35.44 ms
+[pace] period 71.99 blocked 39.34 busy 32.65 ms
+[pace] period 87.90 blocked 50.90 busy 37.00 ms
+[pace] period 62.17 blocked 30.04 busy 32.13 ms
+[corepreempt] handoffs=27264
+[pace] period 86.62 blocked 50.13 busy 36.49 ms
+[pace] period 76.66 blocked 34.23 busy 42.43 ms
+[pace] period 79.32 blocked 41.87 busy 37.45 ms
+[pace] period 83.48 blocked 46.56 busy 36.92 ms
+[pace] period 56.59 blocked 19.62 busy 36.96 ms
+[pace] period 63.99 blocked 27.89 busy 36.10 ms
+[pace] period 87.53 blocked 49.98 busy 37.55 ms
+[pace] period 64.36 blocked 32.25 busy 32.11 ms
+[vk] t=96.4 frame 1944 12.9 fps gen 0/26 max 100ms level  (7113 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.3MB)
+[pace] period 58.83 blocked 21.64 busy 37.19 ms
+[corepreempt] handoffs=27392
+[pace] period 48.53 blocked 16.88 busy 31.65 ms
+[pace] period 94.51 blocked 59.42 busy 35.09 ms
+[pace] period 61.46 blocked 26.52 busy 34.94 ms
+[pace] period 67.23 blocked 30.90 busy 36.34 ms
+[pace] period 96.73 blocked 60.14 busy 36.59 ms
+[pace] period 71.08 blocked 37.12 busy 33.96 ms
+[pace] period 46.95 blocked 9.84 busy 37.11 ms
+[corepreempt] handoffs=27520
+[pace] period 90.68 blocked 49.63 busy 41.05 ms
+[pace] period 73.83 blocked 38.85 busy 34.98 ms
+[cpumod] 90s total 4205 unmapped 1063 game=607 runtime=179 SDL3=975 Vulkan=24 libc=1357 shader=0 other=0
+[cpuhot] game 3b58000:22 343c000:16 bf5c000:16 fcc0000:15 1193a000:12 101e2000:11 f2fa000:10 115b8000:10
+[cpuhot] runtime 1dc000:72 1d8000:53 1da000:16 27c000:6 370000:6 4be000:4 1de000:3 36a000:3
+[cpuhot] SDL3 1b2000:365 a0000:91 18c000:89 190000:57 1b0000:55 a2000:46 184000:39 18e000:39
+[cpuhot] Vulkan 91c000:3 1c70000:3 948000:2 1c54000:2 8fe000:1 94c000:1 94e000:1 1bfc000:1
+[pace] period 75.23 blocked 30.79 busy 44.44 ms
+[pace] period 66.77 blocked 29.77 busy 36.99 ms
+[pace] period 68.63 blocked 33.96 busy 34.67 ms
+[pace] period 73.06 blocked 41.02 busy 32.04 ms
+[pace] period 77.19 blocked 40.97 busy 36.23 ms
+[pace] period 58.21 blocked 23.91 busy 34.30 ms
+[corepreempt] handoffs=27648
+[pace] period 78.69 blocked 39.31 busy 39.38 ms
+[pace] period 69.02 blocked 30.70 busy 38.31 ms
+[pace] period 60.34 blocked 30.60 busy 29.74 ms
+[pace] period 63.72 blocked 29.51 busy 34.21 ms
+[pace] period 72.23 blocked 35.35 busy 36.88 ms
+[pace] period 71.24 blocked 36.93 busy 34.31 ms
+[pace] period 91.97 blocked 56.56 busy 35.41 ms
+[pace] period 60.78 blocked 24.55 busy 36.23 ms
+[corepreempt] handoffs=27776
+[pace] period 53.39 blocked 22.19 busy 31.20 ms
+[pace] period 72.71 blocked 36.12 busy 36.59 ms
+[pace] period 76.51 blocked 40.90 busy 35.61 ms
+[vk] t=98.5 frame 1972 14.0 fps gen 0/28 max 104ms level  (7672 draws, 0 skipped, 448 passes, 0 dispatches, 56 flushes, wait 0ms, compile 0, fbcopy 28, upload 9.0MB)
+[pace] period 75.68 blocked 43.14 busy 32.54 ms
+[pace] period 90.98 blocked 60.17 busy 30.81 ms
+[pace] period 80.06 blocked 41.93 busy 38.13 ms
+[corepreempt] handoffs=27904
+[pace] period 86.66 blocked 51.31 busy 35.35 ms
+[pace] period 74.84 blocked 38.64 busy 36.20 ms
+[pace] period 79.28 blocked 41.99 busy 37.29 ms
+[pace] period 94.02 blocked 59.85 busy 34.17 ms
+[pace] period 68.63 blocked 32.99 busy 35.64 ms
+[corepreempt] handoffs=28032
+[pace] period 99.90 blocked 61.48 busy 38.42 ms
+[pace] period 56.61 blocked 23.79 busy 32.82 ms
+[pace] period 88.44 blocked 52.05 busy 36.39 ms
+[pace] period 76.47 blocked 38.65 busy 37.82 ms
+[pace] period 63.22 blocked 28.15 busy 35.07 ms
+[pace] period 49.39 blocked 13.45 busy 35.94 ms
+[pace] period 77.88 blocked 43.69 busy 34.19 ms
+[pace] period 78.51 blocked 42.55 busy 35.96 ms
+[corepreempt] handoffs=28160
+[pace] period 73.90 blocked 36.15 busy 37.76 ms
+[pace] period 81.39 blocked 47.04 busy 34.34 ms
+[pace] period 76.68 blocked 39.43 busy 37.25 ms
+[pace] period 93.68 blocked 59.06 busy 34.62 ms
+[pace] period 66.94 blocked 32.07 busy 34.87 ms
+[pace] period 61.99 blocked 24.81 busy 37.18 ms
+[vk] t=100.5 frame 1997 12.4 fps gen 0/25 max 109ms level  (6850 draws, 0 skipped, 400 passes, 0 dispatches, 50 flushes, wait 0ms, compile 0, fbcopy 25, upload 8.1MB)
+[corepreempt] handoffs=28288
+[pace] period 72.62 blocked 33.26 busy 39.36 ms
+[pace] period 79.08 blocked 37.06 busy 42.02 ms
+[pace] period 94.22 blocked 60.06 busy 34.15 ms
+[pace] period 91.37 blocked 55.50 busy 35.86 ms
+[pace] period 90.11 blocked 50.48 busy 39.63 ms
+[pace] period 69.61 blocked 35.17 busy 34.44 ms
+[corepreempt] handoffs=28416
+[pace] period 48.29 blocked 11.99 busy 36.30 ms
+[pace] period 95.24 blocked 61.07 busy 34.17 ms
+[pace] period 83.23 blocked 48.61 busy 34.62 ms
+[pace] period 77.13 blocked 42.04 busy 35.10 ms
+[pace] period 73.01 blocked 38.04 busy 34.97 ms
+[pace] period 88.10 blocked 54.59 busy 33.51 ms
+[corepreempt] handoffs=28544
+[pace] period 84.02 blocked 47.79 busy 36.23 ms
+[pace] period 92.67 blocked 54.76 busy 37.91 ms
+[pace] period 66.89 blocked 29.57 busy 37.32 ms
+[pace] period 88.53 blocked 50.74 busy 37.78 ms
+[pace] period 83.35 blocked 44.55 busy 38.80 ms
+[pace] period 73.43 blocked 32.91 busy 40.53 ms
+[pace] period 64.22 blocked 24.35 busy 39.87 ms
+[pace] period 76.06 blocked 40.20 busy 35.85 ms
+[corepreempt] handoffs=28672
+[pace] period 76.64 blocked 40.68 busy 35.96 ms
+[pace] period 79.67 blocked 41.60 busy 38.07 ms
+[pace] period 60.82 blocked 29.47 busy 31.36 ms
+[pace] period 82.29 blocked 46.23 busy 36.06 ms
+[pace] period 84.25 blocked 48.76 busy 35.49 ms
+[vk] t=102.5 frame 2023 12.5 fps gen 0/26 max 104ms level  (7115 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.3MB)
+[pace] period 82.19 blocked 44.12 busy 38.06 ms
+[pace] period 65.23 blocked 29.76 busy 35.46 ms
+[pace] period 76.11 blocked 41.05 busy 35.06 ms
+[corepreempt] handoffs=28800
+[pace] period 80.33 blocked 42.42 busy 37.90 ms
+[pace] period 85.77 blocked 47.47 busy 38.30 ms
+[pace] period 68.56 blocked 35.64 busy 32.92 ms
+[pace] period 93.69 blocked 56.68 busy 37.01 ms
+[pace] period 66.39 blocked 30.67 busy 35.72 ms
+[pace] period 74.52 blocked 37.07 busy 37.45 ms
+[pace] period 86.74 blocked 52.10 busy 34.64 ms
+[corepreempt] handoffs=28928
+[pace] period 83.79 blocked 43.18 busy 40.62 ms
+[pace] period 85.71 blocked 49.26 busy 36.45 ms
+[pace] period 92.56 blocked 58.57 busy 33.99 ms
+[pace] period 76.10 blocked 44.20 busy 31.90 ms
+[pace] period 82.44 blocked 45.92 busy 36.52 ms
+[corepreempt] handoffs=29056
+[pace] period 77.09 blocked 39.71 busy 37.37 ms
+[pace] period 68.21 blocked 27.36 busy 40.85 ms
+[pace] period 94.12 blocked 56.08 busy 38.04 ms
+[pace] period 81.46 blocked 36.32 busy 45.14 ms
+[corepreempt] handoffs=29184
+[pace] period 70.64 blocked 26.10 busy 44.54 ms
+[vk] t=104.6 frame 2047 11.7 fps gen 0/24 max 152ms level  (6570 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 84.74 blocked 44.40 busy 40.34 ms
+[pace] period 70.88 blocked 32.71 busy 38.17 ms
+[pace] period 66.18 blocked 27.48 busy 38.70 ms
+[pace] period 76.79 blocked 41.26 busy 35.52 ms
+[pace] period 84.06 blocked 44.67 busy 39.39 ms
+[pace] period 87.50 blocked 47.10 busy 40.39 ms
+[pace] period 81.86 blocked 44.66 busy 37.19 ms
+[corepreempt] handoffs=29312
+[pace] period 79.66 blocked 41.43 busy 38.23 ms
+[pace] period 91.87 blocked 55.75 busy 36.12 ms
+[pace] period 71.29 blocked 31.96 busy 39.33 ms
+[pace] period 85.27 blocked 46.60 busy 38.68 ms
+[pace] period 81.36 blocked 45.43 busy 35.93 ms
+[pace] period 62.86 blocked 21.18 busy 41.68 ms
+[corepreempt] handoffs=29440
+[pace] period 77.62 blocked 43.37 busy 34.25 ms
+[pace] period 78.51 blocked 41.21 busy 37.31 ms
+[pace] period 85.62 blocked 47.65 busy 37.97 ms
+[pace] period 75.98 blocked 33.10 busy 42.89 ms
+[corepreempt] handoffs=29568
+[pace] period 95.46 blocked 54.47 busy 40.99 ms
+[vk] t=106.6 frame 2070 11.3 fps gen 0/23 max 138ms level  (6302 draws, 0 skipped, 368 passes, 0 dispatches, 46 flushes, wait 0ms, compile 0, fbcopy 23, upload 7.4MB)
+[pace] period 75.94 blocked 42.44 busy 33.50 ms
+[pace] period 80.58 blocked 43.36 busy 37.22 ms
+[pace] period 81.42 blocked 46.10 busy 35.32 ms
+[pace] period 62.12 blocked 29.03 busy 33.08 ms
+[pace] period 80.79 blocked 42.40 busy 38.39 ms
+[corepreempt] handoffs=29696
+[pace] period 74.45 blocked 37.93 busy 36.52 ms
+[pace] period 73.60 blocked 36.46 busy 37.14 ms
+[pace] period 70.44 blocked 33.02 busy 37.42 ms
+[pace] period 82.93 blocked 48.42 busy 34.51 ms
+[pace] period 81.76 blocked 44.51 busy 37.25 ms
+[pace] period 61.31 blocked 24.64 busy 36.67 ms
+[pace] period 60.43 blocked 27.12 busy 33.31 ms
+[pace] period 52.67 blocked 19.52 busy 33.15 ms
+[corepreempt] handoffs=29824
+[pace] period 54.23 blocked 21.87 busy 32.35 ms
+[pace] period 70.40 blocked 37.24 busy 33.16 ms
+[pace] period 84.98 blocked 47.74 busy 37.24 ms
+[pace] period 78.78 blocked 40.08 busy 38.70 ms
+[pace] period 71.74 blocked 33.48 busy 38.26 ms
+[pace] period 71.58 blocked 37.69 busy 33.88 ms
+[pace] period 81.00 blocked 42.39 busy 38.62 ms
+[corepreempt] handoffs=29952
+[pace] period 81.81 blocked 46.88 busy 34.93 ms
+[pace] period 79.58 blocked 44.21 busy 35.37 ms
+[pace] period 71.13 blocked 39.09 busy 32.04 ms
+[pace] period 84.67 blocked 48.05 busy 36.62 ms
+[pace] period 57.76 blocked 22.79 busy 34.98 ms
+[pace] period 79.94 blocked 40.92 busy 39.02 ms
+[pace] period 77.64 blocked 43.02 busy 34.62 ms
+[corepreempt] handoffs=30080
+[pace] period 92.52 blocked 53.40 busy 39.12 ms
+[vk] t=108.7 frame 2098 13.5 fps gen 0/28 max 92ms level  (7672 draws, 0 skipped, 448 passes, 0 dispatches, 56 flushes, wait 0ms, compile 0, fbcopy 28, upload 9.0MB)
+[pace] period 78.41 blocked 40.50 busy 37.91 ms
+[pace] period 68.79 blocked 30.23 busy 38.56 ms
+[pace] period 87.39 blocked 54.28 busy 33.12 ms
+[pace] period 73.65 blocked 40.29 busy 33.35 ms
+[pace] period 73.28 blocked 33.74 busy 39.54 ms
+[pace] period 76.02 blocked 37.39 busy 38.63 ms
+[corepreempt] handoffs=30208
+[pace] period 49.22 blocked 15.68 busy 33.53 ms
+[pace] period 68.93 blocked 35.81 busy 33.13 ms
+[pace] period 88.45 blocked 52.86 busy 35.59 ms
+[pace] period 73.44 blocked 31.05 busy 42.39 ms
+[pace] period 62.60 blocked 23.08 busy 39.52 ms
+[pace] period 99.08 blocked 60.90 busy 38.18 ms
+[pace] period 76.43 blocked 41.83 busy 34.60 ms
+[corepreempt] handoffs=30336
+[pace] period 83.08 blocked 46.51 busy 36.57 ms
+[pace] period 71.15 blocked 36.31 busy 34.84 ms
+[pace] period 73.62 blocked 40.71 busy 32.91 ms
+[pace] period 76.22 blocked 37.44 busy 38.78 ms
+[pace] period 85.27 blocked 49.42 busy 35.85 ms
+[pace] period 72.91 blocked 38.64 busy 34.27 ms
+[pace] period 68.63 blocked 35.53 busy 33.10 ms
+[pace] period 72.03 blocked 33.27 busy 38.76 ms
+[corepreempt] handoffs=30464
+[pace] period 80.34 blocked 43.66 busy 36.69 ms
+[pace] period 86.87 blocked 49.82 busy 37.05 ms
+[pace] period 73.10 blocked 36.33 busy 36.77 ms
+[pace] period 62.65 blocked 27.03 busy 35.62 ms
+[pace] period 93.76 blocked 56.06 busy 37.70 ms
+[vk] t=110.8 frame 2125 13.0 fps gen 0/27 max 107ms level  (7387 draws, 0 skipped, 432 passes, 0 dispatches, 54 flushes, wait 0ms, compile 0, fbcopy 27, upload 8.6MB)
+[pace] period 82.91 blocked 50.81 busy 32.10 ms
+[pace] period 99.72 blocked 64.41 busy 35.31 ms
+[corepreempt] handoffs=30592
+[pace] period 80.17 blocked 46.85 busy 33.32 ms
+[pace] period 75.77 blocked 37.92 busy 37.85 ms
+[pace] period 93.57 blocked 59.98 busy 33.60 ms
+[pace] period 81.37 blocked 47.14 busy 34.23 ms
+[pace] period 86.20 blocked 50.88 busy 35.32 ms
+[corepreempt] handoffs=30720
+[pace] period 99.86 blocked 63.74 busy 36.12 ms
+[pace] period 74.53 blocked 38.73 busy 35.81 ms
+[pace] period 93.82 blocked 56.60 busy 37.22 ms
+[pace] period 78.26 blocked 39.47 busy 38.78 ms
+[pace] period 81.43 blocked 44.12 busy 37.31 ms
+[pace] period 94.05 blocked 59.68 busy 34.38 ms
+[corepreempt] handoffs=30848
+[pace] period 68.15 blocked 32.28 busy 35.87 ms
+[pace] period 69.55 blocked 32.43 busy 37.12 ms
+[cpumod] 105s total 4246 unmapped 1079 game=571 runtime=202 SDL3=1032 Vulkan=20 libc=1342 shader=0 other=0
+[cpuhot] game 343c000:23 3b58000:17 bf5c000:14 44f6000:13 44f8000:12 2898000:11 fcc0000:11 fe42000:10
+[cpuhot] runtime 1dc000:88 1d8000:58 1da000:12 370000:6 4be000:6 27c000:5 360000:4 266000:3
+[cpuhot] SDL3 1b2000:335 a0000:125 18c000:91 190000:63 1b0000:55 1b4000:51 a2000:44 184000:41
+[cpuhot] Vulkan 1c74000:3 8fe000:2 1c72000:2 1ee6000:2 2e000:1 91c000:1 94c000:1 aae000:1
+[pace] period 99.19 blocked 46.97 busy 52.22 ms
+[pace] period 94.26 blocked 57.58 busy 36.68 ms
+[pace] period 80.12 blocked 39.08 busy 41.04 ms
+[pace] period 76.35 blocked 38.72 busy 37.63 ms
+[corepreempt] handoffs=30976
+[vk] t=112.8 frame 2148 11.3 fps gen 0/23 max 118ms level  (6298 draws, 0 skipped, 368 passes, 0 dispatches, 46 flushes, wait 0ms, compile 0, fbcopy 23, upload 7.4MB)
+[pace] period 63.07 blocked 30.06 busy 33.02 ms
+[pace] period 75.68 blocked 39.59 busy 36.08 ms
+[pace] period 86.56 blocked 51.16 busy 35.40 ms
+[pace] period 81.28 blocked 46.51 busy 34.78 ms
+[pace] period 95.01 blocked 61.01 busy 34.00 ms
+[pace] period 84.49 blocked 47.19 busy 37.30 ms
+[pace] period 78.38 blocked 39.95 busy 38.43 ms
+[pace] period 64.10 blocked 26.44 busy 37.65 ms
+[corepreempt] handoffs=31104
+[pace] period 75.99 blocked 38.95 busy 37.04 ms
+[pace] period 67.44 blocked 27.94 busy 39.50 ms
+[pace] period 63.49 blocked 28.58 busy 34.92 ms
+[pace] period 93.90 blocked 58.32 busy 35.59 ms
+[pace] period 97.38 blocked 61.01 busy 36.37 ms
+[pace] period 72.21 blocked 40.40 busy 31.81 ms
+[pace] period 92.61 blocked 52.19 busy 40.43 ms
+[corepreempt] handoffs=31232
+[pace] period 78.99 blocked 36.53 busy 42.46 ms
+[pace] period 83.12 blocked 42.62 busy 40.50 ms
+[pace] period 88.77 blocked 39.75 busy 49.02 ms
+[pace] period 88.95 blocked 47.91 busy 41.05 ms
+[pace] period 80.25 blocked 46.24 busy 34.01 ms
+[pace] period 82.43 blocked 42.54 busy 39.89 ms
+[corepreempt] handoffs=31360
+[pace] period 82.86 blocked 47.53 busy 35.33 ms
+[vk] t=114.8 frame 2172 12.0 fps gen 0/24 max 119ms level  (6576 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 89.57 blocked 46.77 busy 42.80 ms
+[pace] period 67.11 blocked 31.82 busy 35.29 ms
+[pace] period 96.94 blocked 61.37 busy 35.57 ms
+[pace] period 71.29 blocked 37.71 busy 33.58 ms
+[pace] period 79.54 blocked 43.18 busy 36.36 ms
+[corepreempt] handoffs=31488
+[pace] period 62.43 blocked 28.06 busy 34.37 ms
+[pace] period 97.25 blocked 61.00 busy 36.25 ms
+[pace] period 67.10 blocked 32.44 busy 34.65 ms
+[pace] period 80.07 blocked 41.96 busy 38.11 ms
+[pace] period 92.76 blocked 59.18 busy 33.58 ms
+[pace] period 82.73 blocked 46.55 busy 36.19 ms
+[pace] period 92.66 blocked 58.41 busy 34.24 ms
+[corepreempt] handoffs=31616
+[pace] period 85.18 blocked 49.61 busy 35.56 ms
+[pace] period 78.05 blocked 43.86 busy 34.19 ms
+[pace] period 96.21 blocked 59.57 busy 36.64 ms
+[pace] period 89.60 blocked 53.95 busy 35.64 ms
+[pace] period 66.22 blocked 32.32 busy 33.90 ms
+[corepreempt] handoffs=31744
+[pace] period 94.89 blocked 49.83 busy 45.06 ms
+[pace] period 85.82 blocked 44.36 busy 41.46 ms
+[vk] t=116.9 frame 2195 11.1 fps gen 0/23 max 137ms level  (6302 draws, 0 skipped, 368 passes, 0 dispatches, 46 flushes, wait 0ms, compile 0, fbcopy 23, upload 7.4MB)
+[pace] period 82.58 blocked 42.65 busy 39.94 ms
+[pace] period 77.58 blocked 37.47 busy 40.11 ms
+[corepreempt] handoffs=31872
+[pace] period 62.57 blocked 22.51 busy 40.05 ms
+[pace] period 61.57 blocked 26.42 busy 35.15 ms
+[pace] period 81.03 blocked 46.30 busy 34.73 ms
+[pace] period 72.72 blocked 34.95 busy 37.77 ms
+[pace] period 75.80 blocked 39.75 busy 36.05 ms
+[pace] period 84.01 blocked 44.76 busy 39.25 ms
+[pace] period 69.97 blocked 30.99 busy 38.98 ms
+[pace] period 69.83 blocked 36.11 busy 33.72 ms
+[corepreempt] handoffs=32000
+[pace] period 89.03 blocked 54.76 busy 34.26 ms
+[pace] period 94.00 blocked 55.32 busy 38.68 ms
+[pace] period 85.80 blocked 52.85 busy 32.95 ms
+[pace] period 96.35 blocked 54.65 busy 41.70 ms
+[pace] period 78.45 blocked 40.27 busy 38.17 ms
+[corepreempt] handoffs=32128
+[pace] period 80.86 blocked 44.41 busy 36.45 ms
+[pace] period 77.99 blocked 38.96 busy 39.03 ms
+[pace] period 97.36 blocked 55.08 busy 42.28 ms
+[pace] period 86.55 blocked 45.01 busy 41.54 ms
+[pace] period 87.17 blocked 52.25 busy 34.92 ms
+[pace] period 84.20 blocked 45.21 busy 38.99 ms
+[vk] t=118.9 frame 2219 11.8 fps gen 0/24 max 124ms level  (6571 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[corepreempt] handoffs=32256
+[pace] period 98.62 blocked 63.33 busy 35.29 ms
+[pace] period 77.13 blocked 43.16 busy 33.96 ms
+[pace] period 77.34 blocked 42.20 busy 35.14 ms
+[pace] period 89.64 blocked 55.93 busy 33.71 ms
+[pace] period 91.32 blocked 54.74 busy 36.58 ms
+[pace] period 79.04 blocked 46.31 busy 32.73 ms
+[corepreempt] handoffs=32384
+[pace] period 70.54 blocked 39.35 busy 31.19 ms
+[pace] period 75.52 blocked 41.16 busy 34.36 ms
+[pace] period 70.68 blocked 35.89 busy 34.79 ms
+[pace] period 87.18 blocked 50.02 busy 37.17 ms
+[pace] period 90.69 blocked 55.50 busy 35.19 ms
+[pace] period 99.04 blocked 62.16 busy 36.88 ms
+[pace] period 77.91 blocked 41.79 busy 36.11 ms
+[corepreempt] handoffs=32512
+[pace] period 77.53 blocked 40.44 busy 37.10 ms
+[pace] period 87.90 blocked 50.59 busy 37.32 ms
+[pace] period 85.15 blocked 49.78 busy 35.37 ms
+[pace] period 75.60 blocked 40.48 busy 35.12 ms
+[pace] period 81.08 blocked 45.17 busy 35.90 ms
+[pace] period 69.58 blocked 35.86 busy 33.73 ms
+[pace] period 97.58 blocked 60.28 busy 37.30 ms
+[corepreempt] handoffs=32640
+[pace] period 75.04 blocked 38.83 busy 36.21 ms
+[pace] period 76.32 blocked 41.45 busy 34.86 ms
+[pace] period 95.74 blocked 61.12 busy 34.62 ms
+[vk] t=121.0 frame 2243 12.0 fps gen 0/24 max 102ms level  (6566 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 74.53 blocked 39.04 busy 35.49 ms
+[pace] period 63.12 blocked 30.41 busy 32.72 ms
+[pace] period 71.65 blocked 33.16 busy 38.49 ms
+[pace] period 64.68 blocked 32.76 busy 31.91 ms
+[corepreempt] handoffs=32768
+[pace] period 76.23 blocked 40.92 busy 35.31 ms
+[pace] period 68.22 blocked 36.37 busy 31.85 ms
+[pace] period 75.81 blocked 35.98 busy 39.83 ms
+[pace] period 69.64 blocked 34.91 busy 34.73 ms
+[pace] period 85.82 blocked 50.45 busy 35.37 ms
+[pace] period 69.66 blocked 33.12 busy 36.54 ms
+[pace] period 63.63 blocked 28.70 busy 34.93 ms
+[pace] period 93.28 blocked 56.66 busy 36.62 ms
+[corepreempt] handoffs=32896
+[pace] period 75.22 blocked 37.01 busy 38.21 ms
+[pace] period 87.77 blocked 48.09 busy 39.67 ms
+[pace] period 85.42 blocked 45.53 busy 39.88 ms
+[pace] period 79.70 blocked 39.72 busy 39.98 ms
+[pace] period 66.50 blocked 31.27 busy 35.23 ms
+[pace] period 69.82 blocked 37.07 busy 32.75 ms
+[corepreempt] handoffs=33024
+[pace] period 84.92 blocked 46.31 busy 38.60 ms
+[pace] period 64.75 blocked 25.81 busy 38.94 ms
+[pace] period 82.27 blocked 49.06 busy 33.21 ms
+[pace] period 90.29 blocked 55.32 busy 34.96 ms
+[pace] period 89.17 blocked 51.21 busy 37.96 ms
+[vk] t=123.0 frame 2269 12.6 fps gen 0/26 max 115ms level  (7124 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.4MB)
+[corepreempt] handoffs=33152
+[pace] period 76.19 blocked 42.36 busy 33.83 ms
+[pace] period 72.27 blocked 33.40 busy 38.87 ms
+[pace] period 87.53 blocked 50.21 busy 37.33 ms
+[pace] period 84.30 blocked 51.10 busy 33.20 ms
+[pace] period 97.09 blocked 62.83 busy 34.26 ms
+[corepreempt] handoffs=33280
+[pace] period 96.23 blocked 59.67 busy 36.57 ms
+[pace] period 92.14 blocked 52.06 busy 40.08 ms
+[pace] period 70.03 blocked 30.19 busy 39.84 ms
+[pace] period 76.54 blocked 42.07 busy 34.47 ms
+[pace] period 85.83 blocked 50.58 busy 35.26 ms
+[pace] period 95.40 blocked 61.19 busy 34.21 ms
+[corepreempt] handoffs=33408
+[pace] period 89.89 blocked 53.97 busy 35.93 ms
+[pace] period 48.80 blocked 14.13 busy 34.68 ms
+[pace] period 83.25 blocked 52.12 busy 31.14 ms
+[pace] period 86.48 blocked 47.63 busy 38.85 ms
+[pace] period 64.14 blocked 27.49 busy 36.65 ms
+[pace] period 61.50 blocked 28.41 busy 33.09 ms
+[pace] period 66.22 blocked 33.89 busy 32.32 ms
+[pace] period 56.21 blocked 23.91 busy 32.30 ms
+[pace] period 76.01 blocked 43.08 busy 32.93 ms
+[pace] period 82.87 blocked 47.30 busy 35.58 ms
+[corepreempt] handoffs=33536
+[pace] period 96.41 blocked 57.98 busy 38.43 ms
+[pace] period 78.49 blocked 38.85 busy 39.65 ms
+[vk] t=125.1 frame 2294 12.2 fps gen 0/25 max 113ms level  (6850 draws, 0 skipped, 400 passes, 0 dispatches, 50 flushes, wait 0ms, compile 0, fbcopy 25, upload 8.1MB)
+[pace] period 77.29 blocked 39.31 busy 37.98 ms
+[pace] period 80.77 blocked 43.26 busy 37.51 ms
+[pace] period 66.58 blocked 29.31 busy 37.27 ms
+[pace] period 77.22 blocked 40.49 busy 36.73 ms
+[pace] period 89.73 blocked 50.25 busy 39.48 ms
+[corepreempt] handoffs=33664
+[pace] period 89.40 blocked 53.41 busy 35.99 ms
+[pace] period 98.01 blocked 62.27 busy 35.74 ms
+[pace] period 85.53 blocked 50.15 busy 35.38 ms
+[pace] period 76.04 blocked 40.18 busy 35.86 ms
+[pace] period 85.13 blocked 48.91 busy 36.21 ms
+[pace] period 76.07 blocked 42.02 busy 34.05 ms
+[pace] period 90.46 blocked 53.19 busy 37.27 ms
+[corepreempt] handoffs=33792
+[pace] period 80.83 blocked 44.64 busy 36.19 ms
+[pace] period 81.08 blocked 45.50 busy 35.58 ms
+[pace] period 82.04 blocked 44.93 busy 37.11 ms
+[pace] period 79.63 blocked 42.52 busy 37.11 ms
+[pace] period 80.62 blocked 40.40 busy 40.22 ms
+[pace] period 51.80 blocked 14.13 busy 37.66 ms
+[pace] period 74.12 blocked 39.94 busy 34.18 ms
+[corepreempt] handoffs=33920
+[pace] period 70.21 blocked 34.84 busy 35.37 ms
+[pace] period 89.48 blocked 53.96 busy 35.52 ms
+[pace] period 63.21 blocked 26.79 busy 36.42 ms
+[pace] period 65.46 blocked 28.38 busy 37.08 ms
+[pace] period 67.74 blocked 31.19 busy 36.55 ms
+[pace] period 78.41 blocked 44.99 busy 33.41 ms
+[pace] period 95.64 blocked 54.28 busy 41.36 ms
+[vk] t=127.1 frame 2320 12.7 fps gen 0/26 max 98ms level  (7118 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.4MB)
+[corepreempt] handoffs=34048
+[pace] period 72.28 blocked 39.91 busy 32.37 ms
+[cpumod] 120s total 4244 unmapped 1054 game=583 runtime=166 SDL3=1041 Vulkan=19 libc=1381 shader=0 other=0
+[cpuhot] game 3b58000:19 fcc0000:17 44f6000:15 bf5c000:15 44f8000:14 343c000:13 eee8000:12 2898000:11
+[cpuhot] runtime 1dc000:80 1d8000:41 1da000:16 370000:6 4be000:5 27c000:3 1de000:2 27a000:2
+[cpuhot] SDL3 1b2000:401 a0000:97 18c000:78 a2000:68 190000:55 1b0000:47 184000:40 1b4000:39
+[cpuhot] Vulkan 1c72000:4 91c000:2 94c000:2 962000:1 1bf6000:1 1bf8000:1 1bfa000:1 1c20000:1
+[pace] period 91.23 blocked 56.60 busy 34.64 ms
+[pace] period 90.62 blocked 50.66 busy 39.97 ms
+[pace] period 69.20 blocked 32.33 busy 36.87 ms
+[corepreempt] handoffs=34176
+[pace] period 93.24 blocked 55.45 busy 37.80 ms
+[pace] period 71.34 blocked 32.77 busy 38.57 ms
+[pace] period 89.54 blocked 50.83 busy 38.71 ms
+[pace] period 62.79 blocked 26.98 busy 35.81 ms
+[pace] period 78.99 blocked 37.89 busy 41.10 ms
+[pace] period 70.67 blocked 35.81 busy 34.86 ms
+[pace] period 63.79 blocked 27.91 busy 35.88 ms
+[corepreempt] handoffs=34304
+[pace] period 77.86 blocked 34.23 busy 43.63 ms
+[pace] period 97.25 blocked 55.74 busy 41.51 ms
+[pace] period 70.97 blocked 33.67 busy 37.30 ms
+[pace] period 77.56 blocked 40.88 busy 36.68 ms
+[pace] period 90.46 blocked 56.98 busy 33.48 ms
+[pace] period 74.72 blocked 37.92 busy 36.80 ms
+[corepreempt] handoffs=34432
+[pace] period 80.55 blocked 42.99 busy 37.56 ms
+[vk] t=129.2 frame 2344 11.5 fps gen 0/24 max 121ms level  (6567 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 82.75 blocked 43.92 busy 38.83 ms
+[pace] period 81.74 blocked 46.44 busy 35.30 ms
+[pace] period 81.27 blocked 42.67 busy 38.59 ms
+[pace] period 93.20 blocked 50.61 busy 42.59 ms
+[corepreempt] handoffs=34560
+[pace] period 71.97 blocked 31.79 busy 40.18 ms
+[pace] period 73.46 blocked 33.48 busy 39.98 ms
+[pace] period 66.51 blocked 34.10 busy 32.41 ms
+[pace] period 76.98 blocked 41.78 busy 35.20 ms
+[pace] period 89.13 blocked 51.32 busy 37.81 ms
+[pace] period 75.50 blocked 33.21 busy 42.28 ms
+[corepreempt] handoffs=34688
+[pace] period 73.69 blocked 37.03 busy 36.66 ms
+[pace] period 66.83 blocked 31.46 busy 35.37 ms
+[pace] period 89.03 blocked 54.27 busy 34.76 ms
+[pace] period 99.73 blocked 61.16 busy 38.57 ms
+[pace] period 70.64 blocked 35.17 busy 35.47 ms
+[pace] period 79.86 blocked 45.37 busy 34.50 ms
+[pace] period 73.57 blocked 36.55 busy 37.01 ms
+[pace] period 99.92 blocked 60.27 busy 39.65 ms
+[corepreempt] handoffs=34816
+[pace] period 86.20 blocked 53.21 busy 32.99 ms
+[pace] period 78.22 blocked 40.66 busy 37.55 ms
+[pace] period 97.32 blocked 58.34 busy 38.99 ms
+[pace] period 70.15 blocked 35.47 busy 34.69 ms
+[pace] period 83.92 blocked 48.63 busy 35.29 ms
+[vk] t=131.3 frame 2369 12.0 fps gen 0/25 max 111ms level  (6850 draws, 0 skipped, 400 passes, 0 dispatches, 50 flushes, wait 0ms, compile 0, fbcopy 25, upload 8.1MB)
+[corepreempt] handoffs=34944
+[pace] period 85.59 blocked 46.76 busy 38.82 ms
+[pace] period 87.89 blocked 52.43 busy 35.46 ms
+[pace] period 78.56 blocked 39.19 busy 39.38 ms
+[pace] period 78.01 blocked 42.10 busy 35.91 ms
+[pace] period 77.86 blocked 45.07 busy 32.79 ms
+[pace] period 75.46 blocked 38.29 busy 37.16 ms
+[pace] period 70.89 blocked 36.59 busy 34.30 ms
+[corepreempt] handoffs=35072
+[pace] period 68.97 blocked 32.58 busy 36.39 ms
+[pace] period 77.55 blocked 38.71 busy 38.84 ms
+[pace] period 82.18 blocked 46.26 busy 35.92 ms
+[pace] period 82.05 blocked 44.14 busy 37.91 ms
+[pace] period 68.38 blocked 33.97 busy 34.40 ms
+[pace] period 88.04 blocked 53.03 busy 35.01 ms
+[corepreempt] handoffs=35200
+[pace] period 80.40 blocked 44.23 busy 36.16 ms
+[pace] period 60.04 blocked 22.01 busy 38.03 ms
+[pace] period 87.74 blocked 44.61 busy 43.13 ms
+[pace] period 96.81 blocked 56.66 busy 40.15 ms
+[pace] period 93.28 blocked 51.91 busy 41.37 ms
+[pace] period 83.23 blocked 42.35 busy 40.88 ms
+[corepreempt] handoffs=35328
+[pace] period 62.74 blocked 26.34 busy 36.40 ms
+[vk] t=133.3 frame 2393 11.9 fps gen 0/24 max 118ms level  (6576 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 92.07 blocked 60.61 busy 31.47 ms
+[pace] period 96.26 blocked 55.96 busy 40.29 ms
+[pace] period 81.52 blocked 40.32 busy 41.19 ms
+[pace] period 74.11 blocked 37.37 busy 36.73 ms
+[pace] period 97.95 blocked 62.38 busy 35.57 ms
+[input] GetNpadState id 0 lr 800263e58
+[pace] period 70.24 blocked 34.70 busy 35.54 ms
+[corepreempt] handoffs=35456
+[pace] period 78.20 blocked 45.54 busy 32.67 ms
+[shader] prefetch: scanned 164310 draws / 1200 submits (373.3 ms), started 0 programs + 0 pipelines ahead, waits 0 (0 ms total, worst 0 ms), unforeseen 0
+[pace] period 78.19 blocked 41.08 busy 37.11 ms
+[pace] period 82.62 blocked 47.17 busy 35.45 ms
+[pace] period 85.29 blocked 48.73 busy 36.56 ms
+[pace] period 85.01 blocked 49.74 busy 35.27 ms
+[pace] period 86.24 blocked 49.67 busy 36.57 ms
+[pace] period 98.37 blocked 60.60 busy 37.77 ms
+[corepreempt] handoffs=35584
+[pace] period 93.78 blocked 53.06 busy 40.73 ms
+[pace] period 72.87 blocked 34.47 busy 38.40 ms
+[pace] period 88.15 blocked 51.15 busy 37.00 ms
+[pace] period 91.10 blocked 52.71 busy 38.39 ms
+[pace] period 88.37 blocked 55.10 busy 33.27 ms
+[pace] period 74.50 blocked 36.55 busy 37.95 ms
+[corepreempt] handoffs=35712
+[pace] period 82.41 blocked 45.46 busy 36.95 ms
+[pace] period 74.11 blocked 40.30 busy 33.81 ms
+[pace] period 83.27 blocked 46.55 busy 36.73 ms
+[pace] period 79.85 blocked 42.95 busy 36.90 ms
+[vk] t=135.3 frame 2417 11.8 fps gen 0/24 max 101ms level  (6573 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 81.31 blocked 47.55 busy 33.76 ms
+[pace] period 81.91 blocked 42.85 busy 39.06 ms
+[corepreempt] handoffs=35840
+[pace] period 80.14 blocked 44.51 busy 35.63 ms
+[pace] period 99.54 blocked 63.41 busy 36.13 ms
+[pace] period 74.84 blocked 38.22 busy 36.62 ms
+[pace] period 82.81 blocked 42.35 busy 40.46 ms
+[pace] period 88.79 blocked 51.72 busy 37.07 ms
+[pace] period 75.44 blocked 34.55 busy 40.88 ms
+[pace] period 89.86 blocked 48.16 busy 41.70 ms
+[corepreempt] handoffs=35968
+[pace] period 83.16 blocked 49.65 busy 33.51 ms
+[pace] period 83.28 blocked 46.92 busy 36.37 ms
+[pace] period 87.90 blocked 51.02 busy 36.88 ms
+[pace] period 64.88 blocked 29.13 busy 35.76 ms
+[pace] period 82.93 blocked 44.42 busy 38.51 ms
+[pace] period 86.49 blocked 50.30 busy 36.19 ms
+[pace] period 86.77 blocked 48.43 busy 38.34 ms
+[corepreempt] handoffs=36096
+[pace] period 71.29 blocked 36.47 busy 34.83 ms
+[pace] period 70.92 blocked 31.28 busy 39.64 ms
+[pace] period 55.95 blocked 19.76 busy 36.19 ms
+[pace] period 70.64 blocked 31.96 busy 38.68 ms
+[pace] period 62.38 blocked 27.43 busy 34.94 ms
+[pace] period 64.06 blocked 28.03 busy 36.03 ms
+[pace] period 73.02 blocked 34.74 busy 38.28 ms
+[pace] period 80.99 blocked 42.90 busy 38.09 ms
+[pace] period 62.00 blocked 27.02 busy 34.98 ms
+[vk] t=137.4 frame 2443 12.7 fps gen 0/26 max 102ms level  (7112 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.3MB)
+[corepreempt] handoffs=36224
+[pace] period 69.59 blocked 30.84 busy 38.75 ms
+[pace] period 84.29 blocked 52.51 busy 31.78 ms
+[pace] period 73.42 blocked 40.09 busy 33.32 ms
+[pace] period 71.88 blocked 36.64 busy 35.25 ms
+[pace] period 58.86 blocked 25.88 busy 32.98 ms
+[pace] period 91.46 blocked 55.77 busy 35.69 ms
+[pace] period 75.85 blocked 38.96 busy 36.89 ms
+[pace] period 59.60 blocked 25.40 busy 34.20 ms
+[pace] period 64.80 blocked 32.62 busy 32.18 ms
+[corepreempt] handoffs=36352
+[pace] period 75.48 blocked 41.46 busy 34.02 ms
+[pace] period 82.89 blocked 45.77 busy 37.12 ms
+[pace] period 55.70 blocked 23.92 busy 31.79 ms
+[pace] period 59.25 blocked 24.99 busy 34.26 ms
+[pace] period 61.01 blocked 24.68 busy 36.33 ms
+[pace] period 64.69 blocked 26.46 busy 38.23 ms
+[pace] period 89.06 blocked 49.19 busy 39.88 ms
+[corepreempt] handoffs=36480
+[pace] period 90.98 blocked 53.71 busy 37.27 ms
+[pace] period 85.69 blocked 48.96 busy 36.73 ms
+[pace] period 90.36 blocked 50.67 busy 39.70 ms
+[pace] period 60.98 blocked 25.86 busy 35.13 ms
+[pace] period 92.69 blocked 55.46 busy 37.23 ms
+[corepreempt] handoffs=36608
+[pace] period 89.37 blocked 49.62 busy 39.75 ms
+[pace] period 72.13 blocked 36.92 busy 35.21 ms
+[pace] period 89.38 blocked 50.76 busy 38.62 ms
+[vk] t=139.4 frame 2469 12.8 fps gen 0/26 max 110ms level  (7124 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.4MB)
+[pace] period 74.07 blocked 36.54 busy 37.53 ms
+[pace] period 74.04 blocked 39.54 busy 34.50 ms
+[pace] period 87.54 blocked 52.29 busy 35.25 ms
+[corepreempt] handoffs=36736
+[pace] period 78.69 blocked 41.31 busy 37.39 ms
+[pace] period 79.37 blocked 42.98 busy 36.39 ms
+[pace] period 69.74 blocked 32.15 busy 37.60 ms
+[pace] period 76.12 blocked 40.24 busy 35.88 ms
+[pace] period 69.10 blocked 33.98 busy 35.12 ms
+[pace] period 69.16 blocked 35.62 busy 33.54 ms
+[pace] period 62.67 blocked 29.28 busy 33.38 ms
+[pace] period 83.78 blocked 43.30 busy 40.48 ms
+[corepreempt] handoffs=36864
+[pace] period 57.04 blocked 19.13 busy 37.91 ms
+[pace] period 68.44 blocked 33.83 busy 34.61 ms
+[pace] period 94.93 blocked 55.97 busy 38.96 ms
+[pace] period 99.16 blocked 60.19 busy 38.97 ms
+[pace] period 96.21 blocked 54.76 busy 41.44 ms
+[corepreempt] handoffs=36992
+[pace] period 74.89 blocked 36.45 busy 38.44 ms
+[pace] period 69.31 blocked 33.99 busy 35.32 ms
+[pace] period 74.13 blocked 38.41 busy 35.72 ms
+[pace] period 87.54 blocked 43.94 busy 43.59 ms
+[pace] period 93.59 blocked 59.84 busy 33.75 ms
+[pace] period 89.83 blocked 54.10 busy 35.73 ms
+[pace] period 83.91 blocked 47.84 busy 36.07 ms
+[corepreempt] handoffs=37120
+[pace] period 92.66 blocked 49.14 busy 43.52 ms
+[vk] t=141.4 frame 2494 12.5 fps gen 0/25 max 103ms level  (6850 draws, 0 skipped, 400 passes, 0 dispatches, 50 flushes, wait 1ms, compile 0, fbcopy 25, upload 8.1MB)
+[pace] period 82.46 blocked 45.80 busy 36.66 ms
+[pace] period 92.60 blocked 53.05 busy 39.55 ms
+[pace] period 91.48 blocked 53.92 busy 37.56 ms
+[pace] period 85.18 blocked 49.23 busy 35.95 ms
+[pace] period 73.35 blocked 33.66 busy 39.69 ms
+[pace] period 92.08 blocked 56.32 busy 35.76 ms
+[corepreempt] handoffs=37248
+[pace] period 97.03 blocked 63.19 busy 33.83 ms
+[pace] period 89.12 blocked 49.75 busy 39.37 ms
+[pace] period 80.32 blocked 46.75 busy 33.56 ms
+[cpumod] 135s total 4244 unmapped 1054 game=575 runtime=186 SDL3=1064 Vulkan=14 libc=1351 shader=0 other=0
+[cpuhot] game 44f8000:29 3b58000:19 343c000:18 eee8000:14 2898000:13 44f6000:13 fcc0000:13 108c4000:12
+[cpuhot] runtime 1dc000:103 1d8000:24 1da000:19 27c000:6 35c000:6 370000:6 1e0000:3 4be000:3
+[cpuhot] SDL3 1b2000:385 a0000:123 18c000:103 a2000:73 1b0000:61 190000:38 184000:34 8a000:33
+[cpuhot] Vulkan 1c26000:2 1c28000:2 91c000:1 ab2000:1 1c06000:1 1c2a000:1 1c2c000:1 1c30000:1
+[pace] period 84.55 blocked 46.87 busy 37.68 ms
+[corepreempt] handoffs=37376
+[pace] period 90.76 blocked 51.66 busy 39.10 ms
+[pace] period 75.27 blocked 38.21 busy 37.06 ms
+[pace] period 76.86 blocked 39.38 busy 37.48 ms
+[pace] period 70.10 blocked 31.73 busy 38.37 ms
+[pace] period 98.90 blocked 56.38 busy 42.52 ms
+[pace] period 91.73 blocked 50.44 busy 41.30 ms
+[pace] period 85.70 blocked 41.54 busy 44.16 ms
+[pace] period 84.58 blocked 52.46 busy 32.12 ms
+[corepreempt] handoffs=37504
+[pace] period 79.59 blocked 41.59 busy 38.00 ms
+[pace] period 89.06 blocked 50.58 busy 38.48 ms
+[vk] t=143.5 frame 2517 11.3 fps gen 0/23 max 112ms level  (6299 draws, 0 skipped, 368 passes, 0 dispatches, 46 flushes, wait 0ms, compile 0, fbcopy 23, upload 7.4MB)
+[pace] period 79.79 blocked 42.22 busy 37.56 ms
+[pace] period 77.64 blocked 42.15 busy 35.49 ms
+[pace] period 93.66 blocked 54.16 busy 39.51 ms
+[corepreempt] handoffs=37632
+[pace] period 78.00 blocked 30.74 busy 47.26 ms
+[pace] period 74.58 blocked 40.82 busy 33.76 ms
+[pace] period 77.96 blocked 43.09 busy 34.87 ms
+[pace] period 88.33 blocked 50.13 busy 38.21 ms
+[pace] period 69.97 blocked 36.28 busy 33.69 ms
+[corepreempt] handoffs=37760
+[pace] period 80.95 blocked 44.25 busy 36.70 ms
+[pace] period 85.53 blocked 47.54 busy 37.99 ms
+[pace] period 77.13 blocked 37.83 busy 39.30 ms
+[pace] period 77.72 blocked 38.57 busy 39.14 ms
+[pace] period 89.81 blocked 45.12 busy 44.69 ms
+[pace] period 76.25 blocked 35.61 busy 40.64 ms
+[corepreempt] handoffs=37888
+[pace] period 87.02 blocked 49.71 busy 37.31 ms
+[pace] period 83.62 blocked 42.77 busy 40.85 ms
+[pace] period 99.47 blocked 60.65 busy 38.82 ms
+[pace] period 86.83 blocked 40.20 busy 46.64 ms
+[pace] period 80.90 blocked 43.66 busy 37.25 ms
+[pace] period 99.23 blocked 56.40 busy 42.83 ms
+[pace] period 68.69 blocked 27.91 busy 40.79 ms
+[vk] t=145.5 frame 2541 11.6 fps gen 0/24 max 127ms level  (6564 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[corepreempt] handoffs=38016
+[pace] period 87.42 blocked 51.06 busy 36.37 ms
+[pace] period 77.16 blocked 40.06 busy 37.10 ms
+[pace] period 85.91 blocked 49.09 busy 36.81 ms
+[pace] period 77.80 blocked 40.84 busy 36.96 ms
+[pace] period 98.62 blocked 64.76 busy 33.86 ms
+[pace] period 83.49 blocked 42.03 busy 41.46 ms
+[corepreempt] handoffs=38144
+[pace] period 85.06 blocked 48.93 busy 36.13 ms
+[pace] period 79.62 blocked 38.38 busy 41.23 ms
+[pace] period 57.83 blocked 19.43 busy 38.39 ms
+[pace] period 74.95 blocked 35.38 busy 39.56 ms
+[pace] period 77.43 blocked 38.44 busy 38.99 ms
+[pace] period 62.27 blocked 25.23 busy 37.04 ms
+[pace] period 85.00 blocked 47.59 busy 37.41 ms
+[corepreempt] handoffs=38272
+[pace] period 68.40 blocked 29.60 busy 38.80 ms
+[pace] period 99.83 blocked 63.07 busy 36.76 ms
+[pace] period 95.19 blocked 58.14 busy 37.04 ms
+[pace] period 80.58 blocked 46.83 busy 33.75 ms
+[pace] period 69.58 blocked 34.68 busy 34.90 ms
+[pace] period 87.19 blocked 52.30 busy 34.88 ms
+[pace] period 86.38 blocked 47.74 busy 38.64 ms
+[pace] period 74.87 blocked 38.73 busy 36.14 ms
+[corepreempt] handoffs=38400
+[pace] period 79.81 blocked 46.24 busy 33.56 ms
+[pace] period 75.84 blocked 42.47 busy 33.37 ms
+[pace] period 78.32 blocked 41.88 busy 36.44 ms
+[vk] t=147.6 frame 2566 12.2 fps gen 0/25 max 114ms level  (6850 draws, 0 skipped, 400 passes, 0 dispatches, 50 flushes, wait 0ms, compile 0, fbcopy 25, upload 8.1MB)
+[pace] period 81.54 blocked 46.45 busy 35.10 ms
+[pace] period 88.74 blocked 54.27 busy 34.47 ms
+[pace] period 89.59 blocked 49.50 busy 40.09 ms
+[corepreempt] handoffs=38528
+[pace] period 74.00 blocked 38.25 busy 35.75 ms
+[pace] period 71.53 blocked 32.12 busy 39.41 ms
+[pace] period 95.72 blocked 58.19 busy 37.53 ms
+[pace] period 88.78 blocked 51.88 busy 36.90 ms
+[corepreempt] handoffs=38656
+[pace] period 87.11 blocked 51.08 busy 36.03 ms
+[pace] period 76.48 blocked 43.11 busy 33.37 ms
+[pace] period 99.53 blocked 63.90 busy 35.63 ms
+[pace] period 61.02 blocked 25.67 busy 35.35 ms
+[pace] period 93.78 blocked 56.37 busy 37.41 ms
+[pace] period 80.29 blocked 45.13 busy 35.16 ms
+[corepreempt] handoffs=38784
+[pace] period 81.24 blocked 41.54 busy 39.70 ms
+[pace] period 73.25 blocked 34.62 busy 38.63 ms
+[pace] period 63.22 blocked 29.24 busy 33.98 ms
+[pace] period 79.96 blocked 45.39 busy 34.57 ms
+[pace] period 76.68 blocked 40.53 busy 36.15 ms
+[pace] period 74.90 blocked 35.44 busy 39.45 ms
+[pace] period 78.47 blocked 40.30 busy 38.18 ms
+[vk] t=149.6 frame 2590 11.9 fps gen 0/24 max 106ms level  (6576 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[corepreempt] handoffs=38912
+[pace] period 75.94 blocked 40.08 busy 35.86 ms
+[pace] period 80.06 blocked 44.34 busy 35.72 ms
+[pace] period 61.72 blocked 23.62 busy 38.10 ms
+[pace] period 84.23 blocked 44.49 busy 39.73 ms
+[pace] period 75.77 blocked 40.54 busy 35.23 ms
+[pace] period 77.35 blocked 39.63 busy 37.73 ms
+[pace] period 71.91 blocked 34.63 busy 37.28 ms
+[corepreempt] handoffs=39040
+[pace] period 96.53 blocked 58.23 busy 38.30 ms
+[pace] period 67.29 blocked 29.73 busy 37.56 ms
+[pace] period 60.01 blocked 24.46 busy 35.55 ms
+[pace] period 81.41 blocked 43.19 busy 38.22 ms
+[pace] period 80.16 blocked 40.88 busy 39.28 ms
+[pace] period 82.45 blocked 41.76 busy 40.69 ms
+[pace] period 72.95 blocked 37.81 busy 35.14 ms
+[corepreempt] handoffs=39168
+[pace] period 78.76 blocked 41.36 busy 37.40 ms
+[pace] period 79.18 blocked 44.93 busy 34.26 ms
+[pace] period 91.39 blocked 51.45 busy 39.94 ms
+[pace] period 73.75 blocked 39.06 busy 34.69 ms
+[pace] period 85.24 blocked 50.03 busy 35.21 ms
+[pace] period 62.23 blocked 24.01 busy 38.21 ms
+[pace] period 72.67 blocked 30.13 busy 42.54 ms
+[pace] period 78.45 blocked 42.24 busy 36.21 ms
+[pace] period 75.88 blocked 40.37 busy 35.51 ms
+[corepreempt] handoffs=39296
+[pace] period 97.11 blocked 60.59 busy 36.52 ms
+[vk] t=151.7 frame 2616 12.6 fps gen 0/26 max 103ms level  (7122 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.4MB)
+[pace] period 93.20 blocked 57.54 busy 35.65 ms
+[pace] period 96.79 blocked 58.34 busy 38.45 ms
+[pace] period 99.85 blocked 62.88 busy 36.96 ms
+[pace] period 78.57 blocked 41.46 busy 37.11 ms
+[pace] period 85.04 blocked 51.35 busy 33.69 ms
+[corepreempt] handoffs=39424
+[pace] period 77.40 blocked 43.78 busy 33.61 ms
+[pace] period 79.46 blocked 42.24 busy 37.23 ms
+[pace] period 85.27 blocked 48.97 busy 36.30 ms
+[pace] period 88.48 blocked 52.20 busy 36.29 ms
+[pace] period 86.19 blocked 48.32 busy 37.87 ms
+[pace] period 85.74 blocked 50.58 busy 35.16 ms
+[pace] period 88.44 blocked 54.24 busy 34.20 ms
+[corepreempt] handoffs=39552
+[pace] period 52.04 blocked 18.52 busy 33.52 ms
+[pace] period 57.85 blocked 21.40 busy 36.45 ms
+[pace] period 58.61 blocked 22.16 busy 36.46 ms
+[pace] period 81.96 blocked 43.72 busy 38.25 ms
+[pace] period 65.80 blocked 30.61 busy 35.19 ms
+[pace] period 72.68 blocked 37.16 busy 35.52 ms
+[corepreempt] handoffs=39680
+[pace] period 61.60 blocked 23.93 busy 37.67 ms
+[pace] period 58.54 blocked 25.80 busy 32.74 ms
+[pace] period 73.65 blocked 34.52 busy 39.13 ms
+[vk] t=153.7 frame 2641 12.1 fps gen 0/25 max 123ms level  (6837 draws, 0 skipped, 400 passes, 0 dispatches, 50 flushes, wait 0ms, compile 0, fbcopy 25, upload 8.0MB)
+[pace] period 98.70 blocked 57.86 busy 40.84 ms
+[pace] period 91.44 blocked 49.29 busy 42.15 ms
+[corepreempt] handoffs=39808
+[pace] period 53.87 blocked 14.10 busy 39.78 ms
+[pace] period 59.67 blocked 19.82 busy 39.85 ms
+[pace] period 58.13 blocked 20.70 busy 37.43 ms
+[pace] period 59.96 blocked 27.30 busy 32.66 ms
+[pace] period 52.94 blocked 18.43 busy 34.51 ms
+[pace] period 69.29 blocked 38.08 busy 31.21 ms
+[pace] period 72.70 blocked 39.00 busy 33.70 ms
+[pace] period 61.00 blocked 26.33 busy 34.68 ms
+[corepreempt] handoffs=39936
+[pace] period 80.13 blocked 43.23 busy 36.90 ms
+[pace] period 72.29 blocked 40.34 busy 31.94 ms
+[pace] period 87.50 blocked 52.13 busy 35.38 ms
+[pace] period 75.08 blocked 42.47 busy 32.62 ms
+[pace] period 76.49 blocked 38.43 busy 38.06 ms
+[pace] period 94.32 blocked 50.72 busy 43.60 ms
+[pace] period 90.67 blocked 49.94 busy 40.73 ms
+[pace] period 76.64 blocked 38.29 busy 38.35 ms
+[corepreempt] handoffs=40064
+[pace] period 78.92 blocked 40.64 busy 38.28 ms
+[pace] period 82.76 blocked 46.08 busy 36.67 ms
+[pace] period 84.94 blocked 47.44 busy 37.50 ms
+[pace] period 90.07 blocked 55.22 busy 34.86 ms
+[pace] period 97.40 blocked 60.95 busy 36.44 ms
+[pace] period 86.46 blocked 49.71 busy 36.74 ms
+[pace] period 83.52 blocked 43.60 busy 39.93 ms
+[corepreempt] handoffs=40192
+[pace] period 75.26 blocked 34.95 busy 40.31 ms
+[vk] t=155.7 frame 2667 12.9 fps gen 0/26 max 99ms level  (7124 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.4MB)
+[pace] period 90.26 blocked 52.11 busy 38.15 ms
+[pace] period 89.14 blocked 52.35 busy 36.80 ms
+[pace] period 67.38 blocked 31.96 busy 35.42 ms
+[corepreempt] handoffs=40320
+[pace] period 85.92 blocked 51.27 busy 34.65 ms
+[pace] period 85.64 blocked 51.61 busy 34.03 ms
+[pace] period 76.24 blocked 42.75 busy 33.49 ms
+[pace] period 94.91 blocked 57.01 busy 37.90 ms
+[pace] period 96.08 blocked 56.54 busy 39.54 ms
+[pace] period 90.38 blocked 54.28 busy 36.10 ms
+[pace] period 91.24 blocked 55.93 busy 35.31 ms
+[pace] period 94.86 blocked 56.39 busy 38.46 ms
+[corepreempt] handoffs=40448
+[pace] period 90.80 blocked 51.87 busy 38.93 ms
+[pace] period 64.67 blocked 30.84 busy 33.83 ms
+[pace] period 77.66 blocked 40.65 busy 37.02 ms
+[pace] period 82.70 blocked 42.83 busy 39.87 ms
+[pace] period 75.71 blocked 39.26 busy 36.45 ms
+[pace] period 95.17 blocked 60.61 busy 34.56 ms
+[corepreempt] handoffs=40576
+[cpumod] 150s total 4249 unmapped 1058 game=602 runtime=185 SDL3=1018 Vulkan=23 libc=1363 shader=0 other=0
+[cpuhot] game 3b58000:26 343c000:18 2898000:16 bf5c000:15 44f8000:14 eee8000:11 11630000:11 bf18000:10
+[cpuhot] runtime 1dc000:93 1d8000:38 1da000:16 370000:5 27c000:4 35c000:4 4be000:4 360000:3
+[cpuhot] SDL3 1b2000:398 a0000:99 18c000:92 a2000:56 190000:56 1b0000:53 18e000:38 ca000:37
+[cpuhot] Vulkan 91a000:3 1c26000:2 1c70000:2 1ee6000:2 2e000:1 30000:1 34000:1 91c000:1
+[pace] period 79.90 blocked 35.91 busy 44.00 ms
+[pace] period 66.19 blocked 32.56 busy 33.63 ms
+[pace] period 95.79 blocked 56.87 busy 38.92 ms
+[pace] period 81.87 blocked 45.20 busy 36.67 ms
+[vk] t=157.8 frame 2691 11.5 fps gen 0/24 max 105ms level  (6576 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 77.52 blocked 36.12 busy 41.41 ms
+[pace] period 78.67 blocked 43.94 busy 34.74 ms
+[pace] period 82.91 blocked 47.19 busy 35.72 ms
+[corepreempt] handoffs=40704
+[pace] period 74.03 blocked 38.73 busy 35.31 ms
+[pace] period 95.21 blocked 54.70 busy 40.51 ms
+[pace] period 69.14 blocked 34.07 busy 35.08 ms
+[pace] period 62.93 blocked 28.64 busy 34.29 ms
+[pace] period 84.11 blocked 48.87 busy 35.25 ms
+[pace] period 89.75 blocked 49.30 busy 40.45 ms
+[pace] period 66.84 blocked 27.77 busy 39.08 ms
+[corepreempt] handoffs=40832
+[pace] period 63.11 blocked 28.50 busy 34.62 ms
+[pace] period 68.68 blocked 33.26 busy 35.42 ms
+[pace] period 88.01 blocked 51.21 busy 36.80 ms
+[pace] period 82.28 blocked 49.19 busy 33.09 ms
+[pace] period 66.11 blocked 31.82 busy 34.30 ms
+[pace] period 91.00 blocked 48.25 busy 42.75 ms
+[pace] period 75.61 blocked 40.86 busy 34.74 ms
+[corepreempt] handoffs=40960
+[pace] period 67.13 blocked 31.22 busy 35.91 ms
+[pace] period 87.12 blocked 52.66 busy 34.46 ms
+[pace] period 82.63 blocked 46.66 busy 35.97 ms
+[pace] period 79.98 blocked 44.28 busy 35.70 ms
+[pace] period 68.80 blocked 29.30 busy 39.50 ms
+[pace] period 89.99 blocked 48.10 busy 41.89 ms
+[pace] period 59.91 blocked 21.96 busy 37.95 ms
+[corepreempt] handoffs=41088
+[pace] period 74.32 blocked 34.11 busy 40.21 ms
+[vk] t=159.9 frame 2717 12.7 fps gen 0/26 max 128ms level  (7121 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.4MB)
+[pace] period 64.37 blocked 29.27 busy 35.10 ms
+[pace] period 68.79 blocked 29.34 busy 39.45 ms
+[pace] period 91.14 blocked 55.66 busy 35.48 ms
+[pace] period 99.07 blocked 61.84 busy 37.23 ms
+[pace] period 88.56 blocked 50.19 busy 38.37 ms
+[pace] period 98.09 blocked 62.77 busy 35.32 ms
+[corepreempt] handoffs=41216
+[pace] period 77.26 blocked 42.90 busy 34.36 ms
+[pace] period 98.24 blocked 59.76 busy 38.48 ms
+[pace] period 75.34 blocked 41.70 busy 33.65 ms
+[pace] period 87.50 blocked 50.59 busy 36.92 ms
+[pace] period 61.69 blocked 25.79 busy 35.90 ms
+[pace] period 92.25 blocked 45.03 busy 47.22 ms
+[pace] period 86.89 blocked 45.95 busy 40.94 ms
+[corepreempt] handoffs=41344
+[pace] period 95.09 blocked 55.80 busy 39.29 ms
+[pace] period 67.29 blocked 35.57 busy 31.73 ms
+[pace] period 94.31 blocked 57.15 busy 37.16 ms
+[pace] period 57.69 blocked 20.28 busy 37.41 ms
+[pace] period 67.26 blocked 30.10 busy 37.17 ms
+[pace] period 90.80 blocked 49.91 busy 40.89 ms
+[corepreempt] handoffs=41472
+[pace] period 76.53 blocked 42.25 busy 34.28 ms
+[pace] period 90.58 blocked 46.35 busy 44.23 ms
+[vk] t=161.9 frame 2741 11.8 fps gen 0/24 max 109ms level  (6564 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 80.93 blocked 37.55 busy 43.39 ms
+[pace] period 68.12 blocked 28.05 busy 40.06 ms
+[pace] period 79.43 blocked 43.77 busy 35.66 ms
+[pace] period 92.67 blocked 51.51 busy 41.16 ms
+[pace] period 62.81 blocked 21.22 busy 41.58 ms
+[pace] period 70.31 blocked 35.59 busy 34.72 ms
+[corepreempt] handoffs=41600
+[pace] period 59.93 blocked 25.35 busy 34.58 ms
+[pace] period 87.60 blocked 51.04 busy 36.57 ms
+[pace] period 95.34 blocked 58.64 busy 36.69 ms
+[pace] period 67.39 blocked 31.60 busy 35.79 ms
+[pace] period 99.46 blocked 63.83 busy 35.62 ms
+[pace] period 87.22 blocked 50.97 busy 36.25 ms
+[corepreempt] handoffs=41728
+[pace] period 96.33 blocked 58.24 busy 38.08 ms
+[pace] period 80.50 blocked 44.89 busy 35.61 ms
+[pace] period 81.25 blocked 45.91 busy 35.34 ms
+[pace] period 86.53 blocked 48.93 busy 37.60 ms
+[pace] period 70.38 blocked 35.58 busy 34.80 ms
+[corepreempt] handoffs=41856
+[pace] period 93.73 blocked 56.66 busy 37.07 ms
+[pace] period 72.74 blocked 38.47 busy 34.27 ms
+[pace] period 73.35 blocked 40.01 busy 33.34 ms
+[vk] t=163.9 frame 2765 11.7 fps gen 0/24 max 125ms level  (6576 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 70.02 blocked 33.32 busy 36.70 ms
+[pace] period 56.43 blocked 19.93 busy 36.50 ms
+[pace] period 76.21 blocked 39.93 busy 36.28 ms
+[corepreempt] handoffs=41984
+[pace] period 72.06 blocked 38.87 busy 33.19 ms
+[pace] period 90.88 blocked 52.73 busy 38.15 ms
+[pace] period 70.17 blocked 34.77 busy 35.40 ms
+[pace] period 88.78 blocked 52.82 busy 35.96 ms
+[pace] period 68.92 blocked 34.33 busy 34.58 ms
+[pace] period 66.77 blocked 34.99 busy 31.78 ms
+[pace] period 65.64 blocked 27.11 busy 38.53 ms
+[pace] period 68.99 blocked 35.36 busy 33.62 ms
+[corepreempt] handoffs=42112
+[pace] period 78.66 blocked 37.29 busy 41.37 ms
+[pace] period 63.25 blocked 27.24 busy 36.00 ms
+[pace] period 67.11 blocked 29.99 busy 37.13 ms
+[pace] period 85.94 blocked 50.11 busy 35.83 ms
+[pace] period 74.08 blocked 36.56 busy 37.52 ms
+[pace] period 85.08 blocked 46.77 busy 38.31 ms
+[pace] period 81.16 blocked 43.13 busy 38.03 ms
+[corepreempt] handoffs=42240
+[pace] period 55.33 blocked 16.24 busy 39.09 ms
+[pace] period 67.63 blocked 29.66 busy 37.96 ms
+[pace] period 86.12 blocked 49.01 busy 37.11 ms
+[pace] period 64.68 blocked 24.49 busy 40.19 ms
+[pace] period 63.29 blocked 30.24 busy 33.05 ms
+[pace] period 84.29 blocked 48.37 busy 35.92 ms
+[pace] period 53.34 blocked 17.21 busy 36.13 ms
+[pace] period 82.48 blocked 47.11 busy 35.36 ms
+[corepreempt] handoffs=42368
+[pace] period 80.61 blocked 45.41 busy 35.20 ms
+[vk] t=166.0 frame 2793 13.5 fps gen 0/28 max 102ms level  (7672 draws, 0 skipped, 448 passes, 0 dispatches, 56 flushes, wait 0ms, compile 0, fbcopy 28, upload 9.0MB)
+[pace] period 96.60 blocked 61.02 busy 35.58 ms
+[pace] period 94.57 blocked 59.06 busy 35.51 ms
+[pace] period 67.89 blocked 29.87 busy 38.02 ms
+[pace] period 77.53 blocked 42.57 busy 34.96 ms
+[pace] period 82.02 blocked 44.19 busy 37.84 ms
+[pace] period 78.82 blocked 41.88 busy 36.94 ms
+[pace] period 83.54 blocked 49.87 busy 33.67 ms
+[corepreempt] handoffs=42496
+[pace] period 83.97 blocked 45.08 busy 38.89 ms
+[pace] period 66.69 blocked 29.91 busy 36.78 ms
+[pace] period 63.06 blocked 30.24 busy 32.81 ms
+[pace] period 71.18 blocked 33.58 busy 37.60 ms
+[pace] period 61.20 blocked 26.68 busy 34.52 ms
+[pace] period 65.74 blocked 30.56 busy 35.19 ms
+[pace] period 74.08 blocked 34.39 busy 39.69 ms
+[pace] period 47.58 blocked 11.30 busy 36.29 ms
+[pace] period 83.80 blocked 46.69 busy 37.11 ms
+[corepreempt] handoffs=42624
+[pace] period 72.26 blocked 35.02 busy 37.24 ms
+[pace] period 96.68 blocked 60.10 busy 36.58 ms
+[pace] period 77.97 blocked 40.10 busy 37.87 ms
+[pace] period 97.52 blocked 58.49 busy 39.03 ms
+[pace] period 77.48 blocked 39.09 busy 38.39 ms
+[pace] period 95.58 blocked 59.00 busy 36.58 ms
+[corepreempt] handoffs=42752
+[pace] period 79.98 blocked 45.61 busy 34.37 ms
+[pace] period 78.46 blocked 43.14 busy 35.32 ms
+[pace] period 83.84 blocked 46.96 busy 36.88 ms
+[vk] t=168.1 frame 2819 12.6 fps gen 0/26 max 110ms level  (7119 draws, 0 skipped, 416 passes, 0 dispatches, 52 flushes, wait 0ms, compile 0, fbcopy 26, upload 8.4MB)
+[pace] period 59.50 blocked 25.96 busy 33.54 ms
+[pace] period 55.96 blocked 19.71 busy 36.26 ms
+[pace] period 48.06 blocked 12.73 busy 35.33 ms
+[pace] period 64.21 blocked 28.83 busy 35.38 ms
+[pace] period 82.17 blocked 41.41 busy 40.76 ms
+[pace] period 59.43 blocked 20.47 busy 38.96 ms
+[corepreempt] handoffs=42880
+[pace] period 91.58 blocked 53.50 busy 38.08 ms
+[pace] period 60.31 blocked 27.38 busy 32.94 ms
+[pace] period 85.23 blocked 49.79 busy 35.43 ms
+[pace] period 63.65 blocked 28.09 busy 35.56 ms
+[pace] period 63.88 blocked 22.82 busy 41.06 ms
+[pace] period 50.55 blocked 17.02 busy 33.54 ms
+[pace] period 89.79 blocked 55.10 busy 34.69 ms
+[pace] period 84.74 blocked 45.45 busy 39.29 ms
+[corepreempt] handoffs=43008
+[pace] period 95.56 blocked 60.24 busy 35.32 ms
+[pace] period 89.35 blocked 51.53 busy 37.82 ms
+[pace] period 82.19 blocked 44.69 busy 37.51 ms
+[pace] period 95.73 blocked 57.78 busy 37.95 ms
+[corepreempt] handoffs=43136
+[pace] period 98.13 blocked 57.33 busy 40.80 ms
+[pace] period 71.88 blocked 36.29 busy 35.59 ms
+[pace] period 92.29 blocked 52.62 busy 39.67 ms
+[vk] t=170.1 frame 2844 12.3 fps gen 0/25 max 129ms level  (6840 draws, 0 skipped, 400 passes, 0 dispatches, 50 flushes, wait 0ms, compile 0, fbcopy 25, upload 8.0MB)
+[pace] period 83.03 blocked 51.06 busy 31.97 ms
+[pace] period 68.98 blocked 31.16 busy 37.82 ms
+[pace] period 78.56 blocked 39.30 busy 39.26 ms
+[corepreempt] handoffs=43264
+[pace] period 78.95 blocked 41.39 busy 37.56 ms
+[pace] period 77.01 blocked 41.53 busy 35.48 ms
+[pace] period 79.49 blocked 42.80 busy 36.70 ms
+[pace] period 88.00 blocked 51.51 busy 36.49 ms
+[pace] period 83.26 blocked 43.77 busy 39.49 ms
+[pace] period 90.93 blocked 52.65 busy 38.28 ms
+[pace] period 59.65 blocked 22.72 busy 36.94 ms
+[pace] period 95.17 blocked 59.48 busy 35.68 ms
+[corepreempt] handoffs=43392
+[pace] period 87.07 blocked 53.45 busy 33.62 ms
+[pace] period 91.84 blocked 56.15 busy 35.69 ms
+[pace] period 89.02 blocked 54.58 busy 34.44 ms
+[pace] period 95.26 blocked 59.62 busy 35.64 ms
+[pace] period 83.12 blocked 44.62 busy 38.50 ms
+[pace] period 64.00 blocked 28.12 busy 35.88 ms
+[pace] period 85.23 blocked 52.79 busy 32.44 ms
+[corepreempt] handoffs=43520
+[pace] period 90.06 blocked 53.90 busy 36.17 ms
+[pace] period 72.39 blocked 41.04 busy 31.35 ms
+[pace] period 97.10 blocked 63.05 busy 34.05 ms
+[pace] period 93.21 blocked 52.62 busy 40.59 ms
+[vk] t=172.2 frame 2868 11.6 fps gen 0/24 max 141ms level  (6576 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 92.00 blocked 58.75 busy 33.25 ms
+[pace] period 88.23 blocked 50.87 busy 37.36 ms
+[corepreempt] handoffs=43648
+[pace] period 78.05 blocked 43.72 busy 34.33 ms
+[cpumod] 165s total 4230 unmapped 1035 game=576 runtime=185 SDL3=1048 Vulkan=16 libc=1370 shader=0 other=0
+[cpuhot] game 3b58000:25 343c000:19 fcc0000:17 bf5c000:16 44f8000:15 f2fa000:13 2898000:12 eee8000:12
+[cpuhot] runtime 1dc000:102 1d8000:39 27c000:11 1da000:10 370000:4 4b8000:3 4be000:3 282000:2
+[cpuhot] SDL3 1b2000:368 a0000:121 18c000:116 a2000:58 1b0000:50 190000:47 184000:46 1b4000:43
+[cpuhot] Vulkan 1ee6000:3 91c000:2 ab0000:2 1c74000:2 1bf8000:1 1c08000:1 1c10000:1 1c1c000:1
+[pace] period 74.31 blocked 36.00 busy 38.31 ms
+[pace] period 94.88 blocked 58.49 busy 36.39 ms
+[pace] period 83.30 blocked 48.98 busy 34.33 ms
+[pace] period 82.29 blocked 45.97 busy 36.32 ms
+[pace] period 75.04 blocked 40.43 busy 34.61 ms
+[corepreempt] handoffs=43776
+[pace] period 89.17 blocked 49.50 busy 39.67 ms
+[pace] period 74.55 blocked 40.02 busy 34.53 ms
+[pace] period 95.35 blocked 62.15 busy 33.20 ms
+[pace] period 87.01 blocked 52.20 busy 34.82 ms
+[pace] period 79.19 blocked 42.28 busy 36.90 ms
+[pace] period 84.50 blocked 48.19 busy 36.31 ms
+[pace] period 78.45 blocked 43.31 busy 35.14 ms
+[corepreempt] handoffs=43904
+[pace] period 75.52 blocked 37.20 busy 38.32 ms
+[pace] period 62.02 blocked 26.62 busy 35.41 ms
+[pace] period 74.51 blocked 41.60 busy 32.91 ms
+[pace] period 86.27 blocked 49.51 busy 36.76 ms
+[pace] period 75.63 blocked 41.84 busy 33.78 ms
+[corepreempt] handoffs=44032
+[pace] period 89.01 blocked 56.07 busy 32.94 ms
+[pace] period 85.43 blocked 51.01 busy 34.42 ms
+[vk] t=174.2 frame 2892 11.9 fps gen 0/24 max 108ms level  (6576 draws, 0 skipped, 384 passes, 0 dispatches, 48 flushes, wait 0ms, compile 0, fbcopy 24, upload 7.7MB)
+[pace] period 77.53 blocked 43.20 busy 34.33 ms
+[pace] period 99.30 blocked 66.19 busy 33.11 ms

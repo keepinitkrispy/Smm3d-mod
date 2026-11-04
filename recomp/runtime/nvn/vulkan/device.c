@@ -1120,7 +1120,23 @@ int ui_run(void) {
     for (;;) {
         if (rt_reboot_requested()) return rt_reboot_requested();  // (runtime/main.c tears the game down)
         SDL_Event e;
+#ifdef __ANDROID__
+        // Bound event work so event storms cannot monopolize a host CPU.
+        // Opt-in for same-build A/B testing; leave queued input for next batch.
+        static int bounded = -1;
+        if (bounded < 0) {
+            const char *v = getenv("LARECOMP_BOUNDED_EVENTS");
+            bounded = v && atoi(v) != 0;
+            LOG("[eventpump] bounded=%d\n", bounded);
+        }
+        unsigned event_count = 0;
+        uint64_t event_start = SDL_GetTicksNS();
+        while (bounded ? (event_count++ < 64 &&
+                         SDL_GetTicksNS() - event_start < 2000000ull && SDL_PollEvent(&e))
+                       : SDL_WaitEventTimeout(&e, 16)) {
+#else
         while (SDL_WaitEventTimeout(&e, 16)) {
+#endif
             if (e.type == SDL_EVENT_QUIT) {
                 LOG("window closed\n");
                 exit(0);
@@ -1130,6 +1146,9 @@ int ui_run(void) {
             if (menu_handle_event(&e)) continue;
             input_handle_event(&e);
         }
+#ifdef __ANDROID__
+        if (bounded) SDL_Delay(4);
+#endif
         menu_apply_window_requests(window);
         atomic_store(&g_display_hz, framegen_display_hz(window));  // (SDL's display state: read on this thread)
     }

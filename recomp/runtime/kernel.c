@@ -172,7 +172,7 @@ static bool core_equal_due(void) {
 static void core_refresh_preempt(void) {
     int any = 0;
     for (KThread *w = g_threads; w; w = w->anext)
-        if (w->want_core && w->core >= 0) { any = 1; break; }
+        if (w->want_core && w->core >= 0 && w->core < 4) any |= 1u << w->core;
     if (atomic_exchange_explicit(&core_preempt_waiters, any, memory_order_relaxed) != any)
         fnprof_sched_enable(any);
 }
@@ -299,7 +299,7 @@ void rt_guest_safepoint(void) {
     static __thread unsigned check_counter;
     if (!t_cur || t_cur->core < 0 || cores_off) return;
     if ((++check_counter & 31u) ||
-        !atomic_load_explicit(&core_preempt_waiters, memory_order_relaxed)) return;
+        !(atomic_load_explicit(&core_preempt_waiters, memory_order_relaxed) & (1u << t_cur->core))) return;
     pthread_mutex_lock(&g_klock);
     int core = t_cur->core;
     KThread *w = core >= 0 ? core_best_waiter(core) : NULL;

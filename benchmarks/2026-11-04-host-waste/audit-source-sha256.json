@@ -1,0 +1,10 @@
+{
+  "runtime/nvn/vulkan/exec.c": "f34e360ec25ed04ac60266698c59eba03dbe8d5fcdd311edf5638df501cee486",
+  "runtime/nvn/vulkan/textures.c": "9c549aef457e227fd52c27ade5fd96bc696b0be6190788cb66c1182a3c5b26eb",
+  "runtime/nvn/vulkan/device.c": "ea22ac763785585b27082c5800116bbe9634b9e91f79e90ef7a13c57b918eb04",
+  "runtime/kernel.c": "f3d34e9c7ae81645e78b8cc8b67544e20431d3ce9cdd47830a3333276d22cafc",
+  "runtime/fnprof.c": "a4ed52bff9b6b0017e4ac7ac24ddc900d2792506aa78fa9e42e28233e6da1424",
+  "runtime/dispatch.c": "1583a9de923b2b9649326a2b5802403272689c25be00b06ace596a2d832319c6",
+  "runtime/cpu.h": "0e601f6c37ac49ec3b7c7f2f76327f5089e6a58795dffb9f7b2f00cc3e10fe15",
+  "Makefile": "77a35314b3a5bd94a4cfe742a91a5a207d6c37c73a09483b249d005802fbdf3b"
+}

@@ -15,6 +15,7 @@ ADB = ["adb", "-s", "127.0.0.1:5555"]
 APP = "org.smcraft.smm2o2cap0"
 DATA = f"/sdcard/Android/data/{APP}/files"
 BRANCH = "experiment/main-x1-affinity-20261104"
+FIXTURE_PATH = HOME / "smm2-hot/cap40/course-fixture.json"
 CONF = {
     "LARECOMP_VK_NO_GMEM": "1",
     "LARECOMP_GMAP_RANGE_MB": "16",
@@ -50,6 +51,18 @@ def freqs():
                 result[str(c)][field] = None
     return result
 
+def fixture():
+    """A real, externally verified replay to one specific playable course."""
+    try:
+        x = json.loads(FIXTURE_PATH.read_text())
+        if x.get("verified") is True and isinstance(x.get("seed"), int) and \
+           isinstance(x.get("input_script"), str) and x["input_script"] and \
+           isinstance(x.get("course_id"), str) and x["course_id"]:
+            return x
+    except (OSError, ValueError, TypeError):
+        pass
+    return None
+
 def check():
     bat = power()
     freq = freqs()
@@ -57,12 +70,14 @@ def check():
     cool = bat["thermal_status"] is not None and bat["thermal_status"] <= 1
     maxes = [freq[str(i)]["scaling_max_freq"] or 0 for i in (6, 7)]
     cold_clock = min(maxes) >= 2500000
+    selected = fixture()
     apk = adb("shell", f"pm path {APP}").stdout.strip().startswith("package:")
     exefs = adb("shell", f"test -s {DATA}/extracted/exefs/main").returncode == 0
     romfs = adb("shell", f"test -d {DATA}/extracted/romfs").returncode == 0
     return {"battery": bat, "big_core_freq_khz": {i: freq[str(i)] for i in (6, 7)},
             "clone_installed": apk, "clone_exefs": exefs, "clone_romfs": romfs,
-            "ready": enough and not bat["plugged"] and cool and cold_clock and apk and exefs and romfs}
+            "playable_course_fixture_verified": selected is not None,
+            "ready": enough and not bat["plugged"] and cool and cold_clock and apk and exefs and romfs and selected is not None}
 
 def collect(mode):
     info = check()
@@ -70,7 +85,13 @@ def collect(mode):
         raise SystemExit("NO RUN: cool/unplugged/battery/data gate not met: " + json.dumps(info))
     OUT.mkdir(parents=True, exist_ok=True)
     config = OUT / f"{mode}.env"
-    config.write_text("".join(f"{k}={v}\n" for k, v in (CONF | {"LARECOMP_FPS_CAP": "40" if mode == "cap40" else "0"}).items()))
+    selected = fixture()
+    assert selected is not None
+    settings = CONF | {"LARECOMP_FPS_CAP": "40" if mode == "cap40" else "0",
+                       "SMM2_SEED": str(selected["seed"]),
+                       "LARECOMP_INPUT": selected["input_script"],
+                       "LARECOMP_NO_USER_INPUT": "1"}
+    config.write_text("".join(f"{k}={v}\n" for k, v in settings.items()))
     assert adb("push", str(config), DATA + "/recomp.env", timeout=90).returncode == 0
     config.unlink()
     adb("shell", f"am force-stop {APP}")
@@ -89,6 +110,16 @@ def collect(mode):
                 if remaining > 0:
                     time.sleep(remaining)
                 t = round(time.monotonic() - start, 2)
+                # Evidence is local only: a screenshot just before the scoring window,
+                # and another at the end, after confirming the clone is foreground.
+                if n in (29, 36):
+                    top = adb("shell", "dumpsys activity activities | grep -m1 topResumedActivity").stdout
+                    if APP in top:
+                        screenshot = OUT / f"{mode}-scene-{n*5}s.local.png"
+                        with screenshot.open("wb") as png:
+                            capture = subprocess.run(ADB + ["exec-out", "screencap", "-p"], stdout=png, timeout=20)
+                        if capture.returncode:
+                            screenshot.unlink(missing_ok=True)
                 samples.append({"seconds": t, "cpu_khz": freqs(),
                                 "battery": power() if n % 6 == 0 else None,
                                 "game_pid": adb("shell", f"pidof {APP}").stdout.strip()})
@@ -110,7 +141,8 @@ def collect(mode):
               "cpu_and_battery_5s": samples,
               "steady_150_180": {"n": len(last), "mean": statistics.mean(last) if last else None,
                                   "minimum": min(last) if last else None},
-              "scene_verified": False, "note": "Course equality requires screenshot/save-state verification."}
+              "fixture_id": selected["course_id"],
+              "scene_verified": False, "note": "Fixture preverified. Actual course must be checked against 145s/180s local screenshots of both runs before using results."}
     report = OUT / f"{mode}.json"
     report.write_text(json.dumps(result, indent=2) + "\n")
     clean = OUT / f"{mode}.sanitized.log"

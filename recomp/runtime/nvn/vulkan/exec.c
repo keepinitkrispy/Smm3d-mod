@@ -828,7 +828,15 @@ static void cpu_prof_sampler_tick(void) {
 // present_ns: time in backend_present's acquire/blit/present.
 void vk_prof_frame(uint64_t frame, uint64_t present_ns) {
 #ifdef __ANDROID__
-    cpu_prof_sampler_tick();
+    // The SIGPROF timer scans native threads and 7 * 65,536 atomic histogram
+    // bins while active. Keep it opt-in for measured performance runs rather
+    // than paying that overhead on every launch of the playable Android build.
+    static int cpu_prof_enabled = -1;
+    if (cpu_prof_enabled < 0) {
+        const char *e = getenv("LARECOMP_CPU_PROF");
+        cpu_prof_enabled = e && atoi(e) != 0;
+    }
+    if (cpu_prof_enabled) cpu_prof_sampler_tick();
 #endif
     if (!prof) return;
     static uint64_t last_t, l_exec, l_wait, l_draws, l_subs;
@@ -2429,9 +2437,24 @@ static void gfx_gmap(int stage) {
     memset(gx_tab, 0, sizeof gx_tab);
     struct { uint64_t lo, hi; } r[16];
     int n = 0;
+    // Bounded shader-global-memory staging: do not import the entire guest heap.
+    // Permit larger bound ranges than the inherited LAS fallback, while keeping
+    // the total transient copy bounded. These limits can be tuned without a rebuild.
+    static uint64_t max_range, max_total;
+    if (!max_range) {
+        const char *r = getenv("LARECOMP_GMAP_RANGE_MB");
+        const char *t = getenv("LARECOMP_GMAP_TOTAL_MB");
+        max_range = (uint64_t)(r ? atoi(r) : 16) << 20;
+        max_total = (uint64_t)(t ? atoi(t) : 32) << 20;
+        if (!max_range) max_range = 1ull << 20;
+        if (!max_total) max_total = 1ull << 20;
+        LOG("[gmap] bounded draw staging: range=%llu MB total=%llu MB\n", (unsigned long long)(max_range >> 20), (unsigned long long)(max_total >> 20));
+    }
+    static uint64_t rejected_ranges, rejected_draws;
     for (int i = 0; i < 16; i++) {  // heap offsets of the bound storage buffers, 256-aligned, sorted by start
         uint64_t a = st.sbuf[stage][i].addr, sz = st.sbuf[stage][i].size;
-        if (!a || !sz || a < HEAP_BASE || a - HEAP_BASE + sz > HEAP_MAX || sz > (8u << 20)) continue;
+        if (!a || !sz || a < HEAP_BASE || a - HEAP_BASE + sz > HEAP_MAX) continue;
+        if (sz > max_range) { if (++rejected_ranges <= 12) LOG("[gmap] range excluded: %llu bytes stage=%d\n", (unsigned long long)sz, stage); continue; }
         uint64_t lo = (a - HEAP_BASE) & ~255ull, hi = (a - HEAP_BASE + sz + 255) & ~255ull;
         if (hi > HEAP_MAX) hi = HEAP_MAX;
         int k = n++;
@@ -2445,7 +2468,10 @@ static void gfx_gmap(int stage) {
     }
     uint64_t total = 0;
     for (int i = 0; i < m; i++) total += (r[i].hi - r[i].lo + 255) & ~255ull;
-    if (!m || m > GMAP_MAX || total > (16u << 20)) { gx_fast = gfast_info(); return; }  // (nothing / too much: none)
+    if (!m || m > GMAP_MAX || total > max_total) {
+        if (m && ++rejected_draws <= 12) LOG("[gmap] draw excluded: %d ranges %llu bytes\n", m, (unsigned long long)total);
+        gx_fast = gfast_info(); return;
+    }
     VkSpan sp = vk_transient(total, 256);
     uint64_t off = 0;
     for (int i = 0; i < m; i++) {

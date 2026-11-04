@@ -109,6 +109,33 @@ static KThread *g_threads;
 typedef struct { KThread *owner; } Core;
 static Core g_cores[4];
 static int cores_off = -1;
+static uint64_t core_wait_counter;  // protected by g_klock
+
+// Experimental Horizon equal-priority time slicing. Disabled unless requested:
+// LARECOMP_CORE_QUANTUM_US=4000. Preserve single-owner-per-guest-core invariant.
+// The CPU code remains precompiled; existing guest FN_ENTER safepoints do the
+// handoff, with no instrumentation added to the recompiled game library.
+static uint64_t core_quantum_ns(void) {
+#ifdef __ANDROID__
+    static uint64_t cached = ~0ull;  // always called with g_klock held
+    if (cached == ~0ull) {
+        cached = 0;
+        const char *e = getenv("LARECOMP_CORE_QUANTUM_US");
+        if (e && *e) {
+            char *end = NULL;
+            unsigned long us = strtoul(e, &end, 10);
+            if (end != e && !*end && us >= 500 && us <= 50000)
+                cached = (uint64_t)us * 1000;
+        }
+        if (cached)
+            LOG("[corequantum] equal-priority guest-core quantum %llu us\n",
+                (unsigned long long)(cached / 1000));
+    }
+    return cached;
+#else
+    return 0;
+#endif
+}
 #ifdef __ANDROID__
 // The existing generated-code FN_ENTER branch can signal a guest-safe preemption
 // point without recompiling the large ARM64 game library.
@@ -116,6 +143,12 @@ extern void fnprof_sched_enable(int enabled);
 static _Atomic int core_preempt_waiters;
 static _Atomic unsigned long long core_preempt_handoffs;
 static __thread uint64_t core_last_acquired_ns;
+static _Atomic unsigned long long core_equal_handoffs;
+static bool core_equal_due(void) {
+    uint64_t quantum = core_quantum_ns();
+    return quantum && core_last_acquired_ns &&
+           plat_now_ns() - core_last_acquired_ns >= quantum;
+}
 static void core_refresh_preempt(void) {
     int any = 0;
     for (KThread *w = g_threads; w; w = w->anext)
@@ -132,7 +165,10 @@ static int core_of_mask(uint64_t mask) {
 static KThread *core_best_waiter(int core) {
     KThread *best = NULL;
     for (KThread *t = g_threads; t; t = t->anext)
-        if (t->want_core && t->core == core && (!best || t->prio < best->prio)) best = t;
+        if (t->want_core && t->core == core &&
+            (!best || t->prio < best->prio ||
+             (t->prio == best->prio && core_quantum_ns() &&
+              t->core_wait_order < best->core_wait_order))) best = t;
     return best;
 }
 
@@ -158,6 +194,7 @@ static void core_acquire(KThread *t) {
 #endif
         return; }
     t->want_core = true;
+    t->core_wait_order = ++core_wait_counter;
 #ifdef __ANDROID__
     core_refresh_preempt();
 #endif
@@ -192,9 +229,18 @@ static void core_acquire(KThread *t) {
 static void core_check(KThread *t) {
     if (!t || t->core < 0 || cores_off) return;
     KThread *w = core_best_waiter(t->core);
-    if (!w || w->prio >= t->prio) return;
+    if (!w || w->prio > t->prio) return;
+#ifdef __ANDROID__
+    bool equal = w->prio == t->prio && core_equal_due();
+    if (w->prio == t->prio && !equal) return;
+#else
+    if (w->prio == t->prio) return;
+#endif
     core_release(t);
     core_acquire(t);
+#ifdef __ANDROID__
+    if (equal) atomic_fetch_add_explicit(&core_equal_handoffs, 1, memory_order_relaxed);
+#endif
 }
 
 #ifdef __ANDROID__
@@ -209,13 +255,17 @@ void rt_guest_safepoint(void) {
     pthread_mutex_lock(&g_klock);
     int core = t_cur->core;
     KThread *w = core >= 0 ? core_best_waiter(core) : NULL;
+    bool equal = w && w->prio == t_cur->prio && core_equal_due();
     if (w && g_cores[core].owner == t_cur &&
-        w->prio < t_cur->prio) {
+        (w->prio < t_cur->prio || equal)) {
         core_release(t_cur);
         core_acquire(t_cur);
         unsigned long long n = atomic_fetch_add_explicit(&core_preempt_handoffs, 1, memory_order_relaxed) + 1;
+        unsigned long long eq = equal ? atomic_fetch_add_explicit(&core_equal_handoffs, 1, memory_order_relaxed) + 1 : 0;
         pthread_mutex_unlock(&g_klock);
         if (n == 1 || n % 128 == 0) LOG("[corepreempt] handoffs=%llu\n", n);
+        if (eq == 1 || (eq && eq % 128 == 0))
+            LOG("[corequantum] equal-priority handoffs=%llu\n", eq);
         return;
     }
     if (!w && atomic_load_explicit(&core_preempt_waiters, memory_order_relaxed)) core_refresh_preempt();

@@ -38,6 +38,7 @@ struct KThread {
     bool started, finished;
     bool joined;           // its host thread was joined (threads_reap; a reboot joins the rest)
     bool want_core;        // waiting for its core (kernel.c "cores"); core: -1 = not pinned
+    uint64_t core_wait_order;  // FIFO among same-priority guest-core waiters (g_klock)
     uint32_t last_svc;     // (diagnostics: kernel_dump_threads)
     KThread *anext;        // every thread of this boot (g_klock)
 };

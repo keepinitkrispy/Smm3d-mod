@@ -4,6 +4,10 @@
 #include <time.h>
 #include <stdatomic.h>
 #include <unistd.h>
+#ifdef __ANDROID__
+#include <sched.h>
+#include <errno.h>
+#endif
 
 #include "hle.h"
 #include "kernel.h"
@@ -396,6 +400,46 @@ static void query_memory(uint64_t addr, uint64_t out) {
 
 // ------------------------------------------------------------------ threads
 static uint64_t next_thread_id = 0x50;
+#ifdef __ANDROID__
+static KThread *g_main_guest_thread;
+
+// Optional, explicitly requested physical CPU pinning for the primary guest
+// thread. The Pixel 6's top-app cpuset allows CPUs 0-7; Termux's foreground
+// cpuset allows only 0-5. Check the actual thread cpuset and decline gracefully
+// if its intended CPU is unavailable. No root or OS policy changes required.
+static void host_pin_main_guest_cpu(KThread *t) {
+    if (t != g_main_guest_thread) return;
+    const char *s = getenv("LARECOMP_MAIN_HOST_CPU");
+    if (!s || !*s) return;
+    char *end = NULL;
+    long cpu = strtol(s, &end, 10);
+    if (end == s || *end || cpu < 0 || cpu >= CPU_SETSIZE) {
+        LOG("[hostcpu] invalid LARECOMP_MAIN_HOST_CPU value (expected available CPU index)\n");
+        return;
+    }
+    cpu_set_t allowed, target, after;
+    if (sched_getaffinity(0, sizeof allowed, &allowed) != 0) {
+        LOG("[hostcpu] affinity query failed: %s\n", strerror(errno));
+        return;
+    }
+    if (!CPU_ISSET((int)cpu, &allowed)) {
+        LOG("[hostcpu] CPU %ld unavailable in guest main thread cpuset; preserving Android scheduler\n", cpu);
+        return;
+    }
+    CPU_ZERO(&target);
+    CPU_SET((int)cpu, &target);
+    if (sched_setaffinity(0, sizeof target, &target) != 0) {
+        LOG("[hostcpu] pin CPU %ld denied: %s\n", cpu, strerror(errno));
+        return;
+    }
+    if (sched_getaffinity(0, sizeof after, &after) != 0 ||
+        CPU_COUNT(&after) != 1 || !CPU_ISSET((int)cpu, &after)) {
+        LOG("[hostcpu] pin CPU %ld set but final mask verification failed\n", cpu);
+        return;
+    }
+    LOG("[hostcpu] guest main thread pinned to host CPU %ld (verified)\n", cpu);
+}
+#endif
 
 // ------------------------------------------------------------------ in-place reboot
 // Recompiled guest code can't be killed from outside, so a reboot (runtime/main.c) sets g_rt_unwind, wakes every
@@ -416,6 +460,9 @@ static void *thread_main(void *arg) {
     t_cur = t;
     crash_handler_install();
     rt_set_fpcr(0);
+#ifdef __ANDROID__
+    host_pin_main_guest_cpu(t);
+#endif
     pthread_mutex_lock(&g_klock);
     core_acquire(t);  // (cores, above: it runs when its core is free)
     pthread_mutex_unlock(&g_klock);
@@ -485,6 +532,9 @@ KThread *kernel_create_main_thread(uint64_t entry, uint64_t stack_size, int prio
     uint64_t stack = STACK_BASE + STACK_SIZE - ((stack_size + 0xFFFF) & ~0xFFFFull);
     region_add(stack, stack_size, 0xB, 3);
     KThread *t = thread_new(entry, 0, stack + stack_size, prio, 0);
+#ifdef __ANDROID__
+    g_main_guest_thread = t;
+#endif
     t->handle = kernel_new_handle(&t->obj);
     return t;
 }

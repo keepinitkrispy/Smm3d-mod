@@ -1213,13 +1213,46 @@ static void pass_layout(const ExecState *s, PassLayout *out) {
     }
 }
 
+// The next operation after this dependency is a graphics pass. The producer
+// may have been graphics, transfer, or compute, so its scope stays broad; the
+// consumer needs only graphics stages. On tile-based GPUs the narrower consumer
+// scope can avoid unnecessarily stalling unrelated transfer/compute work.
+//
+// Off by default, enabling A/B of GPU synchronization without modifying game
+// timing, the event pump, or the guest-visible command order.
+static void vk_pass_dependency(VkCommandBuffer cb) {
+    static int graphics_dst = -1;
+    if (graphics_dst < 0) {
+        const char *e = getenv("LARECOMP_VK_PASS_DEPENDENCY");
+        graphics_dst = e && !strcmp(e, "graphics");
+        LOG("[vk] pass dependency dst=%s\n", graphics_dst ? "graphics" : "all-commands");
+    }
+    if (!graphics_dst) {
+        vk_full_barrier(cb);
+        return;
+    }
+    VkMemoryBarrier2 mb = {
+        .sType = VK_STRUCTURE_TYPE_MEMORY_BARRIER_2,
+        .srcStageMask = VK_PIPELINE_STAGE_2_ALL_COMMANDS_BIT,
+        .srcAccessMask = VK_ACCESS_2_MEMORY_WRITE_BIT,
+        .dstStageMask = VK_PIPELINE_STAGE_2_ALL_GRAPHICS_BIT,
+        .dstAccessMask = VK_ACCESS_2_MEMORY_READ_BIT | VK_ACCESS_2_MEMORY_WRITE_BIT,
+    };
+    VkDependencyInfo di = {
+        .sType = VK_STRUCTURE_TYPE_DEPENDENCY_INFO,
+        .memoryBarrierCount = 1,
+        .pMemoryBarriers = &mb,
+    };
+    vkCmdPipelineBarrier2(cb, &di);
+}
+
 static void begin_pass(void) {
     if (in_pass && !st.rt_dirty) return;
     vk_end_pass();
     if (dl_on == 2) renderer_flush();  // (LARECOMP_VK_DEVLOST_TRACE=2: each pass its own submission)
     st.rt_dirty = false;
     VkCommandBuffer cb = vk_cmd();
-    vk_full_barrier(cb);  // passes, copies and dispatches see each other's results
+    vk_pass_dependency(cb);  // image/transfer/compute producers before graphics consumers
     g_pass_last_prog = NULL;
     {
         NvnTexture *t0n = st.rt.ncolor ? st.rt.color[0] : NULL;

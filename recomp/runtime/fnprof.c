@@ -11,6 +11,13 @@
 volatile int g_fnprof;
 #ifdef __ANDROID__
 extern void rt_guest_safepoint(void);
+extern void rt_guest_safepoint_due(void);
+// Optional: one host scheduler call per 32 guest function entries instead of
+// calling into the kernel at all 32 entries only to return 31 times.
+// The check interval and guest-core ownership invariants remain unchanged.
+static __thread int sched_batch = -1;
+static __thread unsigned sched_entry_count;
+static _Atomic int sched_batch_logged;
 static _Atomic int g_sched_hook_active;
 static _Atomic int g_record_hook_active;
 void fnprof_sched_enable(int enabled) {
@@ -72,7 +79,19 @@ void fnprof_dump_ring(void) {
 
 void fnprof_hit(uint64_t a, uint64_t lr, uint64_t x0) {
 #ifdef __ANDROID__
-    if (atomic_load_explicit(&g_sched_hook_active, memory_order_relaxed)) rt_guest_safepoint();
+    if (atomic_load_explicit(&g_sched_hook_active, memory_order_relaxed)) {
+        if (sched_batch < 0) {
+            const char *e = getenv("LARECOMP_SCHED_BATCH_HOOK");
+            sched_batch = e && atoi(e) == 1;
+            if (sched_batch && !atomic_exchange_explicit(&sched_batch_logged, 1, memory_order_relaxed))
+                LOG("[schedhook] batching 32 guest entries per safepoint call\n");
+        }
+        if (sched_batch) {
+            if (!(++sched_entry_count & 31u)) rt_guest_safepoint_due();
+        } else {
+            rt_guest_safepoint();
+        }
+    }
     // Avoid the expensive function-entry counting hash table during a scheduling
     // handoff. Instrumentation remains available when explicitly requested.
     if (!atomic_load_explicit(&g_record_hook_active, memory_order_relaxed)) return;

@@ -295,11 +295,11 @@ static void core_check(KThread *t) {
 // Called from existing generated ARM64 game function entries, outside the
 // kernel's own dispatch. A pending waiter arms FN_ENTER globally, and normal
 // execution has only the already compiled predicted-not-taken branch.
-void rt_guest_safepoint(void) {
-    static __thread unsigned check_counter;
+// Shared safepoint body. The default caller samples one in 32 entries;
+// the opt-in batched caller has already performed that exact sampling.
+static void core_safepoint_check(void) {
     if (!t_cur || t_cur->core < 0 || cores_off) return;
-    if ((++check_counter & 31u) ||
-        !(atomic_load_explicit(&core_preempt_waiters, memory_order_relaxed) & (1u << t_cur->core))) return;
+    if (!(atomic_load_explicit(&core_preempt_waiters, memory_order_relaxed) & (1u << t_cur->core))) return;
     pthread_mutex_lock(&g_klock);
     int core = t_cur->core;
     KThread *w = core >= 0 ? core_best_waiter(core) : NULL;
@@ -318,6 +318,14 @@ void rt_guest_safepoint(void) {
     }
     if (!w && atomic_load_explicit(&core_preempt_waiters, memory_order_relaxed)) core_refresh_preempt();
     pthread_mutex_unlock(&g_klock);
+}
+void rt_guest_safepoint(void) {
+    static __thread unsigned check_counter;
+    if (!t_cur || t_cur->core < 0 || cores_off) return;
+    if (!(++check_counter & 31u)) core_safepoint_check();
+}
+void rt_guest_safepoint_due(void) {
+    core_safepoint_check();
 }
 #endif
 
